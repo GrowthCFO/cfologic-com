@@ -1,16 +1,4 @@
 {
-  "navigationFallback": {
-    "rewrite": "/404.html",
-    "exclude": [
-      "/assets/*",
-      "/uploads/*",
-      "/*.css",
-      "/*.js",
-      "/*.png",
-      "/*.xml",
-      "/*.txt"
-    ]
-  },
   "trailingSlash": "auto",
   "responseOverrides": {
     "404": {
