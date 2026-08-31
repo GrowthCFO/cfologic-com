@@ -66,6 +66,17 @@ input, button { font-family: inherit; }
 @media (max-width: 760px){
 .nav{flex-wrap:wrap;row-gap:10px}
 }
+
+/* Post body tables. The wrapper scrolls on its own so a wide table never
+   widens the page; min-width keeps the columns readable instead of squashing
+   them to nothing on a phone. */
+.post-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:26px 0 0;border:1px solid var(--color-neutral-200);border-radius:12px;background:#fff}
+.post-table-wrap:focus-visible{outline:2px solid var(--color-accent);outline-offset:2px}
+.post-table{border-collapse:collapse;width:100%;min-width:620px;font-size:15px;line-height:23px}
+.post-table th,.post-table td{text-align:left;vertical-align:top;padding:11px 16px;border-bottom:1px solid var(--color-neutral-200)}
+.post-table thead th{font-size:12px;letter-spacing:0.06em;text-transform:uppercase;color:var(--color-accent-800);background:var(--color-accent-100);white-space:nowrap}
+.post-table tbody tr:last-child td{border-bottom:0}
+.post-table td:first-child{font-weight:600}
 </style>
 
 <script type="application/ld+json" id="post-ld">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "When Your CFO Is Doing Work a Controller Should Be Doing", "description": "Level-drift starts as covering a gap and ends as the CFO's job description. How to spot it, and how to redesign the function out of it.", "keywords": "CFOServices, FP&A, FinOps, FinanceTeam, FinancialLeadership, FinanceExcellence, FinanceStrategy, ProcessImprovement, SMB, SME, PEFundedBusiness, VentureFundedStartup, FractionalCFOFirm", "datePublished": "2026-06-06", "dateModified": "2026-06-06", "articleSection": "CFO Success Partners™", "wordCount": 679, "timeRequired": "PT3M", "author": {"@type": "Organization", "name": "CFOLogic", "url": "https://cfologic.com/"}, "publisher": {"@type": "Organization", "name": "CFOLogic"}, "mainEntityOfPage": "https://cfologic.com/insights/when-your-cfo-is-doing-work-a-controller-should-be-doing"}</script>
@@ -173,6 +184,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">There's a phenomenon in finance functions that's easy to miss until you look for it, and then impossible to unsee. Call it level-drift: the gradual migration of work from lower levels of the organization to the CFO, until the CFO's days look less like a CFO's and more like a senior controller's.</p>
           
+          
         </div>
       
         <div>
@@ -181,11 +193,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">It starts innocuously. The controller leaves and the CFO covers temporarily. A financial analyst role is left unfilled for six months because the hiring market is tight. An FP&amp;A project gets reassigned to the CFO because nobody else has the modeling skill. Each step is individually reasonable. Together, they produce a CFO who is spending 60% of their time on work that should be done by people reporting to them — and 40% on the strategic work that is ostensibly the reason they were hired.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">How the Pattern Establishes Itself</h2>
+          
           
           
           
@@ -197,6 +211,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Level-drift is self-reinforcing. Once the CFO is doing controller-level work, two things happen. First, the team adapts: people stop developing the skills to do the work themselves because the CFO always ends up doing it. Second, the CFO's calendar fills up: once you're managing the close and building the models and reviewing reconciliations, there's no white space for strategy.</p>
           
+          
         </div>
       
         <div>
@@ -204,6 +219,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The Consero 2024 CFO Survey found that 84% of CFOs are experiencing difficulty finding accounting expertise — a striking figure that reflects the structural challenge of building finance teams in the current talent market. When the controller role is hard to fill, the CFO fills it. When the analyst role is hard to fill, the CFO fills it. Level-drift is, in part, a talent market problem.</p>
+          
           
         </div>
       
@@ -213,11 +229,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Source: Consero Global, 2024 CFO Survey (referencing Avalara research on CFO talent challenges).</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">The Organizational Cost</h2>
+          
           
           
           
@@ -229,6 +247,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The cost of level-drift is paid in two places. First, in the strategic work that doesn't happen: the board didn't get the financial narrative they needed because the CFO was closing the books, the capital allocation decision was delayed because the CFO was building the model rather than analyzing it, the investor relationship suffered because the CFO didn't have bandwidth for calls.</p>
           
+          
         </div>
       
         <div>
@@ -237,11 +256,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Second, in the CFO's personal effectiveness: a CFO who spends most of their time on execution work is not developing the strategic capabilities they need to grow with the business. After two or three years of level-drift, the gap between what the CFO is doing and what the role requires becomes an organizational problem.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Redesigning the Function</h2>
+          
           
           
           
@@ -253,6 +274,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The path out of level-drift is a function redesign — not just a hire. The redesign starts with a clear-eyed assessment of what work is actually happening at each level: what is the CFO doing, what should they be doing, and what needs to be built or acquired to handle the difference?</p>
           
+          
         </div>
       
         <div>
@@ -260,6 +282,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The output is typically a combination of targeted hires (to fill the roles that have drifted up) and structured outsourcing (for the execution work that can be handled more cost-effectively through a partner than through in-house staffing). The CFO's role is redefined around the activities that require their specific judgment and relationship capital — investor engagement, board communication, strategic financial leadership.</p>
+          
           
         </div>
       
@@ -269,11 +292,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">This process works best when it's treated as a deliberate organizational design exercise, not a reaction to a crisis. CFOs who wait until they're fully overwhelmed before redesigning the function usually have to manage the transition under pressure, which rarely produces the best structural outcomes.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">A Practical Starting Point</h2>
+          
           
           
           
@@ -285,6 +310,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">One useful diagnostic: ask the CFO to track their time for two weeks, categorizing each activity by the level at which it should be performed (CFO, controller, analyst, specialist). The results are usually clarifying — and often motivating. Seeing in black and white that 55% of your week is being spent on work that belongs two levels down tends to create urgency for change.</p>
           
+          
         </div>
       
         <div>
@@ -293,6 +319,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">—</p>
           
+          
         </div>
       
         <div>
@@ -300,6 +327,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">CFOLogic's CFO Success Partners™ practice helps CFOs redesign their finance functions — identifying what should be done at each level and building the execution infrastructure to make it happen. If level-drift is a problem in your organization, we'd be glad to help you diagnose it and design a path out.</p>
+          
           
         </div>
       

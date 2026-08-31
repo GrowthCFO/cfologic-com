@@ -66,6 +66,17 @@ input, button { font-family: inherit; }
 @media (max-width: 760px){
 .nav{flex-wrap:wrap;row-gap:10px}
 }
+
+/* Post body tables. The wrapper scrolls on its own so a wide table never
+   widens the page; min-width keeps the columns readable instead of squashing
+   them to nothing on a phone. */
+.post-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:26px 0 0;border:1px solid var(--color-neutral-200);border-radius:12px;background:#fff}
+.post-table-wrap:focus-visible{outline:2px solid var(--color-accent);outline-offset:2px}
+.post-table{border-collapse:collapse;width:100%;min-width:620px;font-size:15px;line-height:23px}
+.post-table th,.post-table td{text-align:left;vertical-align:top;padding:11px 16px;border-bottom:1px solid var(--color-neutral-200)}
+.post-table thead th{font-size:12px;letter-spacing:0.06em;text-transform:uppercase;color:var(--color-accent-800);background:var(--color-accent-100);white-space:nowrap}
+.post-table tbody tr:last-child td{border-bottom:0}
+.post-table td:first-child{font-weight:600}
 </style>
 
 <script type="application/ld+json" id="post-ld">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Three Finance Initiatives That Live on Every CFO's Backlog", "description": "FP&A buildout, controls documentation, process standardization: the three initiatives every CFO defers, why they stay deferred, and what they return when they finally ship.", "keywords": "CFOServices, FP&A, FinOps, FinanceStrategy, FinanceExcellence, FinancialOperations, FinanceTeam, ProcessImprovement, SMB, SME, PEFundedBusiness, VentureFundedStartup, FractionalCFOFirm", "datePublished": "2026-06-18", "dateModified": "2026-06-18", "articleSection": "CFO Success Partners™", "wordCount": 753, "timeRequired": "PT4M", "author": {"@type": "Organization", "name": "CFOLogic", "url": "https://cfologic.com/"}, "publisher": {"@type": "Organization", "name": "CFOLogic"}, "mainEntityOfPage": "https://cfologic.com/insights/three-finance-initiatives-that-live-on-every-cfo-s-backlog"}</script>
@@ -173,6 +184,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Ask any CFO at a business doing $10–50M what's on their strategic agenda and what's on their backlog, and you'll find a familiar list in the second category. The specifics vary. The categories don't.</p>
           
+          
         </div>
       
         <div>
@@ -181,11 +193,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Three initiatives appear on almost every CFO's backlog, at almost every company in this revenue range. They've been there for 6, 12, sometimes 18 months. Everyone agrees they're important. Nobody has gotten them done.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Initiative 1: FP&amp;A Buildout</h2>
+          
           
           
           
@@ -197,6 +211,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The FP&amp;A function at most $10–30M companies is either nonexistent or embryonic — a collection of spreadsheet models maintained by the controller, with no dedicated analyst, no documented methodology, and no integrated process for linking planning to reporting. The CFO knows exactly what needs to be built: a three-statement model, a rolling forecast process, a variance review cadence, and a management reporting package that leadership actually reads.</p>
           
+          
         </div>
       
         <div>
@@ -204,6 +219,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">It stays on the backlog because building it takes 200–300 hours of skilled FP&amp;A work — work that the CFO can design but can't do themselves while managing everything else, and that the existing team doesn't have the capacity or skill set for.</p>
+          
           
         </div>
       
@@ -213,6 +229,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The return is measurable. The CPA.com CAS FP&amp;A Guide notes that organizations with mature FP&amp;A functions — those linking planning, budgeting, and continuous performance reporting — make materially better capital allocation decisions and respond faster to market changes than those without. For a $15M business, the decision quality improvement alone typically justifies the investment.</p>
           
+          
         </div>
       
         <div>
@@ -221,11 +238,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Source: CPA.com, CAS Financial Planning &amp; Analysis Guide.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">What it takes to get it done</h2>
+          
           
           
           
@@ -237,11 +256,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">An FP&amp;A buildout at this scale typically requires 8–12 weeks of dedicated execution: model architecture in the first month, data integration and historical loading in the second, and process documentation and team training in the third. It requires someone who can own the build — not just advise on it.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Initiative 2: Internal Controls Documentation</h2>
+          
           
           
           
@@ -253,6 +274,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Internal controls — approval workflows, segregation of duties, documentation standards, reconciliation requirements — are the infrastructure that makes financial reporting auditable and fraud-resistant. Most $10–30M businesses have controls in practice but not on paper. The controller knows the approval process. The CFO knows the reconciliation standard. But it's institutional knowledge, not documented policy.</p>
           
+          
         </div>
       
         <div>
@@ -261,11 +283,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">This matters for three reasons. First, audits are more expensive and more disruptive when controls aren't documented — auditors have to reconstruct the control environment rather than test a documented one. Second, key-person risk is significant: if the controller leaves, the control environment leaves with them. Third, investors and acquirers conducting diligence increasingly expect a documented control environment as a baseline.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">What it takes to get it done</h2>
+          
           
           
           
@@ -277,11 +301,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Controls documentation for a $10–30M business is a 60–90 day project: mapping existing processes, identifying gaps against a standard framework, drafting policies, and getting sign-off from relevant stakeholders. It requires someone with the technical knowledge to build the framework and the discipline to drive it through completion — neither of which is typically available inside an under-resourced finance function.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Initiative 3: Process Standardization</h2>
+          
           
           
           
@@ -293,6 +319,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Month-end close processes, AP workflows, AR collection processes, expense management — in most $10–30M businesses, these exist as informal practices rather than documented, standardized procedures. They work when the right people are in place. They break down during staff transitions, rapid growth, or audit seasons.</p>
           
+          
         </div>
       
         <div>
@@ -300,6 +327,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The 2024 Consero CFO Survey found that establishing well-defined financial processes was the second-most-common challenge for investor-backed CFOs (28% of respondents) — ahead of M&amp;A integration, reporting accuracy, and investor relationship management. This is a striking finding, given that process standardization is a relatively straightforward operational project.</p>
+          
           
         </div>
       
@@ -309,11 +337,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Source: Consero Global, 2024 CFO Survey: Challenges and Opportunities for Investor-Backed CFOs.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">What it takes to get it done</h2>
+          
           
           
           
@@ -325,11 +355,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Process documentation is less technically demanding than controls or FP&amp;A but requires time and discipline to complete. The typical deliverable: a close calendar with named owners and hard deadlines, documented AP and AR workflows, an expense management policy, and a monthly reporting checklist. None of these require external expertise — they require dedicated execution time that the CFO doesn't have.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">The Common Thread</h2>
+          
           
           
           
@@ -341,6 +373,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">All three of these initiatives share a common characteristic: the CFO knows exactly what needs to happen and has probably known for some time. The barrier isn't thinking — it's execution bandwidth. And the cost of continued deferral — in audit exposure, in investor conversations, in operational risk — compounds quietly but meaningfully.</p>
           
+          
         </div>
       
         <div>
@@ -349,6 +382,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">—</p>
           
+          
         </div>
       
         <div>
@@ -356,6 +390,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">CFOLogic's CFO Success Partners™ practice specializes in driving exactly these initiatives to completion — acting as a structured execution partner to the CFO, with the bandwidth and capability to take these from backlog to done.</p>
+          
           
         </div>
       

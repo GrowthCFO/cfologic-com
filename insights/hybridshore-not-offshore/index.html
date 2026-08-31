@@ -66,6 +66,17 @@ input, button { font-family: inherit; }
 @media (max-width: 760px){
 .nav{flex-wrap:wrap;row-gap:10px}
 }
+
+/* Post body tables. The wrapper scrolls on its own so a wide table never
+   widens the page; min-width keeps the columns readable instead of squashing
+   them to nothing on a phone. */
+.post-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:26px 0 0;border:1px solid var(--color-neutral-200);border-radius:12px;background:#fff}
+.post-table-wrap:focus-visible{outline:2px solid var(--color-accent);outline-offset:2px}
+.post-table{border-collapse:collapse;width:100%;min-width:620px;font-size:15px;line-height:23px}
+.post-table th,.post-table td{text-align:left;vertical-align:top;padding:11px 16px;border-bottom:1px solid var(--color-neutral-200)}
+.post-table thead th{font-size:12px;letter-spacing:0.06em;text-transform:uppercase;color:var(--color-accent-800);background:var(--color-accent-100);white-space:nowrap}
+.post-table tbody tr:last-child td{border-bottom:0}
+.post-table td:first-child{font-weight:600}
 </style>
 
 <script type="application/ld+json" id="post-ld">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Hybridshore, Not Offshore: What Changes When the Team Is Employed, Not Outsourced", "description": "A senior lead in your time zone, a Center of Excellence running the close to a documented standard, and nobody handing you a portal and a ticket queue. Why the employment model is the whole difference.", "keywords": "CFOServices, FinOps, Offshoring, MixShoreDelivery, FinanceTeam, SMB, FractionalCFOFirm", "datePublished": "2026-02-17", "dateModified": "2026-02-17", "articleSection": "Full-Stack Finance", "wordCount": 312, "timeRequired": "PT3M", "author": {"@type": "Organization", "name": "CFOLogic", "url": "https://cfologic.com/"}, "publisher": {"@type": "Organization", "name": "CFOLogic"}, "mainEntityOfPage": "https://cfologic.com/insights/hybridshore-not-offshore"}</script>
@@ -173,11 +184,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Offshore accounting has a reputation problem, and it’s mostly deserved. Not because the people are less capable - they aren’t - but because the standard model is built to fail: work tossed over a wall to contractors, communication through a portal, quality enforced by ticket SLA. Finance work doesn’t survive that structure. It’s an outcomes business being run as a task business.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">What Hybridshore Means</h2>
+          
           
           
           
@@ -189,11 +202,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Hybridshore is a different structure, not a different geography. In front: a senior finance leader in your time zone who knows your business, sits in your planning conversations, and is accountable for the outcome. Behind them: a 40+ person Center of Excellence in Pune running the close, the reconciliations and the models to a documented standard. One team, one engagement, one escalation path.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Employees, Not Contractors</h2>
+          
           
           
           
@@ -205,11 +220,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The load-bearing word is employed. Our COE staff are employees - trained on our SOPs, developed on our career paths, retained across years. That’s what makes quality repeatable rather than dependent on which contractor picked up the ticket this month. It’s also what makes institutional knowledge accumulate: the person reconciling your accounts in month twelve knows what they learned in month one.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Who Owns What</h2>
+          
           
           
           
@@ -221,11 +238,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">In the standard offshore model, the client quietly becomes the integrator - writing procedures, chasing deadlines, checking output. In hybridshore, we own the SOPs, the close calendar, the quality control and the escalation. You are never handed a portal and a ticket queue. If something is late or wrong, that’s ours to fix, and there’s a named person in your time zone who answers for it.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Why It Matters Economically</h2>
+          
           
           
           
@@ -236,6 +255,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The structure is also what makes full-stack finance affordable at $2-10M. Senior judgment where it’s needed, trained execution capacity where it isn’t, and none of it priced as US headcount. The comparison isn’t against your bookkeeper - it’s against the team you’ve been unable to hire.</p>
+          
           
         </div>
       

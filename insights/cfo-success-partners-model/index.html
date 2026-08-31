@@ -66,6 +66,17 @@ input, button { font-family: inherit; }
 @media (max-width: 760px){
 .nav{flex-wrap:wrap;row-gap:10px}
 }
+
+/* Post body tables. The wrapper scrolls on its own so a wide table never
+   widens the page; min-width keeps the columns readable instead of squashing
+   them to nothing on a phone. */
+.post-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:26px 0 0;border:1px solid var(--color-neutral-200);border-radius:12px;background:#fff}
+.post-table-wrap:focus-visible{outline:2px solid var(--color-accent);outline-offset:2px}
+.post-table{border-collapse:collapse;width:100%;min-width:620px;font-size:15px;line-height:23px}
+.post-table th,.post-table td{text-align:left;vertical-align:top;padding:11px 16px;border-bottom:1px solid var(--color-neutral-200)}
+.post-table thead th{font-size:12px;letter-spacing:0.06em;text-transform:uppercase;color:var(--color-accent-800);background:var(--color-accent-100);white-space:nowrap}
+.post-table tbody tr:last-child td{border-bottom:0}
+.post-table td:first-child{font-weight:600}
 </style>
 
 <script type="application/ld+json" id="post-ld">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "When the CFO Needs Execution Capacity: The Success Partners Model", "description": "You own the strategy. What you’re missing is a retained team that turns it into results - weekly progress, blockers surfaced early, your agenda. How the model works.", "keywords": "CFOServices, FP&A, FinanceTeam, FinancialLeadership, PEFundedBusiness, FractionalCFOFirm", "datePublished": "2026-02-10", "dateModified": "2026-02-10", "articleSection": "CFO Success Partners™", "wordCount": 288, "timeRequired": "PT3M", "author": {"@type": "Organization", "name": "CFOLogic", "url": "https://cfologic.com/"}, "publisher": {"@type": "Organization", "name": "CFOLogic"}, "mainEntityOfPage": "https://cfologic.com/insights/cfo-success-partners-model"}</script>
@@ -173,11 +184,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">There’s a version of finance trouble that has nothing to do with capability. The CFO is good. The strategy is right. The initiative list - FP&amp;A buildout, systems migration, controls documentation, integration - is correct and has been correct for six quarters. What’s missing is the layer that executes it.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">The Bandwidth Problem</h2>
+          
           
           
           
@@ -189,11 +202,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">At $10-50M, the finance team under the CFO is calibrated to keep the trains running: close, payroll, payables, reporting. Every strategic initiative competes with that workload and loses, because the trains have to run. The CFO ends up doing controller work at night and strategy never leaves the deck it was written in.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">What the Model Is</h2>
+          
           
           
           
@@ -205,11 +220,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">CFO Success Partners™ is a retained execution team that plugs in beneath a sitting CFO - in-house or fractional. The CFO owns the agenda and the judgment. We own the delivery: a senior finance lead who sits in your planning conversations, backed by trained execution capacity for the modeling, the documentation, the reconciliation work, the build-out. Their agenda, our execution.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">What It Isn’t</h2>
+          
           
           
           
@@ -221,11 +238,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">It isn’t staff augmentation - you’re not managing a temp. It isn’t consulting - the deliverable is a working process, not a recommendations deck. And it isn’t a threat to the CFO’s role; the whole design assumes a finance leader who owns the strategy and needs leverage, not replacement.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">The Working Cadence</h2>
+          
           
           
           
@@ -240,6 +259,7 @@ input, button { font-family: inherit; }
             </div>
           
           
+          
         </div>
       
         <div>
@@ -249,6 +269,7 @@ input, button { font-family: inherit; }
               <span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 999px; background: var(--color-accent); margin-top: 11px"></span>
               <span>Weekly progress against that scope - written, short, honest.</span>
             </div>
+          
           
           
         </div>
@@ -262,6 +283,7 @@ input, button { font-family: inherit; }
             </div>
           
           
+          
         </div>
       
         <div>
@@ -269,6 +291,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The test of the model is simple: the backlog that hasn’t moved in six quarters starts shipping, and the CFO’s calendar starts looking like a CFO’s calendar.</p>
+          
           
         </div>
       

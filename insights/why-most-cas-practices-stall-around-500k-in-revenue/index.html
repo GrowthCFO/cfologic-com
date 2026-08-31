@@ -66,6 +66,17 @@ input, button { font-family: inherit; }
 @media (max-width: 760px){
 .nav{flex-wrap:wrap;row-gap:10px}
 }
+
+/* Post body tables. The wrapper scrolls on its own so a wide table never
+   widens the page; min-width keeps the columns readable instead of squashing
+   them to nothing on a phone. */
+.post-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:26px 0 0;border:1px solid var(--color-neutral-200);border-radius:12px;background:#fff}
+.post-table-wrap:focus-visible{outline:2px solid var(--color-accent);outline-offset:2px}
+.post-table{border-collapse:collapse;width:100%;min-width:620px;font-size:15px;line-height:23px}
+.post-table th,.post-table td{text-align:left;vertical-align:top;padding:11px 16px;border-bottom:1px solid var(--color-neutral-200)}
+.post-table thead th{font-size:12px;letter-spacing:0.06em;text-transform:uppercase;color:var(--color-accent-800);background:var(--color-accent-100);white-space:nowrap}
+.post-table tbody tr:last-child td{border-bottom:0}
+.post-table td:first-child{font-weight:600}
 </style>
 
 <script type="application/ld+json" id="post-ld">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Why Most CAS Practices Stall Around $500K in Revenue", "description": "The $500K ceiling is predictable: talent, capacity and pricing constraints arriving together. Incremental fixes don't break it.", "keywords": "CFOServices, FP&A, FinOps, FinanceExcellence, FinanceStrategy, BusinessGrowth, TalentRetention, DigitalFinance, CASFirm, CPAFirm, AccountingFirm, FractionalCFOFirm", "datePublished": "2026-04-06", "dateModified": "2026-04-06", "articleSection": "CAS Practice Partner", "wordCount": 644, "timeRequired": "PT3M", "author": {"@type": "Organization", "name": "CFOLogic", "url": "https://cfologic.com/"}, "publisher": {"@type": "Organization", "name": "CFOLogic"}, "mainEntityOfPage": "https://cfologic.com/insights/why-most-cas-practices-stall-around-500k-in-revenue"}</script>
@@ -173,6 +184,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The $500K CAS practice ceiling is one of the most consistent patterns in the accounting profession. Practices launch, grow steadily, and then find themselves unable to push past a certain revenue level despite a clear client demand for the services and a genuine desire from the partners to scale.</p>
           
+          
         </div>
       
         <div>
@@ -181,11 +193,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The ceiling isn't random. It's the predictable outcome of three simultaneous constraints that most practices don't address together.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">The Three Constraints</h2>
+          
           
           
           
@@ -197,6 +211,7 @@ input, button { font-family: inherit; }
           
           
           
+          
         </div>
       
         <div>
@@ -204,6 +219,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">CAS requires a specific combination of skills — technical accounting, technology fluency, client communication, and business judgment — that is genuinely scarce. The CPA.com &amp; AICPA PCPS CAS Benchmark Survey found that filling the talent pipeline is a persistent challenge for CAS practices, with high demand for skilled professionals and multiple competing methods required to recruit and retain them.</p>
+          
           
         </div>
       
@@ -213,6 +229,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Source: CPA.com &amp; AICPA PCPS Client Advisory Services (CAS) Benchmark Survey 2022.</p>
           
+          
         </div>
       
         <div>
@@ -221,11 +238,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The practical consequence: CAS practices hit a growth ceiling not because demand runs out, but because they can't find the people to deliver more services. Turning away clients or letting service quality slip is the result of a talent constraint, not a market constraint.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Constraint 2: The capacity problem</h2>
+          
           
           
           
@@ -237,6 +256,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Even when the right talent is in place, capacity is often the binding constraint. Senior CPAs in CAS practices are typically allocated across both execution work (the month-end close, the reconciliations, the bookkeeping review) and advisory work (client strategy meetings, financial planning, business insights). Neither gets full attention because the time is split.</p>
           
+          
         </div>
       
         <div>
@@ -245,11 +265,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The CPA.com &amp; AICPA PCPS CAS Benchmark Survey found that top-performing practices spend significantly more of their senior team's time on advisory work and less on execution — enabled by technology automation and, in some cases, by outsourcing transactional finance work. The capacity constraint isn't a headcount problem — it's an allocation problem.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Constraint 3: The pricing problem</h2>
+          
           
           
           
@@ -261,6 +283,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Many CAS practices are under-priced for the value they deliver — especially the advisory component. The Ignition 2025 Pricing Benchmark found that 69% of clients don't understand the value of CAS advisory or confuse it with lower-level bookkeeping services. This pricing confusion suppresses revenue per client and limits the practice's ability to invest in the talent and systems needed to scale.</p>
           
+          
         </div>
       
         <div>
@@ -268,6 +291,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Source: Ignition, 2025 U.S. Accounting and Tax Pricing Benchmark.</p>
+          
           
         </div>
       
@@ -277,11 +301,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The most successful CAS practices solve the pricing problem by being explicit about the distinction between execution services (bookkeeping, reconciliations, reporting) and advisory services (strategic financial planning, business insights, CFO-level guidance) — and pricing each separately.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Why Incremental Fixes Don't Work</h2>
+          
           
           
           
@@ -293,6 +319,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The three constraints are interdependent. Hiring more staff (talent fix) doesn't solve the capacity problem if the new staff are also allocated across execution and advisory. Investing in technology (capacity fix) doesn't solve the pricing problem if clients still perceive the service as bookkeeping. Raising prices (pricing fix) doesn't solve the talent problem if the practice can't attract the people needed to deliver on the higher price point.</p>
           
+          
         </div>
       
         <div>
@@ -301,11 +328,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Breaking through the ceiling requires addressing all three simultaneously — which is why the most successful path is typically a delivery model redesign rather than incremental improvement in any single area.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">The Redesign</h2>
+          
           
           
           
@@ -317,6 +346,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The delivery model redesign that breaks the $500K ceiling separates execution from advisory structurally: execution work is handled by technology, junior staff, or an execution partner; senior CPAs are dedicated to advisory relationships. This separation solves all three constraints simultaneously — it stretches the senior team's advisory capacity, it creates a talent profile for each role that's more achievable to fill, and it makes the advisory premium credible because it's visibly distinct from the execution work.</p>
           
+          
         </div>
       
         <div>
@@ -325,6 +355,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">—</p>
           
+          
         </div>
       
         <div>
@@ -332,6 +363,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">CFOLogic works with CAS practices as a delivery and execution partner — providing the FinOps and FP&amp;A capacity that frees senior CPAs for advisory work, enabling practices to break through the capacity ceiling without proportionally scaling headcount. We'd welcome a conversation about what this looks like for your practice.</p>
+          
           
         </div>
       

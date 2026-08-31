@@ -66,6 +66,17 @@ input, button { font-family: inherit; }
 @media (max-width: 760px){
 .nav{flex-wrap:wrap;row-gap:10px}
 }
+
+/* Post body tables. The wrapper scrolls on its own so a wide table never
+   widens the page; min-width keeps the columns readable instead of squashing
+   them to nothing on a phone. */
+.post-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:26px 0 0;border:1px solid var(--color-neutral-200);border-radius:12px;background:#fff}
+.post-table-wrap:focus-visible{outline:2px solid var(--color-accent);outline-offset:2px}
+.post-table{border-collapse:collapse;width:100%;min-width:620px;font-size:15px;line-height:23px}
+.post-table th,.post-table td{text-align:left;vertical-align:top;padding:11px 16px;border-bottom:1px solid var(--color-neutral-200)}
+.post-table thead th{font-size:12px;letter-spacing:0.06em;text-transform:uppercase;color:var(--color-accent-800);background:var(--color-accent-100);white-space:nowrap}
+.post-table tbody tr:last-child td{border-bottom:0}
+.post-table td:first-child{font-weight:600}
 </style>
 
 <script type="application/ld+json" id="post-ld">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Growing CAS Without Hiring: The White-Label Bench", "description": "Client advisory services is the growth engine of the modern firm - and the hardest to staff. How firms plug a trained, employed bench into their own brand and SOPs.", "keywords": "CASPractice, CFOServices, FinOps, FinanceTeam, CPAFirms, AccountingFirms", "datePublished": "2026-02-06", "dateModified": "2026-02-06", "articleSection": "CAS Practice Partner", "wordCount": 313, "timeRequired": "PT3M", "author": {"@type": "Organization", "name": "CFOLogic", "url": "https://cfologic.com/"}, "publisher": {"@type": "Organization", "name": "CFOLogic"}, "mainEntityOfPage": "https://cfologic.com/insights/growing-cas-without-hiring-white-label-bench"}</script>
@@ -173,11 +184,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Every managing partner has the same two CAS charts: a demand line going up and to the right, and a hiring pipeline that can’t keep pace with it. Client advisory services is the growth engine of the modern firm, and it’s being throttled by the one input firms can’t manufacture - staff.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Why CAS Staffing Is Structurally Hard</h2>
+          
           
           
           
@@ -189,11 +202,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">CAS work needs people who can run a close, build a forecast, and talk to a client - a profile that sits between traditional accounting and advisory. Those people are scarce, they’re expensive in every US market, and the ones you train are the ones recruiters call. The result is a practice that grows in lurches: hire, absorb, stall, repeat - or worse, senior CPAs doing reconciliations because someone has to.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">The White-Label Bench</h2>
+          
           
           
           
@@ -205,11 +220,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The alternative is to separate the relationship from the delivery. The firm keeps the client, the brand, the advisory judgment and the pricing. Behind it plugs a trained, employed bench - our Center of Excellence - running the execution to the firm’s SOPs or to ours, under the firm’s name. White-label means the client experiences the firm, full stop.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Why Employment Is the Difference</h2>
+          
           
           
           
@@ -221,11 +238,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Firms have tried this with offshore contractors and been burned - inconsistent quality, no continuity, partners re-reviewing everything. The difference here is the employment model: the bench is made of employees, trained to a documented standard, retained across years, with quality and escalation owned by us. The firm manages a relationship and a standard, not forty tickets.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">What It Unlocks</h2>
+          
           
           
           
@@ -236,6 +255,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Capacity stops being the constraint on growth. The firm can say yes to the next ten CAS clients without a hiring sprint, move its senior people up the value stack to advisory work clients actually pay premiums for, and price engagements on value rather than on scarce hours. The practice you built to grow finally gets to.</p>
+          
           
         </div>
       

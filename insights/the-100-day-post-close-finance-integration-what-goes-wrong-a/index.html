@@ -66,6 +66,17 @@ input, button { font-family: inherit; }
 @media (max-width: 760px){
 .nav{flex-wrap:wrap;row-gap:10px}
 }
+
+/* Post body tables. The wrapper scrolls on its own so a wide table never
+   widens the page; min-width keeps the columns readable instead of squashing
+   them to nothing on a phone. */
+.post-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:26px 0 0;border:1px solid var(--color-neutral-200);border-radius:12px;background:#fff}
+.post-table-wrap:focus-visible{outline:2px solid var(--color-accent);outline-offset:2px}
+.post-table{border-collapse:collapse;width:100%;min-width:620px;font-size:15px;line-height:23px}
+.post-table th,.post-table td{text-align:left;vertical-align:top;padding:11px 16px;border-bottom:1px solid var(--color-neutral-200)}
+.post-table thead th{font-size:12px;letter-spacing:0.06em;text-transform:uppercase;color:var(--color-accent-800);background:var(--color-accent-100);white-space:nowrap}
+.post-table tbody tr:last-child td{border-bottom:0}
+.post-table td:first-child{font-weight:600}
 </style>
 
 <script type="application/ld+json" id="post-ld">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "The 100-Day Post-Close Finance Integration: What Goes Wrong and How to Fix It", "description": "The first 100 days after close decide whether integration takes a quarter or two years. The common failures, and the workplan that avoids them.", "keywords": "CFOServices, FP&A, FinOps, DealSupport, DueDiligence, FinanceStrategy, FinanceExcellence, MAndA, FinancialOperations, BusinessGrowth, SMB, SME, PEFundedBusiness, VentureFundedStartup, FractionalCFOFirm", "datePublished": "2026-06-12", "dateModified": "2026-06-12", "articleSection": "CFO Success Partners™", "wordCount": 696, "timeRequired": "PT3M", "author": {"@type": "Organization", "name": "CFOLogic", "url": "https://cfologic.com/"}, "publisher": {"@type": "Organization", "name": "CFOLogic"}, "mainEntityOfPage": "https://cfologic.com/insights/the-100-day-post-close-finance-integration-what-goes-wrong-a"}</script>
@@ -173,6 +184,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The first 100 days after an acquisition close are among the most operationally demanding a finance team will ever experience. The pressure is intense, the requirements are specific, and the bandwidth needed to execute well is almost always more than what the existing team can provide while maintaining the ongoing demands of the core business.</p>
           
+          
         </div>
       
         <div>
@@ -181,11 +193,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">This is the moment when finance integration most often goes wrong — not because the CFO doesn't know what needs to happen, but because the team doesn't have the capacity to do it.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">The Common Failure Modes</h2>
+          
           
           
           
@@ -197,6 +211,7 @@ input, button { font-family: inherit; }
           
           
           
+          
         </div>
       
         <div>
@@ -205,11 +220,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">In the first 30 days post-close, the most urgent requirement is the ability to produce a consolidated view of the combined business. This requires integrating chart of accounts, aligning accounting policies, and building a reporting structure that captures both entities in a single format. Most integration plans underestimate how long this takes — and leadership ends up running the first 60 days on separate financials from two businesses that are legally one.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Misaligned control environments</h2>
+          
           
           
           
@@ -221,11 +238,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Every acquired business has its own control environment — its own approval workflows, its own reconciliation standards, its own expense policies. In the first 100 days, these need to be assessed, gaps identified, and a unified framework implemented. Skipping this step creates audit exposure and operational inconsistency that compounds over time.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Parallel finance teams</h2>
+          
           
           
           
@@ -237,11 +256,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The most visible failure: the acquired company's finance team continues operating as a separate entity for months after close, reporting into the acquired company's management rather than integrating into the acquiring company's structure. This creates confusion, redundancy, and competing priorities. The integration plan needs to address team structure in the first 30 days, not the first 90.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">What the Data Shows</h2>
+          
           
           
           
@@ -253,6 +274,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The Consero 2024 CFO Survey found that managing financial integration after M&amp;A transactions was the third-most-common challenge for investor-backed CFOs, cited by 26% of respondents. This ranked ahead of reporting accuracy, investor relationship management, and regulatory compliance — reflecting the specific intensity of M&amp;A integration as an operational event.</p>
           
+          
         </div>
       
         <div>
@@ -260,6 +282,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Source: Consero Global, 2024 CFO Survey: Challenges and Opportunities for Investor-Backed CFOs.</p>
+          
           
         </div>
       
@@ -269,11 +292,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">What's notable about this ranking is that M&amp;A integration is, in principle, a temporary challenge — it ends when the integration is complete. Yet it consistently appears as a top-three ongoing challenge, which suggests that most integrations run significantly longer than the 100-day target and continue to consume CFO bandwidth long after they should be finished.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">The 100-Day Finance Integration Workplan</h2>
+          
           
           
           
@@ -285,6 +310,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">A disciplined 100-day finance integration runs through four phases, each with defined deliverables and named owners.</p>
           
+          
         </div>
       
         <div>
@@ -292,6 +318,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Days 1–15: Rapid assessment. Review both companies' chart of accounts, accounting policies, control environments, and reporting structures. Identify the gaps and conflicts that need to be resolved. Produce a single-page integration map.</p>
+          
           
         </div>
       
@@ -301,6 +328,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Days 16–45: Consolidation. Align chart of accounts and accounting policies. Build the consolidated reporting template. Run the first consolidated close — it will be imperfect, but running it teaches you where the integration work still needs to happen.</p>
           
+          
         </div>
       
         <div>
@@ -308,6 +336,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Days 46–75: Controls and process alignment. Document and align the control environment. Establish unified AP, AR, and close processes. Resolve team structure and reporting lines.</p>
+          
           
         </div>
       
@@ -317,11 +346,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Days 76–100: Stabilization and handoff. The integrated function should be running as a single unit. Management reporting should be consolidated, timely, and trusted. The integration team hands off to the operating team, with documented processes and a clear picture of any remaining open items.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">The Bandwidth Problem</h2>
+          
           
           
           
@@ -333,6 +364,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The workplan above is achievable. What makes it fail is trying to run it with a team that is simultaneously managing the base business. The CFO cannot drive a 100-day integration while also running month-end close, managing the audit, supporting investor reporting, and handling the operational demands of the combined business.</p>
           
+          
         </div>
       
         <div>
@@ -340,6 +372,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">A dedicated execution layer — a CFO Success Partner who owns the integration workstream — is the most effective way to run a 100-day integration without compromising the ongoing operation of the finance function.</p>
+          
           
         </div>
       
@@ -349,6 +382,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">—</p>
           
+          
         </div>
       
         <div>
@@ -356,6 +390,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">CFOLogic's CFO Success Partners™ practice has supported finance integrations across multiple transaction types. If you're approaching a close date or in the middle of an integration that has run longer than planned, we'd welcome a conversation about what a structured integration workplan would look like.</p>
+          
           
         </div>
       

@@ -66,9 +66,20 @@ input, button { font-family: inherit; }
 @media (max-width: 760px){
 .nav{flex-wrap:wrap;row-gap:10px}
 }
+
+/* Post body tables. The wrapper scrolls on its own so a wide table never
+   widens the page; min-width keeps the columns readable instead of squashing
+   them to nothing on a phone. */
+.post-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:26px 0 0;border:1px solid var(--color-neutral-200);border-radius:12px;background:#fff}
+.post-table-wrap:focus-visible{outline:2px solid var(--color-accent);outline-offset:2px}
+.post-table{border-collapse:collapse;width:100%;min-width:620px;font-size:15px;line-height:23px}
+.post-table th,.post-table td{text-align:left;vertical-align:top;padding:11px 16px;border-bottom:1px solid var(--color-neutral-200)}
+.post-table thead th{font-size:12px;letter-spacing:0.06em;text-transform:uppercase;color:var(--color-accent-800);background:var(--color-accent-100);white-space:nowrap}
+.post-table tbody tr:last-child td{border-bottom:0}
+.post-table td:first-child{font-weight:600}
 </style>
 
-<script type="application/ld+json" id="post-ld">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "What a Full Finance Function Actually Costs — and What You’re Comparing It To", "description": "The honest comparison isn’t vendor vs vendor. It’s the bookkeeper, controller and CFO you’d otherwise hire against one team priced on outcomes. Here’s how to run the math for your own P&L.", "keywords": "CFOServices, FP&A, FinOps, FinanceStrategy, SMB, SME, FounderLed", "datePublished": "2026-03-13", "dateModified": "2026-03-13", "articleSection": "Full-Stack Finance", "wordCount": 417, "timeRequired": "PT3M", "author": {"@type": "Organization", "name": "CFOLogic", "url": "https://cfologic.com/"}, "publisher": {"@type": "Organization", "name": "CFOLogic"}, "mainEntityOfPage": "https://cfologic.com/insights/what-a-full-finance-function-actually-costs"}</script>
+<script type="application/ld+json" id="post-ld">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "What a Full Finance Function Actually Costs — and What You’re Comparing It To", "description": "The honest comparison isn’t vendor vs vendor. It’s the bookkeeper, controller and CFO you’d otherwise hire against one team priced on outcomes. Here’s how to run the math for your own P&L.", "keywords": "CFOServices, FP&A, FinOps, FinanceStrategy, SMB, SME, FounderLed", "datePublished": "2026-03-13", "dateModified": "2026-03-13", "articleSection": "Full-Stack Finance", "wordCount": 460, "timeRequired": "PT3M", "author": {"@type": "Organization", "name": "CFOLogic", "url": "https://cfologic.com/"}, "publisher": {"@type": "Organization", "name": "CFOLogic"}, "mainEntityOfPage": "https://cfologic.com/insights/what-a-full-finance-function-actually-costs"}</script>
 </head>
 <body>
 <cfo-lead-capture></cfo-lead-capture>
@@ -173,11 +184,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Ask what outsourced finance costs and you’ll get a vendor comparison: this firm charges X, that platform charges Y. It’s the wrong frame. The useful question is what the alternative costs - because the alternative isn’t another vendor, it’s a team.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">The Headcount Math</h2>
+          
           
           
           
@@ -189,6 +202,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">A complete finance function has four kinds of work in it: financial operations, controllership, FP&amp;A, and CFO-level strategy. Staffed conventionally, that’s a bookkeeper or staff accountant, a controller, an analyst, and a CFO. Even with the CFO fractional and the analyst shared, the fully loaded cost - salary, benefits, payroll taxes, software, management time - clears $400K a year quickly. At $2-10M in revenue, that line item doesn’t survive a budget meeting.</p>
           
+          
         </div>
       
         <div>
@@ -197,11 +211,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">So businesses staff the bottom of the stack and skip the top. A capable bookkeeper, a tax CPA once a year, and a founder doing CFO work at midnight. The books get kept. The function doesn’t exist.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">What the Gap Actually Costs</h2>
+          
           
           
           
@@ -213,11 +229,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The cost of the missing layers doesn’t appear on the P&amp;L, which is why it goes unmeasured. It appears as decisions made late or on instinct: the hire made a quarter after it was affordable, the price increase never modeled, the cash crunch discovered instead of forecast. It appears in transactions - a raise or sale where diligence takes twice as long and the terms reflect the mess. And it appears in founder hours: four to six a week reconciling numbers nobody fully trusts.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">What Outcome Pricing Changes</h2>
+          
           
           
           
@@ -229,11 +247,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">A full-stack model prices the function, not the seats. One team covers all four layers, scaled to what the business actually needs at its stage - more FinOps depth early, more FP&amp;A and strategy as complexity grows. Because delivery is shared across a trained bench rather than dedicated headcount, the cost lands at a fraction of the hiring math, and it flexes as the business changes shape.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">How to Run the Math for Your Own P&amp;L</h2>
+          
           
           
           
@@ -248,6 +268,7 @@ input, button { font-family: inherit; }
             </div>
           
           
+          
         </div>
       
         <div>
@@ -257,6 +278,7 @@ input, button { font-family: inherit; }
               <span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 999px; background: var(--color-accent); margin-top: 11px"></span>
               <span>Count the founder hours currently spent on finance work, at the value of what you’d otherwise be doing with them.</span>
             </div>
+          
           
           
         </div>
@@ -270,6 +292,7 @@ input, button { font-family: inherit; }
             </div>
           
           
+          
         </div>
       
         <div>
@@ -277,6 +300,16 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Run those three numbers and the question inverts. It stops being “can we afford a full finance function” and becomes “what is not having one already costing us.”</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">If the layer you are pricing first is the CFO, <a href="/insights/fractional-cfo-services-cost-and-when-you-need-one">Fractional CFO Services: Cost and When You Need One</a> runs the same arithmetic for that seat alone — market rates, the hours behind them, and the execution capacity the rate does not buy.</p>
+          
           
         </div>
       

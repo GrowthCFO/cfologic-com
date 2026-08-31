@@ -66,6 +66,17 @@ input, button { font-family: inherit; }
 @media (max-width: 760px){
 .nav{flex-wrap:wrap;row-gap:10px}
 }
+
+/* Post body tables. The wrapper scrolls on its own so a wide table never
+   widens the page; min-width keeps the columns readable instead of squashing
+   them to nothing on a phone. */
+.post-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:26px 0 0;border:1px solid var(--color-neutral-200);border-radius:12px;background:#fff}
+.post-table-wrap:focus-visible{outline:2px solid var(--color-accent);outline-offset:2px}
+.post-table{border-collapse:collapse;width:100%;min-width:620px;font-size:15px;line-height:23px}
+.post-table th,.post-table td{text-align:left;vertical-align:top;padding:11px 16px;border-bottom:1px solid var(--color-neutral-200)}
+.post-table thead th{font-size:12px;letter-spacing:0.06em;text-transform:uppercase;color:var(--color-accent-800);background:var(--color-accent-100);white-space:nowrap}
+.post-table tbody tr:last-child td{border-bottom:0}
+.post-table td:first-child{font-weight:600}
 </style>
 
 <script type="application/ld+json" id="post-ld">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Your Senior CPAs Shouldn't Be Doing Reconciliations. Here's What They Should Be Doing Instead.", "description": "Senior CPAs doing reconciliations is the most expensive misallocation in a CAS practice. The role architecture that fixes it.", "keywords": "CFOServices, FP&A, FinOps, Offshoring, FinanceTeam, FinanceExcellence, FinancialLeadership, TalentRetention, ProcessImprovement, CASFirm, CPAFirm, AccountingFirm, FractionalCFOFirm", "datePublished": "2026-04-03", "dateModified": "2026-04-03", "articleSection": "CAS Practice Partner", "wordCount": 714, "timeRequired": "PT3M", "author": {"@type": "Organization", "name": "CFOLogic", "url": "https://cfologic.com/"}, "publisher": {"@type": "Organization", "name": "CFOLogic"}, "mainEntityOfPage": "https://cfologic.com/insights/your-senior-cpas-shouldn-t-be-doing-reconciliations-here-s-w"}</script>
@@ -173,6 +184,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Ask a senior CPA at a CAS practice to describe their week and you'll almost always find the same pattern: Monday through Wednesday managing the close for a handful of clients — reviewing reconciliations, clearing exceptions, updating the management report. Thursday and Friday for client meetings, business development, and the advisory conversations that are theoretically the purpose of the role.</p>
           
+          
         </div>
       
         <div>
@@ -180,6 +192,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The split varies. But the pattern — senior professionals spending 50–60% of their billable time on execution work that doesn't require their level of expertise — is nearly universal.</p>
+          
           
         </div>
       
@@ -189,11 +202,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">It's also the reason that most CAS practices struggle to scale, struggle to retain senior talent, and struggle to build the deep advisory relationships that generate genuine client loyalty.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">The Misallocation Problem</h2>
+          
           
           
           
@@ -205,6 +220,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Senior CPA time is the scarcest and most expensive resource in a CAS practice. The fully-loaded cost of a senior CPA — salary, benefits, overhead, partner share — typically runs $150,000–$250,000 per year. If 50–60% of that person's time is spent on work that a well-trained junior staff member or an automated process could handle, the practice is significantly over-investing in execution and under-investing in advisory.</p>
           
+          
         </div>
       
         <div>
@@ -212,6 +228,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The CPA.com &amp; AICPA PCPS CAS Benchmark Survey found that the practices with the best economics are the ones that have most aggressively separated execution from advisory — using technology, automation, and in some cases outsourced delivery for the transactional work, freeing senior staff for client-facing advisory. Top performers in the survey were significantly more likely than average respondents to use workflow tools and technology to automate execution tasks.</p>
+          
           
         </div>
       
@@ -221,11 +238,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Source: CPA.com &amp; AICPA PCPS Client Advisory Services (CAS) Benchmark Survey 2022.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">What Senior CPAs Should Actually Be Doing</h2>
+          
           
           
           
@@ -237,6 +256,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">In a well-structured CAS practice, the senior CPA's role is fundamentally different from what it looks like in most practices today. Specifically:</p>
           
+          
         </div>
       
         <div>
@@ -246,6 +266,7 @@ input, button { font-family: inherit; }
               <span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 999px; background: var(--color-accent); margin-top: 11px"></span>
               <span>Leading quarterly or monthly strategic financial reviews with clients — not reviewing reconciliations, but interpreting what the financials mean for the client's business decisions</span>
             </div>
+          
           
           
         </div>
@@ -259,6 +280,7 @@ input, button { font-family: inherit; }
             </div>
           
           
+          
         </div>
       
         <div>
@@ -268,6 +290,7 @@ input, button { font-family: inherit; }
               <span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 999px; background: var(--color-accent); margin-top: 11px"></span>
               <span>Advising on capital structure, growth investment decisions, and fundraising preparation</span>
             </div>
+          
           
           
         </div>
@@ -281,6 +304,7 @@ input, button { font-family: inherit; }
             </div>
           
           
+          
         </div>
       
         <div>
@@ -292,6 +316,7 @@ input, button { font-family: inherit; }
             </div>
           
           
+          
         </div>
       
         <div>
@@ -300,11 +325,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">These activities create genuine value that clients are willing to pay premium prices for. They also create the deep, trusted advisor relationship that drives long-term retention and referrals. And they require the full attention and expertise of a senior professional — not the hours left over after the close is done.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Restructuring the Delivery Model</h2>
+          
           
           
           
@@ -316,6 +343,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Getting senior CPAs into this role requires restructuring the delivery model: specifically, moving execution work off their plates and onto a different resource.</p>
           
+          
         </div>
       
         <div>
@@ -323,6 +351,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The three options available to most practices are: technology and automation (for the highest-volume, most repeatable tasks), upskilled junior staff (for the tasks that require accounting knowledge but not senior judgment), and outsourced execution partners (for the full FinOps and basic FP&amp;A work that exceeds what internal junior staff can handle efficiently).</p>
+          
           
         </div>
       
@@ -332,11 +361,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The practices that have made the most progress on this restructuring typically use all three — technology for automation, junior staff for review and quality control, and an execution partner for the delivery capacity they can't efficiently staff internally. The result is a senior team that is genuinely deployed in an advisory capacity — and a client base that notices and values the difference.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">The Talent Retention Argument</h2>
+          
           
           
           
@@ -348,6 +379,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">There's a second argument for getting this right that goes beyond economics: talent retention. Senior CPAs who spend their time on advisory work — building client relationships, solving complex financial problems, acting as strategic partners — are doing the work they went into the profession to do. Senior CPAs who spend 60% of their time on reconciliations are not. The practices with the best senior talent retention are almost universally the ones that have successfully separated execution from advisory.</p>
           
+          
         </div>
       
         <div>
@@ -356,6 +388,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">—</p>
           
+          
         </div>
       
         <div>
@@ -363,6 +396,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">CFOLogic works with CAS practices as an execution delivery partner — providing the FinOps and FP&amp;A capacity that moves execution work off senior CPA plates and frees them for the advisory relationships that build the most durable practices. We'd welcome a conversation about what a partnership model would look like for your firm.</p>
+          
           
         </div>
       

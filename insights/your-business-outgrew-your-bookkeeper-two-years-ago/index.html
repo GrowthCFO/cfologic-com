@@ -66,6 +66,17 @@ input, button { font-family: inherit; }
 @media (max-width: 760px){
 .nav{flex-wrap:wrap;row-gap:10px}
 }
+
+/* Post body tables. The wrapper scrolls on its own so a wide table never
+   widens the page; min-width keeps the columns readable instead of squashing
+   them to nothing on a phone. */
+.post-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:26px 0 0;border:1px solid var(--color-neutral-200);border-radius:12px;background:#fff}
+.post-table-wrap:focus-visible{outline:2px solid var(--color-accent);outline-offset:2px}
+.post-table{border-collapse:collapse;width:100%;min-width:620px;font-size:15px;line-height:23px}
+.post-table th,.post-table td{text-align:left;vertical-align:top;padding:11px 16px;border-bottom:1px solid var(--color-neutral-200)}
+.post-table thead th{font-size:12px;letter-spacing:0.06em;text-transform:uppercase;color:var(--color-accent-800);background:var(--color-accent-100);white-space:nowrap}
+.post-table tbody tr:last-child td{border-bottom:0}
+.post-table td:first-child{font-weight:600}
 </style>
 
 <script type="application/ld+json" id="post-ld">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Your Business Outgrew Your Bookkeeper Two Years Ago", "description": "The finance setup that got you to $2M quietly stops working long before anyone names the problem. Here are the operational signs, and why the fix is structural rather than a better hire.", "keywords": "CFOServices, FinOps, FP&A, FinanceStrategy, FinanceTeam, BusinessGrowth, FinancialOperations, DigitalFinance, SMB, SME, FounderLed, Startups", "datePublished": "2026-08-15", "dateModified": "2026-08-15", "articleSection": "Full-Stack Finance", "wordCount": 683, "timeRequired": "PT3M", "author": {"@type": "Organization", "name": "CFOLogic", "url": "https://cfologic.com/"}, "publisher": {"@type": "Organization", "name": "CFOLogic"}, "mainEntityOfPage": "https://cfologic.com/insights/your-business-outgrew-your-bookkeeper-two-years-ago"}</script>
@@ -173,6 +184,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">A good bookkeeper keeps the ledger clean. They reconcile accounts, code transactions, and make sure the month-end close happens. At $500K in revenue, that's most of what you need from a finance function.</p>
           
+          
         </div>
       
         <div>
@@ -180,6 +192,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">At $3M, it isn't. At $5M, the gap is expensive. At $8M, it's a strategic liability.</p>
+          
           
         </div>
       
@@ -189,11 +202,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The problem isn't the bookkeeper. It's that the role — and the model built around it — was designed for a business a fraction of your current size.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Five Signs the Model Has Stopped Working</h2>
+          
           
           
           
@@ -205,6 +220,7 @@ input, button { font-family: inherit; }
           
           
           
+          
         </div>
       
         <div>
@@ -213,11 +229,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">A close that stretches past ten business days means you're regularly making current decisions with last month's data. At $5M, where cash cycles faster and margins are tighter, that lag compounds. The standard for a well-run finance function at this revenue stage is five days or fewer.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">2. Cash surprises you more than twice a year</h2>
+          
           
           
           
@@ -229,11 +247,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">One unexpected cash crunch can be bad luck. Two or more is a forecasting problem. A bookkeeper records what happened. A finance function predicts what's coming. If you're regularly learning about cash shortfalls within 30 days of them hitting, the forward-looking capability isn't there.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">3. Your budget exists but nobody uses it</h2>
+          
           
           
           
@@ -245,11 +265,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">This is extremely common. A budget gets built in November, approved in December, and by February nobody can remember what the assumptions were. If actual-versus-budget variance isn't being reviewed monthly with accountability attached, the budget is a document, not a management tool.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">4. Financial questions take more than 24 hours to answer</h2>
+          
           
           
           
@@ -261,11 +283,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">'What's our gross margin by product line?' 'What would happen to runway if we hired two engineers?' 'Can we afford to take on this contract?' If answering these questions requires a week of data wrangling, the finance infrastructure is working against the business, not for it.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">5. You're doing the CFO work yourself</h2>
+          
           
           
           
@@ -277,11 +301,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">This is the most expensive symptom. Founders at $4–8M who are spending four to six hours a week on financial management — reviewing reconciliations, interpreting reports, preparing for investor conversations — are working in the business in a capacity that should be handled by a professional finance partner.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">What Replacing the Model Actually Means</h2>
+          
           
           
           
@@ -293,6 +319,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The answer isn't hiring a full-time CFO. At $3–8M in revenue, a full-time senior CFO is almost always an over-investment. The salary range for a competent CFO in most US markets runs $180,000–$280,000 plus equity — for a function that a well-structured outsourced model can deliver more cost-effectively.</p>
           
+          
         </div>
       
         <div>
@@ -300,6 +327,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The Ignition 2025 U.S. Accounting and Tax Pricing Benchmark report found that the share of firms providing CFO and controller services grew from 56% to 62% between 2024 and 2025 — driven partly by SMB demand for strategic finance capabilities without the cost of a full-time hire. The highest-priced tier (above $2,500/month) remains the most common price point, reflecting that SMBs are increasingly willing to invest in properly structured finance support when they see the value clearly.</p>
+          
           
         </div>
       
@@ -309,6 +337,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Source: Ignition, 2025 U.S. Accounting and Tax Pricing Benchmark.</p>
           
+          
         </div>
       
         <div>
@@ -317,11 +346,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">What replacing the model means, in practical terms: a structured advisory layer (fractional CFO) supported by a reliable execution layer (FinOps) backed by an FP&amp;A function that produces forward-looking intelligence rather than backward-looking reports.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">The Transition Moment</h2>
+          
           
           
           
@@ -333,6 +364,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The cleanest time to make this transition is before you need it. Twelve to eighteen months before a fundraise. Before you scale the team significantly. Before you're in a contract negotiation where the other side wants three years of audited financials.</p>
           
+          
         </div>
       
         <div>
@@ -340,6 +372,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The worst time is during a crisis — when cash is tight, investors are asking questions, or an acquisition is on the table. The businesses that have built the finance function before the inflection point spend those moments executing their strategy. The ones that haven't spend them cleaning up their books.</p>
+          
           
         </div>
       
@@ -349,6 +382,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The transition doesn't have to be dramatic. It usually starts with one question: what do I need my finance function to be able to do in 18 months, and is what I have now capable of getting me there?</p>
           
+          
         </div>
       
         <div>
@@ -357,6 +391,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">—</p>
           
+          
         </div>
       
         <div>
@@ -364,6 +399,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">CFOLogic works with businesses in the $2–10M range to build full-stack finance functions — from FinOps to strategic CFO support.</p>
+          
           
         </div>
       

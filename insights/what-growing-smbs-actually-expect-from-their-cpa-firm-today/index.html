@@ -66,6 +66,17 @@ input, button { font-family: inherit; }
 @media (max-width: 760px){
 .nav{flex-wrap:wrap;row-gap:10px}
 }
+
+/* Post body tables. The wrapper scrolls on its own so a wide table never
+   widens the page; min-width keeps the columns readable instead of squashing
+   them to nothing on a phone. */
+.post-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:26px 0 0;border:1px solid var(--color-neutral-200);border-radius:12px;background:#fff}
+.post-table-wrap:focus-visible{outline:2px solid var(--color-accent);outline-offset:2px}
+.post-table{border-collapse:collapse;width:100%;min-width:620px;font-size:15px;line-height:23px}
+.post-table th,.post-table td{text-align:left;vertical-align:top;padding:11px 16px;border-bottom:1px solid var(--color-neutral-200)}
+.post-table thead th{font-size:12px;letter-spacing:0.06em;text-transform:uppercase;color:var(--color-accent-800);background:var(--color-accent-100);white-space:nowrap}
+.post-table tbody tr:last-child td{border-bottom:0}
+.post-table td:first-child{font-weight:600}
 </style>
 
 <script type="application/ld+json" id="post-ld">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "What Growing SMBs Actually Expect From Their CPA Firm Today", "description": "Growing SMBs no longer want an efficient compliance machine. What they expect instead, and which firms will own those relationships.", "keywords": "CFOServices, FP&A, FinOps, FinanceStrategy, FinanceExcellence, BusinessGrowth, DigitalFinance, FinancialLeadership, CASFirm, CPAFirm, AccountingFirm, SMB, SME", "datePublished": "2026-03-17", "dateModified": "2026-03-17", "articleSection": "CAS Practice Partner", "wordCount": 711, "timeRequired": "PT3M", "author": {"@type": "Organization", "name": "CFOLogic", "url": "https://cfologic.com/"}, "publisher": {"@type": "Organization", "name": "CFOLogic"}, "mainEntityOfPage": "https://cfologic.com/insights/what-growing-smbs-actually-expect-from-their-cpa-firm-today"}</script>
@@ -173,6 +184,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The $5M founder who stays with the same CPA firm for ten years isn't loyal to the firm because of the quality of the tax return. They stay because they trust the firm's judgment on financial matters that go well beyond tax compliance — because the firm knows their business, anticipates their needs, and has been useful in the moments that mattered.</p>
           
+          
         </div>
       
         <div>
@@ -181,11 +193,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">That kind of relationship is increasingly rare. And the data suggests that growing SMBs are actively looking for it — often from providers that are not traditional CPA firms.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">What SMBs Are Looking For</h2>
+          
           
           
           
@@ -197,6 +211,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The CPA.com &amp; AICPA PCPS CAS Benchmark Survey found that 69% of top-performing CAS practices — and 71% of all respondents — identify 'clients don't understand the value of CAS or confuse it with lower-level bookkeeping' as the biggest barrier to selling CAS services. This is a revealing data point. It suggests that the demand for advisory services exists — the confusion is about which providers offer it — and that most CPA firms have not successfully communicated their advisory capability in terms that clients recognize.</p>
           
+          
         </div>
       
         <div>
@@ -204,6 +219,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Source: CPA.com &amp; AICPA PCPS Client Advisory Services (CAS) Benchmark Survey 2022.</p>
+          
           
         </div>
       
@@ -213,6 +229,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The Consero 2024 CFO Survey paints a complementary picture: 79% of investor-backed companies work with a finance and accounting partner, and the benefits most valued by CFOs include improved reporting accuracy, better financial process definition, and reduced operational burden. These are not compliance benefits — they're operational and strategic finance benefits.</p>
           
+          
         </div>
       
         <div>
@@ -220,6 +237,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Source: Consero Global, 2024 CFO Survey: Challenges and Opportunities for Investor-Backed CFOs.</p>
+          
           
         </div>
       
@@ -229,11 +247,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Together, these data points describe a clear market signal: SMBs want proactive, strategic financial partnership — and they're willing to pay for it — but they're not finding it consistently from traditional CPA firms.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">The Five Things Growing SMBs Actually Want</h2>
+          
           
           
           
@@ -245,6 +265,7 @@ input, button { font-family: inherit; }
           
           
           
+          
         </div>
       
         <div>
@@ -253,11 +274,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The most common complaint about CPA firm relationships from $3–10M founders: 'They tell me what happened, but they never tell me what to do about it.' Growing SMBs want a finance partner who reaches out when the numbers show something worth discussing — not one who waits for the client to ask a question.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">2. Forward-looking financial intelligence</h2>
+          
           
           
           
@@ -269,11 +292,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Cash flow projections, scenario analysis, budget-versus-actual with implications — not just historical reporting. The businesses doing $3–10M in revenue are making consequential decisions about hiring, capital allocation, and growth investment every month. They want a finance partner who informs those decisions, not one who documents the decisions after they've been made.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">3. Industry fluency</h2>
+          
           
           
           
@@ -285,11 +310,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">A $7M SaaS business and a $7M professional services business have completely different financial profiles — different revenue recognition, different margin structures, different operational KPIs, different growth investment economics. Growing SMBs want a CPA partner who understands their industry deeply enough to contextualize their financial performance, not just report it.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">4. Integrated service delivery</h2>
+          
           
           
           
@@ -301,11 +328,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Tax, accounting, and advisory delivered as an integrated service — not as three separate engagements from three separate teams who don't coordinate. The most valuable CPA relationships from the client's perspective are the ones where they have a single point of accountability for their entire financial relationship with the firm.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">5. Transparency on pricing and scope</h2>
+          
           
           
           
@@ -317,6 +346,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">According to the CPA.com Business Model Trends report, SMBs are increasingly moving toward fixed-fee and value-based pricing for accounting services — with 63% of buyers preferring non-hourly billing structures. The firms that offer clear, predictable pricing for defined scopes of advisory work are finding it significantly easier to have the conversation about upgrading service levels.</p>
           
+          
         </div>
       
         <div>
@@ -325,11 +355,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Source: CPA.com, Business Model Trends for Accounting Advisory Services, 2023.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">The Competitive Dynamic</h2>
+          
           
           
           
@@ -341,6 +373,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The firms that close the gap between what SMBs want and what they're delivering will own the most valuable client relationships in the $2–10M market. The firms that don't will watch those relationships migrate — to outsourced CFO providers, to newer tech-enabled advisory firms, and to whichever CPA firm in the market is willing to invest in genuine advisory capability.</p>
           
+          
         </div>
       
         <div>
@@ -348,6 +381,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The opportunity is large. The window is not unlimited.</p>
+          
           
         </div>
       
@@ -357,6 +391,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">—</p>
           
+          
         </div>
       
         <div>
@@ -364,6 +399,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">CFOLogic partners with CPA firms to build the advisory and execution capability that SMB clients are looking for — enabling accounting practices to deliver the strategic finance partnership that their best clients expect. If you're thinking about how to evolve your CAS practice, we'd welcome a conversation.</p>
+          
           
         </div>
       

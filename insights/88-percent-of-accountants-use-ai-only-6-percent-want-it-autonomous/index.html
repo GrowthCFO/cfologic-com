@@ -66,6 +66,17 @@ input, button { font-family: inherit; }
 @media (max-width: 760px){
 .nav{flex-wrap:wrap;row-gap:10px}
 }
+
+/* Post body tables. The wrapper scrolls on its own so a wide table never
+   widens the page; min-width keeps the columns readable instead of squashing
+   them to nothing on a phone. */
+.post-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:26px 0 0;border:1px solid var(--color-neutral-200);border-radius:12px;background:#fff}
+.post-table-wrap:focus-visible{outline:2px solid var(--color-accent);outline-offset:2px}
+.post-table{border-collapse:collapse;width:100%;min-width:620px;font-size:15px;line-height:23px}
+.post-table th,.post-table td{text-align:left;vertical-align:top;padding:11px 16px;border-bottom:1px solid var(--color-neutral-200)}
+.post-table thead th{font-size:12px;letter-spacing:0.06em;text-transform:uppercase;color:var(--color-accent-800);background:var(--color-accent-100);white-space:nowrap}
+.post-table tbody tr:last-child td{border-bottom:0}
+.post-table td:first-child{font-weight:600}
 </style>
 
 <script type="application/ld+json" id="post-ld">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "88% of Accountants Use AI. Only 6% Want It Autonomous.", "description": "The Intuit QuickBooks survey (n=725, 2026) confirms what we see daily: AI is everywhere in client services, and nobody serious wants it unsupervised. Where the line actually sits.", "keywords": "CFOServices, FinOps, DigitalFinance, FinanceExcellence, SMB, SME", "datePublished": "2026-03-06", "dateModified": "2026-03-06", "articleSection": "Full-Stack Finance", "wordCount": 299, "timeRequired": "PT3M", "author": {"@type": "Organization", "name": "CFOLogic", "url": "https://cfologic.com/"}, "publisher": {"@type": "Organization", "name": "CFOLogic"}, "mainEntityOfPage": "https://cfologic.com/insights/88-percent-of-accountants-use-ai-only-6-percent-want-it-autonomous"}</script>
@@ -173,11 +184,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Two numbers from the same survey: 88% of accounting professionals now use AI in client services, and only 6% want it operating autonomously (Intuit QuickBooks, n=725, 2026). Most commentary picks one number and runs. The truth is in the pair.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">What the 88% Means</h2>
+          
           
           
           
@@ -189,11 +202,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">AI adoption in finance work is no longer a forecast - it’s the installed base. Transaction categorization, reconciliation matching, anomaly detection, variance narratives, first-draft forecasts: this work is already being done with AI assistance in the large majority of practices. A finance function that hasn’t absorbed any of this is now measurably slower and more expensive than one that has.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">What the 6% Means</h2>
+          
           
           
           
@@ -205,11 +220,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The people closest to the work - the ones using AI daily - are the least interested in removing human judgment from it. That’s not resistance to change. It’s an accurate read of where the technology is strong and where it isn’t. AI is excellent at volume, pattern and first drafts. It does not know that your biggest customer renegotiated terms last month, that the founder is quietly exploring a sale, or that a clean-looking number is wrong because of how a contract was signed. Judgment work stays human, and practitioners know it.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Embedded, Not Bolted On</h2>
+          
           
           
           
@@ -221,6 +238,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The practical implication: the value isn’t in buying AI tools, it’s in workflow design. Close acceleration, variance analysis, anomaly detection and forecast models pay off when the process is built around them - clean data in, defined checkpoints where a person reviews and decides, clear ownership of the output. Bolting AI onto an undocumented, inconsistent process automates the inconsistency.</p>
           
+          
         </div>
       
         <div>
@@ -228,6 +246,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">That’s how we build at CFOLogic: automation where the machine is genuinely better, judgment reserved for the places a person is. The 88% and the 6% aren’t in tension. They’re the same finding, stated twice.</p>
+          
           
         </div>
       

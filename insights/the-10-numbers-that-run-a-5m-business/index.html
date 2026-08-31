@@ -66,6 +66,17 @@ input, button { font-family: inherit; }
 @media (max-width: 760px){
 .nav{flex-wrap:wrap;row-gap:10px}
 }
+
+/* Post body tables. The wrapper scrolls on its own so a wide table never
+   widens the page; min-width keeps the columns readable instead of squashing
+   them to nothing on a phone. */
+.post-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:26px 0 0;border:1px solid var(--color-neutral-200);border-radius:12px;background:#fff}
+.post-table-wrap:focus-visible{outline:2px solid var(--color-accent);outline-offset:2px}
+.post-table{border-collapse:collapse;width:100%;min-width:620px;font-size:15px;line-height:23px}
+.post-table th,.post-table td{text-align:left;vertical-align:top;padding:11px 16px;border-bottom:1px solid var(--color-neutral-200)}
+.post-table thead th{font-size:12px;letter-spacing:0.06em;text-transform:uppercase;color:var(--color-accent-800);background:var(--color-accent-100);white-space:nowrap}
+.post-table tbody tr:last-child td{border-bottom:0}
+.post-table td:first-child{font-weight:600}
 </style>
 
 <script type="application/ld+json" id="post-ld">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "The 10 Numbers That Run a $5M Business", "description": "Ten metrics across revenue quality, cost structure, cash and efficiency: the minimum viable intelligence set for a growth-stage company.", "keywords": "CFOServices, FP&A, FinOps, FinanceStrategy, DigitalFinance, FinanceExcellence, BusinessGrowth, FinancialPlanning, SMB, SME, FounderLed, Startups, VentureFundedStartup", "datePublished": "2026-05-12", "dateModified": "2026-05-12", "articleSection": "Smart Dashboards", "wordCount": 757, "timeRequired": "PT4M", "author": {"@type": "Organization", "name": "CFOLogic", "url": "https://cfologic.com/"}, "publisher": {"@type": "Organization", "name": "CFOLogic"}, "mainEntityOfPage": "https://cfologic.com/insights/the-10-numbers-that-run-a-5m-business"}</script>
@@ -173,6 +184,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">This is not a listicle. It's an attempt to answer a specific question: if you had to reduce the financial intelligence of a $5M business to the ten numbers that matter most — the ones that, if tracked consistently, would support better decisions across the full range of operational choices leadership makes — what would they be?</p>
           
+          
         </div>
       
         <div>
@@ -181,11 +193,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The answer varies slightly by business model. But less than most people think. The fundamentals of what makes a business financially healthy are surprisingly consistent across industries at this revenue stage.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Category 1: Revenue Quality (Three Numbers)</h2>
+          
           
           
           
@@ -197,6 +211,7 @@ input, button { font-family: inherit; }
           
           
           
+          
         </div>
       
         <div>
@@ -205,11 +220,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">For subscription businesses, this is MRR. For professional services or transactional businesses, it's the repeating revenue base — the clients and contracts that will generate revenue next month without active sales effort. This number tells you how much of next month's revenue is already secured.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Net revenue retention</h2>
+          
           
           
           
@@ -221,11 +238,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">What percentage of last year's revenue from existing customers do you have this year, including upsells and expansions? This is the most fundamental indicator of product-market fit and customer satisfaction for any recurring revenue business. Above 100% means expansion is outpacing churn. Below 90% means the base is eroding faster than it looks.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Customer acquisition cost vs. lifetime value ratio</h2>
+          
           
           
           
@@ -237,11 +256,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">How much does it cost to acquire a customer, and how much revenue does that customer generate over their lifetime? A ratio below 3:1 (LTV to CAC) typically signals a business that is growing at the expense of profitability. Above 5:1 suggests underinvestment in growth.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Category 2: Cost Structure (Three Numbers)</h2>
+          
           
           
           
@@ -253,6 +274,7 @@ input, button { font-family: inherit; }
           
           
           
+          
         </div>
       
         <div>
@@ -261,11 +283,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Revenue minus direct costs, divided by revenue. This is the foundational margin metric. For service businesses, it typically reflects labor efficiency. For product businesses, it reflects pricing power and supply chain management. At $5M, gross margins below 40–50% for a service business or below 30% for a product business warrant investigation.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Operating expense ratio</h2>
+          
           
           
           
@@ -277,11 +301,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Total operating expenses (excluding COGS) as a percentage of revenue. This tells you how efficiently the business is converting revenue into operating income. For a well-run $5M business, operating expenses typically run 25–40% of revenue depending on the growth investment level.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">EBITDA margin</h2>
+          
           
           
           
@@ -293,11 +319,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The summary profitability metric. For a $5M business not in growth-investment mode, EBITDA margins below 10–15% suggest a cost structure problem. For a business in active investment mode, the margin may be deliberately compressed — but that should be a choice, not a surprise.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Category 3: Cash Position (Two Numbers)</h2>
+          
           
           
           
@@ -309,6 +337,7 @@ input, button { font-family: inherit; }
           
           
           
+          
         </div>
       
         <div>
@@ -317,11 +346,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">At the current cash burn rate, how many months until the business runs out of cash? This should be calculated monthly and tracked against a minimum threshold — typically 3–6 months of operating expenses. Businesses that track this consistently are never surprised by cash pressure.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Cash conversion cycle</h2>
+          
           
           
           
@@ -333,11 +364,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">How long does it take for a dollar of revenue to become a dollar of cash? This is the sum of days sales outstanding (DSO) and days inventory outstanding, minus days payable outstanding. For service businesses, shortening DSO — getting invoices out faster and collecting faster — is often the highest-ROI operational improvement available.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Category 4: Operational Efficiency (Two Numbers)</h2>
+          
           
           
           
@@ -349,6 +382,7 @@ input, button { font-family: inherit; }
           
           
           
+          
         </div>
       
         <div>
@@ -357,11 +391,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Total revenue divided by headcount. This is an imperfect but useful benchmark for operational efficiency. For professional services businesses, well-run firms at $5M typically generate $150,000–$250,000 in revenue per employee. Significant deviation in either direction warrants investigation.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Month-end close duration</h2>
+          
           
           
           
@@ -373,11 +409,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">How many business days does it take to close the books after month end? As discussed earlier in this series, this is both a finance function efficiency metric and a proxy for decision cycle time. Tracking it monthly creates accountability for improvement.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">The Dashboard Principle</h2>
+          
           
           
           
@@ -389,6 +427,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">These ten numbers should be visible to leadership weekly — not buried in a 40-tab spreadsheet that requires a finance professional to navigate. The businesses that make the best use of financial data are the ones where the CEO, the COO, and the CFO are all looking at the same ten numbers on the same cadence, and where those numbers generate the same questions and conversations every month.</p>
           
+          
         </div>
       
         <div>
@@ -396,6 +435,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The format matters less than the consistency. A simple Google Sheet dashboard that's updated weekly and reviewed in a 20-minute standing meeting is more valuable than a sophisticated BI tool that nobody opens.</p>
+          
           
         </div>
       
@@ -405,6 +445,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">—</p>
           
+          
         </div>
       
         <div>
@@ -412,6 +453,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">CFOLogic builds smart financial dashboards for $2–10M businesses — connecting data sources, building the metrics framework, and delivering weekly visibility into the numbers that actually run the business. If you're ready to move from spreadsheet chaos to financial clarity, we'd be glad to show you what that looks like.</p>
+          
           
         </div>
       

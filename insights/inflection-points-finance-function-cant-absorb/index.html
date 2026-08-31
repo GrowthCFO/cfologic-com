@@ -66,6 +66,17 @@ input, button { font-family: inherit; }
 @media (max-width: 760px){
 .nav{flex-wrap:wrap;row-gap:10px}
 }
+
+/* Post body tables. The wrapper scrolls on its own so a wide table never
+   widens the page; min-width keeps the columns readable instead of squashing
+   them to nothing on a phone. */
+.post-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:26px 0 0;border:1px solid var(--color-neutral-200);border-radius:12px;background:#fff}
+.post-table-wrap:focus-visible{outline:2px solid var(--color-accent);outline-offset:2px}
+.post-table{border-collapse:collapse;width:100%;min-width:620px;font-size:15px;line-height:23px}
+.post-table th,.post-table td{text-align:left;vertical-align:top;padding:11px 16px;border-bottom:1px solid var(--color-neutral-200)}
+.post-table thead th{font-size:12px;letter-spacing:0.06em;text-transform:uppercase;color:var(--color-accent-800);background:var(--color-accent-100);white-space:nowrap}
+.post-table tbody tr:last-child td{border-bottom:0}
+.post-table td:first-child{font-weight:600}
 </style>
 
 <script type="application/ld+json" id="post-ld">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "The Inflection Points an Ordinary Finance Function Can’t Absorb", "description": "Valuation, a raise, an acquisition, an audit. They don’t arrive on the close calendar - they arrive with a deadline. What each one demands, and why preparation beats heroics.", "keywords": "CFOServices, DealSupport, DueDiligence, InvestorReadiness, FinanceStrategy, SMB, PEFundedBusiness", "datePublished": "2026-02-13", "dateModified": "2026-02-13", "articleSection": "Full-Stack Finance", "wordCount": 312, "timeRequired": "PT3M", "author": {"@type": "Organization", "name": "CFOLogic", "url": "https://cfologic.com/"}, "publisher": {"@type": "Organization", "name": "CFOLogic"}, "mainEntityOfPage": "https://cfologic.com/insights/inflection-points-finance-function-cant-absorb"}</script>
@@ -173,11 +184,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">A finance function sized for normal operations - even one running well - is sized for a workload that repeats monthly. Four events don’t repeat monthly, and each one roughly doubles the workload while raising the stakes: valuation, raise, acquisition, audit.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Valuation</h2>
+          
           
           
           
@@ -189,11 +202,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Knowing what the business is worth before someone tells you. A credible valuation needs defensible numbers and the working the other side will test: revenue quality, normalized earnings, customer concentration, the adjustments a buyer’s analyst will hunt for. Assembling that from a bookkeeping-grade ledger takes months. Assembling it from a transaction-ready one takes weeks.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">The Raise</h2>
+          
           
           
           
@@ -205,11 +220,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">A fundraise is a second full-time job for whoever owns the numbers: the model, the data room, the diligence questionnaire that arrives in waves, each answer generating three follow-ups. Investors read the speed and coherence of your responses as a proxy for how the business is run - because it is one.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">The Acquisition</h2>
+          
           
           
           
@@ -221,11 +238,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Buying or being bought, the demand is the same: two sets of books that have to become one story. Quality of earnings, working capital pegs, integration planning. This is the event with the least warning and the least forgiveness for improvisation.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">The Audit</h2>
+          
           
           
           
@@ -237,11 +256,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">An audit is survivable exactly in proportion to the discipline that preceded it. Controls that hold, reconciliations that tie, documentation that exists. An audit hitting an undisciplined function doesn’t just go badly - it consumes the team for a quarter and the findings follow you into the next transaction.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Preparation Beats Heroics</h2>
+          
           
           
           
@@ -252,6 +273,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">These don’t arrive on the close calendar. They arrive with a deadline, and they need capability you can’t hire in time. This is where a partner who already knows your numbers stops being a convenience: the infrastructure is already transaction-grade, and the surge capacity is already trained. The alternative is heroics - and heroics, at diligence prices, are the most expensive way to run finance.</p>
+          
           
         </div>
       

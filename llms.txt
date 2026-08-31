@@ -14,6 +14,7 @@
 - [Trust Center](https://cfologic.com/trust-center): Security and data handling
 
 ## Insights (blog)
+- [Fractional CFO Services: Cost and When You Need One](https://cfologic.com/insights/fractional-cfo-services-cost-and-when-you-need-one): What fractional CFO services cost in 2026, what the role does in the first 90 days, when to hire one, and the execution gap that derails most engagements.
 - [What a $5M Company's Finance Function Actually Looks Like Inside](https://cfologic.com/insights/what-a-5m-company-s-finance-function-actually-looks-like-ins): Most founders have never seen a functional finance department at their size. This piece maps the three-layer architecture that high-performing $5-10M businesses run, and what each layer is supposed to produce.
 - [Your Business Outgrew Your Bookkeeper Two Years Ago](https://cfologic.com/insights/your-business-outgrew-your-bookkeeper-two-years-ago): The finance setup that got you to $2M quietly stops working long before anyone names the problem. Here are the operational signs, and why the fix is structural rather than a better hire.
 - [The CFO Question Every Founder Gets Wrong at $3M Revenue](https://cfologic.com/insights/the-cfo-question-every-founder-gets-wrong-at-3m-revenue): 'Do I need a CFO?' is the wrong question at $3M. The right one is about capability and structure, and it has a much cheaper answer.

@@ -66,6 +66,17 @@ input, button { font-family: inherit; }
 @media (max-width: 760px){
 .nav{flex-wrap:wrap;row-gap:10px}
 }
+
+/* Post body tables. The wrapper scrolls on its own so a wide table never
+   widens the page; min-width keeps the columns readable instead of squashing
+   them to nothing on a phone. */
+.post-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:26px 0 0;border:1px solid var(--color-neutral-200);border-radius:12px;background:#fff}
+.post-table-wrap:focus-visible{outline:2px solid var(--color-accent);outline-offset:2px}
+.post-table{border-collapse:collapse;width:100%;min-width:620px;font-size:15px;line-height:23px}
+.post-table th,.post-table td{text-align:left;vertical-align:top;padding:11px 16px;border-bottom:1px solid var(--color-neutral-200)}
+.post-table thead th{font-size:12px;letter-spacing:0.06em;text-transform:uppercase;color:var(--color-accent-800);background:var(--color-accent-100);white-space:nowrap}
+.post-table tbody tr:last-child td{border-bottom:0}
+.post-table td:first-child{font-weight:600}
 </style>
 
 <script type="application/ld+json" id="post-ld">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Your Close Lands on a Date, or It Doesn’t", "description": "Close discipline is the first honest test of a finance function. What a disciplined close involves, what it unlocks downstream, and why most businesses never get there alone.", "keywords": "FinOps, CFOServices, FinancialOperations, FinanceExcellence, SMB, SME", "datePublished": "2026-02-03", "dateModified": "2026-02-03", "articleSection": "Full-Stack Finance", "wordCount": 287, "timeRequired": "PT3M", "author": {"@type": "Organization", "name": "CFOLogic", "url": "https://cfologic.com/"}, "publisher": {"@type": "Organization", "name": "CFOLogic"}, "mainEntityOfPage": "https://cfologic.com/insights/your-close-lands-on-a-date-or-it-doesnt"}</script>
@@ -173,11 +184,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">If you can ask only one question about a business’s finance function, ask when the books close. Not how long it takes - when. “The 10th, every month” is one kind of business. “Usually two or three weeks in, depends” is another. The gap between those answers predicts almost everything else.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">What a Disciplined Close Involves</h2>
+          
           
           
           
@@ -189,11 +202,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">A close that lands on a date is not a heroic close - it’s a boring one. A written checklist that’s actually followed. A calendar with owners and deadlines for every task. Reconciliations run weekly so month-end confirms rather than discovers. Standard accruals templated, not re-derived. Hard cutoffs for late invoices, accrued on estimate and trued up next cycle. None of this requires brilliance. All of it requires management.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">What It Unlocks Downstream</h2>
+          
           
           
           
@@ -205,11 +220,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The close is the foundation everything strategic is built on. A rolling forecast is only as current as the actuals feeding it - a 20-day close means steering the business on last month’s picture. Board reporting is only as credible as the numbers’ consistency. And in diligence, close discipline is the first thing a buyer’s team tests, because it tells them whether every other number in the data room can be trusted.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Why Businesses Don’t Get There Alone</h2>
+          
           
           
           
@@ -220,6 +237,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The trap is that close discipline is nobody’s emergency. Every month there’s something more urgent than documenting the checklist, and so the close stays personal - it lives in one person’s head, takes as long as it takes, and breaks when that person is out. Escaping the trap is a 60-90 day process build: document, calendar, automate the reconciliation cadence, enforce the cutoffs. It’s the least glamorous project in finance, and it’s the one that makes every other project possible.</p>
+          
           
         </div>
       
@@ -247,6 +265,11 @@ input, button { font-family: inherit; }
         <p style="font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; margin: 0; color: var(--color-accent-700)">Related insights</p>
         <div style="display: flex; flex-direction: column; margin-top: 6px">
           
+            <a href="/insights/fractional-cfo-services-cost-and-when-you-need-one" style="display: block; text-decoration: none; color: var(--color-text); padding: 14px 0; border-bottom: 1px solid var(--color-neutral-200)">
+              <span style="display: block; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700; color: color-mix(in srgb, var(--color-text) 50%, transparent)">Full-Stack Finance · 11 min</span>
+              <span style="display: block; font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 15.5px; line-height: 23px; margin-top: 5px">Fractional CFO Services: Cost and When You Need One</span>
+            </a>
+          
             <a href="/insights/inflection-points-finance-function-cant-absorb" style="display: block; text-decoration: none; color: var(--color-text); padding: 14px 0; border-bottom: 1px solid var(--color-neutral-200)">
               <span style="display: block; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700; color: color-mix(in srgb, var(--color-text) 50%, transparent)">Full-Stack Finance · 3 min</span>
               <span style="display: block; font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 15.5px; line-height: 23px; margin-top: 5px">The Inflection Points an Ordinary Finance Function Can’t Absorb</span>
@@ -255,11 +278,6 @@ input, button { font-family: inherit; }
             <a href="/insights/hybridshore-not-offshore" style="display: block; text-decoration: none; color: var(--color-text); padding: 14px 0; border-bottom: 1px solid var(--color-neutral-200)">
               <span style="display: block; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700; color: color-mix(in srgb, var(--color-text) 50%, transparent)">Full-Stack Finance · 3 min</span>
               <span style="display: block; font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 15.5px; line-height: 23px; margin-top: 5px">Hybridshore, Not Offshore: What Changes When the Team Is Employed, Not Outsourced</span>
-            </a>
-          
-            <a href="/insights/chaos-clarity-confidence-growth-the-finance-ladder" style="display: block; text-decoration: none; color: var(--color-text); padding: 14px 0; border-bottom: 1px solid var(--color-neutral-200)">
-              <span style="display: block; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700; color: color-mix(in srgb, var(--color-text) 50%, transparent)">Full-Stack Finance · 3 min</span>
-              <span style="display: block; font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 15.5px; line-height: 23px; margin-top: 5px">Chaos to Clarity to Confidence to Growth: The Ladder Every Business Climbs</span>
             </a>
           
         </div>

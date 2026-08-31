@@ -66,6 +66,17 @@ input, button { font-family: inherit; }
 @media (max-width: 760px){
 .nav{flex-wrap:wrap;row-gap:10px}
 }
+
+/* Post body tables. The wrapper scrolls on its own so a wide table never
+   widens the page; min-width keeps the columns readable instead of squashing
+   them to nothing on a phone. */
+.post-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:26px 0 0;border:1px solid var(--color-neutral-200);border-radius:12px;background:#fff}
+.post-table-wrap:focus-visible{outline:2px solid var(--color-accent);outline-offset:2px}
+.post-table{border-collapse:collapse;width:100%;min-width:620px;font-size:15px;line-height:23px}
+.post-table th,.post-table td{text-align:left;vertical-align:top;padding:11px 16px;border-bottom:1px solid var(--color-neutral-200)}
+.post-table thead th{font-size:12px;letter-spacing:0.06em;text-transform:uppercase;color:var(--color-accent-800);background:var(--color-accent-100);white-space:nowrap}
+.post-table tbody tr:last-child td{border-bottom:0}
+.post-table td:first-child{font-weight:600}
 </style>
 
 <script type="application/ld+json" id="post-ld">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "What a $5M Company's Finance Function Actually Looks Like Inside", "description": "Most founders have never seen a functional finance department at their size. This piece maps the three-layer architecture that high-performing $5-10M businesses run, and what each layer is supposed to produce.", "keywords": "CFOServices, FP&A, FinOps, FinanceStrategy, FinanceExcellence, FinanceTeam, BusinessGrowth, FinancialOperations, SMB, SME, Startups, FounderLed", "datePublished": "2026-08-18", "dateModified": "2026-08-18", "articleSection": "Full-Stack Finance", "wordCount": 839, "timeRequired": "PT4M", "author": {"@type": "Organization", "name": "CFOLogic", "url": "https://cfologic.com/"}, "publisher": {"@type": "Organization", "name": "CFOLogic"}, "mainEntityOfPage": "https://cfologic.com/insights/what-a-5m-company-s-finance-function-actually-looks-like-ins"}</script>
@@ -173,6 +184,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Walk into most businesses doing $4–6M in annual revenue and ask to see the finance function. What you'll find is a capable bookkeeper, a tax CPA who shows up once a year, a controller who splits time across three clients, and a founder who has quietly become the de-facto CFO — spending four to six hours a week reconciling numbers nobody fully trusts.</p>
           
+          
         </div>
       
         <div>
@@ -180,6 +192,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">That's not a criticism. It's the natural consequence of building a business before building the infrastructure that supports it. But at some point — usually around the $3–5M mark — the patchwork stops working. Decisions start getting made on instinct. Cash surprises start becoming expensive.</p>
+          
           
         </div>
       
@@ -189,11 +202,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">So what does a well-functioning finance operation actually look like at this stage? Not what the textbooks say, but what the high-performing $5–10M businesses in practice have built.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">The Three-Layer Architecture</h2>
+          
           
           
           
@@ -205,6 +220,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The most useful frame is a pyramid. At the foundation, you have financial operations: accounts payable, accounts receivable, payroll, bank reconciliations, and month-end close. This is the machinery. If it runs well, everything above it is reliable. If it runs poorly, nothing above it can be trusted.</p>
           
+          
         </div>
       
         <div>
@@ -212,6 +228,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The middle layer is financial planning and analysis — budgeting, variance analysis, rolling forecasts, and the management reports that leadership actually reads. This is where raw data becomes a view of the business.</p>
+          
           
         </div>
       
@@ -221,11 +238,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">At the top is strategic finance: board reporting, scenario planning, investor communications, and the CFO-level judgment that ties financial outcomes to business decisions. This is the layer that most $5M businesses are completely missing — and the one that investors and acquirers look for first.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">What the Execution Engine Looks Like</h2>
+          
           
           
           
@@ -237,6 +256,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">At the FinOps layer, the benchmarks matter. According to the CPA.com &amp; AICPA PCPS Client Advisory Services Benchmark Survey (2022), top-performing CAS practices have moved well beyond bookkeeping — with 85% of respondents using workflow tools to track and route engagements, and 49% actively deploying budgeting and forecasting software. The shift from reactive bookkeeping to real-time advisory is well underway in the firms that serve this market.</p>
           
+          
         </div>
       
         <div>
@@ -244,6 +264,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Source: CPA.com &amp; AICPA PCPS Client Advisory Services (CAS) Benchmark Survey 2022.</p>
+          
           
         </div>
       
@@ -253,6 +274,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">In practical terms, a healthy FinOps layer means: invoices processed within two to three days, payables reconciled weekly, month-end close completed within five business days, and a clean general ledger that a new team member could navigate without a guided tour.</p>
           
+          
         </div>
       
         <div>
@@ -261,11 +283,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Most $5M businesses close in 15–20 days. Some close in 30. The gap between a 5-day close and a 20-day close is the gap between decision-making on current data and decision-making on last month's numbers.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">What the Middle Layer Produces</h2>
+          
           
           
           
@@ -277,6 +301,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The FP&amp;A function at this revenue stage doesn't need to be a department. It needs to produce, reliably, every month: a P&amp;L with actuals versus budget and forecast, a cash flow statement with a rolling 13-week projection, a dashboard of five to eight KPIs relevant to the business model, and a one-page narrative that tells leadership what the numbers mean.</p>
           
+          
         </div>
       
         <div>
@@ -285,11 +310,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">That's it. The businesses that have this built run their monthly reviews in 45 minutes. The ones that don't spend three hours in a spreadsheet trying to figure out which number is right before the meeting even starts.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">What the Strategic Layer Actually Does</h2>
+          
           
           
           
@@ -301,6 +328,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The 2024 CFO Survey published by Consero Global found that 79% of investor-backed companies now work with a finance and accounting partner — and that the CFOs who do report significantly better preparedness for funding events and audits than those who don't. The top challenge cited across the board: ensuring financial reporting is done on time (30% of respondents), followed by establishing well-defined financial processes (28%).</p>
           
+          
         </div>
       
         <div>
@@ -308,6 +336,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Source: Consero Global, 2024 CFO Survey: Challenges and Opportunities for Investor-Backed CFOs.</p>
+          
           
         </div>
       
@@ -317,6 +346,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">At the strategic level, the CFO function is doing three things that can't be delegated to a bookkeeper or a tax accountant: shaping the financial narrative for investors and the board, pressure-testing business decisions through scenario modeling, and spotting structural risks before they become expensive problems.</p>
           
+          
         </div>
       
         <div>
@@ -325,11 +355,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">For a $5M business, this doesn't require a full-time $250,000 CFO. It requires someone at that level of thinking, engaged at the right cadence — typically 8–15 hours a month — with the execution infrastructure to back them up.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Why Founders Underinvest Here</h2>
+          
           
           
           
@@ -341,6 +373,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The most common thing we hear from founders who finally build this out: 'I wish we'd done this two years ago.' The hesitation usually comes from one of three places: it feels like overhead rather than investment, the founder doesn't know what good looks like, or the patchwork has mostly worked so far.</p>
           
+          
         </div>
       
         <div>
@@ -348,6 +381,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The patchwork always mostly works — until it doesn't. A cash flow surprise, an acquisition offer that requires a data room in 30 days, a bank covenant that needs renegotiation. These moments expose every shortcut that was taken in finance infrastructure. The businesses that have built the pyramid in advance spend those moments executing. The ones that haven't spend them catching up.</p>
+          
           
         </div>
       
@@ -357,6 +391,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">—</p>
           
+          
         </div>
       
         <div>
@@ -364,6 +399,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">It takes about 30 minutes and gives you a clear picture of where you are and what the path forward looks like.</p>
+          
           
         </div>
       

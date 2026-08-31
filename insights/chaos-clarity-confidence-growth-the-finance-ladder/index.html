@@ -66,6 +66,17 @@ input, button { font-family: inherit; }
 @media (max-width: 760px){
 .nav{flex-wrap:wrap;row-gap:10px}
 }
+
+/* Post body tables. The wrapper scrolls on its own so a wide table never
+   widens the page; min-width keeps the columns readable instead of squashing
+   them to nothing on a phone. */
+.post-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:26px 0 0;border:1px solid var(--color-neutral-200);border-radius:12px;background:#fff}
+.post-table-wrap:focus-visible{outline:2px solid var(--color-accent);outline-offset:2px}
+.post-table{border-collapse:collapse;width:100%;min-width:620px;font-size:15px;line-height:23px}
+.post-table th,.post-table td{text-align:left;vertical-align:top;padding:11px 16px;border-bottom:1px solid var(--color-neutral-200)}
+.post-table thead th{font-size:12px;letter-spacing:0.06em;text-transform:uppercase;color:var(--color-accent-800);background:var(--color-accent-100);white-space:nowrap}
+.post-table tbody tr:last-child td{border-bottom:0}
+.post-table td:first-child{font-weight:600}
 </style>
 
 <script type="application/ld+json" id="post-ld">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Chaos to Clarity to Confidence to Growth: The Ladder Every Business Climbs", "description": "The four stages of a finance function, what each one feels like from the owner’s seat, and the specific work that moves you up a rung.", "keywords": "CFOServices, FP&A, FinOps, FinanceStrategy, BusinessGrowth, SMB, FounderLed", "datePublished": "2026-03-03", "dateModified": "2026-03-03", "articleSection": "Full-Stack Finance", "wordCount": 350, "timeRequired": "PT3M", "author": {"@type": "Organization", "name": "CFOLogic", "url": "https://cfologic.com/"}, "publisher": {"@type": "Organization", "name": "CFOLogic"}, "mainEntityOfPage": "https://cfologic.com/insights/chaos-clarity-confidence-growth-the-finance-ladder"}</script>
@@ -173,11 +184,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Ask an owner how they feel about their numbers and you’ll place their finance function on a four-rung ladder within a sentence. The ladder matters because each rung has a specific price of admission - and because trying to skip one is the most expensive mistake in growth-stage finance.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Chaos: Where Most Start</h2>
+          
           
           
           
@@ -189,11 +202,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Numbers spread across a bookkeeper, a tax accountant and a spreadsheet. Nothing joined up, nothing you’d bet on. The tell: the owner answers financial questions with “let me get back to you” and then doesn’t, because assembling the answer takes a week.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">First, Clarity</h2>
+          
           
           
           
@@ -205,11 +220,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Clarity is a close that lands on a date and one version of the numbers. You can finally see what the business actually earns. The work that buys it is controllership: close discipline, consistent categorization, reconciliations that happen weekly instead of at year-end, and reporting the owner actually reads. Nothing strategic is possible until this exists.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Then, Confidence</h2>
+          
           
           
           
@@ -221,11 +238,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Confidence is a forward view, not a rear-view. Margin by job, line or location. The hire, the price rise, the second site - modeled before you commit. The price of admission is FP&amp;A run as a discipline: a rolling forecast that’s updated monthly, a three-scenario budget, variance reviews with accountability. This is the rung where finance stops reporting the business and starts steering it.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Which Buys Growth</h2>
+          
           
           
           
@@ -237,11 +256,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Growth is capital raised, acquisitions made, new markets entered - on numbers a board, a bank or a buyer will accept. It requires transaction-grade infrastructure: a defensible three-statement model, a data room that survives professional diligence, and a financial narrative that holds up under hostile questioning.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Using the Ladder</h2>
+          
           
           
           
@@ -256,6 +277,7 @@ input, button { font-family: inherit; }
             </div>
           
           
+          
         </div>
       
         <div>
@@ -265,6 +287,7 @@ input, button { font-family: inherit; }
               <span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 999px; background: var(--color-accent); margin-top: 11px"></span>
               <span>Do the work of the current rung, not the one you wish you were on. Forecasts on a broken close are fiction.</span>
             </div>
+          
           
           
         </div>
@@ -278,6 +301,7 @@ input, button { font-family: inherit; }
             </div>
           
           
+          
         </div>
       
         <div>
@@ -285,6 +309,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The ladder is climbable at any size - we’ve watched $2M businesses reach confidence in two quarters. What it doesn’t permit is skipping.</p>
+          
           
         </div>
       

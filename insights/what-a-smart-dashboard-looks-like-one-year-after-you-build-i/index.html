@@ -66,6 +66,17 @@ input, button { font-family: inherit; }
 @media (max-width: 760px){
 .nav{flex-wrap:wrap;row-gap:10px}
 }
+
+/* Post body tables. The wrapper scrolls on its own so a wide table never
+   widens the page; min-width keeps the columns readable instead of squashing
+   them to nothing on a phone. */
+.post-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:26px 0 0;border:1px solid var(--color-neutral-200);border-radius:12px;background:#fff}
+.post-table-wrap:focus-visible{outline:2px solid var(--color-accent);outline-offset:2px}
+.post-table{border-collapse:collapse;width:100%;min-width:620px;font-size:15px;line-height:23px}
+.post-table th,.post-table td{text-align:left;vertical-align:top;padding:11px 16px;border-bottom:1px solid var(--color-neutral-200)}
+.post-table thead th{font-size:12px;letter-spacing:0.06em;text-transform:uppercase;color:var(--color-accent-800);background:var(--color-accent-100);white-space:nowrap}
+.post-table tbody tr:last-child td{border-bottom:0}
+.post-table td:first-child{font-weight:600}
 </style>
 
 <script type="application/ld+json" id="post-ld">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "What a Smart Dashboard Looks Like One Year After You Build It", "description": "Month one tells you where you are; month twelve predicts. What a dashboard becomes after a year of honest use.", "keywords": "CFOServices, FP&A, FinOps, DigitalFinance, FinanceExcellence, FinanceStrategy, BusinessGrowth, FinancialPlanning, SMB, SME, FounderLed, Startups, VentureFundedStartup", "datePublished": "2026-04-17", "dateModified": "2026-04-17", "articleSection": "Smart Dashboards", "wordCount": 735, "timeRequired": "PT3M", "author": {"@type": "Organization", "name": "CFOLogic", "url": "https://cfologic.com/"}, "publisher": {"@type": "Organization", "name": "CFOLogic"}, "mainEntityOfPage": "https://cfologic.com/insights/what-a-smart-dashboard-looks-like-one-year-after-you-build-i"}</script>
@@ -173,6 +184,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">When a financial dashboard is newly built, it feels like an achievement. The data is connected, the metrics are visible, and leadership has access to information they didn't have before. It's a genuine upgrade.</p>
           
+          
         </div>
       
         <div>
@@ -181,11 +193,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">What's harder to anticipate is what the dashboard becomes in the months that follow — and how different it looks at month twelve compared to month one. The metrics that seemed most important at the start are often not the ones the team actually uses. The data that turns out to matter most is often data that nobody thought to include initially. The patterns that become visible after six months of consistent tracking are the ones that change how the business is run.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">What Changes in the First Year</h2>
+          
           
           
           
@@ -197,6 +211,7 @@ input, button { font-family: inherit; }
           
           
           
+          
         </div>
       
         <div>
@@ -205,11 +220,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The first three months of dashboard use are primarily diagnostic. The team is learning to read the metrics consistently, understanding what normal looks like, and developing the habit of weekly review. The most valuable output of this phase is usually not actionable insight — it's calibration. Learning that gross margin is normally 47–49%, that DSO runs about 28 days for most clients, that operating expenses track within 5% of budget in most months. This baseline is the foundation for everything that follows.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Months 4–6: Pattern recognition</h2>
+          
           
           
           
@@ -221,6 +238,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">By month four or five, patterns start to emerge that weren't visible in the initial data. Revenue in the third month of the quarter is consistently stronger than the first month. Gross margin softens in months when onboarding costs are high. Cash conversion slows in December regardless of revenue performance. These patterns, once recognized, change how planning and operational decisions are made.</p>
           
+          
         </div>
       
         <div>
@@ -229,11 +247,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">This is also the phase where the first round of dashboard refinement typically happens. Metrics that turned out to be redundant or unactionable get replaced by ones that the weekly review consistently generates questions about. The dashboard evolves toward the specific intelligence needs of the specific business.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Months 7–12: Predictive intelligence</h2>
+          
           
           
           
@@ -245,6 +265,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">By the second half of year one, a well-maintained dashboard starts to produce forward-looking intelligence rather than just historical reporting. The seasonal patterns identified in months 4–6 become inputs to the quarterly forecast. The correlation between specific leading indicators (pipeline coverage, days to close, NPS trend) and lagging outcomes (revenue, retention, margin) becomes clear enough to use in planning.</p>
           
+          
         </div>
       
         <div>
@@ -253,11 +274,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The finance function's role shifts subtly but significantly: from reporting on what happened to anticipating what's likely to happen based on what is currently visible in the data.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">What Surprises Most Businesses</h2>
+          
           
           
           
@@ -269,6 +292,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The most common surprise in the first year of smart dashboard use is not what the metrics reveal about the business's weaknesses. It's what they reveal about strengths that weren't visible before — a customer segment with significantly better retention than the average, a product line with margins materially higher than the blended rate, a sales channel that generates better LTV at lower CAC.</p>
           
+          
         </div>
       
         <div>
@@ -276,6 +300,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The CPA.com CAS FP&amp;A Guide notes that effective FP&amp;A processes generate insights that allow organizations to identify both challenges and opportunities — and that the involvement of stakeholders across the business in interpreting those insights is what makes financial intelligence genuinely operational rather than merely analytical.</p>
+          
           
         </div>
       
@@ -285,6 +310,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Source: CPA.com, CAS Financial Planning &amp; Analysis Guide.</p>
           
+          
         </div>
       
         <div>
@@ -293,11 +319,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The businesses that make the most of their dashboards in year one are the ones that treat the weekly review as a genuine leadership conversation — not a reporting exercise — and that are willing to update their operating assumptions when the data challenges what they previously believed.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">The Year-Two Dashboard</h2>
+          
           
           
           
@@ -309,6 +337,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">By month twelve, the dashboard typically looks materially different from what was built in month one. Some metrics have been retired. New ones have been added. The format has been refined based on how the team actually uses the information. The data sources have been extended. And the team's relationship with financial data has changed: it's no longer something that the CFO produces and leadership receives — it's something leadership actively uses to run the business.</p>
           
+          
         </div>
       
         <div>
@@ -316,6 +345,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">That shift in relationship is the real deliverable of a smart financial dashboard. Not the tool itself — the habit it builds and the intelligence it generates over time.</p>
+          
           
         </div>
       
@@ -325,6 +355,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">—</p>
           
+          
         </div>
       
         <div>
@@ -332,6 +363,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">CFOLogic designs, builds, and evolves smart financial dashboards for $2–10M businesses — including the ongoing support and refinement that turns a good initial build into a genuinely operational intelligence tool. We'd be glad to show you what a year-one roadmap looks like.</p>
+          
           
         </div>
       

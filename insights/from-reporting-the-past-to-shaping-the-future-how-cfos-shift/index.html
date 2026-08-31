@@ -66,6 +66,17 @@ input, button { font-family: inherit; }
 @media (max-width: 760px){
 .nav{flex-wrap:wrap;row-gap:10px}
 }
+
+/* Post body tables. The wrapper scrolls on its own so a wide table never
+   widens the page; min-width keeps the columns readable instead of squashing
+   them to nothing on a phone. */
+.post-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:26px 0 0;border:1px solid var(--color-neutral-200);border-radius:12px;background:#fff}
+.post-table-wrap:focus-visible{outline:2px solid var(--color-accent);outline-offset:2px}
+.post-table{border-collapse:collapse;width:100%;min-width:620px;font-size:15px;line-height:23px}
+.post-table th,.post-table td{text-align:left;vertical-align:top;padding:11px 16px;border-bottom:1px solid var(--color-neutral-200)}
+.post-table thead th{font-size:12px;letter-spacing:0.06em;text-transform:uppercase;color:var(--color-accent-800);background:var(--color-accent-100);white-space:nowrap}
+.post-table tbody tr:last-child td{border-bottom:0}
+.post-table td:first-child{font-weight:600}
 </style>
 
 <script type="application/ld+json" id="post-ld">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "From Reporting the Past to Shaping the Future: How CFOs Shift the Finance Function's Center of Gravity", "description": "Moving finance's center of gravity from reporting to foresight is a 6-12 month operational project. Here is the build order.", "keywords": "CFOServices, FP&A, FinOps, FinanceStrategy, DigitalFinance, FinanceExcellence, FinancialPlanning, BusinessGrowth, SMB, SME, PEFundedBusiness, VentureFundedStartup, FractionalCFOFirm", "datePublished": "2026-05-18", "dateModified": "2026-05-18", "articleSection": "CFO Success Partners™", "wordCount": 638, "timeRequired": "PT3M", "author": {"@type": "Organization", "name": "CFOLogic", "url": "https://cfologic.com/"}, "publisher": {"@type": "Organization", "name": "CFOLogic"}, "mainEntityOfPage": "https://cfologic.com/insights/from-reporting-the-past-to-shaping-the-future-how-cfos-shift"}</script>
@@ -173,6 +184,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">There is a version of the CFO role that is fundamentally administrative: produce accurate historical financials, manage the audit relationship, ensure compliance, report to the board. In this version, finance is a record-keeping function — valuable, necessary, but not strategic.</p>
           
+          
         </div>
       
         <div>
@@ -180,6 +192,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">And there is another version: the CFO as a forward-looking intelligence function — not just accounting for what happened, but shaping what will happen, identifying risks before they materialize, modeling the financial implications of strategic decisions before they're made. This is the version that CEOs and boards increasingly expect, and the version that most finance functions are not yet built to deliver.</p>
+          
           
         </div>
       
@@ -189,11 +202,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The transition between these two versions is real and achievable. But it's not a strategic conversation — it's an operational project.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">What Has to Change</h2>
+          
           
           
           
@@ -205,11 +220,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The shift from backward to forward requires three foundational changes:</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">1. A reliable data foundation</h2>
+          
           
           
           
@@ -221,11 +238,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Forward-looking analysis is only as good as the historical data it's built on. A finance function that can't produce reliable actuals quickly cannot produce reliable forecasts at all. The starting point for any FP&amp;A transformation is a clean, fast close — and a general ledger that is coded consistently enough that historical trends are meaningful.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">2. An FP&amp;A layer</h2>
+          
           
           
           
@@ -237,6 +256,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">FP&amp;A is the bridge between historical reporting and forward intelligence. It produces the rolling forecasts, the variance analyses, the scenario models, and the KPI dashboards that transform financial data into operational guidance. According to the CPA.com CAS FP&amp;A Guide, effective FP&amp;A links corporate strategy to execution by providing executives with the information they need to make confident, informed choices about both short-term operations and long-term direction.</p>
           
+          
         </div>
       
         <div>
@@ -244,6 +264,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Source: CPA.com, CAS Financial Planning &amp; Analysis Guide.</p>
+          
           
         </div>
       
@@ -253,11 +274,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Building this layer — with a documented methodology, a consistent cadence, and outputs that leadership actually reads and acts on — is the core work of the transformation.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">3. A forward-first reporting cadence</h2>
+          
           
           
           
@@ -269,6 +292,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The monthly reporting package in a backward-looking finance function leads with actuals: here is what happened last month. The reporting package in a forward-looking function leads with context: here is what happened, here is what it means for our forward projections, and here are the decisions it implies for the next 60 days.</p>
           
+          
         </div>
       
         <div>
@@ -277,11 +301,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">This isn't a subtle formatting change — it requires different analytical work, a different meeting cadence, and a different set of expectations from the leadership team about what finance is supposed to produce.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">The Timeline</h2>
+          
           
           
           
@@ -293,11 +319,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The full transition from backward to forward typically takes 9–12 months for a $10–30M business. The first 90 days are about cleaning the foundation: improving the close, standardizing the GL, eliminating the reconciliation exceptions that make historical data unreliable. Months 4–6 are about building the FP&amp;A layer: the model architecture, the forecast methodology, the variance review process. Months 7–12 are about embedding the new cadence into the organization's operating rhythm and demonstrating, through consistent delivery, that the finance function can be depended on for forward intelligence rather than just historical record-keeping.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Why It Requires a Partner</h2>
+          
           
           
           
@@ -309,6 +337,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The challenge is that building a forward-looking finance function requires sustained execution bandwidth during a period when the CFO is also maintaining the existing backward-looking function. The books still have to close, the audit still has to happen, the board still has to get their reporting. The transformation work competes with ongoing operations for the same limited resource: the CFO's time.</p>
           
+          
         </div>
       
         <div>
@@ -316,6 +345,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">This is the structural case for a CFO Success Partner: a team that takes ownership of the transformation workstream while the CFO manages the ongoing operation — compressing a 12-month project into 6 months and ensuring it gets done rather than perpetually deferred.</p>
+          
           
         </div>
       
@@ -325,6 +355,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">—</p>
           
+          
         </div>
       
         <div>
@@ -332,6 +363,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">CFOLogic's CFO Success Partners™ practice has helped multiple finance functions make the transition from backward to forward-looking. If this transition is on your agenda — or should be — we'd be glad to discuss what a structured workplan would look like.</p>
+          
           
         </div>
       

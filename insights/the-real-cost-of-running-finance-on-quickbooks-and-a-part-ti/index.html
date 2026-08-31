@@ -66,6 +66,17 @@ input, button { font-family: inherit; }
 @media (max-width: 760px){
 .nav{flex-wrap:wrap;row-gap:10px}
 }
+
+/* Post body tables. The wrapper scrolls on its own so a wide table never
+   widens the page; min-width keeps the columns readable instead of squashing
+   them to nothing on a phone. */
+.post-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:26px 0 0;border:1px solid var(--color-neutral-200);border-radius:12px;background:#fff}
+.post-table-wrap:focus-visible{outline:2px solid var(--color-accent);outline-offset:2px}
+.post-table{border-collapse:collapse;width:100%;min-width:620px;font-size:15px;line-height:23px}
+.post-table th,.post-table td{text-align:left;vertical-align:top;padding:11px 16px;border-bottom:1px solid var(--color-neutral-200)}
+.post-table thead th{font-size:12px;letter-spacing:0.06em;text-transform:uppercase;color:var(--color-accent-800);background:var(--color-accent-100);white-space:nowrap}
+.post-table tbody tr:last-child td{border-bottom:0}
+.post-table td:first-child{font-weight:600}
 </style>
 
 <script type="application/ld+json" id="post-ld">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "The Real Cost of Running Finance on QuickBooks and a Part-Time Controller", "description": "Bookkeeping that works isn't a finance function that works. The gap has a measurable cost, and it crosses over around $2.5-3M in revenue.", "keywords": "CFOServices, FinOps, FP&A, FinanceStrategy, DigitalFinance, FinanceExcellence, FinancialOperations, BusinessGrowth, SMB, SME, FounderLed, Startups", "datePublished": "2026-08-03", "dateModified": "2026-08-03", "articleSection": "Full-Stack Finance", "wordCount": 596, "timeRequired": "PT3M", "author": {"@type": "Organization", "name": "CFOLogic", "url": "https://cfologic.com/"}, "publisher": {"@type": "Organization", "name": "CFOLogic"}, "mainEntityOfPage": "https://cfologic.com/insights/the-real-cost-of-running-finance-on-quickbooks-and-a-part-ti"}</script>
@@ -173,6 +184,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">This is not a critique of QuickBooks. It is, genuinely, very good software for what it's designed to do: bookkeeping and basic financial reporting for small businesses. For a business doing under $1M in revenue, it's often more than enough.</p>
           
+          
         </div>
       
         <div>
@@ -181,11 +193,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">But there's a version of the QuickBooks-and-controller setup that persists well past the point where it's adequate — through $3M, $5M, sometimes $8M — because the costs of under-investment in finance infrastructure are diffuse and slow-moving. They don't show up as a line item. They show up as friction, as missed opportunities, as founder hours spent on the wrong things.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">The Five Hidden Costs</h2>
+          
           
           
           
@@ -197,6 +211,7 @@ input, button { font-family: inherit; }
           
           
           
+          
         </div>
       
         <div>
@@ -205,11 +220,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">When your financial close takes 15–20 days and your management reports are built in Excel by your controller, the time from month-end to a usable picture of the business is often 3–4 weeks. That means every operating decision you make in the first half of the month is based on data that is 6–8 weeks old. In a $5M business with monthly revenue variability of even 10%, that lag is operationally significant.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">2. Forecast blindness</h2>
+          
           
           
           
@@ -221,11 +238,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">A bookkeeper records what happened. A part-time controller produces a P&amp;L. Neither of these produces a cash flow forecast, a rolling 12-month budget model, or a scenario analysis. The business is essentially flying without instruments — which works until it doesn't.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">3. Investor conversation quality</h2>
+          
           
           
           
@@ -237,11 +256,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">When a banker, investor, or acquirer asks about your unit economics, your revenue quality, or your forward projections, the quality of the answer depends entirely on the quality of the financial infrastructure behind it. A business that can answer these questions precisely, quickly, and with confidence is in a categorically different position than one that has to say 'let me get back to you on that.'</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">4. Founder time cost</h2>
+          
           
           
           
@@ -253,11 +274,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">This one is almost never quantified. Most founders doing $3–8M are spending four to eight hours a week on financial management tasks — reviewing reports, preparing for board conversations, responding to investor requests, troubleshooting reconciliation issues. At a conservative founder time valuation of $500/hour, that's $104,000–$208,000 per year in founder attention being spent on finance tasks. A well-structured finance function costs a fraction of that to run.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">5. The audit and diligence premium</h2>
+          
           
           
           
@@ -269,11 +292,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">When a transaction — an acquisition, a raise, a bank refinancing — requires historical financial diligence, the cost of cleaning up books that weren't maintained to a high standard is significant. Legal and advisory fees, management time, delayed timelines, and in some cases, reduced valuations when historical numbers can't be cleanly presented.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">The Transition Economics</h2>
+          
           
           
           
@@ -285,6 +310,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">A full-stack finance function for a $2–10M business — strategic CFO advisory, FP&amp;A, and FinOps execution — typically runs $25,000–$50,000 per year in a well-structured outsourced model. Set against the hidden costs described above, the economics of the investment are rarely close.</p>
           
+          
         </div>
       
         <div>
@@ -292,6 +318,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">According to the Ignition 2025 Pricing Benchmark, CFO and controller services are the fastest-growing segment of the accounting services market, with 62% of firms now offering these services compared to 56% in 2024. The growth reflects real demand from SMB founders who have reached the limit of the legacy model.</p>
+          
           
         </div>
       
@@ -301,6 +328,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Source: Ignition, 2025 U.S. Accounting and Tax Pricing Benchmark.</p>
           
+          
         </div>
       
         <div>
@@ -308,6 +336,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The question for most founders at $3–7M isn't whether the investment makes economic sense. It's recognizing that the status quo has a cost too — it's just a cost that doesn't appear on any invoice.</p>
+          
           
         </div>
       
@@ -317,6 +346,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">—</p>
           
+          
         </div>
       
         <div>
@@ -324,6 +354,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">CFOLogic offers full-stack finance for businesses in the $2–10M range at a price point designed for this stage. A conversation about your current setup and what an upgraded model would look like costs nothing.</p>
+          
           
         </div>
       

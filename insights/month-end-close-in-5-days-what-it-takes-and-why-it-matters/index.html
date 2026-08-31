@@ -66,6 +66,17 @@ input, button { font-family: inherit; }
 @media (max-width: 760px){
 .nav{flex-wrap:wrap;row-gap:10px}
 }
+
+/* Post body tables. The wrapper scrolls on its own so a wide table never
+   widens the page; min-width keeps the columns readable instead of squashing
+   them to nothing on a phone. */
+.post-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:26px 0 0;border:1px solid var(--color-neutral-200);border-radius:12px;background:#fff}
+.post-table-wrap:focus-visible{outline:2px solid var(--color-accent);outline-offset:2px}
+.post-table{border-collapse:collapse;width:100%;min-width:620px;font-size:15px;line-height:23px}
+.post-table th,.post-table td{text-align:left;vertical-align:top;padding:11px 16px;border-bottom:1px solid var(--color-neutral-200)}
+.post-table thead th{font-size:12px;letter-spacing:0.06em;text-transform:uppercase;color:var(--color-accent-800);background:var(--color-accent-100);white-space:nowrap}
+.post-table tbody tr:last-child td{border-bottom:0}
+.post-table td:first-child{font-weight:600}
 </style>
 
 <script type="application/ld+json" id="post-ld">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Month-End Close in 5 Days: What It Takes and Why It Matters", "description": "A five-day close is a decision-making advantage, not an accounting trophy. What the discipline involves, and how most businesses get there in 60-90 days.", "keywords": "FinOps, FP&A, CFOServices, FinancialOperations, FinanceExcellence, DigitalFinance, ProcessImprovement, SMB, SME, FounderLed, PEFundedBusiness", "datePublished": "2026-08-09", "dateModified": "2026-08-09", "articleSection": "Full-Stack Finance", "wordCount": 697, "timeRequired": "PT3M", "author": {"@type": "Organization", "name": "CFOLogic", "url": "https://cfologic.com/"}, "publisher": {"@type": "Organization", "name": "CFOLogic"}, "mainEntityOfPage": "https://cfologic.com/insights/month-end-close-in-5-days-what-it-takes-and-why-it-matters"}</script>
@@ -173,6 +184,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Every finance professional knows what a month-end close is. Fewer have worked inside a business where it genuinely runs in five days and watched what that does to decision quality.</p>
           
+          
         </div>
       
         <div>
@@ -181,11 +193,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The difference isn't incremental. A leadership team reviewing full-month financials by the 5th of the following month is operating in a fundamentally different information environment than one that gets them on the 20th. By the 20th, two-thirds of the new month has already happened. Decisions that could have been course corrections become reactions.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Why Most SMB Closes Run Long</h2>
+          
           
           
           
@@ -197,6 +211,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The causes of a slow close are almost always the same, regardless of the size of the business:</p>
           
+          
         </div>
       
         <div>
@@ -206,6 +221,7 @@ input, button { font-family: inherit; }
               <span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 999px; background: var(--color-accent); margin-top: 11px"></span>
               <span>Unreconciled transactions that pile up during the month and get resolved in bulk at close</span>
             </div>
+          
           
           
         </div>
@@ -219,6 +235,7 @@ input, button { font-family: inherit; }
             </div>
           
           
+          
         </div>
       
         <div>
@@ -228,6 +245,7 @@ input, button { font-family: inherit; }
               <span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 999px; background: var(--color-accent); margin-top: 11px"></span>
               <span>Intercompany or credit card reconciliations done manually at close rather than continuously</span>
             </div>
+          
           
           
         </div>
@@ -241,6 +259,7 @@ input, button { font-family: inherit; }
             </div>
           
           
+          
         </div>
       
         <div>
@@ -252,6 +271,7 @@ input, button { font-family: inherit; }
             </div>
           
           
+          
         </div>
       
         <div>
@@ -260,11 +280,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Most of these are process failures, not resource failures. Adding headcount doesn't fix a slow close if the underlying workflow hasn't been redesigned.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">The Architecture of a 5-Day Close</h2>
+          
           
           
           
@@ -276,11 +298,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">A five-day close runs on continuous accounting rather than end-of-month scramble. The key structural changes:</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Daily reconciliation</h2>
+          
           
           
           
@@ -292,11 +316,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Bank reconciliations and high-volume transaction categories (credit cards, major vendors) are reconciled daily or weekly rather than monthly. This eliminates the bulk reconciliation work that extends most closes by four to six days.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Pre-built accruals</h2>
+          
           
           
           
@@ -308,11 +334,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Standard accruals — rent, salaries, depreciation, insurance — are templated and pre-built into the close process. They don't require new analysis each month, just verification that actuals match expectations.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Hard AP cutoffs</h2>
+          
           
           
           
@@ -324,11 +352,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Vendor invoices received after the 25th of the month are accrued based on estimates and booked in the next cycle. This sounds counterintuitive but is standard practice in well-run finance functions. The alternative — holding AP open until all invoices arrive — extends closes indefinitely.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">A written close calendar</h2>
+          
           
           
           
@@ -340,11 +370,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Every step in the close process has a named owner and a specific due date. The calendar is shared, tracked, and reviewed. The CFO or controller can see exactly where the close stands at any point during the five-day window.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">What It Enables</h2>
+          
           
           
           
@@ -356,6 +388,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The operational benefits of a fast close are well-documented. According to the CPA.com CAS Financial Planning and Analysis Guide, FP&amp;A processes that are fed by timely, reliable financial data are significantly more effective at linking corporate strategy to execution — enabling rolling forecasts, variance analysis, and scenario planning that wouldn't be possible if the underlying data were always 20 days stale.</p>
           
+          
         </div>
       
         <div>
@@ -363,6 +396,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Source: CPA.com, CAS Financial Planning &amp; Analysis Guide.</p>
+          
           
         </div>
       
@@ -372,6 +406,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">In practice, a five-day close means: the management reporting package goes out on the 7th; the leadership team reviews it in a focused 45-minute meeting by the 10th; and any operational decisions triggered by the numbers are in flight within two weeks of month end. The full cycle from month end to action is two weeks rather than four.</p>
           
+          
         </div>
       
         <div>
@@ -380,11 +415,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">For a $5–10M business making 50 meaningful operational decisions a year, that compression in decision cycle time is a compounding advantage.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">The 90-Day Path</h2>
+          
           
           
           
@@ -396,6 +433,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">For a business currently closing in 15–20 days, the path to a five-day close typically runs through three phases. The first month is diagnostics: mapping the current close process step by step, identifying the three or four bottlenecks driving the timeline extension. Month two is redesign: building the new close calendar, implementing daily reconciliation, establishing AP cutoff rules. Month three is execution: running the new process with active management, resolving edge cases, and stabilizing the timeline.</p>
           
+          
         </div>
       
         <div>
@@ -403,6 +441,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Most businesses hit five days or fewer by the end of the 90-day cycle. The harder work is sustaining it — which requires the close process to be documented, owned, and reviewed quarterly rather than left to institutional memory.</p>
+          
           
         </div>
       
@@ -412,6 +451,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">—</p>
           
+          
         </div>
       
         <div>
@@ -419,6 +459,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">CFOLogic's FinOps practice specializes in building the financial operations infrastructure that makes a fast, reliable close possible. If your current close is running longer than it should, we're happy to walk through what a redesign would look like for your specific setup.</p>
+          
           
         </div>
       

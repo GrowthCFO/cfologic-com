@@ -66,6 +66,17 @@ input, button { font-family: inherit; }
 @media (max-width: 760px){
 .nav{flex-wrap:wrap;row-gap:10px}
 }
+
+/* Post body tables. The wrapper scrolls on its own so a wide table never
+   widens the page; min-width keeps the columns readable instead of squashing
+   them to nothing on a phone. */
+.post-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:26px 0 0;border:1px solid var(--color-neutral-200);border-radius:12px;background:#fff}
+.post-table-wrap:focus-visible{outline:2px solid var(--color-accent);outline-offset:2px}
+.post-table{border-collapse:collapse;width:100%;min-width:620px;font-size:15px;line-height:23px}
+.post-table th,.post-table td{text-align:left;vertical-align:top;padding:11px 16px;border-bottom:1px solid var(--color-neutral-200)}
+.post-table thead th{font-size:12px;letter-spacing:0.06em;text-transform:uppercase;color:var(--color-accent-800);background:var(--color-accent-100);white-space:nowrap}
+.post-table tbody tr:last-child td{border-bottom:0}
+.post-table td:first-child{font-weight:600}
 </style>
 
 <script type="application/ld+json" id="post-ld">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Board Confidence Is a Finance Deliverable", "description": "Boards don't award confidence for eloquence. They award it for consistency, credible forecasts and hard questions answered with precision - all finance deliverables.", "keywords": "CFOServices, FP&A, FinanceStrategy, FinancialLeadership, FinanceExcellence, InvestorReadiness, BusinessGrowth, SMB, SME, PEFundedBusiness, VentureFundedStartup, FractionalCFOFirm, FounderLed", "datePublished": "2026-05-15", "dateModified": "2026-05-15", "articleSection": "CFO Success Partners™", "wordCount": 658, "timeRequired": "PT3M", "author": {"@type": "Organization", "name": "CFOLogic", "url": "https://cfologic.com/"}, "publisher": {"@type": "Organization", "name": "CFOLogic"}, "mainEntityOfPage": "https://cfologic.com/insights/board-confidence-is-a-finance-deliverable"}</script>
@@ -173,6 +184,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Ask a board member what gives them confidence in a company's finance function and the answers converge quickly: consistent reporting delivered on time, forecasts that turn out to be reasonably accurate, a CFO who can answer a hard question in real time without having to follow up, and a general sense that if something were going wrong financially, they would know about it before it became a crisis.</p>
           
+          
         </div>
       
         <div>
@@ -181,11 +193,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">None of this is about personality or communication style. All of it is about operational infrastructure. Board confidence is not built in board meetings — it's built in the month-end close process, the forecast model, the management reporting package, and the internal review cadence that prepares the CFO for every stakeholder conversation they have.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">The Four Drivers of Board Confidence</h2>
+          
           
           
           
@@ -197,6 +211,7 @@ input, button { font-family: inherit; }
           
           
           
+          
         </div>
       
         <div>
@@ -204,6 +219,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The most reliable way to build board confidence is to deliver the same high-quality reporting package, on the same schedule, every month. Not occasionally excellent and sometimes late — consistently excellent and always on time. Consistency signals operational control. Inconsistency signals operational chaos, regardless of what the numbers themselves say.</p>
+          
           
         </div>
       
@@ -213,11 +229,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Boards learn to trust finance functions that behave predictably. They learn to distrust ones where the reporting quality varies based on how busy the team is or how smooth the close was.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">2. Forecast accuracy</h2>
+          
           
           
           
@@ -229,6 +247,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">A CFO who projects 10% revenue growth and delivers 10% revenue growth builds credibility. A CFO who projects 10% and delivers 5% — and who has an explanation for why — builds less credibility, but still maintains the relationship. A CFO who is consistently surprised by the gap between forecast and actuals has a forecast problem, not a communication problem.</p>
           
+          
         </div>
       
         <div>
@@ -236,6 +255,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The CPA.com CAS FP&amp;A Guide describes integrated financial planning as the practice of linking planning and budgeting to continuous performance monitoring — ensuring that forward projections are grounded in current performance data, not in original budget assumptions that may no longer reflect reality.</p>
+          
           
         </div>
       
@@ -245,6 +265,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Source: CPA.com, CAS Financial Planning &amp; Analysis Guide.</p>
           
+          
         </div>
       
         <div>
@@ -253,11 +274,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Forecasts that are updated regularly, with documented rationale for changes, are far more credible to boards than static projections that diverge from reality over time.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">3. The ability to answer hard questions</h2>
+          
           
           
           
@@ -269,11 +292,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">'What's our customer acquisition cost by channel?' 'What happens to cash if we add two salespeople?' 'What's the net margin on the new product line?' The CFOs who build the most board trust are the ones who can answer these questions precisely, in real time, without needing to follow up. That capability is not the result of being smart — it's the result of having built a finance function that tracks the right metrics and makes them accessible.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">4. Early warning on risks</h2>
+          
           
           
           
@@ -285,11 +310,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The most trust-building thing a CFO can do is tell the board about a problem before it's a crisis. 'I want to flag a potential cash pressure in Q3 based on our current AR aging and the deal timing we're projecting.' This communication — proactive, specific, and accompanied by the CFO's proposed response — signals that the finance function is functioning as a forward-looking intelligence operation rather than a record-keeping function.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">What This Requires</h2>
+          
           
           
           
@@ -301,6 +328,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Building the finance function that supports board-level confidence requires the infrastructure discussed throughout this series: a fast close, a reliable FP&amp;A layer, a forward-looking reporting cadence, and a CFO who is operating at the right level rather than absorbing execution work from below. The deliverable — board confidence — is the product of all of these working together.</p>
           
+          
         </div>
       
         <div>
@@ -308,6 +336,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">It's also worth noting what it doesn't require: a politically sophisticated communication strategy, an impressive PowerPoint template, or a CFO with extraordinary interpersonal skills. Boards are sophisticated. They build confidence in finance functions based on performance, not presentation.</p>
+          
           
         </div>
       
@@ -317,6 +346,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">—</p>
           
+          
         </div>
       
         <div>
@@ -324,6 +354,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">CFOLogic's CFO Success Partners™ practice helps CFOs build the operational infrastructure that supports board-level confidence. If the finance function's credibility with your board is not where it needs to be, the path there is operational — and we'd be glad to help you design it.</p>
+          
           
         </div>
       

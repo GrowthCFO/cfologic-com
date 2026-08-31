@@ -66,6 +66,17 @@ input, button { font-family: inherit; }
 @media (max-width: 760px){
 .nav{flex-wrap:wrap;row-gap:10px}
 }
+
+/* Post body tables. The wrapper scrolls on its own so a wide table never
+   widens the page; min-width keeps the columns readable instead of squashing
+   them to nothing on a phone. */
+.post-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:26px 0 0;border:1px solid var(--color-neutral-200);border-radius:12px;background:#fff}
+.post-table-wrap:focus-visible{outline:2px solid var(--color-accent);outline-offset:2px}
+.post-table{border-collapse:collapse;width:100%;min-width:620px;font-size:15px;line-height:23px}
+.post-table th,.post-table td{text-align:left;vertical-align:top;padding:11px 16px;border-bottom:1px solid var(--color-neutral-200)}
+.post-table thead th{font-size:12px;letter-spacing:0.06em;text-transform:uppercase;color:var(--color-accent-800);background:var(--color-accent-100);white-space:nowrap}
+.post-table tbody tr:last-child td{border-bottom:0}
+.post-table td:first-child{font-weight:600}
 </style>
 
 <script type="application/ld+json" id="post-ld">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "CFOs at $15–50M Companies Are Understaffed. Here's the Data.", "description": "Most $15-50M finance teams are staffed for the business of three years ago. The numbers behind the bandwidth gap, and the structure that closes it.", "keywords": "CFOServices, FP&A, FinOps, FinanceTeam, FinanceStrategy, FinanceExcellence, TalentRetention, BusinessGrowth, SMB, SME, PEFundedBusiness, VentureFundedStartup, FractionalCFOFirm", "datePublished": "2026-06-09", "dateModified": "2026-06-09", "articleSection": "CFO Success Partners™", "wordCount": 640, "timeRequired": "PT3M", "author": {"@type": "Organization", "name": "CFOLogic", "url": "https://cfologic.com/"}, "publisher": {"@type": "Organization", "name": "CFOLogic"}, "mainEntityOfPage": "https://cfologic.com/insights/cfos-at-15-50m-companies-are-understaffed-here-s-the-data"}</script>
@@ -173,6 +184,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">There is a particular kind of organizational underinvestment that's easy to miss because it doesn't look like underinvestment from the outside. The company is growing. The CFO is smart and capable. The finance function appears to be working — the books close, the reports come out, the audit gets done.</p>
           
+          
         </div>
       
         <div>
@@ -180,6 +192,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">What's harder to see from the outside is what's not getting done. The FP&amp;A function that was supposed to be built six months ago. The internal controls documentation that has been on the roadmap for a year. The management reporting package that the board has asked for twice and still doesn't exist. The 13-week cash forecast that the CFO knows the business needs.</p>
+          
           
         </div>
       
@@ -189,11 +202,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">These aren't failures of vision. They're failures of staffing — specifically, a finance function that was designed for a smaller business and hasn't scaled to match the organization around it.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">The Staffing Gap in Context</h2>
+          
           
           
           
@@ -205,6 +220,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The CPA.com &amp; AICPA PCPS CAS Benchmark Survey found that filling the talent pipeline is consistently among the top operational challenges for finance practices — with demand for skilled finance professionals growing faster than the supply of people who can do the work. For in-house finance functions at growth-stage companies, the challenge is compounded by budget constraints: the company may not be large enough to justify the fully-loaded cost of additional senior finance staff, but it's generating demands on the finance function that exceed the existing team's capacity.</p>
           
+          
         </div>
       
         <div>
@@ -212,6 +228,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Source: CPA.com &amp; AICPA PCPS Client Advisory Services (CAS) Benchmark Survey 2022.</p>
+          
           
         </div>
       
@@ -221,11 +238,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The practical result at most $15–50M companies is a finance function where the CFO is operating two levels down from where they should be — handling FP&amp;A work that should be done by a financial analyst, and handling operational finance that should be done by a controller. The strategic work — the board relationships, the capital allocation decisions, the investor narrative — gets less time than it deserves.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Three Indicators of a Staffed-for-Yesterday Finance Function</h2>
+          
           
           
           
@@ -237,6 +256,7 @@ input, button { font-family: inherit; }
           
           
           
+          
         </div>
       
         <div>
@@ -245,11 +265,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">If the CFO is spending more than 4 hours a month in Excel building or maintaining financial models, the FP&amp;A layer is missing. CFOs should be reviewing models and using them to make decisions — not building them from scratch every quarter.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Reporting is late more than once a quarter</h2>
+          
           
           
           
@@ -261,11 +283,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Consistent reporting latency is almost always a staffing and process problem. A well-staffed finance function with documented processes produces management reports on time, every month. Latency is a signal that the team is stretched — that close process demands are competing with reporting demands with insufficient capacity for both.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">The initiative backlog hasn't moved in six months</h2>
+          
           
           
           
@@ -277,11 +301,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Every CFO has a list of things that need to get done. If that list hasn't meaningfully shortened in six months, the function doesn't have the execution capacity to advance strategic initiatives while managing ongoing operations. This is the clearest indicator that the staffing model needs to change.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">The Right Structure</h2>
+          
           
           
           
@@ -293,6 +319,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The solution is rarely simply adding headcount. Adding a financial analyst doesn't solve an FP&amp;A problem if the analyst has no model architecture to work within. Adding a controller doesn't solve an operations problem if the processes are undocumented and variable.</p>
           
+          
         </div>
       
         <div>
@@ -300,6 +327,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The most effective structural upgrade for a $15–50M finance function is a combination of targeted in-house hires (usually one analyst and a strengthened controller) supported by outsourced execution for the FinOps and FP&amp;A work that can be delivered more cost-effectively through a structured partner. This hybrid model gives the CFO the in-house presence they need for day-to-day management while providing the execution depth to drive strategic initiatives forward.</p>
+          
           
         </div>
       
@@ -309,6 +337,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">—</p>
           
+          
         </div>
       
         <div>
@@ -316,6 +345,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">CFOLogic's CFO Success Partners™ practice is designed to provide the execution depth that understaffed finance functions need — without the cost and timeline of a full in-house team build. We'd welcome a conversation about what the right structure looks like for your specific situation.</p>
+          
           
         </div>
       

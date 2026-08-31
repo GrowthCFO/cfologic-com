@@ -66,6 +66,17 @@ input, button { font-family: inherit; }
 @media (max-width: 760px){
 .nav{flex-wrap:wrap;row-gap:10px}
 }
+
+/* Post body tables. The wrapper scrolls on its own so a wide table never
+   widens the page; min-width keeps the columns readable instead of squashing
+   them to nothing on a phone. */
+.post-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:26px 0 0;border:1px solid var(--color-neutral-200);border-radius:12px;background:#fff}
+.post-table-wrap:focus-visible{outline:2px solid var(--color-accent);outline-offset:2px}
+.post-table{border-collapse:collapse;width:100%;min-width:620px;font-size:15px;line-height:23px}
+.post-table th,.post-table td{text-align:left;vertical-align:top;padding:11px 16px;border-bottom:1px solid var(--color-neutral-200)}
+.post-table thead th{font-size:12px;letter-spacing:0.06em;text-transform:uppercase;color:var(--color-accent-800);background:var(--color-accent-100);white-space:nowrap}
+.post-table tbody tr:last-child td{border-bottom:0}
+.post-table td:first-child{font-weight:600}
 </style>
 
 <script type="application/ld+json" id="post-ld">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "How Founders Without a Finance Background Stay on Top of Their Numbers", "description": "Twenty minutes, five numbers, three questions a week: how non-finance founders stay genuinely on top of the business.", "keywords": "CFOServices, FP&A, FinOps, FinanceStrategy, DigitalFinance, BusinessGrowth, FinanceExcellence, FinancialPlanning, SMB, SME, FounderLed, Startups, VentureFundedStartup", "datePublished": "2026-05-06", "dateModified": "2026-05-06", "articleSection": "Smart Dashboards", "wordCount": 658, "timeRequired": "PT3M", "author": {"@type": "Organization", "name": "CFOLogic", "url": "https://cfologic.com/"}, "publisher": {"@type": "Organization", "name": "CFOLogic"}, "mainEntityOfPage": "https://cfologic.com/insights/how-founders-without-a-finance-background-stay-on-top-of-the"}</script>
@@ -173,6 +184,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Every founder who built a business without a finance background has had the same experience at some point: a finance professional places a 15-page financial report in front of them, walks them through it for 30 minutes, and they leave the room understanding roughly as much as when they walked in. Except now they feel vaguely inadequate.</p>
           
+          
         </div>
       
         <div>
@@ -181,11 +193,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The problem in that situation is not the founder's financial literacy. The problem is the report. A report designed to satisfy an accountant is not the same as a report designed to support a founder's decision-making. And the gap between those two things is almost always the cause of what gets misdiagnosed as financial disengagement.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">What Founders Actually Need</h2>
+          
           
           
           
@@ -197,6 +211,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">A founder running a $5M business needs to be able to answer five questions every week:</p>
           
+          
         </div>
       
         <div>
@@ -206,6 +221,7 @@ input, button { font-family: inherit; }
               <span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 999px; background: var(--color-accent); margin-top: 11px"></span>
               <span>How much cash do I have, and how does that compare to this time last month?</span>
             </div>
+          
           
           
         </div>
@@ -219,6 +235,7 @@ input, button { font-family: inherit; }
             </div>
           
           
+          
         </div>
       
         <div>
@@ -228,6 +245,7 @@ input, button { font-family: inherit; }
               <span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 999px; background: var(--color-accent); margin-top: 11px"></span>
               <span>What is my current gross margin, and has it changed materially since last quarter?</span>
             </div>
+          
           
           
         </div>
@@ -241,6 +259,7 @@ input, button { font-family: inherit; }
             </div>
           
           
+          
         </div>
       
         <div>
@@ -252,6 +271,7 @@ input, button { font-family: inherit; }
             </div>
           
           
+          
         </div>
       
         <div>
@@ -260,11 +280,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">These five questions don't require a finance degree to answer. They require a dashboard that surfaces the answers without requiring the founder to dig for them.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">The 20-Minute Weekly Review</h2>
+          
           
           
           
@@ -276,6 +298,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The most financially effective founders we've worked with share a common habit: a weekly, time-boxed financial review. Not a monthly board-style meeting. A 20-minute standing review of a small number of key metrics, conducted at the same time every week, with the same agenda.</p>
           
+          
         </div>
       
         <div>
@@ -284,11 +307,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The agenda is always the same: current cash position, revenue-to-plan, gross margin, AR aging, and the top three financial questions for the next 30 days. The consistency of the format is what makes it valuable — the founder learns to read the dashboard the same way every week, and anomalies become immediately visible because the pattern is so familiar.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">The Translation Function</h2>
+          
           
           
           
@@ -300,6 +325,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The most valuable thing a finance partner can do for a non-finance founder is not produce sophisticated analysis — it's translate. Translate the numbers into the language of business decisions. Not 'EBITDA was $127K in October, representing a 12.4% margin' — but 'We made $127K of operating profit in October, which is in line with plan. The main risk heading into November is that two large invoices totaling $80K are now 45 days overdue. If those don't collect by mid-month, we'll be tighter on cash than our forecast assumes.'</p>
           
+          
         </div>
       
         <div>
@@ -307,6 +333,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The second version doesn't require a financial background to understand. It also tells the founder exactly what decision is in front of them: follow up on those two invoices.</p>
+          
           
         </div>
       
@@ -316,6 +343,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The CPA.com CAS FP&amp;A Guide describes the FP&amp;A function as serving an intelligence role for executives — equipping decision-makers with the information they need to make confident choices aligned with both short-term operations and long-term vision. For founders without finance backgrounds, the 'intelligence' framing is the right one: the finance function exists to inform decisions, not to produce complexity.</p>
           
+          
         </div>
       
         <div>
@@ -324,11 +352,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Source: CPA.com, CAS Financial Planning &amp; Analysis Guide.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Building the Right Habit</h2>
+          
           
           
           
@@ -340,6 +370,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The weekly review habit requires three things: the right dashboard (see the previous piece in this series), a finance partner who prepares a brief narrative alongside the numbers, and a calendar commitment from the founder to protect the 20 minutes.</p>
           
+          
         </div>
       
         <div>
@@ -347,6 +378,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The founders who struggle most with financial oversight are not the ones without finance backgrounds — they're the ones whose financial information arrives in formats that require translation before they can use it. Fix the format, and the engagement follows.</p>
+          
           
         </div>
       
@@ -356,6 +388,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">—</p>
           
+          
         </div>
       
         <div>
@@ -363,6 +396,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">CFOLogic builds financial dashboards and weekly reporting packages specifically designed for founders without finance backgrounds — presenting the right information in the right format to support the decisions that matter most. If financial oversight has felt harder than it should be, we'd welcome a conversation.</p>
+          
           
         </div>
       

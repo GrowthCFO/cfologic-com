@@ -66,6 +66,17 @@ input, button { font-family: inherit; }
 @media (max-width: 760px){
 .nav{flex-wrap:wrap;row-gap:10px}
 }
+
+/* Post body tables. The wrapper scrolls on its own so a wide table never
+   widens the page; min-width keeps the columns readable instead of squashing
+   them to nothing on a phone. */
+.post-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:26px 0 0;border:1px solid var(--color-neutral-200);border-radius:12px;background:#fff}
+.post-table-wrap:focus-visible{outline:2px solid var(--color-accent);outline-offset:2px}
+.post-table{border-collapse:collapse;width:100%;min-width:620px;font-size:15px;line-height:23px}
+.post-table th,.post-table td{text-align:left;vertical-align:top;padding:11px 16px;border-bottom:1px solid var(--color-neutral-200)}
+.post-table thead th{font-size:12px;letter-spacing:0.06em;text-transform:uppercase;color:var(--color-accent-800);background:var(--color-accent-100);white-space:nowrap}
+.post-table tbody tr:last-child td{border-bottom:0}
+.post-table td:first-child{font-weight:600}
 </style>
 
 <script type="application/ld+json" id="post-ld">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "The Fractional CFO's Unspoken Problem", "description": "Fractional CFOs sell judgment. The unspoken question is who implements it, and it decides more client outcomes than the advice itself.", "keywords": "CFOServices, FP&A, FinOps, FinanceStrategy, FinanceTeam, FinancialLeadership, FinanceExcellence, BusinessGrowth, SMB, SME, FractionalCFOFirm, PEFundedBusiness, VentureFundedStartup, FounderLed", "datePublished": "2026-06-03", "dateModified": "2026-06-03", "articleSection": "CFO Success Partners™", "wordCount": 645, "timeRequired": "PT3M", "author": {"@type": "Organization", "name": "CFOLogic", "url": "https://cfologic.com/"}, "publisher": {"@type": "Organization", "name": "CFOLogic"}, "mainEntityOfPage": "https://cfologic.com/insights/the-fractional-cfo-s-unspoken-problem"}</script>
@@ -173,6 +184,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The fractional CFO market has grown substantially over the past five years. The model makes economic sense for SMBs: access to senior financial expertise at a cost structure that's appropriate for the revenue stage. For many $2–15M businesses, a fractional CFO is exactly the right answer.</p>
           
+          
         </div>
       
         <div>
@@ -181,11 +193,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">But the model has a structural tension that rarely gets discussed in the marketing materials for fractional CFO services: the advice is strategic, but implementation is almost always left to the client's existing team — a team that, in most cases, was not built to execute strategic finance initiatives.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">The Implementation Gap</h2>
+          
           
           
           
@@ -197,6 +211,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Consider a fractional CFO working across four clients at 10 hours per client per month. In those 10 hours, they're reviewing financials, meeting with the CEO and board, making strategic recommendations, and handling investor or bank relationships. The actual execution of those recommendations — building the model, redesigning the close process, implementing the new reporting framework — has to happen somewhere else.</p>
           
+          
         </div>
       
         <div>
@@ -204,6 +219,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">In practice, it often doesn't happen at all, or happens very slowly. The client's controller tries to implement the new close process while managing ongoing operations. The financial analyst builds a new budget model in the gaps between their other responsibilities. Progress is incremental and often insufficient.</p>
+          
           
         </div>
       
@@ -213,11 +229,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The fractional CFO returns next month, sees that the initiative from last month has barely moved, and restates the recommendation. The cycle repeats. The client is paying for strategic advice they're not fully able to act on.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">What Top Fractional CFOs Do Differently</h2>
+          
           
           
           
@@ -229,6 +247,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The fractional CFOs who produce the most consistent client outcomes have solved this problem in one of two ways. Some have built small delivery teams — junior analysts and controllers who work alongside them on client engagements. Others have formed partnerships with outsourced finance providers who handle the execution layer while the CFO handles strategy.</p>
           
+          
         </div>
       
         <div>
@@ -236,6 +255,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Both approaches reflect the same insight: the value of fractional CFO advice is multiplied when there's a reliable mechanism for implementation. Strategy without execution is expensive consulting that the client can't fully act on.</p>
+          
           
         </div>
       
@@ -245,6 +265,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The CPA.com &amp; AICPA PCPS CAS Benchmark Survey found that the most effective CAS and finance advisory practices are those that combine advisory services with execution capabilities — using technology and delivery infrastructure to scale their capacity without proportionally scaling their headcount. The fractional CFO market is moving in the same direction.</p>
           
+          
         </div>
       
         <div>
@@ -253,11 +274,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Source: CPA.com &amp; AICPA PCPS Client Advisory Services (CAS) Benchmark Survey 2022.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">For Clients of Fractional CFOs</h2>
+          
           
           
           
@@ -269,6 +292,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">If you're working with a fractional CFO — or evaluating one — there are three questions worth asking about implementation:</p>
           
+          
         </div>
       
         <div>
@@ -278,6 +302,7 @@ input, button { font-family: inherit; }
               <span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 999px; background: var(--color-accent); margin-top: 11px"></span>
               <span>When you make a recommendation, who is responsible for implementing it? How is that handoff managed?</span>
             </div>
+          
           
           
         </div>
@@ -291,6 +316,7 @@ input, button { font-family: inherit; }
             </div>
           
           
+          
         </div>
       
         <div>
@@ -302,6 +328,7 @@ input, button { font-family: inherit; }
             </div>
           
           
+          
         </div>
       
         <div>
@@ -310,11 +337,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The answers to these questions will tell you more about the likely value of the engagement than any assessment of the CFO's strategic capabilities. Strategic capability matters enormously. It only produces value when paired with execution capacity.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">The CFO Success Partners™ Model as a Solution</h2>
+          
           
           
           
@@ -326,6 +355,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The CFO Success Partners™ model is designed to address this gap directly — whether the CFO is in-house or fractional. It provides a structured execution partner that owns the implementation of CFO-designed initiatives, with professional accountability for outcomes rather than effort.</p>
           
+          
         </div>
       
         <div>
@@ -333,6 +363,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">For fractional CFOs, it's the execution layer that completes the model. For their clients, it's the mechanism that converts strategic advice into operational results.</p>
+          
           
         </div>
       
@@ -342,6 +373,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">—</p>
           
+          
         </div>
       
         <div>
@@ -349,6 +381,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">CFOLogic's CFO Success Partners™ practice works alongside fractional and in-house CFOs as a structured execution partner. If you're a fractional CFO looking for a delivery partner, or a business looking to get more from your fractional CFO engagement, we'd welcome a conversation.</p>
+          
           
         </div>
       

@@ -66,6 +66,17 @@ input, button { font-family: inherit; }
 @media (max-width: 760px){
 .nav{flex-wrap:wrap;row-gap:10px}
 }
+
+/* Post body tables. The wrapper scrolls on its own so a wide table never
+   widens the page; min-width keeps the columns readable instead of squashing
+   them to nothing on a phone. */
+.post-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:26px 0 0;border:1px solid var(--color-neutral-200);border-radius:12px;background:#fff}
+.post-table-wrap:focus-visible{outline:2px solid var(--color-accent);outline-offset:2px}
+.post-table{border-collapse:collapse;width:100%;min-width:620px;font-size:15px;line-height:23px}
+.post-table th,.post-table td{text-align:left;vertical-align:top;padding:11px 16px;border-bottom:1px solid var(--color-neutral-200)}
+.post-table thead th{font-size:12px;letter-spacing:0.06em;text-transform:uppercase;color:var(--color-accent-800);background:var(--color-accent-100);white-space:nowrap}
+.post-table tbody tr:last-child td{border-bottom:0}
+.post-table td:first-child{font-weight:600}
 </style>
 
 <script type="application/ld+json" id="post-ld">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Investor-Ready in 90 Days: What It Actually Takes to Clean Up Your Financial House", "description": "Clean books are the entry ticket, not the destination. What professional diligence actually tests, and the 90-day sequence that prepares you for it.", "keywords": "CFOServices, FP&A, FinOps, DealSupport, DueDiligence, FinanceStrategy, InvestorReadiness, FinanceExcellence, BusinessGrowth, FinancialOperations, SMB, SME, FounderLed, VentureFundedStartup, PEFundedBusiness, Startups", "datePublished": "2026-07-15", "dateModified": "2026-07-15", "articleSection": "Full-Stack Finance", "wordCount": 703, "timeRequired": "PT3M", "author": {"@type": "Organization", "name": "CFOLogic", "url": "https://cfologic.com/"}, "publisher": {"@type": "Organization", "name": "CFOLogic"}, "mainEntityOfPage": "https://cfologic.com/insights/investor-ready-in-90-days-what-it-actually-takes-to-clean-up"}</script>
@@ -173,6 +184,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The phrase 'investor-ready financials' gets used loosely. It tends to conjure an image of clean books and organized spreadsheets. That's table stakes. What investors and acquirers are actually looking for goes considerably deeper — and the gap between where most $3–8M businesses start and where they need to be is larger than most founders expect.</p>
           
+          
         </div>
       
         <div>
@@ -181,11 +193,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The 90-day clean-up is doable. But it requires honest diagnosis of exactly what needs to be fixed and a disciplined workplan to fix it — not a rush of activity in the final weeks before a data room opens.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">What Diligence Actually Looks Like</h2>
+          
           
           
           
@@ -197,6 +211,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">A professional investor conducting financial diligence on a $5–10M business is working through several layers simultaneously. They want to verify that the historical financials are accurate (what happened). They want to understand the quality of those earnings (what the financial performance actually represents). They want to evaluate the forward-looking model (what the business is likely to do). And they want to assess the process maturity that produced those financials (whether the numbers can be trusted and reproduced).</p>
           
+          
         </div>
       
         <div>
@@ -205,11 +220,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">That last piece — process maturity — is where most SMBs fall short. A business that can produce accurate historical financials but can't explain how they were produced, or that has reconciliation exceptions it can't explain, or that has revenue recognition practices that aren't clearly documented, will slow down or complicate any transaction.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">The 90-Day Roadmap</h2>
+          
           
           
           
@@ -221,6 +238,7 @@ input, button { font-family: inherit; }
           
           
           
+          
         </div>
       
         <div>
@@ -228,6 +246,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The first 30 days are about understanding exactly what exists and what needs to change. This typically includes: a full review of the general ledger for the last 24–36 months, identification of any reconciling items or classification inconsistencies, assessment of revenue recognition practices against the applicable accounting standard, and a review of the AP and AR aging for stale items.</p>
+          
           
         </div>
       
@@ -237,11 +256,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Most businesses find a handful of issues at this stage. A few revenue line items classified inconsistently across periods. Some expenses that should be capitalized, or vice versa. Old receivables that are effectively uncollectable but haven't been reserved. These aren't crises — but they need to be resolved before diligence starts, not during it.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Days 31–60: Reporting and Narrative</h2>
+          
           
           
           
@@ -253,6 +274,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The second phase builds the reporting infrastructure. This means a full three-statement model (P&amp;L, balance sheet, cash flow) with 24–36 months of history, presented consistently. A management reporting package that tells a coherent story about the business — revenue trends, margin trajectory, key cost drivers. A KPI dashboard that captures the metrics most relevant to the business model and that can be reconciled back to the financials.</p>
           
+          
         </div>
       
         <div>
@@ -261,11 +283,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The narrative matters as much as the numbers. Investors who understand exactly why gross margin dipped in Q2 of the prior year — because of a specific client situation that has since been resolved — are far more comfortable than investors who find an unexplained anomaly and have to form their own theories.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Days 61–90: Forward Model and Data Room</h2>
+          
           
           
           
@@ -277,11 +301,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The final phase builds the forward-looking model and assembles the data room. The financial model should cover the base, upside, and downside scenarios discussed earlier in this series. The data room organization should anticipate the diligence request list — standard items include three years of financial statements, the current budget and operating model, key contracts, IP documentation, and organizational charts.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">The Cost of Waiting</h2>
+          
           
           
           
@@ -293,6 +319,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The Consero 2024 CFO Survey found that the most common challenge investor-backed CFOs face is ensuring financial reporting is done on time. In a transaction context, 'on time' means before diligence starts — because financials produced during diligence are under scrutiny in real time, and any issue that surfaces creates delay, negotiating leverage for the buyer, or both.</p>
           
+          
         </div>
       
         <div>
@@ -300,6 +327,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Source: Consero Global, 2024 CFO Survey: Challenges and Opportunities for Investor-Backed CFOs.</p>
+          
           
         </div>
       
@@ -309,6 +337,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The businesses that close fastest are the ones where diligence is a confirmation exercise — where the materials are already prepared, the narrative is already clear, and the questions investors ask have already been anticipated and answered. That position is built over 18–24 months of disciplined financial management, not in the final sprint before a deal.</p>
           
+          
         </div>
       
         <div>
@@ -317,6 +346,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">—</p>
           
+          
         </div>
       
         <div>
@@ -324,6 +354,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">CFOLogic has supported businesses through multiple fundraising and M&amp;A processes. If you're thinking about a transaction in the next 12–18 months, the best time to start building is now.</p>
+          
           
         </div>
       

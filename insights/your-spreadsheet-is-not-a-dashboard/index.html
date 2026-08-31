@@ -66,6 +66,17 @@ input, button { font-family: inherit; }
 @media (max-width: 760px){
 .nav{flex-wrap:wrap;row-gap:10px}
 }
+
+/* Post body tables. The wrapper scrolls on its own so a wide table never
+   widens the page; min-width keeps the columns readable instead of squashing
+   them to nothing on a phone. */
+.post-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:26px 0 0;border:1px solid var(--color-neutral-200);border-radius:12px;background:#fff}
+.post-table-wrap:focus-visible{outline:2px solid var(--color-accent);outline-offset:2px}
+.post-table{border-collapse:collapse;width:100%;min-width:620px;font-size:15px;line-height:23px}
+.post-table th,.post-table td{text-align:left;vertical-align:top;padding:11px 16px;border-bottom:1px solid var(--color-neutral-200)}
+.post-table thead th{font-size:12px;letter-spacing:0.06em;text-transform:uppercase;color:var(--color-accent-800);background:var(--color-accent-100);white-space:nowrap}
+.post-table tbody tr:last-child td{border-bottom:0}
+.post-table td:first-child{font-weight:600}
 </style>
 
 <script type="application/ld+json" id="post-ld">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Your Spreadsheet Is Not a Dashboard", "description": "Calculation tools and decision tools look alike in a grid. Confusing them is why most SMB 'dashboards' don't change any decisions.", "keywords": "CFOServices, FP&A, FinOps, DigitalFinance, FinanceExcellence, AIinFinance, FinanceStrategy, BusinessGrowth, SMB, SME, FounderLed, Startups, VentureFundedStartup", "datePublished": "2026-05-09", "dateModified": "2026-05-09", "articleSection": "Smart Dashboards", "wordCount": 644, "timeRequired": "PT3M", "author": {"@type": "Organization", "name": "CFOLogic", "url": "https://cfologic.com/"}, "publisher": {"@type": "Organization", "name": "CFOLogic"}, "mainEntityOfPage": "https://cfologic.com/insights/your-spreadsheet-is-not-a-dashboard"}</script>
@@ -173,6 +184,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Walk into most $5M businesses and ask to see the financial dashboard. What you'll typically find is a carefully maintained Excel workbook — built by someone with genuine spreadsheet skill — that consolidates data from QuickBooks, the CRM, and sometimes a payroll system into a collection of tabs, charts, and summary tables.</p>
           
+          
         </div>
       
         <div>
@@ -180,6 +192,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">It's impressive work. It's not a dashboard.</p>
+          
           
         </div>
       
@@ -189,6 +202,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">A dashboard is a decision tool. It presents the minimum information required for a specific decision in the format that makes acting on it easiest. A spreadsheet is a calculation tool. It records, calculates, and organizes data in whatever structure the builder found useful at the time of construction.</p>
           
+          
         </div>
       
         <div>
@@ -197,11 +211,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The distinction matters because decision tools and calculation tools have different design requirements — and using one in place of the other produces predictable failure modes.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">The Failure Modes of Spreadsheet Dashboards</h2>
+          
           
           
           
@@ -213,6 +229,7 @@ input, button { font-family: inherit; }
           
           
           
+          
         </div>
       
         <div>
@@ -221,11 +238,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The person who built the spreadsheet can navigate it fluently. Everyone else needs a guided tour. A real dashboard requires no explanation — the information is presented in the format that makes the key question answerable without assistance. If the CFO has to walk the CEO through the spreadsheet every month, it's not a dashboard.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">They're stale by the time they're ready</h2>
+          
           
           
           
@@ -237,11 +256,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">A spreadsheet dashboard is typically updated manually — someone exports data from QuickBooks, pastes it into the template, adjusts the formulas, checks for errors, and publishes the result. The process takes 2–4 hours. By the time it's done, the data is a week old. A real dashboard connects to live data sources and reflects current information without manual intervention.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">They don't surface the right questions</h2>
+          
           
           
           
@@ -253,11 +274,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">A well-designed dashboard doesn't just present data — it surfaces anomalies. When gross margin drops below the threshold, the dashboard makes it visible immediately, before the next monthly review. When DSO extends past 45 days, the dashboard flags it. Spreadsheets show what you look for. Dashboards show what you need to see.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">What a Real Dashboard Does</h2>
+          
           
           
           
@@ -269,6 +292,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The CPA.com &amp; AICPA PCPS CAS Benchmark Survey found that top-performing CAS and finance practices have moved rapidly toward technology-enabled real-time data access — with the most effective practices using dashboards and workflow tools to deliver insights that were previously available only through time-consuming manual reporting. The shift from periodic to real-time financial intelligence is the defining operational change in finance practice at this stage.</p>
           
+          
         </div>
       
         <div>
@@ -276,6 +300,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Source: CPA.com &amp; AICPA PCPS Client Advisory Services (CAS) Benchmark Survey 2022.</p>
+          
           
         </div>
       
@@ -285,11 +310,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">A real financial dashboard for a $5M business pulls live data from the accounting system, the CRM or billing system, and the bank. It presents the ten to fifteen most decision-relevant metrics in a format readable in five minutes. It highlights variances against plan automatically. It's available on any device, updated continuously, and designed so that a CEO with no finance background can use it independently.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Building the Right One</h2>
+          
           
           
           
@@ -301,6 +328,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The first step in building a real dashboard is not choosing a technology. It's answering three design questions:</p>
           
+          
         </div>
       
         <div>
@@ -310,6 +338,7 @@ input, button { font-family: inherit; }
               <span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 999px; background: var(--color-accent); margin-top: 11px"></span>
               <span>What are the five to ten decisions this dashboard needs to support? (Not 'what metrics should we track?' — what decisions?)</span>
             </div>
+          
           
           
         </div>
@@ -323,6 +352,7 @@ input, button { font-family: inherit; }
             </div>
           
           
+          
         </div>
       
         <div>
@@ -334,6 +364,7 @@ input, button { font-family: inherit; }
             </div>
           
           
+          
         </div>
       
         <div>
@@ -341,6 +372,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Only after those questions are answered does the technology choice become clear. In many cases, a well-connected modern accounting platform with a built-in reporting layer is sufficient. In others, a purpose-built financial intelligence tool is appropriate. The choice depends on the data complexity and the specific decisions the dashboard needs to support — not on what looks impressive in a product demo.</p>
+          
           
         </div>
       
@@ -350,6 +382,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">—</p>
           
+          
         </div>
       
         <div>
@@ -357,6 +390,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">CFOLogic builds smart financial dashboards as part of our finance infrastructure offering — from requirements design through data integration and delivery. If you're ready to move from spreadsheet-based reporting to real-time financial intelligence, we'd be glad to show you what's possible.</p>
+          
           
         </div>
       

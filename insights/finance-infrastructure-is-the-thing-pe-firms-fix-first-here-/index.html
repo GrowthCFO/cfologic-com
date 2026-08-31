@@ -66,6 +66,17 @@ input, button { font-family: inherit; }
 @media (max-width: 760px){
 .nav{flex-wrap:wrap;row-gap:10px}
 }
+
+/* Post body tables. The wrapper scrolls on its own so a wide table never
+   widens the page; min-width keeps the columns readable instead of squashing
+   them to nothing on a phone. */
+.post-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:26px 0 0;border:1px solid var(--color-neutral-200);border-radius:12px;background:#fff}
+.post-table-wrap:focus-visible{outline:2px solid var(--color-accent);outline-offset:2px}
+.post-table{border-collapse:collapse;width:100%;min-width:620px;font-size:15px;line-height:23px}
+.post-table th,.post-table td{text-align:left;vertical-align:top;padding:11px 16px;border-bottom:1px solid var(--color-neutral-200)}
+.post-table thead th{font-size:12px;letter-spacing:0.06em;text-transform:uppercase;color:var(--color-accent-800);background:var(--color-accent-100);white-space:nowrap}
+.post-table tbody tr:last-child td{border-bottom:0}
+.post-table td:first-child{font-weight:600}
 </style>
 
 <script type="application/ld+json" id="post-ld">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Finance Infrastructure Is the Thing PE Firms Fix First. Here's Why.", "description": "PE firms fix finance infrastructure before sales, ops or tech, because nothing can be managed on unreliable numbers. What they find, and what founders can learn from it.", "keywords": "CFOServices, FP&A, FinOps, DealSupport, DueDiligence, FinanceStrategy, FinanceExcellence, FinancialOperations, BusinessGrowth, InvestorReadiness, SMB, SME, PEFundedBusiness, VentureFundedStartup, FounderLed", "datePublished": "2026-08-06", "dateModified": "2026-08-06", "articleSection": "Full-Stack Finance", "wordCount": 643, "timeRequired": "PT3M", "author": {"@type": "Organization", "name": "CFOLogic", "url": "https://cfologic.com/"}, "publisher": {"@type": "Organization", "name": "CFOLogic"}, "mainEntityOfPage": "https://cfologic.com/insights/finance-infrastructure-is-the-thing-pe-firms-fix-first-here-"}</script>
@@ -173,6 +184,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">When a PE firm acquires a business doing $5–20M in revenue, the 100-day plan almost always starts in the same place: the finance function.</p>
           
+          
         </div>
       
         <div>
@@ -181,11 +193,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Not because finance is the most strategically interesting workstream. But because every other workstream — sales strategy, operational improvement, technology investment, talent planning — depends on having reliable financial data to diagnose the current state and measure progress. You cannot manage what you cannot measure, and in most acquired SMBs, measurement is the first thing that needs to be built.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">What PE Firms Typically Find</h2>
+          
           
           
           
@@ -197,6 +211,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The findings vary by business, but the patterns are consistent:</p>
           
+          
         </div>
       
         <div>
@@ -206,6 +221,7 @@ input, button { font-family: inherit; }
               <span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 999px; background: var(--color-accent); margin-top: 11px"></span>
               <span>Month-end closes running 15–25 days, producing financials that are 6–8 weeks stale by the time they reach leadership</span>
             </div>
+          
           
           
         </div>
@@ -219,6 +235,7 @@ input, button { font-family: inherit; }
             </div>
           
           
+          
         </div>
       
         <div>
@@ -228,6 +245,7 @@ input, button { font-family: inherit; }
               <span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 999px; background: var(--color-accent); margin-top: 11px"></span>
               <span>Financial reporting built for tax compliance rather than operational management — a P&amp;L that satisfies the accountant but tells the CEO very little about what's actually happening in the business</span>
             </div>
+          
           
           
         </div>
@@ -241,6 +259,7 @@ input, button { font-family: inherit; }
             </div>
           
           
+          
         </div>
       
         <div>
@@ -252,6 +271,7 @@ input, button { font-family: inherit; }
             </div>
           
           
+          
         </div>
       
         <div>
@@ -260,11 +280,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">None of these are catastrophic individually. But together, they represent a finance function that is running the business from the rearview mirror — and that cannot support the growth agenda that the investment thesis requires.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">The 100-Day Finance Build</h2>
+          
           
           
           
@@ -276,6 +298,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">A typical PE-led finance transformation in the first 100 days touches four areas. First, close compression: redesigning the month-end close process to hit five to seven days. Second, reporting infrastructure: building a management reporting package that covers P&amp;L, balance sheet, cash flow, and a KPI dashboard — delivered within 10 days of month end. Third, FP&amp;A standup: a rolling 12-month budget model with monthly variance analysis and a 13-week cash flow forecast. Fourth, controls: documenting approval workflows, establishing segregation of duties, and closing the gaps that would surface in an audit.</p>
           
+          
         </div>
       
         <div>
@@ -284,11 +307,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">This is expensive to do reactively — in terms of both money and management distraction. It's far less expensive to build it proactively.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">The Founder's Advantage</h2>
+          
           
           
           
@@ -300,6 +325,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The Consero 2024 CFO Survey found that the number one financial challenge investor-backed CFOs face is ensuring financial reporting is done on time. This was followed closely by difficulties in establishing well-defined financial processes (28%) and managing financial integration after M&amp;A transactions (26%). These are the same gaps PE firms build into their first 100 days — which means they're also the gaps that slow down or complicate transactions for founders on the sell side.</p>
           
+          
         </div>
       
         <div>
@@ -307,6 +333,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Source: Consero Global, 2024 CFO Survey: Challenges and Opportunities for Investor-Backed CFOs.</p>
+          
           
         </div>
       
@@ -316,11 +343,13 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">A founder who walks into a sale process with a five-day close, clean financials, a documented control environment, and a management reporting package that looks like what the acquirer would build anyway — that founder has a material advantage. Diligence moves faster, the narrative is cleaner, and the acquirer's post-close integration costs are lower. In a competitive process, that often translates to better terms.</p>
           
+          
         </div>
       
         <div>
           
             <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">What 'PE-Standard' Finance Actually Means for a $5M Business</h2>
+          
           
           
           
@@ -332,6 +361,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">It doesn't mean a Big 4 audit and a 20-person finance team. It means three things: the books close in five days, the management reports tell you something useful, and the controls are documented and testable.</p>
           
+          
         </div>
       
         <div>
@@ -339,6 +369,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">That's achievable for most $3–10M businesses with the right structure in place — fractional CFO support at the top, solid FP&amp;A in the middle, and a reliable FinOps layer at the base. The cost of that structure is a fraction of what a PE firm will spend to build it post-acquisition.</p>
+          
           
         </div>
       
@@ -348,6 +379,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The businesses that build it before the transaction don't have to fund the cleanup from the proceeds.</p>
           
+          
         </div>
       
         <div>
@@ -356,6 +388,7 @@ input, button { font-family: inherit; }
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">—</p>
           
+          
         </div>
       
         <div>
@@ -363,6 +396,7 @@ input, button { font-family: inherit; }
           
           
             <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">CFOLogic works with growth-stage businesses to build the financial infrastructure that institutional investors and acquirers expect. If you're 12–24 months from a fundraise or sale process, now is the right time to build.</p>
+          
           
         </div>
       
