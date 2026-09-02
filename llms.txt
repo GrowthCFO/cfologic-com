@@ -14,7 +14,7 @@
 - [Trust Center](https://cfologic.com/trust-center): Security and data handling
 
 ## Insights (blog)
-- [What a Buy-Side Quality of Earnings Actually Finds](https://cfologic.com/insights/buy-side-quality-of-earnings-worked-example/): A worked example of a buy-side quality of earnings on a hotel portfolio — where the seller's $4.9M of adjusted EBITDA was supported at $3.7M, and why.
+- [What a Buy-Side Quality of Earnings Actually Finds](https://cfologic.com/case-studies/buy-side-quality-of-earnings-worked-example/): A worked example of a buy-side quality of earnings on a hotel portfolio — where the seller's $4.9M of adjusted EBITDA was supported at $3.7M, and why.
 - [Fractional CFO Services: Cost and When You Need One](https://cfologic.com/insights/fractional-cfo-services-cost-and-when-you-need-one/): What fractional CFO services cost in 2026, what the role does in the first 90 days, when to hire one, and the execution gap that derails most engagements.
 - [What a $5M Company's Finance Function Actually Looks Like Inside](https://cfologic.com/insights/what-a-5m-company-s-finance-function-looks-like-inside/): Most founders have never seen a functional finance department at their size. This piece maps the three-layer architecture that high-performing $5-10M businesses run, and what each layer is supposed to produce.
 - [Your Business Outgrew Your Bookkeeper Two Years Ago](https://cfologic.com/insights/your-business-outgrew-your-bookkeeper-two-years-ago/): The finance setup that got you to $2M quietly stops working long before anyone names the problem. Here are the operational signs, and why the fix is structural rather than a better hire.
