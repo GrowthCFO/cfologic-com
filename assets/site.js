@@ -104,6 +104,12 @@
       if (count && D.chip.countLabel) {
         count.textContent = shown + (shown === 1 ? D.chip.countLabel[0] : D.chip.countLabel[1]);
       }
+      // A note that belongs to one chip value only - the Insights index uses it
+      // to point at /case-studies, which holds far more cases than Insights does.
+      var note = document.querySelector('[data-dc-note]');
+      if (note && D.chip.note) {
+        note.style.display = picked[D.chip.note.group] === D.chip.note.value ? '' : 'none';
+      }
     };
   }
 
