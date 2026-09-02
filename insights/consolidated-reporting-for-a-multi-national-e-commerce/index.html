@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5HRTB39JZ6"></script>
+<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-5HRTB39JZ6');</script>
+<title>Consolidated Reporting Across Multiple Markets | CFOLogic</title>
+<link rel="canonical" href="https://cfologic.com/insights/consolidated-reporting-for-a-multi-national-e-commerce/">
+<meta name="description" content="How a $6M multi-market e-commerce business got one consolidated view, with intercompany eliminations and profitability by market.">
+<meta property="og:title" content="Consolidated Reporting Across Multiple Markets | CFOLogic">
+<meta property="og:description" content="How a $6M multi-market e-commerce business got one consolidated view, with intercompany eliminations and profitability by market.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="CFOLogic">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://cfologic.com/insights/consolidated-reporting-for-a-multi-national-e-commerce/">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@CFOLogicHQ">
+<link rel="stylesheet" href="/assets/ds/styles.css">
+<script src="/assets/cfo-lead-capture.js"></script>
+<style>
+:root{--color-accent:#0064F1;--color-accent-100:#EDF4FF;--color-accent-200:#D6E6FF;--color-accent-300:#A0C7FF;--color-accent-400:#7DB3FF;--color-accent-500:#5A9FFF;--color-accent-600:#0055CE;--color-accent-700:#0047AB;--color-accent-800:#00378A;--color-accent-900:#002B66;--color-accent-2:#0064F1;--color-accent-2-100:#EDF4FF;--color-accent-2-200:#D6E6FF;--color-accent-2-800:#00378A;
+--grad-a:linear-gradient(135deg,#0047AB,#0064F1 48%,#378AFF);--grad-a-h:linear-gradient(135deg,#00378A,#0055CE 48%,#1576FF);
+--color-bg:#FDFDFD}
+.btn-primary{background-image:var(--grad-a);color:#fff !important}
+.btn-primary:hover,.btn-primary:active{background-image:var(--grad-a-h);color:#fff !important}
+.glass{background:rgba(255,255,255,0.55);backdrop-filter:blur(20px) saturate(1.6);-webkit-backdrop-filter:blur(20px) saturate(1.6);border:1px solid var(--color-neutral-200);border-radius:16px;box-shadow:0 8px 28px rgba(0,71,171,0.08)}
+.grad-text{background-image:var(--grad-a);-webkit-background-clip:text;background-clip:text;color:transparent}
+body { margin: 0; background: var(--color-bg); color: var(--color-text); font-family: var(--font-body); text-wrap: pretty; }
+a { color: var(--color-accent-700); }
+a:hover { color: var(--color-accent-600); }
+.nav-mobile{display:none;position:relative}
+.nav-mobile summary{list-style:none;cursor:pointer;display:flex;align-items:center;padding:6px;color:var(--color-text)}
+.nav-mobile summary::-webkit-details-marker{display:none}
+.nav-mobile-menu{position:absolute;right:-6px;top:calc(100% + 12px);width:min(320px,calc(100vw - 32px));display:flex;flex-direction:column;background:rgba(253,253,253,0.97);backdrop-filter:blur(18px) saturate(1.6);-webkit-backdrop-filter:blur(18px) saturate(1.6);border:1px solid var(--color-neutral-200);border-radius:12px;box-shadow:0 12px 36px rgba(0,71,171,0.18);padding:8px 0;z-index:60}
+.nav-mobile-menu a{padding:11px 18px;text-decoration:none;color:var(--color-text)}
+.nav-mobile-menu a:hover{background:var(--color-accent-100)}
+.nav-mobile-menu .mm-sec{font-size:11px;letter-spacing:0.08em;text-transform:uppercase;font-weight:700;color:color-mix(in srgb,var(--color-text) 50%,transparent);padding:12px 18px 4px}
+.nav-mobile-menu .mm-cta{margin:10px 18px 8px;background-image:var(--grad-a);color:#fff;border-radius:10px;text-align:center;font-weight:700}
+.nav-mobile-menu .mm-cta:hover{background-image:var(--grad-a-h)}
+@media (max-width: 760px){
+.nav > a:not([aria-label="CFOLogic"]){display:none}
+.nav .nav-dd{display:none}
+.nav-mobile{display:block}
+}
+@media (hover: none){
+.fit-body{grid-template-rows:1fr}
+.fit-body>p{padding-top:10px}
+.nav-dd:focus-within .nav-dd-menu{display:flex}
+}
+
+.nav-dd{position:relative;padding:26px 0;margin:-26px 0}
+.nav-dd-btn{display:flex;align-items:center;gap:6px;background:none;border:0;font-family:inherit;font-size:inherit;color:var(--color-text);cursor:pointer;padding:0;white-space:nowrap}
+.nav-dd-btn:hover{color:var(--color-accent-700)}
+.nav-dd-menu{position:absolute;top:100%;left:-18px;min-width:270px;padding:10px 0;display:none;flex-direction:column;background:rgba(253,253,253,0.92);backdrop-filter:blur(18px) saturate(1.6);-webkit-backdrop-filter:blur(18px) saturate(1.6);border:1px solid var(--color-neutral-200);border-radius:12px;box-shadow:0 12px 36px rgba(0,71,171,0.14)}
+.nav-dd:hover .nav-dd-menu,.nav-dd:focus-within .nav-dd-menu{display:flex}
+.nav-dd-menu a{padding:9px 18px;white-space:nowrap;text-decoration:none}
+.nav-dd-menu a:hover{background:var(--color-accent-100)}
+
+input, button { font-family: inherit; }
+@media (max-width: 960px){
+.post-grid{grid-template-columns:1fr !important}
+.post-side{position:static !important}
+}
+@media (max-width: 760px){
+.nav{flex-wrap:wrap;row-gap:10px}
+}
+
+/* Post body tables. The wrapper scrolls on its own so a wide table never
+   widens the page; min-width keeps the columns readable instead of squashing
+   them to nothing on a phone. */
+.post-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:26px 0 0;border:1px solid var(--color-neutral-200);border-radius:12px;background:#fff}
+.post-table-wrap:focus-visible{outline:2px solid var(--color-accent);outline-offset:2px}
+.post-table{border-collapse:collapse;width:100%;min-width:620px;font-size:15px;line-height:23px}
+.post-table th,.post-table td{text-align:left;vertical-align:top;padding:11px 16px;border-bottom:1px solid var(--color-neutral-200)}
+.post-table thead th{font-size:12px;letter-spacing:0.06em;text-transform:uppercase;color:var(--color-accent-800);background:var(--color-accent-100);white-space:nowrap}
+.post-table tbody tr:last-child td{border-bottom:0}
+.post-table td:first-child{font-weight:600}
+@media (max-width: 760px){
+.m-stack{grid-template-columns:1fr !important}
+}
+</style>
+
+<script type="application/ld+json" id="post-ld">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Consolidated reporting for a multi-national e-commerce business", "description": "How a $6M multi-market e-commerce business got one consolidated view, with intercompany eliminations and profitability by market.", "keywords": "FinOps, FinancialOperations, CFOServices, ProcessImprovement, SMB", "datePublished": "2025-10-07", "dateModified": "2025-10-07", "articleSection": "Full-Stack Finance", "wordCount": 428, "timeRequired": "PT2M", "author": {"@type": "Organization", "name": "CFOLogic", "url": "https://cfologic.com/"}, "publisher": {"@type": "Organization", "name": "CFOLogic"}, "mainEntityOfPage": "https://cfologic.com/insights/consolidated-reporting-for-a-multi-national-e-commerce/"}</script>
+<meta property="og:image" content="https://cfologic.com/assets/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://cfologic.com/assets/og-card.png">
+</head>
+<body>
+<cfo-lead-capture></cfo-lead-capture>
+<div id="page-wrap" style="min-height: 100vh">
+<nav class="nav" style="position: sticky; top: 0; z-index: 50; background: rgba(253,253,253,0.65); backdrop-filter: blur(18px) saturate(1.6); -webkit-backdrop-filter: blur(18px) saturate(1.6); border-bottom: 1px solid var(--color-neutral-200); padding-inline: max(clamp(20px,5vw,72px), calc((100% - 1200px) / 2 + clamp(20px,5vw,72px)))">
+  <a href="/" aria-label="CFOLogic" style="text-decoration: none; flex: none"><img src="/assets/cfologic-logo.png" alt="CFOLogic" style="display: block; height: 40px; width: auto"></a>
+  
+    <div class="nav-dd">
+      <button class="nav-dd-btn" type="button" aria-haspopup="true">Who we serve <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></button>
+      <div class="nav-dd-menu">
+        
+          <a href="/founders/" style="color: var(--color-text)">For Founders &amp; CEOs</a>
+        
+          <a href="/cfo-success-partners/" style="color: var(--color-text)">For CFOs</a>
+        
+          <a href="/accounting-firms/" style="color: var(--color-text)">For CFO/CAS Firms</a>
+        
+          <a href="/capital-providers/" style="color: var(--color-text)">For Capital Providers</a>
+        
+          <a href="/acquisition-entrepreneurs/" style="color: var(--color-text)">For Acquisition Entrepreneurs</a>
+        
+      </div>
+    </div>
+  
+  <a href="/insights/" style="white-space: nowrap; font-weight: 700; color: var(--color-accent-700); text-decoration: none">Insights</a>
+  
+    <a href="https://navigator.cfologic.com" target="_blank" rel="noopener" style="white-space: nowrap; color: var(--color-text); text-decoration: none">Navigator AI</a>
+  
+  
+  <div class="nav-dd">
+    <button class="nav-dd-btn" type="button" aria-haspopup="true">About <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></button>
+    <div class="nav-dd-menu">
+      <a href="/about/" style="color: var(--color-text)">About Us</a>
+      <a href="/trust-center/" style="color: var(--color-text)">Trust Center</a>
+      <a href="https://careers.cfologic.com/careers" target="_blank" rel="noopener" style="color: var(--color-text)">Careers</a>
+    </div>
+  </div>
+  
+  <span style="flex: 1"></span>
+  <a class="btn btn-primary" href="https://cal.com/GrowthCFO" target="_blank" rel="noopener" style="white-space: nowrap; text-decoration: none">Book a Discovery Call</a>
+<details class="nav-mobile">
+    <summary aria-label="Open menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"></path></svg></summary>
+    <div class="nav-mobile-menu">
+      <span class="mm-sec">Who we serve</span>
+      <a href="/founders/">For Founders &amp; CEOs</a>
+      <a href="/cfo-success-partners/">For CFOs</a>
+      <a href="/accounting-firms/">For CFO/CAS Firms</a>
+      <a href="/capital-providers/">For Capital Providers</a>
+      <a href="/acquisition-entrepreneurs/">For Acquisition Entrepreneurs</a>
+      <span class="mm-sec">Explore</span>
+      <a href="/insights/">Insights</a>
+      <a href="https://navigator.cfologic.com" target="_blank" rel="noopener">Navigator AI</a>
+      <span class="mm-sec">Company</span>
+      <a href="/about/">About Us</a>
+      <a href="/trust-center/">Trust Center</a>
+      <a href="https://careers.cfologic.com/careers" target="_blank" rel="noopener">Careers</a>
+      <a class="mm-cta" href="https://cal.com/GrowthCFO" target="_blank" rel="noopener">Book a Discovery Call</a>
+    </div>
+  </details>
+</nav>
+<main style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(20px,5vw,72px); display: block">
+
+  <section style="padding: 64px 0 0">
+    <a href="/insights/" style="font-size: 14px; text-decoration: none; font-weight: 700">← All insights</a>
+    <div style="display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700; margin-top: 28px">
+      <span style="color: #fff; background-image: var(--grad-a); padding: 4px 10px; border-radius: 999px">Full-Stack Finance</span>
+      <span style="color: var(--color-accent-700)">Case Study</span>
+      <span style="color: color-mix(in srgb, var(--color-text) 50%, transparent); white-space: nowrap">Oct 2025 · 2 min read</span>
+    </div>
+    <h1 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(32px,4.2vw,56px); line-height: 1.1; letter-spacing: -0.02em; margin: 21px 0 0 -0.058em; max-width: 26ch">Consolidated reporting for a multi-national e-commerce business</h1>
+    <p style="font-size: 14px; color: color-mix(in srgb, var(--color-text) 65%, transparent); margin: 18px 0 0">By the CFOLogic team</p>
+  </section>
+
+  <div class="post-grid" style="display: grid; grid-template-columns: minmax(0, 8fr) minmax(280px, 4fr); gap: 42px clamp(32px,4vw,72px); align-items: start; padding: 42px 0 84px">
+    <article style="min-width: 0">
+
+      <article aria-label="Engagement summary" style="border: 1px solid var(--color-neutral-200); border-radius: 16px; background: rgba(253,253,253,0.6); backdrop-filter: blur(20px) saturate(1.6); -webkit-backdrop-filter: blur(20px) saturate(1.6); box-shadow: 0 8px 28px rgba(0,71,171,0.08); padding: clamp(24px,3.2vw,40px); margin: 0 0 42px">
+        <div style="display: flex; align-items: center; gap: 18px; flex-wrap: wrap">
+          <span style="display: inline-block; font-size: 12px; line-height: 16px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700; color: #fff; background: var(--color-accent-800); padding: 4px 12px; border-radius: 999px; flex: none">Financial Operations</span>
+          
+        </div>
+        
+        <div class="m-stack" style="display: grid; grid-template-columns: minmax(0,7fr) minmax(220px,4fr); gap: 24px clamp(28px,4vw,64px); align-items: start; margin-top: 21px">
+          <p style="font-size: 15.5px; line-height: 27px; color: color-mix(in srgb, var(--color-text) 80%, transparent); margin: 0; max-width: 62ch">A multi-national e-commerce business ($6M revenue) operating across multiple markets struggled with consolidated financial reporting and understanding profitability by market.</p>
+          <div style="display: flex; flex-direction: column; gap: 20px">
+            
+              <div style="border-left: 3px solid var(--color-accent); padding-left: 18px">
+                <p class="grad-text" style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(26px,2.6vw,36px); line-height: 1.1; letter-spacing: -0.02em; margin: 0">1 view</p>
+                <p style="font-size: 13px; line-height: 19px; color: color-mix(in srgb, var(--color-text) 70%, transparent); margin: 6px 0 0">consolidated financials across all entities</p>
+              </div>
+            
+              <div style="border-left: 3px solid var(--color-accent); padding-left: 18px">
+                <p class="grad-text" style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(26px,2.6vw,36px); line-height: 1.1; letter-spacing: -0.02em; margin: 0">Monthly</p>
+                <p style="font-size: 13px; line-height: 19px; color: color-mix(in srgb, var(--color-text) 70%, transparent); margin: 6px 0 0">consolidation with intercompany eliminations</p>
+              </div>
+            
+          </div>
+        </div>
+        <div class="m-stack" style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px clamp(28px,4vw,64px); margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--color-neutral-200)">
+          <div>
+            <h3 style="font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700; color: color-mix(in srgb, var(--color-text) 60%, transparent); margin: 0 0 10px">WHAT WE DID</h3>
+            
+              <p style="font-size: 14.5px; line-height: 24px; color: color-mix(in srgb, var(--color-text) 82%, transparent); margin: 0 0 8px; padding-left: 16px; position: relative"><span aria-hidden="true" style="position: absolute; left: 0; color: var(--color-accent)">&middot;</span>Implemented a standardized chart of accounts and reporting templates across entities</p>
+            
+              <p style="font-size: 14.5px; line-height: 24px; color: color-mix(in srgb, var(--color-text) 82%, transparent); margin: 0 0 8px; padding-left: 16px; position: relative"><span aria-hidden="true" style="position: absolute; left: 0; color: var(--color-accent)">&middot;</span>Established a monthly consolidation process including intercompany eliminations</p>
+            
+              <p style="font-size: 14.5px; line-height: 24px; color: color-mix(in srgb, var(--color-text) 82%, transparent); margin: 0 0 8px; padding-left: 16px; position: relative"><span aria-hidden="true" style="position: absolute; left: 0; color: var(--color-accent)">&middot;</span>Delivered monthly reports analyzing revenue, COGS, and opex by market and product category</p>
+            
+          </div>
+          <div>
+            <h3 style="font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700; color: color-mix(in srgb, var(--color-text) 60%, transparent); margin: 0 0 10px">WHAT CHANGED</h3>
+            
+              <p style="font-size: 14.5px; line-height: 24px; color: color-mix(in srgb, var(--color-text) 82%, transparent); margin: 0 0 8px; padding-left: 16px; position: relative"><span aria-hidden="true" style="position: absolute; left: 0; color: var(--color-accent)">&#10003;</span>Leadership finally saw the whole business in one place</p>
+            
+              <p style="font-size: 14.5px; line-height: 24px; color: color-mix(in srgb, var(--color-text) 82%, transparent); margin: 0 0 8px; padding-left: 16px; position: relative"><span aria-hidden="true" style="position: absolute; left: 0; color: var(--color-accent)">&#10003;</span>Profitability by market exposed growth drivers and underperformers</p>
+            
+              <p style="font-size: 14.5px; line-height: 24px; color: color-mix(in srgb, var(--color-text) 82%, transparent); margin: 0 0 8px; padding-left: 16px; position: relative"><span aria-hidden="true" style="position: absolute; left: 0; color: var(--color-accent)">&#10003;</span>Expansion decisions ran on comparable data</p>
+            
+          </div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-top: 24px">
+          <span style="font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700; color: color-mix(in srgb, var(--color-text) 60%, transparent)">STACK</span>
+          
+            <span style="font-size: 12.5px; line-height: 18px; padding: 4px 12px; border: 1px solid var(--color-neutral-300); border-radius: 999px; white-space: nowrap; color: color-mix(in srgb, var(--color-text) 75%, transparent)">NetSuite</span>
+          
+            <span style="font-size: 12.5px; line-height: 18px; padding: 4px 12px; border: 1px solid var(--color-neutral-300); border-radius: 999px; white-space: nowrap; color: color-mix(in srgb, var(--color-text) 75%, transparent)">Excel</span>
+          
+        </div>
+      </article>
+      
+        <div>
+          
+            <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">The situation</h2>
+          
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">A multi-national e-commerce business with $6M of revenue, operating across multiple markets, struggled with consolidated financial reporting and with understanding profitability by market.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Multi-entity businesses accumulate this problem gradually. Each market opens with its own books, its own chart of accounts and its own local reporting, all of which is correct locally and incomparable centrally. Nobody makes a decision to run the business without a consolidated view; it simply never gets built.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The cost is invisible until an allocation decision has to be made. Deciding where to put the next dollar of marketing spend requires knowing which market returns it, and that is precisely the question a set of separate ledgers cannot answer.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+            <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">What we did</h2>
+          
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>Implemented a standardized chart of accounts and reporting templates across entities.</strong> This is the unglamorous precondition. Without a common chart of accounts, consolidation is a manual mapping exercise repeated every month, and every repetition is an opportunity for the mapping to drift.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>Established a monthly consolidation process including intercompany eliminations.</strong> Eliminations are what separate a consolidation from an addition. Without them, internal transfers inflate group revenue and the business congratulates itself on selling to itself.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>Delivered monthly reports analyzing revenue, COGS and opex by market and product category.</strong> Two dimensions rather than one. Market alone hides a product that is unprofitable everywhere; product alone hides a market where the economics do not work.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+            <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">What changed</h2>
+          
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The business gained one consolidated view of financials across all entities, with monthly consolidation including intercompany eliminations.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Leadership finally saw the whole business in one place. Profitability by market exposed both growth drivers and underperformers. And expansion decisions began running on comparable data.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Exposing underperformers is the outcome that tends to change behavior fastest. A market that is quietly subsidized by another can persist for years when the reporting cannot separate them.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+            <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.2vw,28px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">What this means for multi-market businesses</h2>
+          
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Consolidation is usually treated as a reporting problem and solved as an accounting one. That framing is why it gets deferred — reporting improvements rarely feel urgent next to operational work.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The better framing is that it is a capital allocation problem. Every expansion decision, every marketing budget and every pricing choice across markets is being made either on comparable data or on assumption, and the gap between those two compounds with each new market opened.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The sequence is fixed. A common chart of accounts comes first, because consolidation and elimination are both mechanical once definitions agree and permanently manual while they do not. Retrofitting it across five markets costs considerably more than establishing it across two.</p>
+          
+          
+        </div>
+      
+      <div style="margin-top: 56px; border-top: 2px solid var(--color-divider); padding-top: 28px; display: flex; flex-wrap: wrap; gap: 12px; align-items: center">
+        <span style="font-size: 12.5px; color: var(--color-accent-800); background: var(--color-accent-100); border: 1px solid var(--color-accent-200); padding: 3px 10px; border-radius: 999px">Full-Stack Finance</span>
+        <span style="font-size: 14px; color: color-mix(in srgb, var(--color-text) 60%, transparent)">Published Oct 2025 · CFOLogic Insights</span>
+      </div>
+    </article>
+
+    <aside class="post-side" style="position: sticky; top: 96px; display: flex; flex-direction: column; gap: 20px; min-width: 0">
+      <div class="glass" style="padding: 0; overflow: hidden">
+        <div style="background-image: var(--grad-a); color: #fff; padding: 18px 24px">
+          <p style="font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; margin: 0; color: rgba(255,255,255,0.8)">The newsletter</p>
+          <p style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 16.5px; line-height: 24px; margin: 6px 0 0">Actionable insights like this, once a month.</p>
+        </div>
+        <form action="https://formsubmit.co/prasad@cfologic.com" method="POST" style="display: flex; flex-direction: column; gap: 10px; padding: 20px 24px 24px">
+          <input type="hidden" name="_subject" value="Insights subscription - blog post sidebar">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="email" name="email" required placeholder="you@company.com" aria-label="Work email" style="font-size: 14px; padding: 10px 14px; border: 1px solid var(--color-neutral-300); border-radius: 8px; background: #fff; color: var(--color-text)">
+          <button class="btn btn-primary" type="submit" style="cursor: pointer; margin-top: 4px">Subscribe</button>
+          <p style="font-size: 12px; line-height: 18px; margin: 2px 0 0; color: color-mix(in srgb, var(--color-text) 60%, transparent)">No spam ever. Unsubscribe in one click.</p>
+        </form>
+      </div>
+      <div class="glass" style="padding: 24px">
+        <p style="font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; margin: 0; color: var(--color-accent-700)">Related insights</p>
+        <div style="display: flex; flex-direction: column; margin-top: 6px">
+          
+            <a href="/insights/cash-collections-turnaround-for-a-us-software-services/" style="display: block; text-decoration: none; color: var(--color-text); padding: 14px 0; border-bottom: 1px solid var(--color-neutral-200)">
+              <span style="display: block; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700; color: color-mix(in srgb, var(--color-text) 50%, transparent)">Full-Stack Finance · 2 min</span>
+              <span style="display: block; font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 15.5px; line-height: 23px; margin-top: 5px">Cash collections turnaround for a US software services company</span>
+            </a>
+          
+            <a href="/insights/building-the-delivery-engine-for-a-fast-growing-startup/" style="display: block; text-decoration: none; color: var(--color-text); padding: 14px 0; border-bottom: 1px solid var(--color-neutral-200)">
+              <span style="display: block; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700; color: color-mix(in srgb, var(--color-text) 50%, transparent)">Full-Stack Finance · 2 min</span>
+              <span style="display: block; font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 15.5px; line-height: 23px; margin-top: 5px">Building the delivery engine for a fast-growing startup accounting firm</span>
+            </a>
+          
+            <a href="/insights/payroll-and-compliance-cleanup-for-a-multi-state-us-smb/" style="display: block; text-decoration: none; color: var(--color-text); padding: 14px 0; border-bottom: 1px solid var(--color-neutral-200)">
+              <span style="display: block; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700; color: color-mix(in srgb, var(--color-text) 50%, transparent)">Full-Stack Finance · 2 min</span>
+              <span style="display: block; font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 15.5px; line-height: 23px; margin-top: 5px">Payroll and compliance cleanup for a multi-state US SMB</span>
+            </a>
+          
+        </div>
+        <a href="/insights/" style="display: inline-block; font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 14px; text-decoration: none; margin-top: 14px">All insights →</a>
+      </div>
+      <div style="border: 1px solid var(--color-neutral-200); border-radius: 16px; padding: 24px">
+        <p style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 16.5px; line-height: 24px; margin: 0">Thirty minutes on the decision you're sitting on right now.</p>
+        <p style="font-size: 13.5px; line-height: 21px; color: color-mix(in srgb, var(--color-text) 70%, transparent); margin: 8px 0 0">No pitch, no pressure.</p>
+        <a class="btn btn-primary" href="https://cal.com/GrowthCFO" target="_blank" rel="noopener" style="text-decoration: none; display: inline-flex; margin-top: 14px">Book a Discovery Call</a>
+      </div>
+    </aside>
+  </div>
+
+</main>
+
+<section style="background-image: var(--grad-a); color: #fff">
+  <div style="max-width: 1200px; margin: 0 auto; padding: 56px clamp(20px,5vw,72px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 28px; align-items: center">
+    <div>
+      <span style="display: block; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.75); margin: 0 0 14px">The newsletter</span>
+      <h3 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(24px,2.6vw,34px); line-height: 1.15; letter-spacing: -0.015em; margin: 0; max-width: 24ch">Actionable insights like this, once a month.</h3>
+    </div>
+    <form action="https://formsubmit.co/prasad@cfologic.com" method="POST" style="display: flex; gap: 8px; flex-wrap: wrap">
+      <input type="hidden" name="_subject" value="Insights subscription - blog post page">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="email" name="email" required placeholder="you@company.com" aria-label="Email address" style="flex: 1; min-width: 200px; font-size: 14px; padding: 12px 14px; border: 0; border-radius: 8px; background: #fff; color: var(--color-text)">
+      <button class="btn" type="submit" style="cursor: pointer; background: var(--color-accent-900); color: #fff; border: 0">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<footer style="border-top: 1px solid var(--color-neutral-200); background: color-mix(in srgb, var(--color-accent-100) 40%, #FDFDFD)">
+  <div class="m-stack" style="max-width: 1200px; margin: 0 auto; padding: 48px clamp(20px,5vw,72px) 56px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 28px; font-size: 14px; line-height: 24px">
+    <div style="display: flex; flex-direction: column; gap: 6px">
+      <a href="/" aria-label="CFOLogic" style="text-decoration: none"><img src="/assets/cfologic-logo.png" alt="CFOLogic" style="display: block; height: 40px; width: auto; margin-bottom: 4px"></a>
+      <p style="margin: 0; color: color-mix(in srgb, var(--color-text) 70%, transparent)">The finance team behind ambitious businesses.</p>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 6px">
+      <p style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); color: var(--color-text); margin: 0 0 4px">Who we serve</p>
+      <a href="/founders/" style="text-decoration: none">Founders &amp; CEOs</a>
+      <a href="/cfo-success-partners/" style="text-decoration: none">CFOs &amp; Finance Leaders</a>
+      <a href="/accounting-firms/" style="text-decoration: none">CFO/CAS Firms</a>
+      <a href="/capital-providers/" style="text-decoration: none">Capital Providers</a>
+      <a href="/acquisition-entrepreneurs/" style="text-decoration: none">Acquisition Entrepreneurs</a>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 6px">
+      <p style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); color: var(--color-text); margin: 0 0 4px">Company</p>
+      <a href="/about/" style="text-decoration: none">About Us</a>
+      <a href="/insights/" style="text-decoration: none">Insights</a>
+      <a href="/trust-center/" style="text-decoration: none">Trust Center</a>
+      <a href="/legal/" style="text-decoration: none">Privacy &amp; Legal</a>
+      <a href="https://careers.cfologic.com/careers" target="_blank" rel="noopener" style="text-decoration: none">Careers</a>
+      <a href="https://navigator.cfologic.com" target="_blank" rel="noopener" style="text-decoration: none">Navigator AI</a>
+    </div>
+    <div>
+      <p style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); color: var(--color-text); margin: 0 0 10px">Subscribe to actionable insights</p>
+      <form action="https://formsubmit.co/prasad@cfologic.com" method="POST" style="display: flex; gap: 8px">
+        <input type="hidden" name="_subject" value="Insights subscription - cfologic.com">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="email" name="email" required placeholder="you@company.com" aria-label="Email address" style="flex: 1; min-width: 0; font-family: inherit; font-size: 14px; padding: 10px 14px; border: 1px solid var(--color-neutral-300); border-radius: 8px; background: #fff; color: var(--color-text)">
+        <button class="btn btn-primary" type="submit" style="white-space: nowrap; cursor: pointer">Subscribe</button>
+      </form>
+      <p style="font-size: 12.5px; margin: 8px 0 0; color: color-mix(in srgb, var(--color-text) 60%, transparent)">No spam ever. Unsubscribe in one click.</p>
+    </div>
+    <div>
+      <p style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); color: var(--color-text); margin: 0 0 4px">Follow</p>
+      <p style="margin: 0"><a href="https://www.linkedin.com/company/cfologichq" target="_blank" rel="noopener" style="text-decoration: none">LinkedIn</a> · <a href="https://x.com/CFOLogicHQ" target="_blank" rel="noopener" style="text-decoration: none">X</a> · <a href="https://www.instagram.com/cfologichq" target="_blank" rel="noopener" style="text-decoration: none">Instagram</a></p>
+      <p style="margin: 21px 0 0">© CFOLogic 2026. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+</div>
+<script>window.__DC={"initial":0};</script>
+<script src="/assets/site.js" defer></script>
+</body>
+</html>
