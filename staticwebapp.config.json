@@ -49,6 +49,66 @@
       "statusCode": 301
     },
     {
+      "route": "/insights/finance-infrastructure-is-the-thing-pe-firms-fix-first-here-",
+      "redirect": "/insights/finance-infrastructure-is-the-thing-pe-firms-fix-first",
+      "statusCode": 301
+    },
+    {
+      "route": "/insights/from-reactive-to-runway-building-a-finance-function-that-thi",
+      "redirect": "/insights/from-reactive-to-runway-finance-that-thinks-six-months-ahead",
+      "statusCode": 301
+    },
+    {
+      "route": "/insights/how-founders-without-a-finance-background-stay-on-top-of-the",
+      "redirect": "/insights/how-non-finance-founders-stay-on-top-of-their-numbers",
+      "statusCode": 301
+    },
+    {
+      "route": "/insights/investor-ready-in-90-days-what-it-actually-takes-to-clean-up",
+      "redirect": "/insights/investor-ready-in-90-days-clean-up-your-financial-house",
+      "statusCode": 301
+    },
+    {
+      "route": "/insights/real-time-financials-for-businesses-that-move-faster-than-mo",
+      "redirect": "/insights/real-time-financials-faster-than-monthly-closes",
+      "statusCode": 301
+    },
+    {
+      "route": "/insights/scenario-planning-for-businesses-that-don-t-have-a-finance-t",
+      "redirect": "/insights/scenario-planning-for-businesses-without-a-finance-team",
+      "statusCode": 301
+    },
+    {
+      "route": "/insights/the-100-day-post-close-finance-integration-what-goes-wrong-a",
+      "redirect": "/insights/the-100-day-post-close-finance-integration",
+      "statusCode": 301
+    },
+    {
+      "route": "/insights/the-real-cost-of-running-finance-on-quickbooks-and-a-part-ti",
+      "redirect": "/insights/the-real-cost-of-quickbooks-and-a-part-time-controller",
+      "statusCode": 301
+    },
+    {
+      "route": "/insights/what-a-5m-company-s-finance-function-actually-looks-like-ins",
+      "redirect": "/insights/what-a-5m-company-s-finance-function-looks-like-inside",
+      "statusCode": 301
+    },
+    {
+      "route": "/insights/what-a-smart-dashboard-looks-like-one-year-after-you-build-i",
+      "redirect": "/insights/what-a-smart-dashboard-looks-like-one-year-later",
+      "statusCode": 301
+    },
+    {
+      "route": "/insights/why-the-best-fractional-cfos-refuse-to-work-without-an-execu",
+      "redirect": "/insights/fractional-cfos-refuse-to-work-without-an-execution-layer",
+      "statusCode": 301
+    },
+    {
+      "route": "/insights/your-senior-cpas-shouldn-t-be-doing-reconciliations-here-s-w",
+      "redirect": "/insights/your-senior-cpas-shouldn-t-be-doing-reconciliations",
+      "statusCode": 301
+    },
+    {
       "route": "/assets/*",
       "headers": {
         "Cache-Control": "public, max-age=31536000, immutable"

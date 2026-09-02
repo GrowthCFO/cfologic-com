@@ -2,13 +2,25 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="refresh" content="0; url=/founders">
+<meta http-equiv="refresh" content="1; url=/founders">
 <link rel="canonical" href="https://cfologic.com/founders">
 <meta name="robots" content="noindex, follow">
 <title>Moved</title>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5HRTB39JZ6"></script>
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+// Record which legacy URL was hit before leaving it. The previous version
+// redirected instantly, so these seven pages never reported to analytics at
+// all. The hop is capped at 600ms and uses a beacon, so a slow or blocked
+// analytics request can never strand a visitor here; the meta refresh above
+// covers visitors without JavaScript.
+var moved=false,go=function(){if(!moved){moved=true;location.replace("/founders");}};
+gtag('config','G-5HRTB39JZ6',{transport_type:'beacon',event_callback:go});
+setTimeout(go,600);
+</script>
 </head>
 <body>
 <p>This page has moved to <a href="/founders">https://cfologic.com/founders</a>.</p>
-<script>location.replace("/founders");</script>
 </body>
 </html>
