@@ -1,10 +1,10 @@
 # CFOLogic
 
-> CFOLogic is a full-stack finance partner for growth-focused businesses ($2-50M revenue): fractional CFO strategy, FP&A, controllership and finance operations (FinOps), delivered by senior finance leaders in the US backed by a 40+ person Center of Excellence in Pune, India. Services include CEO Copilot™ (full finance function for founder-led businesses), CFO Success Partners™ (execution capacity for sitting CFOs), Smart Dashboards, deal support, and white-label CAS capacity for CPA firms.
+> CFOLogic is a full-stack finance partner for growth-focused businesses ($2-50M revenue): fractional CFO strategy, FP&A, controllership and finance operations (FinOps), delivered by senior finance leaders in the US backed by a 40+ person Center of Excellence in Pune, India. Services include CEO Navigator™ (full finance function for founder-led businesses), CFO Success Partners™ (execution capacity for sitting CFOs), Smart Dashboards, deal support, and white-label CAS capacity for CPA firms.
 
 ## Key pages
 - [Home](https://cfologic.com/): Full-stack finance - CFO strategy, FP&A, controller and finance operations from one team
-- [For Founders & CEOs](https://cfologic.com/founders): CEO Copilot™ - the full finance pyramid as a service
+- [For Founders & CEOs](https://cfologic.com/founders): CEO Navigator™ - the full finance pyramid as a service
 - [For CFOs](https://cfologic.com/cfo-success-partners): CFO Success Partners™ - retained execution team for finance leaders
 - [For CFO/CAS Firms](https://cfologic.com/accounting-firms): HybridShore capability for US CFO/CAS firms
 - [For Acquisition Entrepreneurs](https://cfologic.com/acquisition-entrepreneurs): Diligence and deal support before the close; lender-ready finance, covenant and DSCR monitoring after
