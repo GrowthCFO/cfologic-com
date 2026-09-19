@@ -25,7 +25,7 @@
 --color-bg:#FDFDFD}
 .btn-primary{background-image:var(--grad-a);color:#fff !important}
 .btn-primary:hover,.btn-primary:active{background-image:var(--grad-a-h);color:#fff !important}
-.glass{background:rgba(255,255,255,0.55);backdrop-filter:blur(20px) saturate(1.6);-webkit-backdrop-filter:blur(20px) saturate(1.6);border:1px solid var(--color-neutral-200);border-radius:16px;box-shadow:0 8px 28px rgba(0,71,171,0.08)}
+.glass{background:rgba(255,255,255,0.55);backdrop-filter: blur(12px) saturate(1.15);-webkit-backdrop-filter: blur(12px) saturate(1.15);border:1px solid var(--color-neutral-200);border-radius:16px;box-shadow: 0 1px 2px rgba(20,20,20,0.04), 0 4px 17px rgba(20,20,20,0.06)}
 [data-fold]{transform-origin:50% 0;transform:perspective(1400px) rotateX(-32deg);opacity:0;transition:transform 0.7s cubic-bezier(0.22,1,0.36,1),opacity 0.55s ease}
 [data-fold].unfolded{transform:perspective(1400px) rotateX(0);opacity:1}
 @media (prefers-reduced-motion: reduce){[data-fold]{transform:none;opacity:1;transition:none}}
@@ -37,11 +37,11 @@ a:hover { color: var(--color-accent-600); }
 .nav-mobile{display:none;position:relative}
 .nav-mobile summary{list-style:none;cursor:pointer;display:flex;align-items:center;padding:6px;color:var(--color-text)}
 .nav-mobile summary::-webkit-details-marker{display:none}
-.nav-mobile-menu{position:absolute;right:-6px;top:calc(100% + 12px);width:min(320px,calc(100vw - 32px));display:flex;flex-direction:column;background:rgba(253,253,253,0.97);backdrop-filter:blur(18px) saturate(1.6);-webkit-backdrop-filter:blur(18px) saturate(1.6);border:1px solid var(--color-neutral-200);border-radius:12px;box-shadow:0 12px 36px rgba(0,71,171,0.18);padding:8px 0;z-index:60}
+.nav-mobile-menu{position:absolute;right:-6px;top:calc(100% + 12px);width:min(320px,calc(100vw - 32px));display:flex;flex-direction:column;background:rgba(253,253,253,0.97);backdrop-filter: blur(12px) saturate(1.15);-webkit-backdrop-filter: blur(12px) saturate(1.15);border:1px solid var(--color-neutral-200);border-radius:12px;box-shadow: 0 1px 2px rgba(20,20,20,0.04), 0 6px 22px rgba(20,20,20,0.06);padding:8px 0;z-index:60}
 .nav-mobile-menu a{padding:11px 18px;text-decoration:none;color:var(--color-text)}
 .nav-mobile-menu a:hover{background:var(--color-accent-100)}
-.nav-mobile-menu .mm-sec{font-size:11px;letter-spacing:0.08em;text-transform:uppercase;font-weight:700;color:color-mix(in srgb,var(--color-text) 50%,transparent);padding:12px 18px 4px}
-.nav-mobile-menu .mm-cta{margin:10px 18px 8px;background-image:var(--grad-a);color:#fff;border-radius:10px;text-align:center;font-weight:700}
+.nav-mobile-menu .mm-sec{font-size:11px;letter-spacing:0.08em;text-transform:uppercase;font-weight: 600;color:color-mix(in srgb,var(--color-text) 50%,transparent);padding:12px 18px 4px}
+.nav-mobile-menu .mm-cta{margin:10px 18px 8px;background-image:var(--grad-a);color:#fff;border-radius:10px;text-align:center;font-weight: 600}
 .nav-mobile-menu .mm-cta:hover{background-image:var(--grad-a-h)}
 @media (max-width: 760px){
 .nav > a:not([aria-label="CFOLogic"]){display:none}
@@ -57,7 +57,7 @@ a:hover { color: var(--color-accent-600); }
 .nav-dd{position:relative;padding:26px 0;margin:-26px 0}
 .nav-dd-btn{display:flex;align-items:center;gap:6px;background:none;border:0;font-family:inherit;font-size:inherit;color:var(--color-text);cursor:pointer;padding:0;white-space:nowrap}
 .nav-dd-btn:hover{color:var(--color-accent-700)}
-.nav-dd-menu{position:absolute;top:100%;left:-18px;min-width:270px;padding:10px 0;display:none;flex-direction:column;background:rgba(253,253,253,0.92);backdrop-filter:blur(18px) saturate(1.6);-webkit-backdrop-filter:blur(18px) saturate(1.6);border:1px solid var(--color-neutral-200);border-radius:12px;box-shadow:0 12px 36px rgba(0,71,171,0.14)}
+.nav-dd-menu{position:absolute;top:100%;left:-18px;min-width:270px;padding:10px 0;display:none;flex-direction:column;background:rgba(253,253,253,0.92);backdrop-filter: blur(12px) saturate(1.15);-webkit-backdrop-filter: blur(12px) saturate(1.15);border:1px solid var(--color-neutral-200);border-radius:12px;box-shadow: 0 1px 2px rgba(20,20,20,0.04), 0 6px 22px rgba(20,20,20,0.06)}
 .nav-dd:hover .nav-dd-menu,.nav-dd:focus-within .nav-dd-menu{display:flex}
 .nav-dd-menu a{padding:9px 18px;white-space:nowrap;text-decoration:none}
 .nav-dd-menu a:hover{background:var(--color-accent-100)}
@@ -74,7 +74,7 @@ a:hover { color: var(--color-accent-600); }
 }
 </style>
 <script src="/assets/cfo-lead-capture.js"></script>
-
+<link rel="stylesheet" href="/assets/theme.css">
 <meta property="og:image" content="https://cfologic.com/assets/og-card.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -98,7 +98,7 @@ a:hover { color: var(--color-accent-600); }
 <body>
 <cfo-lead-capture></cfo-lead-capture>
 <div id="page-wrap" style="min-height: 100vh">
-<nav class="nav" style="position: sticky; top: 0; z-index: 50; background: rgba(253,253,253,0.65); backdrop-filter: blur(18px) saturate(1.6); -webkit-backdrop-filter: blur(18px) saturate(1.6); border-bottom: 1px solid var(--color-neutral-200); padding-inline: max(clamp(20px,5vw,72px), calc((100% - 1200px) / 2 + clamp(20px,5vw,72px)))">
+<nav class="nav" style="position: sticky; top: 0; z-index: 50; background: rgba(253,253,253,0.65); backdrop-filter: blur(12px) saturate(1.15); -webkit-backdrop-filter: blur(12px) saturate(1.15); border-bottom: 1px solid var(--color-neutral-200); padding-inline: max(clamp(20px,5vw,72px), calc((100% - 1200px) / 2 + clamp(20px,5vw,72px)))">
   <a href="/" aria-label="CFOLogic" style="text-decoration: none; flex: none"><img src="/assets/cfologic-logo.png" alt="CFOLogic" style="display: block; height: 40px; width: auto"></a>
   <div class="nav-dd">
     <button class="nav-dd-btn" type="button" aria-haspopup="true">Who we serve <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></button>
@@ -145,8 +145,8 @@ a:hover { color: var(--color-accent-600); }
 <div style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(20px,5vw,72px)">
 
   <section style="padding: 98px 0 70px">
-    <span style="display: block; font-size: 13px; line-height: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-accent-700); margin: 0 0 24px">About Us</span>
-    <h1 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(38px,5vw,68px); line-height: 1.06; letter-spacing: -0.02em; margin: 0 0 0 -0.058em; max-width: 18ch">CFOLogic is your strategic navigator.</h1>
+    <span style="display: block; font-size: 12.5px; line-height: 14px; letter-spacing: 1px; text-transform: uppercase; color: var(--color-neutral-600); margin: 0 0 24px">About Us</span>
+    <h1 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(33px,4.4vw,60px); line-height: 1.06; letter-spacing: -0.02em; margin: 0 0 0 -0.058em; max-width: 18ch">CFOLogic is your strategic navigator.</h1>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 28px clamp(28px,4vw,64px); margin-top: 36px">
       <p style="font-size: 17px; line-height: 28px; margin: 0; color: color-mix(in srgb, var(--color-text) 85%, transparent)">CFOLogic is a global finance services firm that works alongside the Office of the CFO to help fast-growing small and mid-sized businesses build scalable and disciplined finance functions. We partner closely with CEOs, CFOs, and Finance Leaders to strengthen financial operations, improve reporting reliability, and enable better decision-making through structured processes and financial intelligence.</p>
       <p style="font-size: 17px; line-height: 28px; margin: 0; color: color-mix(in srgb, var(--color-text) 85%, transparent)">Our role goes beyond traditional finance outsourcing. We support leadership teams in building a finance function that can keep pace with growth - combining operational execution, analytical insight, and governance frameworks that improve visibility, control, and strategic alignment across the organization.</p>
@@ -158,15 +158,15 @@ a:hover { color: var(--color-accent-600); }
   <section style="padding: 70px 0">
     <div class="fit-group" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 28px">
       <div class="fit-tile glass" data-fold="1" tabindex="0">
-        <div style="padding: 20px 24px 14px"><span style="display: block; font-size: 13px; line-height: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-accent-700); margin: 0">Purpose</span></div>
+        <div style="padding: 20px 24px 14px"><span style="display: block; font-size: 13px; line-height: 14px; letter-spacing: 0; text-transform: none; color: var(--color-neutral-700); margin: 0">Purpose</span></div>
         <div class="fit-body"><p style="font-size: 15.5px; line-height: 26px; color: color-mix(in srgb, var(--color-text) 82%, transparent); margin: 0">Your navigator for chaos to clarity, clarity to confidence, confidence to growth.</p></div>
       </div>
       <div class="fit-tile glass" data-fold="2" tabindex="0">
-        <div style="padding: 20px 24px 14px"><span style="display: block; font-size: 13px; line-height: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-accent-700); margin: 0">Vision</span></div>
+        <div style="padding: 20px 24px 14px"><span style="display: block; font-size: 13px; line-height: 14px; letter-spacing: 0; text-transform: none; color: var(--color-neutral-700); margin: 0">Vision</span></div>
         <div class="fit-body"><p style="font-size: 15.5px; line-height: 26px; color: color-mix(in srgb, var(--color-text) 82%, transparent); margin: 0">A world where every ambitious business has a trusted navigator - turning data into decisions and strategy into execution.</p></div>
       </div>
       <div class="fit-tile glass" data-fold="3" tabindex="0">
-        <div style="padding: 20px 24px 14px"><span style="display: block; font-size: 13px; line-height: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-accent-700); margin: 0">Mission</span></div>
+        <div style="padding: 20px 24px 14px"><span style="display: block; font-size: 13px; line-height: 14px; letter-spacing: 0; text-transform: none; color: var(--color-neutral-700); margin: 0">Mission</span></div>
         <div class="fit-body"><p style="font-size: 15.5px; line-height: 26px; color: color-mix(in srgb, var(--color-text) 82%, transparent); margin: 0">Serving ambitious businesses worldwide, we bring together people, process, and technology to deliver proactive financial insights - navigating every step from strategy to execution.</p></div>
       </div>
     </div>
@@ -175,16 +175,16 @@ a:hover { color: var(--color-accent-600); }
   <hr style="height: 2px; border: 0; margin: 0; background: var(--color-divider)">
 
   <section style="padding: 70px 0">
-    <span style="display: block; font-size: 13px; line-height: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-accent-700); margin: 0 0 24px">Our DNA</span>
-    <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(28px,3.2vw,44px); line-height: 1.1; letter-spacing: -0.015em; margin: 0 0 0 -0.058em">Three values. One standard.</h2>
+    <span style="display: block; font-size: 12.5px; line-height: 14px; letter-spacing: 1px; text-transform: uppercase; color: var(--color-neutral-600); margin: 0 0 24px">Our DNA</span>
+    <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(25px,2.8vw,39px); line-height: 1.1; letter-spacing: -0.015em; margin: 0 0 0 -0.058em">Three values. One standard.</h2>
     <div class="m-stack" style="display: grid; grid-template-columns: minmax(260px,5fr) minmax(0,7fr); gap: 36px clamp(28px,5vw,84px); align-items: stretch; margin-top: 42px">
       <div style="display: flex; flex-direction: column; gap: 14px; justify-content: center">
         
-          <p role="button" tabindex="0" data-dc-click="values[0].select" data-dc-mouseenter="values[0].select" data-dc-focus="values[0].select" style="font-family:var(--font-heading);font-weight:var(--font-heading-weight);font-size:clamp(36px,4.2vw,58px);line-height:1.08;letter-spacing:-0.02em;margin:0;cursor:pointer;outline:none;transition:opacity 0.4s ease;background-image:var(--grad-a);-webkit-background-clip:text;background-clip:text;color:transparent;opacity:1" data-dc-h="0">Proactive</p>
+          <p role="button" tabindex="0" data-dc-click="values[0].select" data-dc-mouseenter="values[0].select" data-dc-focus="values[0].select" style="font-family:var(--font-heading);font-weight:var(--font-heading-weight);font-size: clamp(32px,3.7vw,51px);line-height:1.08;letter-spacing:-0.02em;margin:0;cursor:pointer;outline:none;transition:opacity 0.4s ease;background-image:var(--grad-a);-webkit-background-clip:text;background-clip:text;color:transparent;opacity:1" data-dc-h="0">Proactive</p>
         
-          <p role="button" tabindex="0" data-dc-click="values[1].select" data-dc-mouseenter="values[1].select" data-dc-focus="values[1].select" style="font-family:var(--font-heading);font-weight:var(--font-heading-weight);font-size:clamp(36px,4.2vw,58px);line-height:1.08;letter-spacing:-0.02em;margin:0;cursor:pointer;outline:none;transition:opacity 0.4s ease;color:var(--color-neutral-300);opacity:0.9" data-dc-h="1">Professional</p>
+          <p role="button" tabindex="0" data-dc-click="values[1].select" data-dc-mouseenter="values[1].select" data-dc-focus="values[1].select" style="font-family:var(--font-heading);font-weight:var(--font-heading-weight);font-size: clamp(32px,3.7vw,51px);line-height:1.08;letter-spacing:-0.02em;margin:0;cursor:pointer;outline:none;transition:opacity 0.4s ease;color:var(--color-neutral-300);opacity:0.9" data-dc-h="1">Professional</p>
         
-          <p role="button" tabindex="0" data-dc-click="values[2].select" data-dc-mouseenter="values[2].select" data-dc-focus="values[2].select" style="font-family:var(--font-heading);font-weight:var(--font-heading-weight);font-size:clamp(36px,4.2vw,58px);line-height:1.08;letter-spacing:-0.02em;margin:0;cursor:pointer;outline:none;transition:opacity 0.4s ease;color:var(--color-neutral-300);opacity:0.9" data-dc-h="2">Proficient</p>
+          <p role="button" tabindex="0" data-dc-click="values[2].select" data-dc-mouseenter="values[2].select" data-dc-focus="values[2].select" style="font-family:var(--font-heading);font-weight:var(--font-heading-weight);font-size: clamp(32px,3.7vw,51px);line-height:1.08;letter-spacing:-0.02em;margin:0;cursor:pointer;outline:none;transition:opacity 0.4s ease;color:var(--color-neutral-300);opacity:0.9" data-dc-h="2">Proficient</p>
         
       </div>
       <div class="glass" style="padding: clamp(24px,3vw,42px); height: 300px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: center; overflow: hidden">
@@ -205,19 +205,19 @@ a:hover { color: var(--color-accent-600); }
   <hr style="height: 2px; border: 0; margin: 0; background: var(--color-divider)">
 
   <section aria-label="Delivering results across borders and growth stages" style="padding: 70px 0">
-    <span style="display: block; font-size: 13px; line-height: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-accent-700); margin: 0 0 42px">Delivering results across borders and growth stages</span>
+    <span style="display: block; font-size: 13px; line-height: 14px; letter-spacing: 0; text-transform: none; color: var(--color-neutral-700); margin: 0 0 42px">Delivering results across borders and growth stages</span>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 42px 28px">
       <div>
-        <p style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(34px,3.4vw,48px); line-height: 56px; background-image: var(--grad-a); -webkit-background-clip: text; background-clip: text; color: transparent; margin: 0 0 0 -0.045em">100+</p>
-        <p style="font-size: 13px; line-height: 18px; letter-spacing: 0.08em; text-transform: uppercase; color: color-mix(in srgb, var(--color-text) 70%, transparent); margin: 14px 0 0">Clients served globally</p>
+        <p style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(30px,3vw,42px); line-height: 56px; background-image: var(--grad-a); -webkit-background-clip: text; background-clip: text; color: transparent; margin: 0 0 0 -0.045em">100+</p>
+        <p style="font-size: 13px; line-height: 18px; letter-spacing: 0; text-transform: none; color: color-mix(in srgb, var(--color-text) 70%, transparent); margin: 14px 0 0">Clients served globally</p>
       </div>
       <div>
-        <p style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(34px,3.4vw,48px); line-height: 56px; background-image: var(--grad-a); -webkit-background-clip: text; background-clip: text; color: transparent; margin: 0 0 0 -0.045em">450+</p>
-        <p style="font-size: 13px; line-height: 18px; letter-spacing: 0.08em; text-transform: uppercase; color: color-mix(in srgb, var(--color-text) 70%, transparent); margin: 14px 0 0">Engagements delivered</p>
+        <p style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(30px,3vw,42px); line-height: 56px; background-image: var(--grad-a); -webkit-background-clip: text; background-clip: text; color: transparent; margin: 0 0 0 -0.045em">450+</p>
+        <p style="font-size: 13px; line-height: 18px; letter-spacing: 0; text-transform: none; color: color-mix(in srgb, var(--color-text) 70%, transparent); margin: 14px 0 0">Engagements delivered</p>
       </div>
       <div>
-        <p style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(34px,3.4vw,48px); line-height: 56px; background-image: var(--grad-a); -webkit-background-clip: text; background-clip: text; color: transparent; margin: 0 0 0 -0.045em">15+</p>
-        <p style="font-size: 13px; line-height: 18px; letter-spacing: 0.08em; text-transform: uppercase; color: color-mix(in srgb, var(--color-text) 70%, transparent); margin: 14px 0 0">Years of finance &amp; advisory services</p>
+        <p style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(30px,3vw,42px); line-height: 56px; background-image: var(--grad-a); -webkit-background-clip: text; background-clip: text; color: transparent; margin: 0 0 0 -0.045em">15+</p>
+        <p style="font-size: 13px; line-height: 18px; letter-spacing: 0; text-transform: none; color: color-mix(in srgb, var(--color-text) 70%, transparent); margin: 14px 0 0">Years of finance &amp; advisory services</p>
       </div>
     </div>
   </section>
@@ -227,8 +227,8 @@ a:hover { color: var(--color-accent-600); }
   <section style="padding: 84px 0">
     <div style="display: flex; align-items: baseline; gap: 28px; flex-wrap: wrap; justify-content: space-between; margin-bottom: 14px">
       <div>
-        <span style="display: block; font-size: 13px; line-height: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-accent-700); margin: 0 0 24px">Meet the team</span>
-        <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(28px,3.2vw,44px); line-height: 1.1; letter-spacing: -0.015em; margin: 0; max-width: 24ch">Top 1% talent for high-impact finance support.</h2>
+        <span style="display: block; font-size: 12.5px; line-height: 14px; letter-spacing: 1px; text-transform: uppercase; color: var(--color-neutral-600); margin: 0 0 24px">Meet the team</span>
+        <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(25px,2.8vw,39px); line-height: 1.1; letter-spacing: -0.015em; margin: 0; max-width: 24ch">Top 1% talent for high-impact finance support.</h2>
         <p style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 17px; line-height: 28px; margin: 14px 0 0">Friends first, <em>colleagues later.</em></p>
       </div>
       <a class="btn btn-secondary" href="https://careers.cfologic.com/" target="_blank" rel="noopener" style="white-space: nowrap; text-decoration: none">Join us</a>
@@ -291,55 +291,69 @@ a:hover { color: var(--color-accent-600); }
 
 <section style="background-image: var(--grad-a); color: #fff">
   <div style="max-width: 1200px; margin: 0 auto; padding: 70px clamp(20px,5vw,72px)">
-    <h3 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(30px,3.6vw,48px); line-height: 1.06; letter-spacing: -0.015em; margin: 0 0 0 -0.058em">Transform your finance function today.</h3>
+    <h3 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(26px,3.2vw,42px); line-height: 1.06; letter-spacing: -0.015em; margin: 0 0 0 -0.058em">Transform your finance function today.</h3>
     <div style="display: flex; gap: var(--space-3); flex-wrap: wrap; margin-top: 36px">
       <a class="btn btn-ghost" href="https://cal.com/GrowthCFO" target="_blank" rel="noopener" style="white-space: nowrap; text-decoration: none; color: #fff; border-color: #fff">Book a Discovery Call</a>
     </div>
   </div>
 </section>
 
-<footer style="border-top: 1px solid var(--color-neutral-200); background: color-mix(in srgb, var(--color-accent-100) 40%, #FDFDFD)">
-  <div class="m-stack" style="max-width: 1200px; margin: 0 auto; padding: 48px clamp(20px,5vw,72px) 56px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 28px; font-size: 14px; line-height: 24px">
-    <div style="display: flex; flex-direction: column; gap: 6px">
-      <a href="/" aria-label="CFOLogic" style="text-decoration: none"><img src="/assets/cfologic-logo.png" alt="CFOLogic" style="display: block; height: 40px; width: auto; margin-bottom: 4px"></a>
-      <p style="margin: 0; color: color-mix(in srgb, var(--color-text) 70%, transparent)">The finance team behind ambitious businesses.</p>
+<footer class="site-footer">
+  <div class="sf-wrap">
+    <div class="sf-grid">
+      <div class="sf-brand">
+        <a href="/" aria-label="CFOLogic" style="display: inline-block"><img src="/assets/cfologic-logo.png" alt="CFOLogic" style="display: block; height: 40px; width: auto"></a>
+        <p class="sf-tagline">The finance team behind ambitious businesses. Strategy to execution, one partner across the whole life of the business.</p>
+        <address class="sf-addr"><strong>CFOLogic, Inc.</strong>1207 Delaware Ave #5151, Wilmington, DE 19806, USA</address>
+        <address class="sf-addr"><strong>CFOLogic Private Limited</strong>2, Revati Arcade II, Baner, Pune, MH 411045, India</address>
+        <div class="sf-social">
+          <a href="https://www.linkedin.com/company/cfologichq" target="_blank" rel="noopener" aria-label="CFOLogic on LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></a>
+          <a href="https://x.com/CFOLogicHQ" target="_blank" rel="noopener" aria-label="CFOLogic on X"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.66l-5.21-6.82-5.97 6.82H1.67l7.73-8.84L1.25 2.25h6.83l4.71 6.23 5.45-6.23zm-1.16 17.52h1.83L7.08 4.13H5.12l11.96 15.64z"/></svg></a>
+          <a href="https://www.instagram.com/cfologichq" target="_blank" rel="noopener" aria-label="CFOLogic on Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        </div>
+      </div>
+      <div class="sf-col">
+        <h4>Who we serve</h4>
+        <a href="/founders/">Founders &amp; CEOs</a>
+        <a href="/cfo-success-partners/">CFOs &amp; Finance Leaders</a>
+        <a href="/accounting-firms/">CFO/CAS Firms</a>
+        <a href="/capital-providers/">Capital Providers</a>
+        <a href="/acquisition-entrepreneurs/">Acquisition Entrepreneurs</a>
+      </div>
+      <div class="sf-col">
+        <h4>Company</h4>
+        <a href="/about/">About</a>
+        <a href="/insights/">Insights</a>
+        <a href="/trust-center/">Trust Center</a>
+        <a href="https://careers.cfologic.com/careers" target="_blank" rel="noopener">Careers</a>
+      </div>
+      <div class="sf-col">
+        <h4>Product</h4>
+        <a href="https://navigator.cfologic.com" target="_blank" rel="noopener">Navigator AI</a>
+        <a href="https://navigatordemo.cfologic.com" target="_blank" rel="noopener">Live demo</a>
+        <a href="https://cal.com/GrowthCFO" target="_blank" rel="noopener">Book a discovery call</a>
+      </div>
+      <div class="sf-col sf-subscribe">
+        <h4>Insights, by email</h4>
+        <form action="https://formsubmit.co/prasad@cfologic.com" method="POST">
+          <input type="hidden" name="_subject" value="Insights subscription - cfologic.com">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="email" name="email" required placeholder="you@company.com" aria-label="Email address">
+          <button class="btn btn-primary" type="submit">Subscribe</button>
+        </form>
+        <p class="sf-note">No spam ever. Unsubscribe in one click.</p>
+      </div>
     </div>
-    <div style="display: flex; flex-direction: column; gap: 6px">
-      <p style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); color: var(--color-text); margin: 0 0 4px">Who we serve</p>
-      <a href="/founders/" style="text-decoration: none">Founders &amp; CEOs</a>
-      <a href="/cfo-success-partners/" style="text-decoration: none">CFOs &amp; Finance Leaders</a>
-      <a href="/accounting-firms/" style="text-decoration: none">CFO/CAS Firms</a>
-      <a href="/capital-providers/" style="text-decoration: none">Capital Providers</a>
-      <a href="/acquisition-entrepreneurs/" style="text-decoration: none">Acquisition Entrepreneurs</a>
-    </div>
-    <div style="display: flex; flex-direction: column; gap: 6px">
-      <p style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); color: var(--color-text); margin: 0 0 4px">Company</p>
-      <a href="/about/" style="text-decoration: none">About Us</a>
-      <a href="/insights/" style="text-decoration: none">Insights</a>
-      <a href="/trust-center/" style="text-decoration: none">Trust Center</a>
-      <a href="/legal/" style="text-decoration: none">Privacy &amp; Legal</a>
-      <a href="https://careers.cfologic.com/careers" target="_blank" rel="noopener" style="text-decoration: none">Careers</a>
-      <a href="https://navigator.cfologic.com" target="_blank" rel="noopener" style="text-decoration: none">Navigator AI</a>
-    </div>
-    <div>
-      <p style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); color: var(--color-text); margin: 0 0 10px">Subscribe to actionable insights</p>
-      <form action="https://formsubmit.co/prasad@cfologic.com" method="POST" style="display: flex; gap: 8px">
-        <input type="hidden" name="_subject" value="Insights subscription - cfologic.com">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="email" name="email" required placeholder="you@company.com" aria-label="Email address" style="flex: 1; min-width: 0; font-family: inherit; font-size: 14px; padding: 10px 14px; border: 1px solid var(--color-neutral-300); border-radius: 8px; background: #fff; color: var(--color-text)">
-        <button class="btn btn-primary" type="submit" style="white-space: nowrap; cursor: pointer">Subscribe</button>
-      </form>
-      <p style="font-size: 12.5px; margin: 8px 0 0; color: color-mix(in srgb, var(--color-text) 60%, transparent)">No spam ever. Unsubscribe in one click.</p>
-    </div>
-    <div>
-      <p style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); color: var(--color-text); margin: 0 0 4px">Follow</p>
-      <p style="margin: 0"><a href="https://www.linkedin.com/company/cfologichq" target="_blank" rel="noopener" style="text-decoration: none">LinkedIn</a> · <a href="https://x.com/CFOLogicHQ" target="_blank" rel="noopener" style="text-decoration: none">X</a> · <a href="https://www.instagram.com/cfologichq" target="_blank" rel="noopener" style="text-decoration: none">Instagram</a></p>
-      <p style="margin: 21px 0 0">© CFOLogic 2026. All rights reserved.</p>
+    <div class="sf-bottom">
+      <span>&copy; CFOLogic 2026. All rights reserved.</span>
+      <nav aria-label="Legal"><a href="/legal/">Privacy</a><a href="/legal/">Terms</a></nav>
     </div>
   </div>
+  <div class="sf-wordmark" aria-hidden="true"><img src="/assets/cfologic-logo.png" alt="" loading="lazy"></div>
 </footer>
+
 </div>
-<script>window.__DC={"initial":0,"patches":{"0":{"0":{"style":"font-family:var(--font-heading);font-weight:var(--font-heading-weight);font-size:clamp(36px,4.2vw,58px);line-height:1.08;letter-spacing:-0.02em;margin:0;cursor:pointer;outline:none;transition:opacity 0.4s ease;background-image:var(--grad-a);-webkit-background-clip:text;background-clip:text;color:transparent;opacity:1"},"1":{"style":"font-family:var(--font-heading);font-weight:var(--font-heading-weight);font-size:clamp(36px,4.2vw,58px);line-height:1.08;letter-spacing:-0.02em;margin:0;cursor:pointer;outline:none;transition:opacity 0.4s ease;color:var(--color-neutral-300);opacity:0.9"},"2":{"style":"font-family:var(--font-heading);font-weight:var(--font-heading-weight);font-size:clamp(36px,4.2vw,58px);line-height:1.08;letter-spacing:-0.02em;margin:0;cursor:pointer;outline:none;transition:opacity 0.4s ease;color:var(--color-neutral-300);opacity:0.9"},"3":{"#text":"We anticipate challenges, take initiative, and drive solutions before problems arise. We stay ahead of the curve, so our clients and teams are always prepared for what's next."},"4":{"#text":"Anticipate &amp; solve"},"5":{"#text":"Take initiative"},"6":{"#text":"Execute with excellence"}},"1":{"0":{"style":"font-family:var(--font-heading);font-weight:var(--font-heading-weight);font-size:clamp(36px,4.2vw,58px);line-height:1.08;letter-spacing:-0.02em;margin:0;cursor:pointer;outline:none;transition:opacity 0.4s ease;background-image:var(--grad-a);-webkit-background-clip:text;background-clip:text;color:transparent;opacity:1"},"1":{"style":"font-family:var(--font-heading);font-weight:var(--font-heading-weight);font-size:clamp(36px,4.2vw,58px);line-height:1.08;letter-spacing:-0.02em;margin:0;cursor:pointer;outline:none;transition:opacity 0.4s ease;color:var(--color-neutral-300);opacity:0.9"},"2":{"style":"font-family:var(--font-heading);font-weight:var(--font-heading-weight);font-size:clamp(36px,4.2vw,58px);line-height:1.08;letter-spacing:-0.02em;margin:0;cursor:pointer;outline:none;transition:opacity 0.4s ease;color:var(--color-neutral-300);opacity:0.9"},"3":{"#text":"We anticipate challenges, take initiative, and drive solutions before problems arise. We stay ahead of the curve, so our clients and teams are always prepared for what's next."},"4":{"#text":"Anticipate &amp; solve"},"5":{"#text":"Take initiative"},"6":{"#text":"Execute with excellence"}},"2":{"0":{"style":"font-family:var(--font-heading);font-weight:var(--font-heading-weight);font-size:clamp(36px,4.2vw,58px);line-height:1.08;letter-spacing:-0.02em;margin:0;cursor:pointer;outline:none;transition:opacity 0.4s ease;color:var(--color-neutral-300);opacity:0.9"},"1":{"style":"font-family:var(--font-heading);font-weight:var(--font-heading-weight);font-size:clamp(36px,4.2vw,58px);line-height:1.08;letter-spacing:-0.02em;margin:0;cursor:pointer;outline:none;transition:opacity 0.4s ease;background-image:var(--grad-a);-webkit-background-clip:text;background-clip:text;color:transparent;opacity:1"},"2":{"style":"font-family:var(--font-heading);font-weight:var(--font-heading-weight);font-size:clamp(36px,4.2vw,58px);line-height:1.08;letter-spacing:-0.02em;margin:0;cursor:pointer;outline:none;transition:opacity 0.4s ease;color:var(--color-neutral-300);opacity:0.9"},"3":{"#text":"We uphold the highest standards of integrity, accountability, and client service. Our communication, conduct, and commitment reflect the trust our clients place in us."},"4":{"#text":"Integrity first"},"5":{"#text":"Ownership &amp; accountability"},"6":{"#text":"Client-centric approach"}},"3":{"0":{"style":"font-family:var(--font-heading);font-weight:var(--font-heading-weight);font-size:clamp(36px,4.2vw,58px);line-height:1.08;letter-spacing:-0.02em;margin:0;cursor:pointer;outline:none;transition:opacity 0.4s ease;color:var(--color-neutral-300);opacity:0.9"},"1":{"style":"font-family:var(--font-heading);font-weight:var(--font-heading-weight);font-size:clamp(36px,4.2vw,58px);line-height:1.08;letter-spacing:-0.02em;margin:0;cursor:pointer;outline:none;transition:opacity 0.4s ease;color:var(--color-neutral-300);opacity:0.9"},"2":{"style":"font-family:var(--font-heading);font-weight:var(--font-heading-weight);font-size:clamp(36px,4.2vw,58px);line-height:1.08;letter-spacing:-0.02em;margin:0;cursor:pointer;outline:none;transition:opacity 0.4s ease;background-image:var(--grad-a);-webkit-background-clip:text;background-clip:text;color:transparent;opacity:1"},"3":{"#text":"We are experts in our field - continuously honing our skills, leveraging technology, and delivering best-in-class financial insights that drive growth."},"4":{"#text":"Commit to learning"},"5":{"#text":"Deliver strategic insights"},"6":{"#text":"Embrace technology &amp; innovation"}}},"trans":[{"values[0].select":1,"values[1].select":2,"values[2].select":3},{"values[0].select":1,"values[1].select":2,"values[2].select":3},{"values[0].select":1,"values[1].select":2,"values[2].select":3},{"values[0].select":1,"values[1].select":2,"values[2].select":3}],"fold":0.25,"auto":{"interval":3400,"next":{}}};</script>
+<script>window.__DC={"initial":0,"patches":{"0":{"0":{"style":"font-family:var(--font-heading);font-weight:var(--font-heading-weight);font-size: clamp(32px,3.7vw,51px);line-height:1.08;letter-spacing:-0.02em;margin:0;cursor:pointer;outline:none;transition:opacity 0.4s ease;background-image:var(--grad-a);-webkit-background-clip:text;background-clip:text;color:transparent;opacity:1"},"1":{"style":"font-family:var(--font-heading);font-weight:var(--font-heading-weight);font-size: clamp(32px,3.7vw,51px);line-height:1.08;letter-spacing:-0.02em;margin:0;cursor:pointer;outline:none;transition:opacity 0.4s ease;color:var(--color-neutral-300);opacity:0.9"},"2":{"style":"font-family:var(--font-heading);font-weight:var(--font-heading-weight);font-size: clamp(32px,3.7vw,51px);line-height:1.08;letter-spacing:-0.02em;margin:0;cursor:pointer;outline:none;transition:opacity 0.4s ease;color:var(--color-neutral-300);opacity:0.9"},"3":{"#text":"We anticipate challenges, take initiative, and drive solutions before problems arise. We stay ahead of the curve, so our clients and teams are always prepared for what's next."},"4":{"#text":"Anticipate &amp; solve"},"5":{"#text":"Take initiative"},"6":{"#text":"Execute with excellence"}},"1":{"0":{"style":"font-family:var(--font-heading);font-weight:var(--font-heading-weight);font-size: clamp(32px,3.7vw,51px);line-height:1.08;letter-spacing:-0.02em;margin:0;cursor:pointer;outline:none;transition:opacity 0.4s ease;background-image:var(--grad-a);-webkit-background-clip:text;background-clip:text;color:transparent;opacity:1"},"1":{"style":"font-family:var(--font-heading);font-weight:var(--font-heading-weight);font-size: clamp(32px,3.7vw,51px);line-height:1.08;letter-spacing:-0.02em;margin:0;cursor:pointer;outline:none;transition:opacity 0.4s ease;color:var(--color-neutral-300);opacity:0.9"},"2":{"style":"font-family:var(--font-heading);font-weight:var(--font-heading-weight);font-size: clamp(32px,3.7vw,51px);line-height:1.08;letter-spacing:-0.02em;margin:0;cursor:pointer;outline:none;transition:opacity 0.4s ease;color:var(--color-neutral-300);opacity:0.9"},"3":{"#text":"We anticipate challenges, take initiative, and drive solutions before problems arise. We stay ahead of the curve, so our clients and teams are always prepared for what's next."},"4":{"#text":"Anticipate &amp; solve"},"5":{"#text":"Take initiative"},"6":{"#text":"Execute with excellence"}},"2":{"0":{"style":"font-family:var(--font-heading);font-weight:var(--font-heading-weight);font-size: clamp(32px,3.7vw,51px);line-height:1.08;letter-spacing:-0.02em;margin:0;cursor:pointer;outline:none;transition:opacity 0.4s ease;color:var(--color-neutral-300);opacity:0.9"},"1":{"style":"font-family:var(--font-heading);font-weight:var(--font-heading-weight);font-size: clamp(32px,3.7vw,51px);line-height:1.08;letter-spacing:-0.02em;margin:0;cursor:pointer;outline:none;transition:opacity 0.4s ease;background-image:var(--grad-a);-webkit-background-clip:text;background-clip:text;color:transparent;opacity:1"},"2":{"style":"font-family:var(--font-heading);font-weight:var(--font-heading-weight);font-size: clamp(32px,3.7vw,51px);line-height:1.08;letter-spacing:-0.02em;margin:0;cursor:pointer;outline:none;transition:opacity 0.4s ease;color:var(--color-neutral-300);opacity:0.9"},"3":{"#text":"We uphold the highest standards of integrity, accountability, and client service. Our communication, conduct, and commitment reflect the trust our clients place in us."},"4":{"#text":"Integrity first"},"5":{"#text":"Ownership &amp; accountability"},"6":{"#text":"Client-centric approach"}},"3":{"0":{"style":"font-family:var(--font-heading);font-weight:var(--font-heading-weight);font-size: clamp(32px,3.7vw,51px);line-height:1.08;letter-spacing:-0.02em;margin:0;cursor:pointer;outline:none;transition:opacity 0.4s ease;color:var(--color-neutral-300);opacity:0.9"},"1":{"style":"font-family:var(--font-heading);font-weight:var(--font-heading-weight);font-size: clamp(32px,3.7vw,51px);line-height:1.08;letter-spacing:-0.02em;margin:0;cursor:pointer;outline:none;transition:opacity 0.4s ease;color:var(--color-neutral-300);opacity:0.9"},"2":{"style":"font-family:var(--font-heading);font-weight:var(--font-heading-weight);font-size: clamp(32px,3.7vw,51px);line-height:1.08;letter-spacing:-0.02em;margin:0;cursor:pointer;outline:none;transition:opacity 0.4s ease;background-image:var(--grad-a);-webkit-background-clip:text;background-clip:text;color:transparent;opacity:1"},"3":{"#text":"We are experts in our field - continuously honing our skills, leveraging technology, and delivering best-in-class financial insights that drive growth."},"4":{"#text":"Commit to learning"},"5":{"#text":"Deliver strategic insights"},"6":{"#text":"Embrace technology &amp; innovation"}}},"trans":[{"values[0].select":1,"values[1].select":2,"values[2].select":3},{"values[0].select":1,"values[1].select":2,"values[2].select":3},{"values[0].select":1,"values[1].select":2,"values[2].select":3},{"values[0].select":1,"values[1].select":2,"values[2].select":3}],"fold":0.25,"auto":{"interval":3400,"next":{}}};</script>
 <script src="/assets/site.js" defer></script>
 </body>
 </html>

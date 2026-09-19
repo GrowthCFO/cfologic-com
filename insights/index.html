@@ -28,21 +28,21 @@
 --color-bg:#FDFDFD}
 .btn-primary{background-image:var(--grad-a);color:#fff !important}
 .btn-primary:hover,.btn-primary:active{background-image:var(--grad-a-h);color:#fff !important}
-.glass{background:rgba(255,255,255,0.55);backdrop-filter:blur(20px) saturate(1.6);-webkit-backdrop-filter:blur(20px) saturate(1.6);border:1px solid var(--color-neutral-200);border-radius:16px;box-shadow:0 8px 28px rgba(0,71,171,0.08)}
+.glass{background:rgba(255,255,255,0.55);backdrop-filter: blur(12px) saturate(1.15);-webkit-backdrop-filter: blur(12px) saturate(1.15);border:1px solid var(--color-neutral-200);border-radius:16px;box-shadow: 0 1px 2px rgba(20,20,20,0.04), 0 4px 17px rgba(20,20,20,0.06)}
 .grad-text{background-image:var(--grad-a);-webkit-background-clip:text;background-clip:text;color:transparent}
 .post-card{transition:border-color 0.25s ease,box-shadow 0.25s ease,transform 0.25s ease}
-.post-card:hover{border-color:var(--color-accent-300);box-shadow:0 12px 32px rgba(0,71,171,0.13);transform:translateY(-2px)}
+.post-card:hover{border-color:var(--color-accent-300);box-shadow: 0 1px 2px rgba(20,20,20,0.04), 0 6px 19px rgba(20,20,20,0.06);transform:translateY(-2px)}
 body { margin: 0; background: var(--color-bg); color: var(--color-text); font-family: var(--font-body); text-wrap: pretty; }
 a { color: var(--color-accent-700); }
 a:hover { color: var(--color-accent-600); }
 .nav-mobile{display:none;position:relative}
 .nav-mobile summary{list-style:none;cursor:pointer;display:flex;align-items:center;padding:6px;color:var(--color-text)}
 .nav-mobile summary::-webkit-details-marker{display:none}
-.nav-mobile-menu{position:absolute;right:-6px;top:calc(100% + 12px);width:min(320px,calc(100vw - 32px));display:flex;flex-direction:column;background:rgba(253,253,253,0.97);backdrop-filter:blur(18px) saturate(1.6);-webkit-backdrop-filter:blur(18px) saturate(1.6);border:1px solid var(--color-neutral-200);border-radius:12px;box-shadow:0 12px 36px rgba(0,71,171,0.18);padding:8px 0;z-index:60}
+.nav-mobile-menu{position:absolute;right:-6px;top:calc(100% + 12px);width:min(320px,calc(100vw - 32px));display:flex;flex-direction:column;background:rgba(253,253,253,0.97);backdrop-filter: blur(12px) saturate(1.15);-webkit-backdrop-filter: blur(12px) saturate(1.15);border:1px solid var(--color-neutral-200);border-radius:12px;box-shadow: 0 1px 2px rgba(20,20,20,0.04), 0 6px 22px rgba(20,20,20,0.06);padding:8px 0;z-index:60}
 .nav-mobile-menu a{padding:11px 18px;text-decoration:none;color:var(--color-text)}
 .nav-mobile-menu a:hover{background:var(--color-accent-100)}
-.nav-mobile-menu .mm-sec{font-size:11px;letter-spacing:0.08em;text-transform:uppercase;font-weight:700;color:color-mix(in srgb,var(--color-text) 50%,transparent);padding:12px 18px 4px}
-.nav-mobile-menu .mm-cta{margin:10px 18px 8px;background-image:var(--grad-a);color:#fff;border-radius:10px;text-align:center;font-weight:700}
+.nav-mobile-menu .mm-sec{font-size:11px;letter-spacing:0.08em;text-transform:uppercase;font-weight: 600;color:color-mix(in srgb,var(--color-text) 50%,transparent);padding:12px 18px 4px}
+.nav-mobile-menu .mm-cta{margin:10px 18px 8px;background-image:var(--grad-a);color:#fff;border-radius:10px;text-align:center;font-weight: 600}
 .nav-mobile-menu .mm-cta:hover{background-image:var(--grad-a-h)}
 @media (max-width: 760px){
 .nav > a:not([aria-label="CFOLogic"]){display:none}
@@ -58,7 +58,7 @@ a:hover { color: var(--color-accent-600); }
 .nav-dd{position:relative;padding:26px 0;margin:-26px 0}
 .nav-dd-btn{display:flex;align-items:center;gap:6px;background:none;border:0;font-family:inherit;font-size:inherit;color:var(--color-text);cursor:pointer;padding:0;white-space:nowrap}
 .nav-dd-btn:hover{color:var(--color-accent-700)}
-.nav-dd-menu{position:absolute;top:100%;left:-18px;min-width:270px;padding:10px 0;display:none;flex-direction:column;background:rgba(253,253,253,0.92);backdrop-filter:blur(18px) saturate(1.6);-webkit-backdrop-filter:blur(18px) saturate(1.6);border:1px solid var(--color-neutral-200);border-radius:12px;box-shadow:0 12px 36px rgba(0,71,171,0.14)}
+.nav-dd-menu{position:absolute;top:100%;left:-18px;min-width:270px;padding:10px 0;display:none;flex-direction:column;background:rgba(253,253,253,0.92);backdrop-filter: blur(12px) saturate(1.15);-webkit-backdrop-filter: blur(12px) saturate(1.15);border:1px solid var(--color-neutral-200);border-radius:12px;box-shadow: 0 1px 2px rgba(20,20,20,0.04), 0 6px 22px rgba(20,20,20,0.06)}
 .nav-dd:hover .nav-dd-menu,.nav-dd:focus-within .nav-dd-menu{display:flex}
 .nav-dd-menu a{padding:9px 18px;white-space:nowrap;text-decoration:none}
 .nav-dd-menu a:hover{background:var(--color-accent-100)}
@@ -68,7 +68,7 @@ a:hover { color: var(--color-accent-600); }
 .m-stack{grid-template-columns:1fr !important}
 }
 </style>
-
+<link rel="stylesheet" href="/assets/theme.css">
 <meta property="og:image" content="https://cfologic.com/assets/og-card.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -92,7 +92,7 @@ a:hover { color: var(--color-accent-600); }
 <body>
 <cfo-lead-capture></cfo-lead-capture>
 <div id="page-wrap" style="min-height: 100vh">
-<nav class="nav" style="position: sticky; top: 0; z-index: 50; background: rgba(253,253,253,0.65); backdrop-filter: blur(18px) saturate(1.6); -webkit-backdrop-filter: blur(18px) saturate(1.6); border-bottom: 1px solid var(--color-neutral-200); padding-inline: max(clamp(20px,5vw,72px), calc((100% - 1200px) / 2 + clamp(20px,5vw,72px)))">
+<nav class="nav" style="position: sticky; top: 0; z-index: 50; background: rgba(253,253,253,0.65); backdrop-filter: blur(12px) saturate(1.15); -webkit-backdrop-filter: blur(12px) saturate(1.15); border-bottom: 1px solid var(--color-neutral-200); padding-inline: max(clamp(20px,5vw,72px), calc((100% - 1200px) / 2 + clamp(20px,5vw,72px)))">
   <a href="/" aria-label="CFOLogic" style="text-decoration: none; flex: none"><img src="/assets/cfologic-logo.png" alt="CFOLogic" style="display: block; height: 40px; width: auto"></a>
   
     <div class="nav-dd">
@@ -112,7 +112,7 @@ a:hover { color: var(--color-accent-600); }
       </div>
     </div>
   
-  <span style="white-space: nowrap; font-weight: 700; color: var(--color-accent-700)">Insights</span>
+  <span style="white-space: nowrap; font-weight: 600; color: var(--color-accent-700)">Insights</span>
   
     <a href="https://navigator.cfologic.com" target="_blank" rel="noopener" style="white-space: nowrap; color: var(--color-text); text-decoration: none">Navigator AI</a>
   
@@ -151,19 +151,19 @@ a:hover { color: var(--color-accent-600); }
 <main style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(20px,5vw,72px); display: block">
 
   <section style="padding: 98px 0 56px">
-    <span style="display: block; font-size: 13px; line-height: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-accent-700); margin: 0 0 24px">Insights</span>
-    <h1 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(36px,5vw,68px); line-height: 1.06; letter-spacing: -0.02em; margin: 0 0 0 -0.058em; max-width: 20ch">Practical finance <span class="grad-text">intelligence</span> for growth-focused businesses.</h1>
+    <span style="display: block; font-size: 12.5px; line-height: 14px; letter-spacing: 1px; text-transform: uppercase; color: var(--color-neutral-600); margin: 0 0 24px">Insights</span>
+    <h1 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(32px,4.4vw,60px); line-height: 1.06; letter-spacing: -0.02em; margin: 0 0 0 -0.058em; max-width: 20ch">Practical finance <span class="grad-text">intelligence</span> for growth-focused businesses.</h1>
     <p style="font-size: 17px; line-height: 28px; max-width: 60ch; margin: 32px 0 0">Articles and guides from the CFOLogic team - on the finance work every business runs, what it should cost, and where AI actually helps. No gate, no fluff.</p>
   </section>
 
   <section style="padding: 0 0 70px">
     <a href="/insights/buy-side-quality-of-earnings-worked-example/" class="glass post-card" style="display: block; text-decoration: none; color: var(--color-text); padding: clamp(28px,4vw,48px)">
-      <div style="display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700">
+      <div style="display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600">
         <span style="color: #fff; background-image: var(--grad-a); padding: 4px 10px; border-radius: 999px">Featured</span>
         <span style="color: var(--color-accent-700)">Case Study</span>
         <span style="color: color-mix(in srgb, var(--color-text) 50%, transparent)">Sep 2026 · 6 min read</span>
       </div>
-      <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(26px,3vw,42px); line-height: 1.12; letter-spacing: -0.015em; margin: 18px 0 0; max-width: 30ch">What a Buy-Side Quality of Earnings Actually Finds</h2>
+      <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(23px,2.6vw,37px); line-height: 1.12; letter-spacing: -0.015em; margin: 18px 0 0; max-width: 30ch">What a Buy-Side Quality of Earnings Actually Finds</h2>
       <p style="font-size: 16px; line-height: 27px; color: color-mix(in srgb, var(--color-text) 78%, transparent); margin: 16px 0 0; max-width: 68ch">A buyer was looking at three franchised select-service hotels in the Upper Midwest — 342 keys, $14.9M of revenue, presented at $4.9M of adjusted EBITDA.</p>
       <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 22px">
         <span style="font-size: 12.5px; color: var(--color-accent-800); background: var(--color-accent-100); border: 1px solid var(--color-accent-200); padding: 3px 10px; border-radius: 999px">Deal Support</span>
@@ -175,10 +175,10 @@ a:hover { color: var(--color-accent-600); }
   <hr style="height: 2px; border: 0; margin: 0; background: var(--color-divider)">
 
   <section style="padding: 70px 0 84px">
-    <span style="display: block; font-size: 13px; line-height: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-accent-700); margin: 0 0 24px">The full archive</span>
-    <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(28px,3.2vw,44px); line-height: 1.1; letter-spacing: -0.015em; margin: 0 0 0 -0.058em; max-width: 26ch">Everything we've published.</h2>
+    <span style="display: block; font-size: 12.5px; line-height: 14px; letter-spacing: 1px; text-transform: uppercase; color: var(--color-neutral-600); margin: 0 0 24px">The full archive</span>
+    <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(25px,2.8vw,39px); line-height: 1.1; letter-spacing: -0.015em; margin: 0 0 0 -0.058em; max-width: 26ch">Everything we've published.</h2>
     <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 36px">
-      <span style="font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700; color: color-mix(in srgb, var(--color-text) 55%, transparent); margin-right: 6px">Type</span>
+      <span style="font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600; color: color-mix(in srgb, var(--color-text) 55%, transparent); margin-right: 6px">Type</span>
       
         <button data-dc-chip="type" data-dc-val="All" style="font-family:inherit;font-size:13px;padding:7px 14px;border-radius:999px;cursor:pointer;white-space:nowrap;transition:all 0.2s ease;background-image:var(--grad-a);color:#fff;border:1px solid transparent">All</button>
       
@@ -190,7 +190,7 @@ a:hover { color: var(--color-accent-600); }
       
     </div>
     <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 12px">
-      <span style="font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700; color: color-mix(in srgb, var(--color-text) 55%, transparent); margin-right: 6px">Topic</span>
+      <span style="font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600; color: color-mix(in srgb, var(--color-text) 55%, transparent); margin-right: 6px">Topic</span>
       
         <button data-dc-chip="topic" data-dc-val="All topics" style="font-family:inherit;font-size:13px;padding:7px 14px;border-radius:999px;cursor:pointer;white-space:nowrap;transition:all 0.2s ease;background-image:var(--grad-a);color:#fff;border:1px solid transparent">All topics</button>
       
@@ -209,7 +209,7 @@ a:hover { color: var(--color-accent-600); }
     <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); gap: 20px; margin-top: 16px">
       
         <a href="/insights/buy-side-quality-of-earnings-worked-example/" data-f-type="Case Study" data-f-topic="Deal Support" class="glass post-card" style="display: flex; flex-direction: column; gap: 0; text-decoration: none; color: var(--color-text); padding: 26px 28px">
-          <div style="display: flex; gap: 14px; align-items: center; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700">
+          <div style="display: flex; gap: 14px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600">
             <span style="color: var(--color-accent-700)">Case Study</span>
             <span style="color: color-mix(in srgb, var(--color-text) 45%, transparent); white-space: nowrap">Sep 2026</span>
             
@@ -223,7 +223,7 @@ a:hover { color: var(--color-accent-600); }
         </a>
       
         <a href="/insights/fractional-cfo-services-cost-and-when-you-need-one/" data-f-type="Guide" data-f-topic="Full-Stack Finance" class="glass post-card" style="display: flex; flex-direction: column; gap: 0; text-decoration: none; color: var(--color-text); padding: 26px 28px">
-          <div style="display: flex; gap: 14px; align-items: center; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700">
+          <div style="display: flex; gap: 14px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600">
             <span style="color: var(--color-accent-700)">Guide</span>
             <span style="color: color-mix(in srgb, var(--color-text) 45%, transparent); white-space: nowrap">Aug 2026</span>
             
@@ -237,7 +237,7 @@ a:hover { color: var(--color-accent-600); }
         </a>
       
         <a href="/insights/what-a-5m-company-s-finance-function-looks-like-inside/" data-f-type="Article" data-f-topic="Full-Stack Finance" class="glass post-card" style="display: flex; flex-direction: column; gap: 0; text-decoration: none; color: var(--color-text); padding: 26px 28px">
-          <div style="display: flex; gap: 14px; align-items: center; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700">
+          <div style="display: flex; gap: 14px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600">
             <span style="color: var(--color-accent-700)">Article</span>
             <span style="color: color-mix(in srgb, var(--color-text) 45%, transparent); white-space: nowrap">Aug 2026</span>
             
@@ -251,7 +251,7 @@ a:hover { color: var(--color-accent-600); }
         </a>
       
         <a href="/insights/your-business-outgrew-your-bookkeeper-two-years-ago/" data-f-type="Article" data-f-topic="Full-Stack Finance" class="glass post-card" style="display: flex; flex-direction: column; gap: 0; text-decoration: none; color: var(--color-text); padding: 26px 28px">
-          <div style="display: flex; gap: 14px; align-items: center; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700">
+          <div style="display: flex; gap: 14px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600">
             <span style="color: var(--color-accent-700)">Article</span>
             <span style="color: color-mix(in srgb, var(--color-text) 45%, transparent); white-space: nowrap">Aug 2026</span>
             
@@ -265,7 +265,7 @@ a:hover { color: var(--color-accent-600); }
         </a>
       
         <a href="/insights/the-cfo-question-every-founder-gets-wrong-at-3m-revenue/" data-f-type="Article" data-f-topic="Full-Stack Finance" class="glass post-card" style="display: flex; flex-direction: column; gap: 0; text-decoration: none; color: var(--color-text); padding: 26px 28px">
-          <div style="display: flex; gap: 14px; align-items: center; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700">
+          <div style="display: flex; gap: 14px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600">
             <span style="color: var(--color-accent-700)">Article</span>
             <span style="color: color-mix(in srgb, var(--color-text) 45%, transparent); white-space: nowrap">Aug 2026</span>
             
@@ -279,7 +279,7 @@ a:hover { color: var(--color-accent-600); }
         </a>
       
         <a href="/insights/month-end-close-in-5-days-what-it-takes-and-why-it-matters/" data-f-type="Article" data-f-topic="Full-Stack Finance" class="glass post-card" style="display: flex; flex-direction: column; gap: 0; text-decoration: none; color: var(--color-text); padding: 26px 28px">
-          <div style="display: flex; gap: 14px; align-items: center; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700">
+          <div style="display: flex; gap: 14px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600">
             <span style="color: var(--color-accent-700)">Article</span>
             <span style="color: color-mix(in srgb, var(--color-text) 45%, transparent); white-space: nowrap">Aug 2026</span>
             
@@ -293,7 +293,7 @@ a:hover { color: var(--color-accent-600); }
         </a>
       
         <a href="/insights/finance-infrastructure-is-the-thing-pe-firms-fix-first/" data-f-type="Article" data-f-topic="Full-Stack Finance" class="glass post-card" style="display: flex; flex-direction: column; gap: 0; text-decoration: none; color: var(--color-text); padding: 26px 28px">
-          <div style="display: flex; gap: 14px; align-items: center; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700">
+          <div style="display: flex; gap: 14px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600">
             <span style="color: var(--color-accent-700)">Article</span>
             <span style="color: color-mix(in srgb, var(--color-text) 45%, transparent); white-space: nowrap">Aug 2026</span>
             
@@ -307,7 +307,7 @@ a:hover { color: var(--color-accent-600); }
         </a>
       
         <a href="/insights/the-real-cost-of-quickbooks-and-a-part-time-controller/" data-f-type="Article" data-f-topic="Full-Stack Finance" class="glass post-card" style="display: flex; flex-direction: column; gap: 0; text-decoration: none; color: var(--color-text); padding: 26px 28px">
-          <div style="display: flex; gap: 14px; align-items: center; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700">
+          <div style="display: flex; gap: 14px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600">
             <span style="color: var(--color-accent-700)">Article</span>
             <span style="color: color-mix(in srgb, var(--color-text) 45%, transparent); white-space: nowrap">Aug 2026</span>
             
@@ -321,7 +321,7 @@ a:hover { color: var(--color-accent-600); }
         </a>
       
         <a href="/insights/scenario-planning-for-businesses-without-a-finance-team/" data-f-type="Article" data-f-topic="Full-Stack Finance" class="glass post-card" style="display: flex; flex-direction: column; gap: 0; text-decoration: none; color: var(--color-text); padding: 26px 28px">
-          <div style="display: flex; gap: 14px; align-items: center; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700">
+          <div style="display: flex; gap: 14px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600">
             <span style="color: var(--color-accent-700)">Article</span>
             <span style="color: color-mix(in srgb, var(--color-text) 45%, transparent); white-space: nowrap">Jul 2026</span>
             
@@ -335,7 +335,7 @@ a:hover { color: var(--color-accent-600); }
         </a>
       
         <a href="/insights/investor-ready-in-90-days-clean-up-your-financial-house/" data-f-type="Article" data-f-topic="Full-Stack Finance" class="glass post-card" style="display: flex; flex-direction: column; gap: 0; text-decoration: none; color: var(--color-text); padding: 26px 28px">
-          <div style="display: flex; gap: 14px; align-items: center; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700">
+          <div style="display: flex; gap: 14px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600">
             <span style="color: var(--color-accent-700)">Article</span>
             <span style="color: color-mix(in srgb, var(--color-text) 45%, transparent); white-space: nowrap">Jul 2026</span>
             
@@ -349,7 +349,7 @@ a:hover { color: var(--color-accent-600); }
         </a>
       
         <a href="/insights/fractional-cfos-refuse-to-work-without-an-execution-layer/" data-f-type="Article" data-f-topic="Full-Stack Finance" class="glass post-card" style="display: flex; flex-direction: column; gap: 0; text-decoration: none; color: var(--color-text); padding: 26px 28px">
-          <div style="display: flex; gap: 14px; align-items: center; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700">
+          <div style="display: flex; gap: 14px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600">
             <span style="color: var(--color-accent-700)">Article</span>
             <span style="color: color-mix(in srgb, var(--color-text) 45%, transparent); white-space: nowrap">Jul 2026</span>
             
@@ -363,7 +363,7 @@ a:hover { color: var(--color-accent-600); }
         </a>
       
         <a href="/insights/from-reactive-to-runway-finance-that-thinks-six-months-ahead/" data-f-type="Article" data-f-topic="Full-Stack Finance" class="glass post-card" style="display: flex; flex-direction: column; gap: 0; text-decoration: none; color: var(--color-text); padding: 26px 28px">
-          <div style="display: flex; gap: 14px; align-items: center; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700">
+          <div style="display: flex; gap: 14px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600">
             <span style="color: var(--color-accent-700)">Article</span>
             <span style="color: color-mix(in srgb, var(--color-text) 45%, transparent); white-space: nowrap">Jul 2026</span>
             
@@ -377,7 +377,7 @@ a:hover { color: var(--color-accent-600); }
         </a>
       
         <a href="/insights/the-cfo-isn-t-failing-the-finance-function-around-them-is/" data-f-type="Article" data-f-topic="CFO Success Partners™" class="glass post-card" style="display: flex; flex-direction: column; gap: 0; text-decoration: none; color: var(--color-text); padding: 26px 28px">
-          <div style="display: flex; gap: 14px; align-items: center; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700">
+          <div style="display: flex; gap: 14px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600">
             <span style="color: var(--color-accent-700)">Article</span>
             <span style="color: color-mix(in srgb, var(--color-text) 45%, transparent); white-space: nowrap">Jul 2026</span>
             
@@ -391,7 +391,7 @@ a:hover { color: var(--color-accent-600); }
         </a>
       
         <a href="/insights/why-good-cfos-leave-good-companies/" data-f-type="Article" data-f-topic="CFO Success Partners™" class="glass post-card" style="display: flex; flex-direction: column; gap: 0; text-decoration: none; color: var(--color-text); padding: 26px 28px">
-          <div style="display: flex; gap: 14px; align-items: center; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700">
+          <div style="display: flex; gap: 14px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600">
             <span style="color: var(--color-accent-700)">Article</span>
             <span style="color: color-mix(in srgb, var(--color-text) 45%, transparent); white-space: nowrap">Jul 2026</span>
             
@@ -405,7 +405,7 @@ a:hover { color: var(--color-accent-600); }
         </a>
       
         <a href="/insights/three-finance-initiatives-that-live-on-every-cfo-s-backlog/" data-f-type="Article" data-f-topic="CFO Success Partners™" class="glass post-card" style="display: flex; flex-direction: column; gap: 0; text-decoration: none; color: var(--color-text); padding: 26px 28px">
-          <div style="display: flex; gap: 14px; align-items: center; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700">
+          <div style="display: flex; gap: 14px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600">
             <span style="color: var(--color-accent-700)">Article</span>
             <span style="color: color-mix(in srgb, var(--color-text) 45%, transparent); white-space: nowrap">Jun 2026</span>
             
@@ -419,7 +419,7 @@ a:hover { color: var(--color-accent-600); }
         </a>
       
         <a href="/insights/what-working-alongside-a-cfo-actually-looks-like/" data-f-type="Article" data-f-topic="CFO Success Partners™" class="glass post-card" style="display: flex; flex-direction: column; gap: 0; text-decoration: none; color: var(--color-text); padding: 26px 28px">
-          <div style="display: flex; gap: 14px; align-items: center; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700">
+          <div style="display: flex; gap: 14px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600">
             <span style="color: var(--color-accent-700)">Article</span>
             <span style="color: color-mix(in srgb, var(--color-text) 45%, transparent); white-space: nowrap">Jun 2026</span>
             
@@ -433,7 +433,7 @@ a:hover { color: var(--color-accent-600); }
         </a>
       
         <a href="/insights/the-100-day-post-close-finance-integration/" data-f-type="Article" data-f-topic="CFO Success Partners™" class="glass post-card" style="display: flex; flex-direction: column; gap: 0; text-decoration: none; color: var(--color-text); padding: 26px 28px">
-          <div style="display: flex; gap: 14px; align-items: center; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700">
+          <div style="display: flex; gap: 14px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600">
             <span style="color: var(--color-accent-700)">Article</span>
             <span style="color: color-mix(in srgb, var(--color-text) 45%, transparent); white-space: nowrap">Jun 2026</span>
             
@@ -447,7 +447,7 @@ a:hover { color: var(--color-accent-600); }
         </a>
       
         <a href="/insights/cfos-at-15-50m-companies-are-understaffed-here-s-the-data/" data-f-type="Article" data-f-topic="CFO Success Partners™" class="glass post-card" style="display: flex; flex-direction: column; gap: 0; text-decoration: none; color: var(--color-text); padding: 26px 28px">
-          <div style="display: flex; gap: 14px; align-items: center; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700">
+          <div style="display: flex; gap: 14px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600">
             <span style="color: var(--color-accent-700)">Article</span>
             <span style="color: color-mix(in srgb, var(--color-text) 45%, transparent); white-space: nowrap">Jun 2026</span>
             
@@ -461,7 +461,7 @@ a:hover { color: var(--color-accent-600); }
         </a>
       
         <a href="/insights/when-your-cfo-is-doing-work-a-controller-should-be-doing/" data-f-type="Article" data-f-topic="CFO Success Partners™" class="glass post-card" style="display: flex; flex-direction: column; gap: 0; text-decoration: none; color: var(--color-text); padding: 26px 28px">
-          <div style="display: flex; gap: 14px; align-items: center; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700">
+          <div style="display: flex; gap: 14px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600">
             <span style="color: var(--color-accent-700)">Article</span>
             <span style="color: color-mix(in srgb, var(--color-text) 45%, transparent); white-space: nowrap">Jun 2026</span>
             
@@ -475,7 +475,7 @@ a:hover { color: var(--color-accent-600); }
         </a>
       
         <a href="/insights/the-fractional-cfo-s-unspoken-problem/" data-f-type="Article" data-f-topic="CFO Success Partners™" class="glass post-card" style="display: flex; flex-direction: column; gap: 0; text-decoration: none; color: var(--color-text); padding: 26px 28px">
-          <div style="display: flex; gap: 14px; align-items: center; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700">
+          <div style="display: flex; gap: 14px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600">
             <span style="color: var(--color-accent-700)">Article</span>
             <span style="color: color-mix(in srgb, var(--color-text) 45%, transparent); white-space: nowrap">Jun 2026</span>
             
@@ -489,7 +489,7 @@ a:hover { color: var(--color-accent-600); }
         </a>
       
         <a href="/insights/from-reporting-the-past-to-shaping-the-future-how-cfos-shift/" data-f-type="Article" data-f-topic="CFO Success Partners™" class="glass post-card" style="display: flex; flex-direction: column; gap: 0; text-decoration: none; color: var(--color-text); padding: 26px 28px">
-          <div style="display: flex; gap: 14px; align-items: center; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700">
+          <div style="display: flex; gap: 14px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600">
             <span style="color: var(--color-accent-700)">Article</span>
             <span style="color: color-mix(in srgb, var(--color-text) 45%, transparent); white-space: nowrap">May 2026</span>
             
@@ -503,7 +503,7 @@ a:hover { color: var(--color-accent-600); }
         </a>
       
         <a href="/insights/board-confidence-is-a-finance-deliverable/" data-f-type="Article" data-f-topic="CFO Success Partners™" class="glass post-card" style="display: flex; flex-direction: column; gap: 0; text-decoration: none; color: var(--color-text); padding: 26px 28px">
-          <div style="display: flex; gap: 14px; align-items: center; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700">
+          <div style="display: flex; gap: 14px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600">
             <span style="color: var(--color-accent-700)">Article</span>
             <span style="color: color-mix(in srgb, var(--color-text) 45%, transparent); white-space: nowrap">May 2026</span>
             
@@ -517,7 +517,7 @@ a:hover { color: var(--color-accent-600); }
         </a>
       
         <a href="/insights/the-10-numbers-that-run-a-5m-business/" data-f-type="Article" data-f-topic="Smart Dashboards" class="glass post-card" style="display: flex; flex-direction: column; gap: 0; text-decoration: none; color: var(--color-text); padding: 26px 28px">
-          <div style="display: flex; gap: 14px; align-items: center; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700">
+          <div style="display: flex; gap: 14px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600">
             <span style="color: var(--color-accent-700)">Article</span>
             <span style="color: color-mix(in srgb, var(--color-text) 45%, transparent); white-space: nowrap">May 2026</span>
             
@@ -531,7 +531,7 @@ a:hover { color: var(--color-accent-600); }
         </a>
       
         <a href="/insights/your-spreadsheet-is-not-a-dashboard/" data-f-type="Article" data-f-topic="Smart Dashboards" class="glass post-card" style="display: flex; flex-direction: column; gap: 0; text-decoration: none; color: var(--color-text); padding: 26px 28px">
-          <div style="display: flex; gap: 14px; align-items: center; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700">
+          <div style="display: flex; gap: 14px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600">
             <span style="color: var(--color-accent-700)">Article</span>
             <span style="color: color-mix(in srgb, var(--color-text) 45%, transparent); white-space: nowrap">May 2026</span>
             
@@ -545,7 +545,7 @@ a:hover { color: var(--color-accent-600); }
         </a>
       
         <a href="/insights/how-non-finance-founders-stay-on-top-of-their-numbers/" data-f-type="Article" data-f-topic="Smart Dashboards" class="glass post-card" style="display: flex; flex-direction: column; gap: 0; text-decoration: none; color: var(--color-text); padding: 26px 28px">
-          <div style="display: flex; gap: 14px; align-items: center; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700">
+          <div style="display: flex; gap: 14px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600">
             <span style="color: var(--color-accent-700)">Article</span>
             <span style="color: color-mix(in srgb, var(--color-text) 45%, transparent); white-space: nowrap">May 2026</span>
             
@@ -559,7 +559,7 @@ a:hover { color: var(--color-accent-600); }
         </a>
       
         <a href="/insights/real-time-financials-faster-than-monthly-closes/" data-f-type="Article" data-f-topic="Smart Dashboards" class="glass post-card" style="display: flex; flex-direction: column; gap: 0; text-decoration: none; color: var(--color-text); padding: 26px 28px">
-          <div style="display: flex; gap: 14px; align-items: center; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700">
+          <div style="display: flex; gap: 14px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600">
             <span style="color: var(--color-accent-700)">Article</span>
             <span style="color: color-mix(in srgb, var(--color-text) 45%, transparent); white-space: nowrap">May 2026</span>
             
@@ -573,7 +573,7 @@ a:hover { color: var(--color-accent-600); }
         </a>
       
         <a href="/insights/what-a-smart-dashboard-looks-like-one-year-later/" data-f-type="Article" data-f-topic="Smart Dashboards" class="glass post-card" style="display: flex; flex-direction: column; gap: 0; text-decoration: none; color: var(--color-text); padding: 26px 28px">
-          <div style="display: flex; gap: 14px; align-items: center; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700">
+          <div style="display: flex; gap: 14px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600">
             <span style="color: var(--color-accent-700)">Article</span>
             <span style="color: color-mix(in srgb, var(--color-text) 45%, transparent); white-space: nowrap">Apr 2026</span>
             
@@ -587,7 +587,7 @@ a:hover { color: var(--color-accent-600); }
         </a>
       
         <a href="/insights/scaling-a-texas-cfo-services-firm-with-a-delivery-team/" data-f-type="Case Study" data-f-topic="CFO Success Partners™" class="glass post-card" style="display: flex; flex-direction: column; gap: 0; text-decoration: none; color: var(--color-text); padding: 26px 28px">
-          <div style="display: flex; gap: 14px; align-items: center; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700">
+          <div style="display: flex; gap: 14px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600">
             <span style="color: var(--color-accent-700)">Case Study</span>
             <span style="color: color-mix(in srgb, var(--color-text) 45%, transparent); white-space: nowrap">Apr 2026</span>
             
@@ -601,7 +601,7 @@ a:hover { color: var(--color-accent-600); }
         </a>
       
         <a href="/insights/the-cas-practice-you-built-was-never-really-the-destination/" data-f-type="Article" data-f-topic="CAS Practice Partner" class="glass post-card" style="display: flex; flex-direction: column; gap: 0; text-decoration: none; color: var(--color-text); padding: 26px 28px">
-          <div style="display: flex; gap: 14px; align-items: center; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700">
+          <div style="display: flex; gap: 14px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600">
             <span style="color: var(--color-accent-700)">Article</span>
             <span style="color: color-mix(in srgb, var(--color-text) 45%, transparent); white-space: nowrap">Apr 2026</span>
             
@@ -615,7 +615,7 @@ a:hover { color: var(--color-accent-600); }
         </a>
       
         <a href="/insights/cas-1-0-was-a-revenue-line-cas-2-0-is-a-business-model/" data-f-type="Article" data-f-topic="CAS Practice Partner" class="glass post-card" style="display: flex; flex-direction: column; gap: 0; text-decoration: none; color: var(--color-text); padding: 26px 28px">
-          <div style="display: flex; gap: 14px; align-items: center; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700">
+          <div style="display: flex; gap: 14px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600">
             <span style="color: var(--color-accent-700)">Article</span>
             <span style="color: color-mix(in srgb, var(--color-text) 45%, transparent); white-space: nowrap">Apr 2026</span>
             
@@ -629,7 +629,7 @@ a:hover { color: var(--color-accent-600); }
         </a>
       
         <a href="/insights/why-most-cas-practices-stall-around-500k-in-revenue/" data-f-type="Article" data-f-topic="CAS Practice Partner" class="glass post-card" style="display: flex; flex-direction: column; gap: 0; text-decoration: none; color: var(--color-text); padding: 26px 28px">
-          <div style="display: flex; gap: 14px; align-items: center; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700">
+          <div style="display: flex; gap: 14px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600">
             <span style="color: var(--color-accent-700)">Article</span>
             <span style="color: color-mix(in srgb, var(--color-text) 45%, transparent); white-space: nowrap">Apr 2026</span>
             
@@ -643,7 +643,7 @@ a:hover { color: var(--color-accent-600); }
         </a>
       
         <a href="/insights/your-senior-cpas-shouldn-t-be-doing-reconciliations/" data-f-type="Article" data-f-topic="CAS Practice Partner" class="glass post-card" style="display: flex; flex-direction: column; gap: 0; text-decoration: none; color: var(--color-text); padding: 26px 28px">
-          <div style="display: flex; gap: 14px; align-items: center; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700">
+          <div style="display: flex; gap: 14px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600">
             <span style="color: var(--color-accent-700)">Article</span>
             <span style="color: color-mix(in srgb, var(--color-text) 45%, transparent); white-space: nowrap">Apr 2026</span>
             
@@ -657,7 +657,7 @@ a:hover { color: var(--color-accent-600); }
         </a>
       
         <a href="/insights/cash-flow-visibility-for-a-fast-growing-ed-tech-saas/" data-f-type="Case Study" data-f-topic="Full-Stack Finance" class="glass post-card" style="display: flex; flex-direction: column; gap: 0; text-decoration: none; color: var(--color-text); padding: 26px 28px">
-          <div style="display: flex; gap: 14px; align-items: center; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700">
+          <div style="display: flex; gap: 14px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600">
             <span style="color: var(--color-accent-700)">Case Study</span>
             <span style="color: color-mix(in srgb, var(--color-text) 45%, transparent); white-space: nowrap">Mar 2026</span>
             
@@ -671,7 +671,7 @@ a:hover { color: var(--color-accent-600); }
         </a>
       
         <a href="/insights/what-growing-smbs-actually-expect-from-their-cpa-firm-today/" data-f-type="Article" data-f-topic="CAS Practice Partner" class="glass post-card" style="display: flex; flex-direction: column; gap: 0; text-decoration: none; color: var(--color-text); padding: 26px 28px">
-          <div style="display: flex; gap: 14px; align-items: center; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700">
+          <div style="display: flex; gap: 14px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600">
             <span style="color: var(--color-accent-700)">Article</span>
             <span style="color: color-mix(in srgb, var(--color-text) 45%, transparent); white-space: nowrap">Mar 2026</span>
             
@@ -685,7 +685,7 @@ a:hover { color: var(--color-accent-600); }
         </a>
       
         <a href="/insights/what-a-full-finance-function-actually-costs/" data-f-type="Article" data-f-topic="Full-Stack Finance" class="glass post-card" style="display: flex; flex-direction: column; gap: 0; text-decoration: none; color: var(--color-text); padding: 26px 28px">
-          <div style="display: flex; gap: 14px; align-items: center; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700">
+          <div style="display: flex; gap: 14px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600">
             <span style="color: var(--color-accent-700)">Article</span>
             <span style="color: color-mix(in srgb, var(--color-text) 45%, transparent); white-space: nowrap">Mar 2026</span>
             
@@ -699,7 +699,7 @@ a:hover { color: var(--color-accent-600); }
         </a>
       
         <a href="/insights/the-finance-pyramid-four-layers-of-finance-work/" data-f-type="Article" data-f-topic="Full-Stack Finance" class="glass post-card" style="display: flex; flex-direction: column; gap: 0; text-decoration: none; color: var(--color-text); padding: 26px 28px">
-          <div style="display: flex; gap: 14px; align-items: center; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700">
+          <div style="display: flex; gap: 14px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600">
             <span style="color: var(--color-accent-700)">Article</span>
             <span style="color: color-mix(in srgb, var(--color-text) 45%, transparent); white-space: nowrap">Mar 2026</span>
             
@@ -713,7 +713,7 @@ a:hover { color: var(--color-accent-600); }
         </a>
       
         <a href="/insights/88-percent-of-accountants-use-ai-only-6-percent-want-it-autonomous/" data-f-type="Article" data-f-topic="Full-Stack Finance" class="glass post-card" style="display: flex; flex-direction: column; gap: 0; text-decoration: none; color: var(--color-text); padding: 26px 28px">
-          <div style="display: flex; gap: 14px; align-items: center; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700">
+          <div style="display: flex; gap: 14px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600">
             <span style="color: var(--color-accent-700)">Article</span>
             <span style="color: color-mix(in srgb, var(--color-text) 45%, transparent); white-space: nowrap">Mar 2026</span>
             
@@ -727,7 +727,7 @@ a:hover { color: var(--color-accent-600); }
         </a>
       
         <a href="/insights/chaos-clarity-confidence-growth-the-finance-ladder/" data-f-type="Guide" data-f-topic="Full-Stack Finance" class="glass post-card" style="display: flex; flex-direction: column; gap: 0; text-decoration: none; color: var(--color-text); padding: 26px 28px">
-          <div style="display: flex; gap: 14px; align-items: center; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700">
+          <div style="display: flex; gap: 14px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600">
             <span style="color: var(--color-accent-700)">Guide</span>
             <span style="color: color-mix(in srgb, var(--color-text) 45%, transparent); white-space: nowrap">Mar 2026</span>
             
@@ -741,7 +741,7 @@ a:hover { color: var(--color-accent-600); }
         </a>
       
         <a href="/insights/buy-side-diligence-on-a-12m-it-services-acquisition/" data-f-type="Case Study" data-f-topic="Deal Support" class="glass post-card" style="display: flex; flex-direction: column; gap: 0; text-decoration: none; color: var(--color-text); padding: 26px 28px">
-          <div style="display: flex; gap: 14px; align-items: center; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700">
+          <div style="display: flex; gap: 14px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600">
             <span style="color: var(--color-accent-700)">Case Study</span>
             <span style="color: color-mix(in srgb, var(--color-text) 45%, transparent); white-space: nowrap">Feb 2026</span>
             
@@ -755,7 +755,7 @@ a:hover { color: var(--color-accent-600); }
         </a>
       
         <a href="/insights/hybridshore-not-offshore/" data-f-type="Article" data-f-topic="Full-Stack Finance" class="glass post-card" style="display: flex; flex-direction: column; gap: 0; text-decoration: none; color: var(--color-text); padding: 26px 28px">
-          <div style="display: flex; gap: 14px; align-items: center; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700">
+          <div style="display: flex; gap: 14px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600">
             <span style="color: var(--color-accent-700)">Article</span>
             <span style="color: color-mix(in srgb, var(--color-text) 45%, transparent); white-space: nowrap">Feb 2026</span>
             
@@ -769,7 +769,7 @@ a:hover { color: var(--color-accent-600); }
         </a>
       
         <a href="/insights/inflection-points-finance-function-cant-absorb/" data-f-type="Article" data-f-topic="Full-Stack Finance" class="glass post-card" style="display: flex; flex-direction: column; gap: 0; text-decoration: none; color: var(--color-text); padding: 26px 28px">
-          <div style="display: flex; gap: 14px; align-items: center; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700">
+          <div style="display: flex; gap: 14px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600">
             <span style="color: var(--color-accent-700)">Article</span>
             <span style="color: color-mix(in srgb, var(--color-text) 45%, transparent); white-space: nowrap">Feb 2026</span>
             
@@ -783,7 +783,7 @@ a:hover { color: var(--color-accent-600); }
         </a>
       
         <a href="/insights/cfo-success-partners-model/" data-f-type="Guide" data-f-topic="CFO Success Partners™" class="glass post-card" style="display: flex; flex-direction: column; gap: 0; text-decoration: none; color: var(--color-text); padding: 26px 28px">
-          <div style="display: flex; gap: 14px; align-items: center; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700">
+          <div style="display: flex; gap: 14px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600">
             <span style="color: var(--color-accent-700)">Guide</span>
             <span style="color: color-mix(in srgb, var(--color-text) 45%, transparent); white-space: nowrap">Feb 2026</span>
             
@@ -797,7 +797,7 @@ a:hover { color: var(--color-accent-600); }
         </a>
       
         <a href="/insights/growing-cas-without-hiring-white-label-bench/" data-f-type="Article" data-f-topic="CAS Practice Partner" class="glass post-card" style="display: flex; flex-direction: column; gap: 0; text-decoration: none; color: var(--color-text); padding: 26px 28px">
-          <div style="display: flex; gap: 14px; align-items: center; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700">
+          <div style="display: flex; gap: 14px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600">
             <span style="color: var(--color-accent-700)">Article</span>
             <span style="color: color-mix(in srgb, var(--color-text) 45%, transparent); white-space: nowrap">Feb 2026</span>
             
@@ -811,7 +811,7 @@ a:hover { color: var(--color-accent-600); }
         </a>
       
         <a href="/insights/your-close-lands-on-a-date-or-it-doesnt/" data-f-type="Article" data-f-topic="Full-Stack Finance" class="glass post-card" style="display: flex; flex-direction: column; gap: 0; text-decoration: none; color: var(--color-text); padding: 26px 28px">
-          <div style="display: flex; gap: 14px; align-items: center; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700">
+          <div style="display: flex; gap: 14px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600">
             <span style="color: var(--color-accent-700)">Article</span>
             <span style="color: color-mix(in srgb, var(--color-text) 45%, transparent); white-space: nowrap">Feb 2026</span>
             
@@ -825,7 +825,7 @@ a:hover { color: var(--color-accent-600); }
         </a>
       
         <a href="/insights/founder-level-cfo-support-for-a-dual-us-india-structure/" data-f-type="Case Study" data-f-topic="Full-Stack Finance" class="glass post-card" style="display: flex; flex-direction: column; gap: 0; text-decoration: none; color: var(--color-text); padding: 26px 28px">
-          <div style="display: flex; gap: 14px; align-items: center; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700">
+          <div style="display: flex; gap: 14px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600">
             <span style="color: var(--color-accent-700)">Case Study</span>
             <span style="color: color-mix(in srgb, var(--color-text) 45%, transparent); white-space: nowrap">Jan 2026</span>
             
@@ -839,7 +839,7 @@ a:hover { color: var(--color-accent-600); }
         </a>
       
         <a href="/insights/startup-savvy-diligence-for-a-vc-fund/" data-f-type="Case Study" data-f-topic="Deal Support" class="glass post-card" style="display: flex; flex-direction: column; gap: 0; text-decoration: none; color: var(--color-text); padding: 26px 28px">
-          <div style="display: flex; gap: 14px; align-items: center; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700">
+          <div style="display: flex; gap: 14px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600">
             <span style="color: var(--color-accent-700)">Case Study</span>
             <span style="color: color-mix(in srgb, var(--color-text) 45%, transparent); white-space: nowrap">Jan 2026</span>
             
@@ -853,7 +853,7 @@ a:hover { color: var(--color-accent-600); }
         </a>
       
         <a href="/insights/project-profitability-for-a-cross-border-construction-firm/" data-f-type="Case Study" data-f-topic="Full-Stack Finance" class="glass post-card" style="display: flex; flex-direction: column; gap: 0; text-decoration: none; color: var(--color-text); padding: 26px 28px">
-          <div style="display: flex; gap: 14px; align-items: center; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700">
+          <div style="display: flex; gap: 14px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600">
             <span style="color: var(--color-accent-700)">Case Study</span>
             <span style="color: color-mix(in srgb, var(--color-text) 45%, transparent); white-space: nowrap">Jan 2026</span>
             
@@ -867,7 +867,7 @@ a:hover { color: var(--color-accent-600); }
         </a>
       
         <a href="/insights/protecting-an-angel-investor-in-a-1m-e-commerce-deal/" data-f-type="Case Study" data-f-topic="Deal Support" class="glass post-card" style="display: flex; flex-direction: column; gap: 0; text-decoration: none; color: var(--color-text); padding: 26px 28px">
-          <div style="display: flex; gap: 14px; align-items: center; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700">
+          <div style="display: flex; gap: 14px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600">
             <span style="color: var(--color-accent-700)">Case Study</span>
             <span style="color: color-mix(in srgb, var(--color-text) 45%, transparent); white-space: nowrap">Jan 2026</span>
             
@@ -881,7 +881,7 @@ a:hover { color: var(--color-accent-600); }
         </a>
       
         <a href="/insights/independent-validation-for-an-8m-manufacturing-expansion/" data-f-type="Case Study" data-f-topic="Deal Support" class="glass post-card" style="display: flex; flex-direction: column; gap: 0; text-decoration: none; color: var(--color-text); padding: 26px 28px">
-          <div style="display: flex; gap: 14px; align-items: center; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700">
+          <div style="display: flex; gap: 14px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600">
             <span style="color: var(--color-accent-700)">Case Study</span>
             <span style="color: color-mix(in srgb, var(--color-text) 45%, transparent); white-space: nowrap">Dec 2025</span>
             
@@ -895,7 +895,7 @@ a:hover { color: var(--color-accent-600); }
         </a>
       
         <a href="/insights/getting-a-singapore-tech-platform-investor-ready/" data-f-type="Case Study" data-f-topic="Full-Stack Finance" class="glass post-card" style="display: flex; flex-direction: column; gap: 0; text-decoration: none; color: var(--color-text); padding: 26px 28px">
-          <div style="display: flex; gap: 14px; align-items: center; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700">
+          <div style="display: flex; gap: 14px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600">
             <span style="color: var(--color-accent-700)">Case Study</span>
             <span style="color: color-mix(in srgb, var(--color-text) 45%, transparent); white-space: nowrap">Dec 2025</span>
             
@@ -909,7 +909,7 @@ a:hover { color: var(--color-accent-600); }
         </a>
       
         <a href="/insights/cost-control-for-a-texas-manufacturing-smb/" data-f-type="Case Study" data-f-topic="Full-Stack Finance" class="glass post-card" style="display: flex; flex-direction: column; gap: 0; text-decoration: none; color: var(--color-text); padding: 26px 28px">
-          <div style="display: flex; gap: 14px; align-items: center; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700">
+          <div style="display: flex; gap: 14px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600">
             <span style="color: var(--color-accent-700)">Case Study</span>
             <span style="color: color-mix(in srgb, var(--color-text) 45%, transparent); white-space: nowrap">Dec 2025</span>
             
@@ -923,7 +923,7 @@ a:hover { color: var(--color-accent-600); }
         </a>
       
         <a href="/insights/subscription-revenue-forecasting-for-a-global-software/" data-f-type="Case Study" data-f-topic="Full-Stack Finance" class="glass post-card" style="display: flex; flex-direction: column; gap: 0; text-decoration: none; color: var(--color-text); padding: 26px 28px">
-          <div style="display: flex; gap: 14px; align-items: center; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700">
+          <div style="display: flex; gap: 14px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600">
             <span style="color: var(--color-accent-700)">Case Study</span>
             <span style="color: color-mix(in srgb, var(--color-text) 45%, transparent); white-space: nowrap">Dec 2025</span>
             
@@ -937,7 +937,7 @@ a:hover { color: var(--color-accent-600); }
         </a>
       
         <a href="/insights/billable-utilization-for-a-us-software-consulting-firm/" data-f-type="Case Study" data-f-topic="Full-Stack Finance" class="glass post-card" style="display: flex; flex-direction: column; gap: 0; text-decoration: none; color: var(--color-text); padding: 26px 28px">
-          <div style="display: flex; gap: 14px; align-items: center; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700">
+          <div style="display: flex; gap: 14px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600">
             <span style="color: var(--color-accent-700)">Case Study</span>
             <span style="color: color-mix(in srgb, var(--color-text) 45%, transparent); white-space: nowrap">Nov 2025</span>
             
@@ -951,7 +951,7 @@ a:hover { color: var(--color-accent-600); }
         </a>
       
         <a href="/insights/two-week-diligence-rescue-for-an-ai-marketing-scale-up-s/" data-f-type="Case Study" data-f-topic="Deal Support" class="glass post-card" style="display: flex; flex-direction: column; gap: 0; text-decoration: none; color: var(--color-text); padding: 26px 28px">
-          <div style="display: flex; gap: 14px; align-items: center; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700">
+          <div style="display: flex; gap: 14px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600">
             <span style="color: var(--color-accent-700)">Case Study</span>
             <span style="color: color-mix(in srgb, var(--color-text) 45%, transparent); white-space: nowrap">Nov 2025</span>
             
@@ -965,7 +965,7 @@ a:hover { color: var(--color-accent-600); }
         </a>
       
         <a href="/insights/forecasting-accuracy-for-a-us-marketing-agency/" data-f-type="Case Study" data-f-topic="Full-Stack Finance" class="glass post-card" style="display: flex; flex-direction: column; gap: 0; text-decoration: none; color: var(--color-text); padding: 26px 28px">
-          <div style="display: flex; gap: 14px; align-items: center; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700">
+          <div style="display: flex; gap: 14px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600">
             <span style="color: var(--color-accent-700)">Case Study</span>
             <span style="color: color-mix(in srgb, var(--color-text) 45%, transparent); white-space: nowrap">Nov 2025</span>
             
@@ -979,7 +979,7 @@ a:hover { color: var(--color-accent-600); }
         </a>
       
         <a href="/insights/payroll-and-compliance-cleanup-for-a-multi-state-us-smb/" data-f-type="Case Study" data-f-topic="Full-Stack Finance" class="glass post-card" style="display: flex; flex-direction: column; gap: 0; text-decoration: none; color: var(--color-text); padding: 26px 28px">
-          <div style="display: flex; gap: 14px; align-items: center; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700">
+          <div style="display: flex; gap: 14px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600">
             <span style="color: var(--color-accent-700)">Case Study</span>
             <span style="color: color-mix(in srgb, var(--color-text) 45%, transparent); white-space: nowrap">Oct 2025</span>
             
@@ -993,7 +993,7 @@ a:hover { color: var(--color-accent-600); }
         </a>
       
         <a href="/insights/cash-collections-turnaround-for-a-us-software-services/" data-f-type="Case Study" data-f-topic="Full-Stack Finance" class="glass post-card" style="display: flex; flex-direction: column; gap: 0; text-decoration: none; color: var(--color-text); padding: 26px 28px">
-          <div style="display: flex; gap: 14px; align-items: center; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700">
+          <div style="display: flex; gap: 14px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600">
             <span style="color: var(--color-accent-700)">Case Study</span>
             <span style="color: color-mix(in srgb, var(--color-text) 45%, transparent); white-space: nowrap">Oct 2025</span>
             
@@ -1007,7 +1007,7 @@ a:hover { color: var(--color-accent-600); }
         </a>
       
         <a href="/insights/consolidated-reporting-for-a-multi-national-e-commerce/" data-f-type="Case Study" data-f-topic="Full-Stack Finance" class="glass post-card" style="display: flex; flex-direction: column; gap: 0; text-decoration: none; color: var(--color-text); padding: 26px 28px">
-          <div style="display: flex; gap: 14px; align-items: center; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700">
+          <div style="display: flex; gap: 14px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600">
             <span style="color: var(--color-accent-700)">Case Study</span>
             <span style="color: color-mix(in srgb, var(--color-text) 45%, transparent); white-space: nowrap">Oct 2025</span>
             
@@ -1021,7 +1021,7 @@ a:hover { color: var(--color-accent-600); }
         </a>
       
         <a href="/insights/building-the-delivery-engine-for-a-fast-growing-startup/" data-f-type="Case Study" data-f-topic="Full-Stack Finance" class="glass post-card" style="display: flex; flex-direction: column; gap: 0; text-decoration: none; color: var(--color-text); padding: 26px 28px">
-          <div style="display: flex; gap: 14px; align-items: center; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700">
+          <div style="display: flex; gap: 14px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600">
             <span style="color: var(--color-accent-700)">Case Study</span>
             <span style="color: color-mix(in srgb, var(--color-text) 45%, transparent); white-space: nowrap">Sep 2025</span>
             
@@ -1035,7 +1035,7 @@ a:hover { color: var(--color-accent-600); }
         </a>
       
         <a href="/insights/preparing-a-b2b-saas-startup-for-its-10m-series-a/" data-f-type="Case Study" data-f-topic="Deal Support" class="glass post-card" style="display: flex; flex-direction: column; gap: 0; text-decoration: none; color: var(--color-text); padding: 26px 28px">
-          <div style="display: flex; gap: 14px; align-items: center; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700">
+          <div style="display: flex; gap: 14px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600">
             <span style="color: var(--color-accent-700)">Case Study</span>
             <span style="color: color-mix(in srgb, var(--color-text) 45%, transparent); white-space: nowrap">Sep 2025</span>
             
@@ -1049,7 +1049,7 @@ a:hover { color: var(--color-accent-600); }
         </a>
       
         <a href="/insights/streamlining-delivery-for-a-florida-cpa-firm-s-bookkeeping/" data-f-type="Case Study" data-f-topic="Full-Stack Finance" class="glass post-card" style="display: flex; flex-direction: column; gap: 0; text-decoration: none; color: var(--color-text); padding: 26px 28px">
-          <div style="display: flex; gap: 14px; align-items: center; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700">
+          <div style="display: flex; gap: 14px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600">
             <span style="color: var(--color-accent-700)">Case Study</span>
             <span style="color: color-mix(in srgb, var(--color-text) 45%, transparent); white-space: nowrap">Sep 2025</span>
             
@@ -1063,7 +1063,7 @@ a:hover { color: var(--color-accent-600); }
         </a>
       
         <a href="/insights/cash-discipline-for-a-us-software-services-company/" data-f-type="Case Study" data-f-topic="Full-Stack Finance" class="glass post-card" style="display: flex; flex-direction: column; gap: 0; text-decoration: none; color: var(--color-text); padding: 26px 28px">
-          <div style="display: flex; gap: 14px; align-items: center; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700">
+          <div style="display: flex; gap: 14px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600">
             <span style="color: var(--color-accent-700)">Case Study</span>
             <span style="color: color-mix(in srgb, var(--color-text) 45%, transparent); white-space: nowrap">Aug 2025</span>
             
@@ -1077,7 +1077,7 @@ a:hover { color: var(--color-accent-600); }
         </a>
       
         <a href="/insights/ai-accelerated-close-for-a-mid-market-manufacturer/" data-f-type="Case Study" data-f-topic="CFO Success Partners™" class="glass post-card" style="display: flex; flex-direction: column; gap: 0; text-decoration: none; color: var(--color-text); padding: 26px 28px">
-          <div style="display: flex; gap: 14px; align-items: center; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700">
+          <div style="display: flex; gap: 14px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600">
             <span style="color: var(--color-accent-700)">Case Study</span>
             <span style="color: color-mix(in srgb, var(--color-text) 45%, transparent); white-space: nowrap">Aug 2025</span>
             
@@ -1091,7 +1091,7 @@ a:hover { color: var(--color-accent-600); }
         </a>
       
         <a href="/insights/stabilizing-reporting-for-a-pe-backed-services-company-in/" data-f-type="Case Study" data-f-topic="CFO Success Partners™" class="glass post-card" style="display: flex; flex-direction: column; gap: 0; text-decoration: none; color: var(--color-text); padding: 26px 28px">
-          <div style="display: flex; gap: 14px; align-items: center; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700">
+          <div style="display: flex; gap: 14px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600">
             <span style="color: var(--color-accent-700)">Case Study</span>
             <span style="color: color-mix(in srgb, var(--color-text) 45%, transparent); white-space: nowrap">Aug 2025</span>
             
@@ -1105,7 +1105,7 @@ a:hover { color: var(--color-accent-600); }
         </a>
       
         <a href="/insights/fp-a-bandwidth-for-a-california-virtual-cfo-firm/" data-f-type="Case Study" data-f-topic="CFO Success Partners™" class="glass post-card" style="display: flex; flex-direction: column; gap: 0; text-decoration: none; color: var(--color-text); padding: 26px 28px">
-          <div style="display: flex; gap: 14px; align-items: center; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700">
+          <div style="display: flex; gap: 14px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600">
             <span style="color: var(--color-accent-700)">Case Study</span>
             <span style="color: color-mix(in srgb, var(--color-text) 45%, transparent); white-space: nowrap">Jul 2025</span>
             
@@ -1119,7 +1119,7 @@ a:hover { color: var(--color-accent-600); }
         </a>
       
         <a href="/insights/board-confidence-for-a-series-a-saas-founder/" data-f-type="Case Study" data-f-topic="Full-Stack Finance" class="glass post-card" style="display: flex; flex-direction: column; gap: 0; text-decoration: none; color: var(--color-text); padding: 26px 28px">
-          <div style="display: flex; gap: 14px; align-items: center; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700">
+          <div style="display: flex; gap: 14px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600">
             <span style="color: var(--color-accent-700)">Case Study</span>
             <span style="color: color-mix(in srgb, var(--color-text) 45%, transparent); white-space: nowrap">Jul 2025</span>
             
@@ -1133,7 +1133,7 @@ a:hover { color: var(--color-accent-600); }
         </a>
       
         <a href="/insights/strategic-oversight-for-a-new-jersey-cpa-advisory-firm/" data-f-type="Case Study" data-f-topic="CFO Success Partners™" class="glass post-card" style="display: flex; flex-direction: column; gap: 0; text-decoration: none; color: var(--color-text); padding: 26px 28px">
-          <div style="display: flex; gap: 14px; align-items: center; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700">
+          <div style="display: flex; gap: 14px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600">
             <span style="color: var(--color-accent-700)">Case Study</span>
             <span style="color: color-mix(in srgb, var(--color-text) 45%, transparent); white-space: nowrap">Jul 2025</span>
             
@@ -1152,8 +1152,8 @@ a:hover { color: var(--color-accent-600); }
   <section style="padding: 0 0 84px">
     <div class="glass m-stack" style="padding: clamp(28px,4vw,48px); display: grid; grid-template-columns: minmax(260px,3fr) minmax(280px,2fr); gap: 28px clamp(28px,4vw,64px); align-items: center">
       <div>
-        <span style="display: block; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-accent-700); margin: 0 0 14px">The newsletter</span>
-        <h3 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px,2.4vw,30px); line-height: 1.2; letter-spacing: -0.015em; margin: 0">Actionable insights, once a month.</h3>
+        <span style="display: block; font-size: 13px; letter-spacing: 0; text-transform: none; color: var(--color-neutral-700); margin: 0 0 14px">The newsletter</span>
+        <h3 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(19px,2.1vw,26px); line-height: 1.2; letter-spacing: -0.015em; margin: 0">Actionable insights, once a month.</h3>
         <p style="font-size: 15px; line-height: 26px; color: color-mix(in srgb, var(--color-text) 76%, transparent); margin: 12px 0 0">Practical finance and operations notes for growth-focused businesses. Written by the team, not the marketing department.</p>
       </div>
       <form action="https://formsubmit.co/prasad@cfologic.com" method="POST" style="display: flex; gap: 8px; flex-wrap: wrap">
@@ -1170,8 +1170,8 @@ a:hover { color: var(--color-accent-600); }
 
 <section style="background-image: var(--grad-a); color: #fff">
   <div style="max-width: 1200px; margin: 0 auto; padding: 70px clamp(20px,5vw,72px)">
-    <span style="display: block; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.75); margin: 0 0 24px">Beyond the reading</span>
-    <h3 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(30px,3.6vw,48px); line-height: 1.06; letter-spacing: -0.015em; margin: 0 0 0 -0.058em; max-width: 24ch">The articles cover the patterns. Your situation is specific.</h3>
+    <span style="display: block; font-size: 12.5px; letter-spacing: 1px; text-transform: uppercase; color: rgba(255,255,255,0.75); margin: 0 0 24px">Beyond the reading</span>
+    <h3 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(26px,3.2vw,42px); line-height: 1.06; letter-spacing: -0.015em; margin: 0 0 0 -0.058em; max-width: 24ch">The articles cover the patterns. Your situation is specific.</h3>
     <p style="font-size: 15.5px; line-height: 28px; color: rgba(255,255,255,0.85); max-width: 58ch; margin: 21px 0 0">Thirty minutes on the decision you're sitting on right now. No pitch, no pressure.</p>
     <div style="display: flex; gap: var(--space-3); flex-wrap: wrap; margin-top: 36px">
       <a class="btn btn-ghost" href="https://cal.com/GrowthCFO" target="_blank" rel="noopener" style="white-space: nowrap; text-decoration: none; color: #fff; border-color: #fff">Book a Discovery Call</a>
@@ -1179,46 +1179,60 @@ a:hover { color: var(--color-accent-600); }
   </div>
 </section>
 
-<footer style="border-top: 1px solid var(--color-neutral-200); background: color-mix(in srgb, var(--color-accent-100) 40%, #FDFDFD)">
-  <div class="m-stack" style="max-width: 1200px; margin: 0 auto; padding: 48px clamp(20px,5vw,72px) 56px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 28px; font-size: 14px; line-height: 24px">
-    <div style="display: flex; flex-direction: column; gap: 6px">
-      <a href="/" aria-label="CFOLogic" style="text-decoration: none"><img src="/assets/cfologic-logo.png" alt="CFOLogic" style="display: block; height: 40px; width: auto; margin-bottom: 4px"></a>
-      <p style="margin: 0; color: color-mix(in srgb, var(--color-text) 70%, transparent)">The finance team behind ambitious businesses.</p>
+<footer class="site-footer">
+  <div class="sf-wrap">
+    <div class="sf-grid">
+      <div class="sf-brand">
+        <a href="/" aria-label="CFOLogic" style="display: inline-block"><img src="/assets/cfologic-logo.png" alt="CFOLogic" style="display: block; height: 40px; width: auto"></a>
+        <p class="sf-tagline">The finance team behind ambitious businesses. Strategy to execution, one partner across the whole life of the business.</p>
+        <address class="sf-addr"><strong>CFOLogic, Inc.</strong>1207 Delaware Ave #5151, Wilmington, DE 19806, USA</address>
+        <address class="sf-addr"><strong>CFOLogic Private Limited</strong>2, Revati Arcade II, Baner, Pune, MH 411045, India</address>
+        <div class="sf-social">
+          <a href="https://www.linkedin.com/company/cfologichq" target="_blank" rel="noopener" aria-label="CFOLogic on LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></a>
+          <a href="https://x.com/CFOLogicHQ" target="_blank" rel="noopener" aria-label="CFOLogic on X"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.66l-5.21-6.82-5.97 6.82H1.67l7.73-8.84L1.25 2.25h6.83l4.71 6.23 5.45-6.23zm-1.16 17.52h1.83L7.08 4.13H5.12l11.96 15.64z"/></svg></a>
+          <a href="https://www.instagram.com/cfologichq" target="_blank" rel="noopener" aria-label="CFOLogic on Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        </div>
+      </div>
+      <div class="sf-col">
+        <h4>Who we serve</h4>
+        <a href="/founders/">Founders &amp; CEOs</a>
+        <a href="/cfo-success-partners/">CFOs &amp; Finance Leaders</a>
+        <a href="/accounting-firms/">CFO/CAS Firms</a>
+        <a href="/capital-providers/">Capital Providers</a>
+        <a href="/acquisition-entrepreneurs/">Acquisition Entrepreneurs</a>
+      </div>
+      <div class="sf-col">
+        <h4>Company</h4>
+        <a href="/about/">About</a>
+        <a href="/insights/">Insights</a>
+        <a href="/trust-center/">Trust Center</a>
+        <a href="https://careers.cfologic.com/careers" target="_blank" rel="noopener">Careers</a>
+      </div>
+      <div class="sf-col">
+        <h4>Product</h4>
+        <a href="https://navigator.cfologic.com" target="_blank" rel="noopener">Navigator AI</a>
+        <a href="https://navigatordemo.cfologic.com" target="_blank" rel="noopener">Live demo</a>
+        <a href="https://cal.com/GrowthCFO" target="_blank" rel="noopener">Book a discovery call</a>
+      </div>
+      <div class="sf-col sf-subscribe">
+        <h4>Insights, by email</h4>
+        <form action="https://formsubmit.co/prasad@cfologic.com" method="POST">
+          <input type="hidden" name="_subject" value="Insights subscription - cfologic.com">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="email" name="email" required placeholder="you@company.com" aria-label="Email address">
+          <button class="btn btn-primary" type="submit">Subscribe</button>
+        </form>
+        <p class="sf-note">No spam ever. Unsubscribe in one click.</p>
+      </div>
     </div>
-    <div style="display: flex; flex-direction: column; gap: 6px">
-      <p style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); color: var(--color-text); margin: 0 0 4px">Who we serve</p>
-      <a href="/founders/" style="text-decoration: none">Founders &amp; CEOs</a>
-      <a href="/cfo-success-partners/" style="text-decoration: none">CFOs &amp; Finance Leaders</a>
-      <a href="/accounting-firms/" style="text-decoration: none">CFO/CAS Firms</a>
-      <a href="/capital-providers/" style="text-decoration: none">Capital Providers</a>
-      <a href="/acquisition-entrepreneurs/" style="text-decoration: none">Acquisition Entrepreneurs</a>
-    </div>
-    <div style="display: flex; flex-direction: column; gap: 6px">
-      <p style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); color: var(--color-text); margin: 0 0 4px">Company</p>
-      <a href="/about/" style="text-decoration: none">About Us</a>
-      <a href="/insights/" style="text-decoration: none">Insights</a>
-      <a href="/trust-center/" style="text-decoration: none">Trust Center</a>
-      <a href="/legal/" style="text-decoration: none">Privacy &amp; Legal</a>
-      <a href="https://careers.cfologic.com/careers" target="_blank" rel="noopener" style="text-decoration: none">Careers</a>
-      <a href="https://navigator.cfologic.com" target="_blank" rel="noopener" style="text-decoration: none">Navigator AI</a>
-    </div>
-    <div>
-      <p style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); color: var(--color-text); margin: 0 0 10px">Subscribe to actionable insights</p>
-      <form action="https://formsubmit.co/prasad@cfologic.com" method="POST" style="display: flex; gap: 8px">
-        <input type="hidden" name="_subject" value="Insights subscription - cfologic.com">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="email" name="email" required placeholder="you@company.com" aria-label="Email address" style="flex: 1; min-width: 0; font-family: inherit; font-size: 14px; padding: 10px 14px; border: 1px solid var(--color-neutral-300); border-radius: 8px; background: #fff; color: var(--color-text)">
-        <button class="btn btn-primary" type="submit" style="white-space: nowrap; cursor: pointer">Subscribe</button>
-      </form>
-      <p style="font-size: 12.5px; margin: 8px 0 0; color: color-mix(in srgb, var(--color-text) 60%, transparent)">No spam ever. Unsubscribe in one click.</p>
-    </div>
-    <div>
-      <p style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); color: var(--color-text); margin: 0 0 4px">Follow</p>
-      <p style="margin: 0"><a href="https://www.linkedin.com/company/cfologichq" target="_blank" rel="noopener" style="text-decoration: none">LinkedIn</a> · <a href="https://x.com/CFOLogicHQ" target="_blank" rel="noopener" style="text-decoration: none">X</a> · <a href="https://www.instagram.com/cfologichq" target="_blank" rel="noopener" style="text-decoration: none">Instagram</a></p>
-      <p style="margin: 21px 0 0">© CFOLogic 2026. All rights reserved.</p>
+    <div class="sf-bottom">
+      <span>&copy; CFOLogic 2026. All rights reserved.</span>
+      <nav aria-label="Legal"><a href="/legal/">Privacy</a><a href="/legal/">Terms</a></nav>
     </div>
   </div>
+  <div class="sf-wordmark" aria-hidden="true"><img src="/assets/cfologic-logo.png" alt="" loading="lazy"></div>
 </footer>
+
 </div>
 <script>window.__DC={"initial":0,"chip":{"itemAttr":"data-f-type","sticky":false,"all":{"type":"All","topic":"All topics"},"active":"font-family:inherit;font-size:13px;padding:7px 14px;border-radius:999px;cursor:pointer;white-space:nowrap;transition:all 0.2s ease;background-image:var(--grad-a);color:#fff;border:1px solid transparent","inactive":"font-family:inherit;font-size:13px;padding:7px 14px;border-radius:999px;cursor:pointer;white-space:nowrap;transition:all 0.2s ease;background:#fff;color:var(--color-text);border:1px solid var(--color-neutral-300)","countLabel":[" insight"," insights"]}};</script>
 <script src="/assets/site.js" defer></script>

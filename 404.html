@@ -27,18 +27,18 @@
 --color-bg:#FDFDFD}
 .btn-primary{background-image:var(--grad-a);color:#fff !important}
 .btn-primary:hover,.btn-primary:active{background-image:var(--grad-a-h);color:#fff !important}
-.glass{background:rgba(255,255,255,0.55);backdrop-filter:blur(20px) saturate(1.6);-webkit-backdrop-filter:blur(20px) saturate(1.6);border:1px solid var(--color-neutral-200);border-radius:16px;box-shadow:0 8px 28px rgba(0,71,171,0.08)}
+.glass{background:rgba(255,255,255,0.55);backdrop-filter: blur(12px) saturate(1.15);-webkit-backdrop-filter: blur(12px) saturate(1.15);border:1px solid var(--color-neutral-200);border-radius:16px;box-shadow: 0 1px 2px rgba(20,20,20,0.04), 0 4px 17px rgba(20,20,20,0.06)}
 body { margin: 0; background: var(--color-bg); color: var(--color-text); font-family: var(--font-body); text-wrap: pretty; }
 a { color: var(--color-accent-700); }
 a:hover { color: var(--color-accent-600); }
 .nav-mobile{display:none;position:relative}
 .nav-mobile summary{list-style:none;cursor:pointer;display:flex;align-items:center;padding:6px;color:var(--color-text)}
 .nav-mobile summary::-webkit-details-marker{display:none}
-.nav-mobile-menu{position:absolute;right:-6px;top:calc(100% + 12px);width:min(320px,calc(100vw - 32px));display:flex;flex-direction:column;background:rgba(253,253,253,0.97);backdrop-filter:blur(18px) saturate(1.6);-webkit-backdrop-filter:blur(18px) saturate(1.6);border:1px solid var(--color-neutral-200);border-radius:12px;box-shadow:0 12px 36px rgba(0,71,171,0.18);padding:8px 0;z-index:60}
+.nav-mobile-menu{position:absolute;right:-6px;top:calc(100% + 12px);width:min(320px,calc(100vw - 32px));display:flex;flex-direction:column;background:rgba(253,253,253,0.97);backdrop-filter: blur(12px) saturate(1.15);-webkit-backdrop-filter: blur(12px) saturate(1.15);border:1px solid var(--color-neutral-200);border-radius:12px;box-shadow: 0 1px 2px rgba(20,20,20,0.04), 0 6px 22px rgba(20,20,20,0.06);padding:8px 0;z-index:60}
 .nav-mobile-menu a{padding:11px 18px;text-decoration:none;color:var(--color-text)}
 .nav-mobile-menu a:hover{background:var(--color-accent-100)}
-.nav-mobile-menu .mm-sec{font-size:11px;letter-spacing:0.08em;text-transform:uppercase;font-weight:700;color:color-mix(in srgb,var(--color-text) 50%,transparent);padding:12px 18px 4px}
-.nav-mobile-menu .mm-cta{margin:10px 18px 8px;background-image:var(--grad-a);color:#fff;border-radius:10px;text-align:center;font-weight:700}
+.nav-mobile-menu .mm-sec{font-size:11px;letter-spacing:0.08em;text-transform:uppercase;font-weight: 600;color:color-mix(in srgb,var(--color-text) 50%,transparent);padding:12px 18px 4px}
+.nav-mobile-menu .mm-cta{margin:10px 18px 8px;background-image:var(--grad-a);color:#fff;border-radius:10px;text-align:center;font-weight: 600}
 .nav-mobile-menu .mm-cta:hover{background-image:var(--grad-a-h)}
 @media (max-width: 760px){
 .nav > a:not([aria-label="CFOLogic"]){display:none}
@@ -54,7 +54,7 @@ a:hover { color: var(--color-accent-600); }
 .nav-dd{position:relative;padding:26px 0;margin:-26px 0}
 .nav-dd-btn{display:flex;align-items:center;gap:6px;background:none;border:0;font-family:inherit;font-size:inherit;color:var(--color-text);cursor:pointer;padding:0;white-space:nowrap}
 .nav-dd-btn:hover{color:var(--color-accent-700)}
-.nav-dd-menu{position:absolute;top:100%;left:-18px;min-width:270px;padding:10px 0;display:none;flex-direction:column;background:rgba(253,253,253,0.92);backdrop-filter:blur(18px) saturate(1.6);-webkit-backdrop-filter:blur(18px) saturate(1.6);border:1px solid var(--color-neutral-200);border-radius:12px;box-shadow:0 12px 36px rgba(0,71,171,0.14)}
+.nav-dd-menu{position:absolute;top:100%;left:-18px;min-width:270px;padding:10px 0;display:none;flex-direction:column;background:rgba(253,253,253,0.92);backdrop-filter: blur(12px) saturate(1.15);-webkit-backdrop-filter: blur(12px) saturate(1.15);border:1px solid var(--color-neutral-200);border-radius:12px;box-shadow: 0 1px 2px rgba(20,20,20,0.04), 0 6px 22px rgba(20,20,20,0.06)}
 .nav-dd:hover .nav-dd-menu,.nav-dd:focus-within .nav-dd-menu{display:flex}
 .nav-dd-menu a{padding:9px 18px;white-space:nowrap;text-decoration:none}
 .nav-dd-menu a:hover{background:var(--color-accent-100)}
@@ -65,7 +65,7 @@ a:hover { color: var(--color-accent-600); }
 }
 </style>
 <script src="/assets/cfo-lead-capture.js"></script>
-
+<link rel="stylesheet" href="/assets/theme.css">
 <meta property="og:image" content="https://cfologic.com/assets/og-card.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -89,7 +89,7 @@ a:hover { color: var(--color-accent-600); }
 <body>
 <cfo-lead-capture></cfo-lead-capture>
 <div id="page-wrap" style="min-height: 100vh">
-<nav class="nav" style="position: sticky; top: 0; z-index: 50; background: rgba(253,253,253,0.65); backdrop-filter: blur(18px) saturate(1.6); -webkit-backdrop-filter: blur(18px) saturate(1.6); border-bottom: 1px solid var(--color-neutral-200); padding-inline: max(clamp(20px,5vw,72px), calc((100% - 1200px) / 2 + clamp(20px,5vw,72px)))">
+<nav class="nav" style="position: sticky; top: 0; z-index: 50; background: rgba(253,253,253,0.65); backdrop-filter: blur(12px) saturate(1.15); -webkit-backdrop-filter: blur(12px) saturate(1.15); border-bottom: 1px solid var(--color-neutral-200); padding-inline: max(clamp(20px,5vw,72px), calc((100% - 1200px) / 2 + clamp(20px,5vw,72px)))">
   <a href="/" aria-label="CFOLogic" style="text-decoration: none; flex: none"><img src="/assets/cfologic-logo.png" alt="CFOLogic" style="display: block; height: 40px; width: auto"></a>
   <div class="nav-dd">
     <button class="nav-dd-btn" type="button" aria-haspopup="true" style="color: var(--color-accent-700)">Who we serve <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></button>
@@ -134,46 +134,60 @@ a:hover { color: var(--color-accent-600); }
   </details>
 </nav>
 <section style="padding: 120px 0 140px; text-align: center"><span style="display: block; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-accent-700); margin: 0 0 20px">404</span><h1 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(30px,3.6vw,50px); line-height: 1.1; letter-spacing: -0.015em; margin: 0 0 18px">This page has moved, or never existed.</h1><p style="font-size: 16px; line-height: 28px; margin: 0 auto 32px; max-width: 52ch; color: color-mix(in srgb, var(--color-text) 72%, transparent)">Try the home page, or head straight to the insights library.</p><div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap"><a class="btn btn-primary" href="/" style="text-decoration: none">Back to home</a><a class="btn btn-ghost" href="/insights/" style="text-decoration: none">Read the insights</a></div></section>
-<footer style="border-top: 1px solid var(--color-neutral-200); background: color-mix(in srgb, var(--color-accent-100) 40%, #FDFDFD)">
-  <div class="m-stack" style="max-width: 1200px; margin: 0 auto; padding: 48px clamp(20px,5vw,72px) 56px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 28px; font-size: 14px; line-height: 24px">
-    <div style="display: flex; flex-direction: column; gap: 6px">
-      <a href="/" aria-label="CFOLogic" style="text-decoration: none"><img src="/assets/cfologic-logo.png" alt="CFOLogic" style="display: block; height: 40px; width: auto; margin-bottom: 4px"></a>
-      <p style="margin: 0; color: color-mix(in srgb, var(--color-text) 70%, transparent)">The finance team behind ambitious businesses.</p>
+<footer class="site-footer">
+  <div class="sf-wrap">
+    <div class="sf-grid">
+      <div class="sf-brand">
+        <a href="/" aria-label="CFOLogic" style="display: inline-block"><img src="/assets/cfologic-logo.png" alt="CFOLogic" style="display: block; height: 40px; width: auto"></a>
+        <p class="sf-tagline">The finance team behind ambitious businesses. Strategy to execution, one partner across the whole life of the business.</p>
+        <address class="sf-addr"><strong>CFOLogic, Inc.</strong>1207 Delaware Ave #5151, Wilmington, DE 19806, USA</address>
+        <address class="sf-addr"><strong>CFOLogic Private Limited</strong>2, Revati Arcade II, Baner, Pune, MH 411045, India</address>
+        <div class="sf-social">
+          <a href="https://www.linkedin.com/company/cfologichq" target="_blank" rel="noopener" aria-label="CFOLogic on LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></a>
+          <a href="https://x.com/CFOLogicHQ" target="_blank" rel="noopener" aria-label="CFOLogic on X"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.66l-5.21-6.82-5.97 6.82H1.67l7.73-8.84L1.25 2.25h6.83l4.71 6.23 5.45-6.23zm-1.16 17.52h1.83L7.08 4.13H5.12l11.96 15.64z"/></svg></a>
+          <a href="https://www.instagram.com/cfologichq" target="_blank" rel="noopener" aria-label="CFOLogic on Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        </div>
+      </div>
+      <div class="sf-col">
+        <h4>Who we serve</h4>
+        <a href="/founders/">Founders &amp; CEOs</a>
+        <a href="/cfo-success-partners/">CFOs &amp; Finance Leaders</a>
+        <a href="/accounting-firms/">CFO/CAS Firms</a>
+        <a href="/capital-providers/">Capital Providers</a>
+        <a href="/acquisition-entrepreneurs/">Acquisition Entrepreneurs</a>
+      </div>
+      <div class="sf-col">
+        <h4>Company</h4>
+        <a href="/about/">About</a>
+        <a href="/insights/">Insights</a>
+        <a href="/trust-center/">Trust Center</a>
+        <a href="https://careers.cfologic.com/careers" target="_blank" rel="noopener">Careers</a>
+      </div>
+      <div class="sf-col">
+        <h4>Product</h4>
+        <a href="https://navigator.cfologic.com" target="_blank" rel="noopener">Navigator AI</a>
+        <a href="https://navigatordemo.cfologic.com" target="_blank" rel="noopener">Live demo</a>
+        <a href="https://cal.com/GrowthCFO" target="_blank" rel="noopener">Book a discovery call</a>
+      </div>
+      <div class="sf-col sf-subscribe">
+        <h4>Insights, by email</h4>
+        <form action="https://formsubmit.co/prasad@cfologic.com" method="POST">
+          <input type="hidden" name="_subject" value="Insights subscription - cfologic.com">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="email" name="email" required placeholder="you@company.com" aria-label="Email address">
+          <button class="btn btn-primary" type="submit">Subscribe</button>
+        </form>
+        <p class="sf-note">No spam ever. Unsubscribe in one click.</p>
+      </div>
     </div>
-    <div style="display: flex; flex-direction: column; gap: 6px">
-      <p style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); color: var(--color-text); margin: 0 0 4px">Who we serve</p>
-      <a href="/founders/" style="text-decoration: none">Founders &amp; CEOs</a>
-      <a href="/cfo-success-partners/" style="text-decoration: none">CFOs &amp; Finance Leaders</a>
-      <a href="/accounting-firms/" style="text-decoration: none">CFO/CAS Firms</a>
-      <a href="/capital-providers/" style="text-decoration: none">Capital Providers</a>
-      <a href="/acquisition-entrepreneurs/" style="text-decoration: none">Acquisition Entrepreneurs</a>
-    </div>
-    <div style="display: flex; flex-direction: column; gap: 6px">
-      <p style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); color: var(--color-text); margin: 0 0 4px">Company</p>
-      <a href="/about/" style="text-decoration: none">About Us</a>
-      <a href="/insights/" style="text-decoration: none">Insights</a>
-      <a href="/trust-center/" style="text-decoration: none">Trust Center</a>
-      <a href="/legal/" style="text-decoration: none">Privacy &amp; Legal</a>
-      <a href="https://careers.cfologic.com/careers" target="_blank" rel="noopener" style="text-decoration: none">Careers</a>
-      <a href="https://navigator.cfologic.com" target="_blank" rel="noopener" style="text-decoration: none">Navigator AI</a>
-    </div>
-    <div>
-      <p style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); color: var(--color-text); margin: 0 0 10px">Subscribe to actionable insights</p>
-      <form action="https://formsubmit.co/prasad@cfologic.com" method="POST" style="display: flex; gap: 8px">
-        <input type="hidden" name="_subject" value="Insights subscription - cfologic.com">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="email" name="email" required placeholder="you@company.com" aria-label="Email address" style="flex: 1; min-width: 0; font-family: inherit; font-size: 14px; padding: 10px 14px; border: 1px solid var(--color-neutral-300); border-radius: 8px; background: #fff; color: var(--color-text)">
-        <button class="btn btn-primary" type="submit" style="white-space: nowrap; cursor: pointer">Subscribe</button>
-      </form>
-      <p style="font-size: 12.5px; margin: 8px 0 0; color: color-mix(in srgb, var(--color-text) 60%, transparent)">No spam ever. Unsubscribe in one click.</p>
-    </div>
-    <div>
-      <p style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); color: var(--color-text); margin: 0 0 4px">Follow</p>
-      <p style="margin: 0"><a href="https://www.linkedin.com/company/cfologichq" target="_blank" rel="noopener" style="text-decoration: none">LinkedIn</a> · <a href="https://x.com/CFOLogicHQ" target="_blank" rel="noopener" style="text-decoration: none">X</a> · <a href="https://www.instagram.com/cfologichq" target="_blank" rel="noopener" style="text-decoration: none">Instagram</a></p>
-      <p style="margin: 21px 0 0">© CFOLogic 2026. All rights reserved.</p>
+    <div class="sf-bottom">
+      <span>&copy; CFOLogic 2026. All rights reserved.</span>
+      <nav aria-label="Legal"><a href="/legal/">Privacy</a><a href="/legal/">Terms</a></nav>
     </div>
   </div>
+  <div class="sf-wordmark" aria-hidden="true"><img src="/assets/cfologic-logo.png" alt="" loading="lazy"></div>
 </footer>
+
 </div>
 <script>window.__DC={"initial":0};</script>
 <script src="/assets/site.js" defer></script>
