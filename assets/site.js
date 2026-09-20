@@ -148,6 +148,16 @@
     sync();
   });
 
+  // ---- flip cards ----------------------------------------------------------
+  Array.prototype.forEach.call(document.querySelectorAll('.card-flip'), function (btn) {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      var card = btn.closest('.glass');
+      var on = card.classList.toggle('flipped');
+      btn.setAttribute('aria-label', on ? 'Close' : 'More');
+    });
+  });
+
   // ---- scroll reveal -------------------------------------------------------
   var folds = document.querySelectorAll('[data-fold]');
   if (folds.length) {
