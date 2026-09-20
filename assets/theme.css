@@ -133,6 +133,10 @@ h1.grad-text, h2.grad-text, h3.grad-text, h4.grad-text { color: inherit; }
   justify-content: space-between;
   gap: 28px;
 }
+/* Three cards fill the row at desktop width instead of leaving a gap; they
+   still hold Navigator's width as a minimum and scroll on narrow screens. */
+[data-rail="3"] > .glass { flex: 1 1 330px; min-width: min(330px, 84vw); }
+
 .rail-nav { display: flex; justify-content: flex-end; gap: 10px; margin-top: 20px; }
 .rail-nav[hidden] { display: none; }
 .rail-nav button {
