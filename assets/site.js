@@ -120,6 +120,34 @@
     window.scrollTo({ top: top - sticky - 12, behavior: 'smooth' });
   }
 
+  // ---- card rails ----------------------------------------------------------
+  // Grids of three or more cards are marked data-rail at build and lay out
+  // as one scrolling row; this adds the arrows and keeps them honest.
+  var CHEV = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 3 5 8l5 5"/></svg>';
+  Array.prototype.forEach.call(document.querySelectorAll('[data-rail]'), function (rail) {
+    var nav = document.createElement('div');
+    nav.className = 'rail-nav';
+    nav.innerHTML = '<button type="button" aria-label="Previous">' + CHEV + '</button>'
+                  + '<button type="button" aria-label="Next" style="transform:scaleX(-1)">' + CHEV + '</button>';
+    rail.parentNode.insertBefore(nav, rail.nextSibling);
+    var prev = nav.children[0], next = nav.children[1];
+    var step = function () {
+      var card = rail.firstElementChild;
+      return card ? card.getBoundingClientRect().width + 20 : 320;
+    };
+    var sync = function () {
+      var max = rail.scrollWidth - rail.clientWidth;
+      nav.hidden = max < 8;
+      prev.disabled = rail.scrollLeft <= 2;
+      next.disabled = rail.scrollLeft >= max - 2;
+    };
+    prev.addEventListener('click', function () { rail.scrollBy({ left: -step(), behavior: 'smooth' }); });
+    next.addEventListener('click', function () { rail.scrollBy({ left: step(), behavior: 'smooth' }); });
+    rail.addEventListener('scroll', sync, { passive: true });
+    window.addEventListener('resize', sync);
+    sync();
+  });
+
   // ---- scroll reveal -------------------------------------------------------
   var folds = document.querySelectorAll('[data-fold]');
   if (folds.length) {

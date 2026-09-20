@@ -109,6 +109,42 @@ h1.grad-text, h2.grad-text, h3.grad-text, h4.grad-text { color: inherit; }
 }
 .fit-tile:hover { border-color: var(--color-neutral-400); box-shadow: none; }
 
+/* ---- card rails: Navigator's single scrolling row ------------------------ */
+[data-rail] {
+  display: flex !important;
+  grid-template-columns: none !important;
+  gap: 20px !important;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  /* let the row run to the container's edge so the next card peeks in */
+  margin-right: calc(-1 * clamp(20px, 5vw, 72px));
+  padding-right: clamp(20px, 5vw, 72px);
+  scroll-padding-left: 0;
+}
+[data-rail]::-webkit-scrollbar { display: none; }
+[data-rail] > .glass {
+  flex: 0 0 min(330px, 84vw);
+  scroll-snap-align: start;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 28px;
+}
+.rail-nav { display: flex; justify-content: flex-end; gap: 10px; margin-top: 20px; }
+.rail-nav[hidden] { display: none; }
+.rail-nav button {
+  width: 40px; height: 40px; border-radius: 50%; border: 0;
+  background: var(--color-neutral-100, #efefef); color: var(--color-text);
+  cursor: pointer; display: grid; place-items: center; padding: 0;
+  transition: background-color 0.18s ease, opacity 0.18s ease;
+}
+.rail-nav button:hover { background: var(--color-neutral-200); }
+.rail-nav button:disabled { opacity: 0.35; cursor: default; }
+.rail-nav svg { width: 16px; height: 16px; }
+
 /* Other card headlines at the design's 19px: Navigator's 22.5 / 500. */
 .glass > h3[style*="font-size: 19px"] { font-size: 22.5px !important; line-height: 1.22 !important; }
 
