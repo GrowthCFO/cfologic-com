@@ -14,6 +14,7 @@
 - [Trust Center](https://cfologic.com/trust-center): Security and data handling
 
 ## Insights (blog)
+- [Setting Up a Subsidiary in India as a US Company: What It Actually Takes](https://cfologic.com/insights/us-company-subsidiary-in-india/): What a US company actually takes on when it opens an Indian subsidiary — the incorporation decisions that are hard to undo, the India compliance calendar, the transfer price both tax authorities read, and what changes on the parent's own return.
 - [Outsourced Accounting for SBA Acquisitions: Cost, Scope and Covenant Reporting](https://cfologic.com/insights/sba-acquisition-finance-cost-scope-covenant-reporting/): What finance support costs after an SBA acquisition, what should be in scope, why Hybridshore delivers the same scope 30–50% below what most firms charge, and how the SOP 50 10 8.1 rules taking effect on 1 October change the numbers a first-time buyer has to prove.
 - [What a Buy-Side Quality of Earnings Actually Finds](https://cfologic.com/insights/buy-side-quality-of-earnings-worked-example/): A worked example of a buy-side quality of earnings on a hotel portfolio — where the seller's $4.9M of adjusted EBITDA was supported at $3.7M, and why.
 - [Fractional CFO Services: Cost and When You Need One](https://cfologic.com/insights/fractional-cfo-services-cost-and-when-you-need-one/): What fractional CFO services cost in 2026, what the role does in the first 90 days, when to hire one, and the execution gap that derails most engagements.
