@@ -21,13 +21,13 @@
                   note: "Annual revenue under $250K, up to 30 transactions a month." },
     seedplus:   { name: "Seed Plus",  fee: 149,  fixed: true,  family: "seed",
                   note: "Annual revenue up to $500K, 31 to 75 transactions a month." },
-    essentials: { name: "Essentials", fee: 300,  fixed: false, family: "standard",
+    essentials: { name: "Essentials", fee: 300,  fixed: false, federal: 1000, family: "standard",
                   note: "Books and statements. No payroll, AR or AP." },
-    startup:    { name: "Startup",    fee: 600,  fixed: false, family: "standard",
+    startup:    { name: "Startup",    fee: 600,  fixed: false, federal: 1500, family: "standard",
                   note: "Payroll in one state, AR, and AP with bill pay." },
-    growing:    { name: "Growing",    fee: 1000, fixed: false, family: "standard",
+    growing:    { name: "Growing",    fee: 1000, fixed: false, federal: 2500, family: "standard",
                   note: "Adds FP&A, spend management and a custom chart of accounts." },
-    scaleup:    { name: "Scaleup",    fee: null, fixed: false, family: "standard",
+    scaleup:    { name: "Scaleup",    fee: null, fixed: false, federal: null, family: "standard",
                   note: "Multi-state or multi-entity, with reporting built to your spec." }
   };
 
@@ -65,7 +65,7 @@
       // standard extras
       cfohrs:   n("pc-cfohrs"),
       states:   n("pc-states"),
-      federal:  g("pc-federal") || "none"
+      federal:  g("pc-federal") || "no"
     };
   }
 
@@ -130,8 +130,10 @@
                            (v.states === 1 ? " state" : " states"),
                     amount: 300 * v.states });
       }
-      if (v.federal !== "none") {
-        once.push({ label: "Federal return", amount: parseInt(v.federal, 10) });
+      if (v.federal === "yes" && plan.federal) {
+        once.push({ label: "Federal return, " + plan.name, amount: plan.federal });
+      } else if (v.federal === "yes") {
+        once.push({ label: "Federal return", amount: 0, quoted: true });
       }
     }
 
@@ -158,10 +160,10 @@
   }
 
   // ----------------------------------------------------------------- render
-  function line(label, amount, muted, from) {
+  function line(label, amount, muted, from, quoted) {
     return '<div class="pc-line' + (muted ? " pc-line-muted" : "") + '">' +
            '<span>' + label + '</span><span>' +
-           (from ? "from " : "") + money(amount) + '</span></div>';
+           (quoted ? "Quoted" : (from ? "from " : "") + money(amount)) + '</span></div>';
   }
 
   function render() {
@@ -206,7 +208,7 @@
       '<div class="pc-line pc-line-muted"><span>Scoped on a call</span><span>&mdash;</span></div>';
 
     var ol = "";
-    r.once.forEach(function (x) { ol += line(x.label, x.amount, false, x.from); });
+    r.once.forEach(function (x) { ol += line(x.label, x.amount, false, x.from, x.quoted); });
     $("pc-once").innerHTML = ol;
     $("pc-once-wrap").hidden = r.once.length === 0;
     $("pc-once-total").textContent = money(r.onceTotal);
