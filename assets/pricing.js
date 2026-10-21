@@ -10,6 +10,12 @@
 
   var ANNUAL_OFF = 0.20;
 
+  // "Starting at" sits above the figure wherever the fee is scoped
+  // rather than fixed, the way the rest of this market writes it.
+  var LEAD = '<span style="display:block;font-size:12.5px;font-weight:600;'
+           + 'letter-spacing:0.02em;line-height:16px;margin-bottom:5px;opacity:.72">'
+           + '%s</span>';
+
   var PLANS = {
     seed:       { name: "Seed",       fee: 99,   fixed: true,  family: "seed",
                   note: "Annual revenue under $250K, up to 30 transactions a month." },
@@ -180,7 +186,8 @@
       big = "Custom";
       sublabel = "Scoped with you, then fixed for the year.";
     } else {
-      big = money(r.monthly) + '<span class="pc-per">/month</span>';
+      big = (r.scoped ? LEAD.replace("%s", "Starting at") : "") +
+            money(r.monthly) + '<span class="pc-per">/month</span>';
       sublabel = r.annual
         ? "Billed annually. " + money(r.perYear) + " a year for the subscription."
         : "Billed monthly. Switch to annual and take 20% off the subscription.";
@@ -212,8 +219,9 @@
       var el = prices[j];
       var mo = parseInt(el.getAttribute("data-mo"), 10);
       var shown = r.annual ? Math.round(mo * (1 - ANNUAL_OFF)) : mo;
-      var pre = el.getAttribute("data-prefix") || "";
-      el.innerHTML = pre + "$" + shown.toLocaleString("en-US") +
+      var pre = el.getAttribute("data-prefix");
+      el.innerHTML = (pre ? LEAD.replace("%s", pre) : "") +
+        "$" + shown.toLocaleString("en-US") +
         '<span style="font-size:16px;font-weight:400">/mo</span>';
       var sub = el.parentNode.querySelector("[data-mo-sub]");
       if (sub) {
