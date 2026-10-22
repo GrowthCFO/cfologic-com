@@ -460,22 +460,27 @@ figure:has(> img[src*="dashboard-hero"]) > img {
   .pyr-row > div:first-child { min-width: 0 !important; }
 }
 
-/* ------------------------------------------------------ cookie consent */
+/* ------------------------------------------------------ cookie consent
+   Glass, the way the nav and the cards do it: a light wash over whatever is
+   behind, a hairline edge and the same 20px radius. */
 .cc-bar {
-  position: fixed; left: 0; right: 0; bottom: 0; z-index: 9000;
-  background: rgba(253,253,253,0.97);
-  backdrop-filter: blur(18px) saturate(1.6);
-  -webkit-backdrop-filter: blur(18px) saturate(1.6);
-  border-top: 1px solid var(--color-neutral-200);
-  box-shadow: 0 -8px 32px rgba(0,0,0,0.07);
+  position: fixed; z-index: 9000;
+  left: 50%; transform: translateX(-50%);
+  bottom: 18px; width: min(1160px, calc(100% - 32px));
+  background: rgba(253,253,253,0.62);
+  backdrop-filter: blur(22px) saturate(1.8);
+  -webkit-backdrop-filter: blur(22px) saturate(1.8);
+  border: 1px solid rgba(255,255,255,0.58);
+  border-radius: 20px;
+  box-shadow: 0 2px 10px rgba(16,24,40,0.05), 0 16px 48px rgba(16,24,40,0.13);
 }
 .cc-bar-in {
-  max-width: 1200px; margin: 0 auto; padding: 18px clamp(20px,5vw,72px);
-  display: flex; align-items: center; gap: 20px 28px; flex-wrap: wrap;
+  padding: 18px 24px;
+  display: flex; align-items: center; gap: 16px 26px; flex-wrap: wrap;
 }
 .cc-bar-txt {
-  flex: 1 1 380px; margin: 0; font-size: 13.5px; line-height: 21px;
-  color: color-mix(in srgb, var(--color-text) 80%, transparent);
+  flex: 1 1 400px; margin: 0; font-size: 13.5px; line-height: 21px;
+  color: color-mix(in srgb, var(--color-text) 82%, transparent);
 }
 .cc-bar-txt a, .cc-fine a { color: var(--color-text); text-underline-offset: 2px; }
 .cc-bar-btns { display: flex; gap: 9px; flex-wrap: wrap; flex: none; }
@@ -483,11 +488,13 @@ figure:has(> img[src*="dashboard-hero"]) > img {
   font-family: var(--font-heading); font-size: 13.5px; line-height: 18px;
   font-weight: 600; padding: 10px 17px; border-radius: 999px;
   cursor: pointer; white-space: nowrap; border: 1px solid transparent;
+  transition: border-color .15s ease, background .15s ease, color .15s ease;
 }
 .cc-btn-ghost {
-  background: transparent; border-color: var(--color-neutral-300); color: var(--color-text);
+  background: rgba(255,255,255,0.5); color: var(--color-text);
+  border-color: rgba(22,22,22,0.14);
 }
-.cc-btn-ghost:hover { border-color: var(--color-neutral-500); }
+.cc-btn-ghost:hover { background: rgba(255,255,255,0.85); border-color: rgba(22,22,22,0.28); }
 .cc-btn-solid { background: var(--color-accent-700); color: #fff; }
 .cc-btn-solid:hover { background: var(--color-accent-800); }
 .cc-btn:focus-visible { outline: 2px solid var(--color-accent-700); outline-offset: 2px; }
@@ -496,38 +503,42 @@ figure:has(> img[src*="dashboard-hero"]) > img {
 .cc-wrap {
   position: fixed; inset: 0; z-index: 9100; display: flex;
   align-items: center; justify-content: center; padding: 20px;
-  background: rgba(16,16,16,0.42);
+  background: rgba(16,20,28,0.30);
+  backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
 }
 .cc-dialog {
-  position: relative; width: 100%; max-width: 560px;
+  position: relative; width: 100%; max-width: 540px;
   max-height: calc(100vh - 40px); overflow-y: auto;
-  background: var(--color-neutral-50, #fff); border-radius: 20px;
-  padding: 32px 30px 26px;
-  box-shadow: 0 24px 64px rgba(0,0,0,0.22);
+  background: rgba(253,253,253,0.80);
+  backdrop-filter: blur(28px) saturate(1.8);
+  -webkit-backdrop-filter: blur(28px) saturate(1.8);
+  border: 1px solid rgba(255,255,255,0.6);
+  border-radius: 22px; padding: 32px 30px 26px;
+  box-shadow: 0 24px 72px rgba(16,24,40,0.26);
 }
 .cc-x {
   position: absolute; top: 14px; right: 16px; width: 32px; height: 32px;
   border: 0; background: transparent; cursor: pointer; border-radius: 50%;
   font-size: 22px; line-height: 1; color: color-mix(in srgb, var(--color-text) 55%, transparent);
 }
-.cc-x:hover { background: var(--color-neutral-100); color: var(--color-text); }
+.cc-x:hover { background: rgba(22,22,22,0.07); color: var(--color-text); }
 .cc-h {
   font-family: var(--font-heading); font-weight: var(--font-heading-weight);
   font-size: 23px; line-height: 1.2; letter-spacing: -0.015em; margin: 0 30px 0 0;
 }
 .cc-lede {
   font-size: 14px; line-height: 23px; margin: 10px 0 0;
-  color: color-mix(in srgb, var(--color-text) 72%, transparent);
+  color: color-mix(in srgb, var(--color-text) 74%, transparent);
 }
 .cc-row {
   display: flex; align-items: flex-start; justify-content: space-between;
-  gap: 20px; padding: 17px 0; border-bottom: 1px solid var(--color-neutral-200);
+  gap: 20px; padding: 18px 0; border-bottom: 1px solid rgba(22,22,22,0.09);
 }
-.cc-row:first-of-type { border-top: 1px solid var(--color-neutral-200); margin-top: 20px; }
+.cc-row:first-of-type { border-top: 1px solid rgba(22,22,22,0.09); margin-top: 20px; }
 .cc-row-name { font-family: var(--font-heading); font-weight: 600; font-size: 14.5px; }
 .cc-row-body {
   margin: 5px 0 0; font-size: 13px; line-height: 20px;
-  color: color-mix(in srgb, var(--color-text) 66%, transparent);
+  color: color-mix(in srgb, var(--color-text) 68%, transparent);
 }
 .cc-always {
   flex: none; font-size: 11.5px; letter-spacing: 0.05em; text-transform: uppercase;
@@ -537,7 +548,7 @@ figure:has(> img[src*="dashboard-hero"]) > img {
 .cc-switch input { position: absolute; opacity: 0; width: 100%; height: 100%; margin: 0; cursor: pointer; }
 .cc-slider {
   position: absolute; inset: 0; border-radius: 999px;
-  background: var(--color-neutral-300); transition: background .16s ease;
+  background: rgba(22,22,22,0.18); transition: background .16s ease;
 }
 .cc-slider::after {
   content: ""; position: absolute; top: 3px; left: 3px; width: 19px; height: 19px;
@@ -554,7 +565,7 @@ figure:has(> img[src*="dashboard-hero"]) > img {
 .cc-actions { display: flex; gap: 10px; justify-content: flex-end; flex-wrap: wrap; margin-top: 22px; }
 .cc-fine {
   font-size: 12px; line-height: 19px; margin: 16px 0 0;
-  color: color-mix(in srgb, var(--color-text) 55%, transparent);
+  color: color-mix(in srgb, var(--color-text) 58%, transparent);
 }
 
 /* the standing cookie button */
@@ -562,17 +573,19 @@ figure:has(> img[src*="dashboard-hero"]) > img {
   position: fixed; right: 18px; bottom: 18px; z-index: 8900;
   width: 42px; height: 42px; border-radius: 50%; cursor: pointer;
   display: flex; align-items: center; justify-content: center;
-  background: rgba(253,253,253,0.94); color: var(--color-text);
-  border: 1px solid var(--color-neutral-300);
-  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
-  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
-  transition: border-color .15s ease, color .15s ease;
+  background: rgba(253,253,253,0.62); color: var(--color-text);
+  border: 1px solid rgba(255,255,255,0.58);
+  backdrop-filter: blur(18px) saturate(1.8);
+  -webkit-backdrop-filter: blur(18px) saturate(1.8);
+  box-shadow: 0 2px 8px rgba(16,24,40,0.06), 0 10px 28px rgba(16,24,40,0.12);
+  transition: color .15s ease, background .15s ease;
 }
-.cc-fab:hover { border-color: var(--color-accent-700); color: var(--color-accent-700); }
+.cc-fab:hover { color: var(--color-accent-700); background: rgba(253,253,253,0.88); }
 .cc-fab:focus-visible { outline: 2px solid var(--color-accent-700); outline-offset: 3px; }
 
 @media (max-width: 760px) {
-  .cc-bar-in { padding: 15px 20px; gap: 14px; }
+  .cc-bar { bottom: 12px; width: calc(100% - 24px); border-radius: 18px; }
+  .cc-bar-in { padding: 16px 18px; gap: 13px; }
   .cc-bar-btns { width: 100%; }
   .cc-bar-btns .cc-btn { flex: 1 1 auto; text-align: center; }
   .cc-dialog { padding: 28px 22px 22px; }

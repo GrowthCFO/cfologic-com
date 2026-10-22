@@ -1,29 +1,33 @@
-/* Cookie consent.
+/* Cookie consent, opt-out.
  *
- * Nothing in a non-essential category runs until the visitor says so. The
- * build rewrites every gated tag to <script type="text/plain" data-consent>,
- * which a browser parses but will not execute; this file turns the allowed
- * ones back into real scripts after a choice is made.
+ * Trackers run from the first page load and keep running until a visitor
+ * turns them off. The build still parks every tag as
+ * <script type="text/plain" data-consent>, which a browser parses but will
+ * not execute, so this file decides what runs -- on a first visit that is
+ * everything, and after a refusal it is nothing.
  *
- * Categories match the four the legal page describes, so what a visitor
+ * Turning a category off reloads the page. A script that is already running
+ * cannot be unloaded, and storing a refusal while Clarity carries on
+ * recording would be a lie told in good faith.
+ *
+ * Categories match the ones the legal page describes, so what a visitor
  * switches off here is the same thing they read about there.
  */
 (function () {
   "use strict";
 
   var KEY = "cfo-consent";
-  var VERSION = 1;
+  var VERSION = 2;
+  var ALL_ON = { analytics: true, marketing: true };
 
   var CATS = [
     { id: "analytics", name: "Analytics",
-      body: "Google Analytics: which pages get read, device type and a rough location from "
-          + "your IP. No session recording." },
-    { id: "replay", name: "Session recording",
-      body: "Microsoft Clarity: records this visit and replays it to us as a video of the "
-          + "page — clicks, scrolling and mouse movement. Typing in form fields is masked." },
+      body: "How the site gets used: which pages are read, what device you are on, roughly "
+          + "where you are, and how you move through a page \u2014 including a replay of "
+          + "clicks and scrolling. It is how we find the parts that do not work. What you "
+          + "type into a form is masked." },
     { id: "marketing", name: "Marketing",
-      body: "The Apollo tracker looks up your IP to work out which company you are visiting "
-          + "from. On our /cfo page only, the Meta Pixel reports the visit to Meta." }
+      body: "Which company a visit comes from, and whether an ad brought you here." }
   ];
 
   // ------------------------------------------------------------------ state
@@ -78,8 +82,20 @@
     if (node && node.parentNode) node.parentNode.removeChild(node);
   }
 
+  // True when a category is live on this page but the new choice switches it
+  // off. Releasing cannot be undone, so the page is reloaded instead.
+  function needsReload(choice) {
+    var live = document.querySelectorAll("script[data-consent-done]");
+    for (var i = 0; i < live.length; i++) {
+      if (!choice[live[i].getAttribute("data-consent")]) return true;
+    }
+    return false;
+  }
+
   function decide(choice) {
+    var reload = needsReload(choice);
     write(choice);
+    if (reload) { location.reload(); return; }
     release(choice);
     close(banner); banner = null;
     close(panel); panel = null;
@@ -88,11 +104,11 @@
   }
 
   function acceptAll() {
-    decide({ analytics: true, replay: true, marketing: true });
+    decide({ analytics: true, marketing: true });
   }
 
   function rejectAll() {
-    decide({ analytics: false, replay: false, marketing: false });
+    decide({ analytics: false, marketing: false });
   }
 
   // ----------------------------------------------------------------- banner
@@ -103,12 +119,13 @@
     banner.innerHTML =
       '<div class="cc-bar-in">'
       + '<p class="cc-bar-txt">We use cookies to see how the site is used, and on one page '
-      + 'to measure advertising. Nothing beyond what the site needs to work runs until you '
-      + 'choose. <a href="/legal#cookies">What each one does</a>.</p>'
+      + 'to measure advertising. They are on now. Turn off whatever you would rather we did '
+      + 'not run \u2014 the site works the same either way. '
+      + '<a href="/legal#cookies">What each one does</a>.</p>'
       + '<div class="cc-bar-btns">'
       + '<button type="button" class="cc-btn cc-btn-ghost" data-cc="prefs">Preferences</button>'
       + '<button type="button" class="cc-btn cc-btn-ghost" data-cc="reject">Reject non-essential</button>'
-      + '<button type="button" class="cc-btn cc-btn-solid" data-cc="accept">Accept all</button>'
+      + '<button type="button" class="cc-btn cc-btn-solid" data-cc="accept">Got it</button>'
       + '</div></div>';
     document.body.appendChild(banner);
     banner.addEventListener("click", function (e) {
@@ -123,7 +140,7 @@
 
   // ------------------------------------------------------------ preferences
   function showPanel() {
-    var saved = read() || { analytics: false, replay: false, marketing: false };
+    var saved = read() || ALL_ON;
     lastFocus = document.activeElement;
     panel = el("div", "cc-wrap");
     panel.setAttribute("role", "dialog");
@@ -149,8 +166,9 @@
       '<div class="cc-dialog">'
       + '<button type="button" class="cc-x" data-cc="close" aria-label="Close">×</button>'
       + '<h2 class="cc-h">Cookie preferences</h2>'
-      + '<p class="cc-lede">Switch off anything you would rather we did not run. The site works '
-      + 'the same either way. You can change this whenever you like.</p>'
+      + '<p class="cc-lede">These are on unless you turn them off. The site works the same '
+      + 'either way, and you can change this whenever you like. Switching one off reloads the '
+      + 'page so it stops straight away.</p>'
       + rows
       + '<div class="cc-actions">'
       + '<button type="button" class="cc-btn cc-btn-ghost" data-cc="reject">Reject non-essential</button>'
@@ -235,6 +253,8 @@
       release(saved);
       showReopen();
     } else {
+      // No choice yet: everything runs, and the banner says so.
+      release(ALL_ON);
       showBanner();
     }
   }

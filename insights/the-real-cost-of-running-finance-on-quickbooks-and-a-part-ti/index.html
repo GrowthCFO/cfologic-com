@@ -8,14 +8,14 @@
 <link rel="icon" href="/favicon.ico?v=d6fea06e" sizes="32x32">
 <title>Moved</title>
 <script>
-// Record which legacy URL was hit before leaving it -- but only for a visitor
-// who has already allowed analytics. A stub that exists for 600ms is no place
-// to ask, so it asks nothing: without consent it simply redirects, and the
-// destination page shows the banner. The meta refresh above covers visitors
-// without JavaScript.
+// Record which legacy URL was hit before leaving it, unless the visitor has
+// turned analytics off. A stub that exists for 600ms is no place to ask, so
+// it asks nothing and follows the choice already stored; the destination page
+// carries the banner. The meta refresh above covers visitors without
+// JavaScript.
 var moved=false,go=function(){if(!moved){moved=true;location.replace("/insights/the-real-cost-of-quickbooks-and-a-part-time-controller/");}};
-var ok=false;
-try{var c=JSON.parse(localStorage.getItem("cfo-consent")||"null");ok=!!(c&&c.v===1&&c.analytics);}catch(e){}
+var ok=true;
+try{var c=JSON.parse(localStorage.getItem("cfo-consent")||"null");if(c&&c.v===1&&!c.analytics){ok=false;}}catch(e){}
 if(ok){
   var g=document.createElement("script");g.async=true;
   g.src="https://www.googletagmanager.com/gtag/js?id=G-5HRTB39JZ6";
