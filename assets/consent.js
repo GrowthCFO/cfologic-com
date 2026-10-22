@@ -119,12 +119,11 @@
     banner.innerHTML =
       '<div class="cc-bar-in">'
       + '<p class="cc-bar-txt">We use cookies to see how the site is used, and on one page '
-      + 'to measure advertising. They are on now. Turn off whatever you would rather we did '
-      + 'not run \u2014 the site works the same either way. '
+      + 'to measure advertising. They are on now. Open preferences to turn off whatever you '
+      + 'would rather we did not run \u2014 the site works the same either way. '
       + '<a href="/legal#cookies">What each one does</a>.</p>'
       + '<div class="cc-bar-btns">'
       + '<button type="button" class="cc-btn cc-btn-ghost" data-cc="prefs">Preferences</button>'
-      + '<button type="button" class="cc-btn cc-btn-ghost" data-cc="reject">Reject non-essential</button>'
       + '<button type="button" class="cc-btn cc-btn-solid" data-cc="accept">Got it</button>'
       + '</div></div>';
     document.body.appendChild(banner);
