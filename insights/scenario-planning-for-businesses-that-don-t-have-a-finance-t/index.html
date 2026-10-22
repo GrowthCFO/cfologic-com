@@ -7,18 +7,25 @@
 <meta name="robots" content="noindex, follow">
 <link rel="icon" href="/favicon.ico?v=d6fea06e" sizes="32x32">
 <title>Moved</title>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5HRTB39JZ6"></script>
 <script>
-window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
-gtag('js',new Date());
-// Record which legacy URL was hit before leaving it. The previous version
-// redirected instantly, so these seven pages never reported to analytics at
-// all. The hop is capped at 600ms and uses a beacon, so a slow or blocked
-// analytics request can never strand a visitor here; the meta refresh above
-// covers visitors without JavaScript.
+// Record which legacy URL was hit before leaving it -- but only for a visitor
+// who has already allowed analytics. A stub that exists for 600ms is no place
+// to ask, so it asks nothing: without consent it simply redirects, and the
+// destination page shows the banner. The meta refresh above covers visitors
+// without JavaScript.
 var moved=false,go=function(){if(!moved){moved=true;location.replace("/insights/scenario-planning-for-businesses-without-a-finance-team/");}};
-gtag('config','G-5HRTB39JZ6',{transport_type:'beacon',event_callback:go});
-setTimeout(go,600);
+var ok=false;
+try{var c=JSON.parse(localStorage.getItem("cfo-consent")||"null");ok=!!(c&&c.v===1&&c.analytics);}catch(e){}
+if(ok){
+  var g=document.createElement("script");g.async=true;
+  g.src="https://www.googletagmanager.com/gtag/js?id=G-5HRTB39JZ6";
+  document.head.appendChild(g);
+  window.dataLayer=window.dataLayer||[];
+  window.gtag=function(){dataLayer.push(arguments);};
+  gtag("js",new Date());
+  gtag("config","G-5HRTB39JZ6",{transport_type:"beacon",event_callback:go});
+}
+setTimeout(go,ok?600:0);
 </script>
 </head>
 <body>
