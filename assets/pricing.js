@@ -100,7 +100,8 @@
     var plan = PLANS[key];
     var sub = [];      // recurring, discountable
     var usage = [];    // recurring, not discountable
-    var once = [];     // one-time or annual
+    var once = [];     // paid once, ever
+    var yearly = [];   // paid again every year
 
     if (plan.fee !== null) {
       sub.push({ label: plan.name + " plan", amount: plan.fee });
@@ -116,25 +117,27 @@
       if (v.catchup > 0) {
         once.push({ label: "Catch-up bookkeeping, " + v.catchup +
                            (v.catchup === 1 ? " month" : " months"),
-                    amount: 49 * v.catchup });
+                    amount: 49 * v.catchup, unit: "$49 for each past month" });
       }
-      once.push({ label: "One-time setup", amount: 199 });
+      once.push({ label: "One-time setup", amount: 199, unit: "Charged once, at the start" });
       if (v.salestax > 0) {
-        once.push({ label: "Sales tax, " + v.salestax +
-                           (v.salestax === 1 ? " filing" : " filings") +
-                           " at $100 each",
-                    amount: 100 * v.salestax, from: true });
+        yearly.push({ label: "Sales tax, " + v.salestax +
+                             (v.salestax === 1 ? " filing" : " filings") + " a year",
+                      amount: 100 * v.salestax, from: true,
+                      unit: "From $100 for each filing" });
       }
     } else {
       if (v.states > 0) {
-        once.push({ label: "State filings, " + v.states +
-                           (v.states === 1 ? " state" : " states"),
-                    amount: 300 * v.states });
+        yearly.push({ label: "State filings, " + v.states +
+                             (v.states === 1 ? " state" : " states"),
+                      amount: 300 * v.states, unit: "$300 per state, per year" });
       }
       if (v.federal === "yes" && plan.federal) {
-        once.push({ label: "Federal return, " + plan.name, amount: plan.federal });
+        yearly.push({ label: "Federal return", amount: plan.federal,
+                      unit: "Set by your plan \u2014 " + plan.name });
       } else if (v.federal === "yes") {
-        once.push({ label: "Federal return", amount: 0, quoted: true });
+        yearly.push({ label: "Federal return", amount: 0, quoted: true,
+                      unit: "Scoped with you" });
       }
     }
 
@@ -147,23 +150,26 @@
     var subTotal = sub.reduce(function (a, b) { return a + b.amount; }, 0);
     var useTotal = usage.reduce(function (a, b) { return a + b.amount; }, 0);
     var onceTotal = once.reduce(function (a, b) { return a + b.amount; }, 0);
+    var yearTotal = yearly.reduce(function (a, b) { return a + b.amount; }, 0);
     var annual = v.billing === "annual";
     var discount = annual ? subTotal * ANNUAL_OFF : 0;
 
     return {
-      key: key, plan: plan, sub: sub, usage: usage, once: once,
+      key: key, plan: plan, sub: sub, usage: usage, once: once, yearly: yearly,
       annual: annual, discount: discount,
       monthly: subTotal - discount + useTotal,
       perYear: (subTotal - discount) * 12,
-      onceTotal: onceTotal,
+      onceTotal: onceTotal, yearTotal: yearTotal,
       scoped: !plan.fixed
     };
   }
 
   // ----------------------------------------------------------------- render
-  function line(label, amount, muted, from, quoted) {
+  function line(label, amount, muted, from, quoted, unit) {
     return '<div class="pc-line' + (muted ? " pc-line-muted" : "") + '">' +
-           '<span>' + label + '</span><span>' +
+           '<span>' + label +
+           (unit ? '<em class="pc-unit">' + unit + '</em>' : "") +
+           '</span><span>' +
            (quoted ? "Quoted" : (from ? "from " : "") + money(amount)) + '</span></div>';
   }
 
@@ -209,10 +215,20 @@
       '<div class="pc-line pc-line-muted"><span>Scoped on a call</span><span>&mdash;</span></div>';
 
     var ol = "";
-    r.once.forEach(function (x) { ol += line(x.label, x.amount, false, x.from, x.quoted); });
+    r.once.forEach(function (x) {
+      ol += line(x.label, x.amount, false, x.from, x.quoted, x.unit);
+    });
     $("pc-once").innerHTML = ol;
     $("pc-once-wrap").hidden = r.once.length === 0;
     $("pc-once-total").textContent = money(r.onceTotal);
+
+    var yl = "";
+    r.yearly.forEach(function (x) {
+      yl += line(x.label, x.amount, false, x.from, x.quoted, x.unit);
+    });
+    $("pc-year").innerHTML = yl;
+    $("pc-year-wrap").hidden = r.yearly.length === 0;
+    $("pc-year-total").textContent = money(r.yearTotal);
 
     $("pc-scoped").hidden = !r.scoped;
 

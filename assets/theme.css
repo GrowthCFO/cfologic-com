@@ -591,3 +591,12 @@ figure:has(> img[src*="dashboard-hero"]) > img {
   .cc-dialog { padding: 28px 22px 22px; }
   .cc-fab { right: 14px; bottom: 14px; }
 }
+
+/* A rate shown under its line item, so a per-unit price is never read as the
+   total of the row it sits in. */
+.pc-unit {
+  display: block; font-style: normal; font-size: 11.5px; line-height: 17px;
+  margin-top: 2px; font-weight: 400;
+  color: color-mix(in srgb, var(--color-text) 50%, transparent);
+}
+.pc-line > span:first-child { min-width: 0; }
