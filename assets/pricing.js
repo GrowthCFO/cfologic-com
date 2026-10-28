@@ -51,12 +51,10 @@
       billing:  g("pc-billing") || "monthly",
       revenue:  g("pc-revenue") || "u250",
       txn:      n("pc-txn"),
-      accounts: n("pc-accounts"),
       payroll:  g("pc-payroll") || "none",
-      heads:    n("pc-heads"),
       ar:       $("pc-ar") && $("pc-ar").checked,
       ap:       $("pc-ap") && $("pc-ap").checked,
-      entities: n("pc-entities"),
+      entities: ($("pc-entities") && $("pc-entities").checked) ? 2 : 1,
       // seed extras
       nav:      $("pc-nav") && $("pc-nav").checked,
       catchup:  n("pc-catchup"),
@@ -75,9 +73,9 @@
     var key;
     if (v.entities > 1 || v.payroll === "multiple" || v.txn > 200) {
       key = "scaleup";
-    } else if (v.txn > 100 || (v.payroll !== "none" && v.heads > 5)) {
+    } else if (v.txn > 100 || v.payroll === "one10") {
       key = "growing";
-    } else if (v.txn > 30 || v.payroll !== "none" || v.ar || v.ap || v.accounts > 4) {
+    } else if (v.txn > 30 || v.payroll !== "none" || v.ar || v.ap) {
       key = "startup";
     } else {
       key = "essentials";
@@ -85,10 +83,9 @@
 
     var simple = !v.ar && !v.ap && v.payroll === "none" && v.entities === 1;
     if (simple) {
-      if (v.revenue === "u250" && v.txn <= 30 && v.accounts <= 2) {
+      if (v.revenue === "u250" && v.txn <= 30) {
         key = "seed";
-      } else if ((v.revenue === "u250" || v.revenue === "u500") &&
-                 v.txn <= 75 && v.accounts <= 3) {
+      } else if ((v.revenue === "u250" || v.revenue === "u500") && v.txn <= 75) {
         key = "seedplus";
       }
     }
@@ -102,6 +99,7 @@
     var usage = [];    // recurring, not discountable
     var once = [];     // paid once, ever
     var yearly = [];   // paid again every year
+    var filed = [];    // billed per return, when it is filed
 
     if (plan.fee !== null) {
       sub.push({ label: plan.name + " plan", amount: plan.fee });
@@ -110,10 +108,6 @@
     if (plan.family === "seed") {
       if (v.nav) sub.push({ label: "CEO Navigator™ Basic", amount: 99 });
       if (v.inctax) sub.push({ label: "Income tax support", amount: 100, from: true });
-      if (v.payroll !== "none" && v.heads > 0) {
-        usage.push({ label: "Payroll, " + v.heads + (v.heads === 1 ? " employee" : " employees"),
-                     amount: 49 * v.heads, unit: "$49 per employee, per payrun" });
-      }
       if (v.catchup > 0) {
         once.push({ label: "Catch-up bookkeeping, " + v.catchup +
                            (v.catchup === 1 ? " month" : " months"),
@@ -121,10 +115,10 @@
       }
       once.push({ label: "One-time setup", amount: 199, unit: "Charged once, at the start" });
       if (v.salestax > 0) {
-        yearly.push({ label: "Sales tax, " + v.salestax +
-                             (v.salestax === 1 ? " filing" : " filings") + " a year",
-                      amount: 100 * v.salestax, from: true,
-                      unit: "From $100 for each filing" });
+        filed.push({ label: "Sales tax, " + v.salestax +
+                            (v.salestax === 1 ? " return" : " returns"),
+                     amount: 100 * v.salestax, from: true,
+                     unit: "From $100 per return filed" });
       }
     } else {
       if (v.states > 0) {
@@ -151,15 +145,16 @@
     var useTotal = usage.reduce(function (a, b) { return a + b.amount; }, 0);
     var onceTotal = once.reduce(function (a, b) { return a + b.amount; }, 0);
     var yearTotal = yearly.reduce(function (a, b) { return a + b.amount; }, 0);
+    var filedTotal = filed.reduce(function (a, b) { return a + b.amount; }, 0);
     var annual = v.billing === "annual";
     var discount = annual ? subTotal * ANNUAL_OFF : 0;
 
     return {
-      key: key, plan: plan, sub: sub, usage: usage, once: once, yearly: yearly,
+      key: key, plan: plan, sub: sub, usage: usage, once: once, yearly: yearly, filed: filed,
       annual: annual, discount: discount,
       monthly: subTotal - discount + useTotal,
       perYear: (subTotal - discount) * 12,
-      onceTotal: onceTotal, yearTotal: yearTotal,
+      onceTotal: onceTotal, yearTotal: yearTotal, filedTotal: filedTotal,
       scoped: !plan.fixed
     };
   }
@@ -183,9 +178,6 @@
     for (var i = 0; i < groups.length; i++) {
       groups[i].hidden = groups[i].getAttribute("data-pc-family") !== r.plan.family;
     }
-    // payroll headcount only matters when payroll is on
-    var heads = $("pc-heads-wrap");
-    if (heads) heads.hidden = v.payroll === "none";
 
     $("pc-plan-name").textContent = r.plan.name;
     $("pc-plan-note").textContent = r.plan.note;
@@ -229,6 +221,14 @@
     $("pc-year").innerHTML = yl;
     $("pc-year-wrap").hidden = r.yearly.length === 0;
     $("pc-year-total").textContent = money(r.yearTotal);
+
+    var fl = "";
+    r.filed.forEach(function (x) {
+      fl += line(x.label, x.amount, false, x.from, x.quoted, x.unit);
+    });
+    $("pc-filed").innerHTML = fl;
+    $("pc-filed-wrap").hidden = r.filed.length === 0;
+    $("pc-filed-total").textContent = money(r.filedTotal);
 
     $("pc-scoped").hidden = !r.scoped;
 
