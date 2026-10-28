@@ -184,12 +184,13 @@
   function renderCompare(annual) {
     if (!$("fc-form")) return;
     var picked = document.querySelector('[name="fc-plan"]:checked');
-    var plan = FC_PLANS[picked ? picked.value : "startup"];
+    var plan = FC_PLANS[picked ? picked.value : "essentials"];
 
-    var theirsYear = (fcNum("fc-book") + fcNum("fc-ops") + fcNum("fc-cfo")) * 12
-                     + fcNum("fc-tax");
+    var theirsYear = (fcNum("fc-book") + fcNum("fc-adv") + fcNum("fc-ops")) * 12
+                     + fcNum("fc-tax") + fcNum("fc-state");
     var ourMonthly = annual ? plan.fee * (1 - ANNUAL_OFF) : plan.fee;
-    var oursYear = ourMonthly * 12 + plan.federal;
+    // a state filing on their side is matched by ours, $300 for one state
+    var oursYear = ourMonthly * 12 + plan.federal + (fcNum("fc-state") > 0 ? 300 : 0);
     var diff = theirsYear - oursYear;
     var pct = theirsYear > 0 ? Math.round(Math.abs(diff) / theirsYear * 100) : 0;
 
