@@ -9,6 +9,8 @@
   "use strict";
 
   var ANNUAL_OFF = 0.20;
+  // returns a year for each filing frequency a state can assign
+  var FREQ = { monthly: 12, quarterly: 4, annually: 1 };
 
   // "Starting at" sits above the figure wherever the fee is scoped
   // rather than fixed, the way the rest of this market writes it.
@@ -59,7 +61,8 @@
       nav:      $("pc-nav") && $("pc-nav").checked,
       catchup:  n("pc-catchup"),
       inctax:   $("pc-inctax") && $("pc-inctax").checked,
-      salestax: n("pc-salestax"),
+      ststates: n("pc-st-states"),
+      stfreq:   g("pc-st-freq") || "quarterly",
       // standard extras
       cfohrs:   n("pc-cfohrs"),
       states:   n("pc-states"),
@@ -114,11 +117,13 @@
                     amount: 49 * v.catchup, unit: "$49 for each past month" });
       }
       once.push({ label: "One-time setup", amount: 199, unit: "Charged once, at the start" });
-      if (v.salestax > 0) {
-        filed.push({ label: "Sales tax, " + v.salestax +
-                            (v.salestax === 1 ? " return" : " returns"),
-                     amount: 100 * v.salestax, from: true,
-                     unit: "From $100 per return filed" });
+      var returns = v.ststates * (FREQ[v.stfreq] || 4);
+      if (returns > 0) {
+        filed.push({ label: "Sales tax, " + returns +
+                            (returns === 1 ? " return" : " returns") + " a year",
+                     amount: 100 * returns, from: true,
+                     unit: v.ststates + (v.ststates === 1 ? " state" : " states") +
+                           ", filing " + v.stfreq + ". From $100 per return filed." });
       }
     } else {
       if (v.states > 0) {
@@ -313,6 +318,14 @@
     }
 
     renderCompare(r.annual);
+
+    var ro = $("pc-st-readout");
+    if (ro) {
+      var n = v.ststates * (FREQ[v.stfreq] || 4);
+      ro.textContent = n === 0 ? "No sales tax returns."
+        : "That is " + n + (n === 1 ? " return" : " returns") + " a year, from $"
+          + (100 * n).toLocaleString("en-US") + ".";
+    }
 
     // live value read-outs on the sliders and steppers
     var outs = document.querySelectorAll("[data-pc-out]");
