@@ -159,6 +159,68 @@
     };
   }
 
+
+  // ------------------------------------------------- fee comparison
+  // Answers "what do I save?" rather than "which plan am I on?". Tax is
+  // counted on both sides, including where ours is the dearer line.
+  var FC_PLANS = {
+    essentials: { name: "Essentials", fee: 199,  federal: 1000 },
+    startup:    { name: "Startup",    fee: 450,  federal: 1500 },
+    growing:    { name: "Growing",    fee: 1000, federal: 2500 }
+  };
+
+  function fcNum(id) {
+    var el = $(id);
+    if (!el) return 0;
+    var n = parseFloat(el.value);
+    return (isFinite(n) && n > 0) ? n : 0;
+  }
+
+  function renderCompare(annual) {
+    if (!$("fc-form")) return;
+    var picked = document.querySelector('[name="fc-plan"]:checked');
+    var plan = FC_PLANS[picked ? picked.value : "startup"];
+
+    var theirsYear = (fcNum("fc-book") + fcNum("fc-ops") + fcNum("fc-cfo")) * 12
+                     + fcNum("fc-tax");
+    var ourMonthly = annual ? plan.fee * (1 - ANNUAL_OFF) : plan.fee;
+    var oursYear = ourMonthly * 12 + plan.federal;
+    var diff = theirsYear - oursYear;
+    var pct = theirsYear > 0 ? Math.round(Math.abs(diff) / theirsYear * 100) : 0;
+
+    $("fc-now").textContent = money(theirsYear);
+    $("fc-ours").textContent = money(oursYear);
+    $("fc-now-mo").textContent = money(theirsYear / 12) + " a month";
+    $("fc-ours-mo").textContent = money(oursYear / 12) + " a month"
+                                 + (annual ? ", billed annually" : "");
+
+    var head = $("fc-headline"), sub = $("fc-sub"), note = $("fc-note");
+    if (theirsYear === 0) {
+      head.textContent = "Add what you pay";
+      sub.textContent = "Fill in a figure or two above and the comparison appears here.";
+      $("fc-diff").textContent = "\u2014";
+      note.hidden = true;
+      return;
+    }
+    if (diff > 0) {
+      head.textContent = "You would save " + money(diff);
+      sub.textContent = pct + " percent lower a year, on the scope you have described.";
+      $("fc-diff").textContent = "\u2212" + money(diff);
+    } else if (diff < 0) {
+      head.textContent = money(-diff) + " more a year";
+      sub.textContent = "On these figures we are the dearer option for this scope.";
+      $("fc-diff").textContent = "+" + money(-diff);
+    } else {
+      head.textContent = "Line ball";
+      sub.textContent = "On these figures the two come out the same.";
+      $("fc-diff").textContent = money(0);
+    }
+    note.hidden = false;
+    note.innerHTML = annual
+      ? "Includes the 20% annual payment discount on the CFOLogic subscription."
+      : "Switch to annual payment at the top of the page and this gap widens by 20% of our subscription.";
+  }
+
   // ----------------------------------------------------------------- render
   function line(label, amount, muted, from, quoted, unit) {
     return '<div class="pc-line' + (muted ? " pc-line-muted" : "") + '">' +
@@ -250,6 +312,8 @@
       }
     }
 
+    renderCompare(r.annual);
+
     // live value read-outs on the sliders and steppers
     var outs = document.querySelectorAll("[data-pc-out]");
     for (var k = 0; k < outs.length; k++) {
@@ -270,6 +334,11 @@
   }
 
   function init() {
+    var cmp = $("fc-form");
+    if (cmp) {
+      cmp.addEventListener("input", function () { render(); });
+      cmp.addEventListener("change", function () { render(); });
+    }
     var form = $("pc-form");
     if (!form) return;
     form.addEventListener("input", render);
