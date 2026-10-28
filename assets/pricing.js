@@ -121,7 +121,8 @@
       once.push({ label: "One-time setup", amount: 199 });
       if (v.salestax > 0) {
         once.push({ label: "Sales tax, " + v.salestax +
-                           (v.salestax === 1 ? " filing" : " filings") + " a year",
+                           (v.salestax === 1 ? " filing" : " filings") +
+                           " at $100 each",
                     amount: 100 * v.salestax, from: true });
       }
     } else {
