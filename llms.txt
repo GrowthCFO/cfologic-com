@@ -4,6 +4,7 @@
 
 ## Key pages
 - [Home](https://cfologic.com/): Full-stack finance - CFO strategy, FP&A, controller and finance operations from one team
+- [Finance Team as a Service](https://cfologic.com/finance-team-as-a-service): What FTaaS is, the four layers (FinOps, controller, FP&A, fractional CFO), the hybridshore delivery model (US-based leadership, India-based teams, high AI leverage), and a costed comparison against hiring in-house
 - [For Founders & CEOs](https://cfologic.com/founders): CEO Navigator™ - the full finance pyramid as a service
 - [For CFOs](https://cfologic.com/cfo-success-partners): CFO Success Partners™ - retained execution team for finance leaders
 - [For CFO/CAS Firms](https://cfologic.com/accounting-firms): HybridShore capability for US CFO/CAS firms
