@@ -109,8 +109,8 @@
     }
 
     if (plan.family === "seed") {
-      if (v.nav) sub.push({ label: "CEO Navigator™ Basic", amount: 99 });
-      if (v.inctax) sub.push({ label: "Income tax support", amount: 100, from: true });
+      if (v.nav) sub.push({ label: "Navigator Basic", amount: 99 });
+      if (v.inctax) sub.push({ label: "Income tax, via our partner CPA", amount: 100, from: true });
       if (v.catchup > 0) {
         once.push({ label: "Catch-up bookkeeping, " + v.catchup +
                            (v.catchup === 1 ? " month" : " months"),

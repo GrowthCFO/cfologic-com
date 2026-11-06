@@ -266,6 +266,12 @@ figure:has(> img[src*="dashboard-hero"]) > img {
   color: var(--color-accent-700); transition: transform .18s ease;
 }
 .faq-q[open] > summary::after { content: "\2212"; }
+
+/* Founders pricing: the estimator opens on demand. */
+.pc-collapse { margin-top: 32px; min-width: 0; max-width: 100%; }
+.pc-collapse > summary { list-style: none; cursor: pointer; display: inline-flex; }
+.pc-collapse > summary::-webkit-details-marker { display: none; }
+.pc-collapse[open] > summary { margin-bottom: 8px; }
 .faq-q > summary:hover { color: var(--color-accent-700); }
 .faq-q > summary:focus-visible { outline: 2px solid var(--color-accent-700); outline-offset: 3px; }
 @media (max-width: 760px) { .faq-q > summary { font-size: 15.5px; line-height: 24px; } }
