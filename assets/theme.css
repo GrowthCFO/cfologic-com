@@ -12,10 +12,10 @@
  * one highlighted card — so the gradient tokens stay as designed. It never
  * uses gradient text, so .grad-text is the one class turned off.
  */
-@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap');
 
 :root {
-  --font-heading-weight: 500;
+  --font-heading-weight: 600;
 
   /* Navigator's greys, measured: #161616 text, #4d4d4d body, #666 secondary,
      #e6e6e6 borders. The design shipped warm neutrals (#7d7979). */
@@ -625,3 +625,32 @@ figure:has(> img[src*="dashboard-hero"]) > img {
 .pc-extras > summary:hover { color: var(--color-accent-700); }
 .pc-extras > summary:focus-visible { outline: 2px solid var(--color-accent-700); outline-offset: 3px; }
 .pc-extras-body > .pc-field:first-child { border-top: 0; padding-top: 0; }
+
+/* ---- Type scale ------------------------------------------------------------
+   Archivo, set on Spearhead's scale (spearheadai.com, measured Nov 2026):
+   page headline 64/800/1.0/-0.031em, section headline 44/800/1.1/-0.034em,
+   card heading 22/700/1.2, lead 20/1.6, body 17-18/1.6, nav and buttons 16.
+   The templates carry their type inline, so these override with !important. */
+/* Page headline 64 / 800 / 1.0 / -0.031em; section headline 44 / 800 / 1.1 / -0.034em */
+h1 { font-size: clamp(40px, 5vw, 64px) !important; font-weight: 800 !important;
+     line-height: 1 !important; letter-spacing: -0.031em !important; }
+h2 { font-size: clamp(30px, 3.4vw, 44px) !important; font-weight: 800 !important;
+     line-height: 1.1 !important; letter-spacing: -0.034em !important; }
+/* Card and step headings 22 / 700 / 1.2 / -0.014em */
+h3, h4, body .fit-tile h3, body .fit-tile h4 { font-weight: 700 !important; line-height: 1.2 !important;
+     letter-spacing: -0.014em !important; }
+body .fit-tile h3, body .fit-tile h4, h3[style*="font-size: 22.5px"], h3[style*="font-size: 19px"] { font-size: 22px !important; }
+
+/* Lead 20 / 1.6; intro 18 / 1.6; body 17 / 1.6; card text 16 / 1.6 */
+p[style*="font-size: 17px"] { font-size: 20px !important; line-height: 1.6 !important; }
+p[style*="font-size: 15.5px"], p[style*="font-size: 16.5px"] { font-size: 18px !important; line-height: 1.6 !important; }
+p[style*="font-size: 15px"] { font-size: 17px !important; line-height: 1.6 !important; }
+p[style*="font-size: 14.5px"] { font-size: 16px !important; line-height: 1.6 !important; }
+p[style*="font-size: 14px"] { font-size: 15px !important; line-height: 1.55 !important; }
+p[style*="font-size: 13px"], p[style*="font-size: 13.5px"] { font-size: 14px !important; line-height: 1.55 !important; }
+article p, article li, .post-body p, .post-body li { font-size: 18px !important; line-height: 1.6 !important; }
+
+/* Eyebrow labels, nav and buttons */
+span[style*="text-transform: uppercase"] { letter-spacing: 0.1em !important; }
+.nav a:not(.btn), .nav-dd-btn { font-size: 16px !important; }
+.btn { font-size: 16px !important; font-weight: 500 !important; }
