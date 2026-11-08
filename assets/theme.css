@@ -636,6 +636,10 @@ h1 { font-size: clamp(40px, 5vw, 64px) !important; font-weight: 800 !important;
      line-height: 1 !important; letter-spacing: -0.031em !important; }
 h2 { font-size: clamp(30px, 3.4vw, 44px) !important; font-weight: 800 !important;
      line-height: 1.1 !important; letter-spacing: -0.034em !important; }
+/* Subheadings inside an article are not section headlines: keep them a step
+   below, at Spearhead's in-body size, rather than the 44px section scale. */
+article h2 { font-size: clamp(22px, 2.2vw, 28px) !important; line-height: 1.25 !important;
+             letter-spacing: -0.02em !important; }
 /* Card and step headings 22 / 700 / 1.2 / -0.014em */
 h3, h4, body .fit-tile h3, body .fit-tile h4 { font-weight: 700 !important; line-height: 1.2 !important;
      letter-spacing: -0.014em !important; }
