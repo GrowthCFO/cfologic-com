@@ -1,0 +1,834 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>x-if[data-if="off"]{display:none!important}</style>
+<script type="text/plain" data-consent="analytics" data-src="https://www.googletagmanager.com/gtag/js?id=G-5HRTB39JZ6"></script>
+<script type="text/plain" data-consent="analytics">window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-5HRTB39JZ6');</script>
+<title>Vendor Master Data Controls Against Payment Fraud | CFOLogic</title>
+<link rel="canonical" href="https://cfologic.com/insights/ai-for-cfos/vendor-master-data-controls/">
+<meta name="description" content="Vendor master data is where payment fraud starts. Controls for bank-detail changes, call-backs, segregation of duties, change logs and dormant vendors.">
+<meta property="og:title" content="Vendor Master Data Controls Against Payment Fraud | CFOLogic">
+<meta property="og:description" content="Vendor master data is where payment fraud starts. Controls for bank-detail changes, call-backs, segregation of duties, change logs and dormant vendors.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="CFOLogic">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://cfologic.com/insights/ai-for-cfos/vendor-master-data-controls/">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@CFOLogicHQ">
+<link rel="stylesheet" href="/assets/ds/styles.css">
+<script src="/assets/cfo-lead-capture.js"></script>
+<style>
+:root{--color-accent:#0064F1;--color-accent-100:#EDF4FF;--color-accent-200:#D6E6FF;--color-accent-300:#A0C7FF;--color-accent-400:#7DB3FF;--color-accent-500:#5A9FFF;--color-accent-600:#0055CE;--color-accent-700:#0047AB;--color-accent-800:#00378A;--color-accent-900:#002B66;--color-accent-2:#0064F1;--color-accent-2-100:#EDF4FF;--color-accent-2-200:#D6E6FF;--color-accent-2-800:#00378A;
+--grad-a:linear-gradient(135deg,#0047AB,#0064F1 48%,#378AFF);--grad-a-h:linear-gradient(135deg,#00378A,#0055CE 48%,#1576FF);
+--color-bg:#FDFDFD}
+.btn-primary{background-image:var(--grad-a);color:#fff !important}
+.btn-primary:hover,.btn-primary:active{background-image:var(--grad-a-h);color:#fff !important}
+.glass{background:rgba(255,255,255,0.55);backdrop-filter: blur(12px) saturate(1.15);-webkit-backdrop-filter: blur(12px) saturate(1.15);border:1px solid var(--color-neutral-200);border-radius:16px;box-shadow: 0 1px 2px rgba(20,20,20,0.04), 0 4px 17px rgba(20,20,20,0.06)}
+.grad-text{background-image:var(--grad-a);-webkit-background-clip:text;background-clip:text;color:transparent}
+body { margin: 0; background: var(--color-bg); color: var(--color-text); font-family: var(--font-body); text-wrap: pretty; }
+a { color: var(--color-accent-700); }
+a:hover { color: var(--color-accent-600); }
+.nav-mobile{display:none;position:relative}
+.nav-mobile summary{list-style:none;cursor:pointer;display:flex;align-items:center;padding:6px;color:var(--color-text)}
+.nav-mobile summary::-webkit-details-marker{display:none}
+.nav-mobile-menu{position:absolute;right:-6px;top:calc(100% + 12px);width:min(320px,calc(100vw - 32px));display:flex;flex-direction:column;background:rgba(253,253,253,0.97);backdrop-filter: blur(12px) saturate(1.15);-webkit-backdrop-filter: blur(12px) saturate(1.15);border:1px solid var(--color-neutral-200);border-radius:12px;box-shadow: 0 1px 2px rgba(20,20,20,0.04), 0 6px 22px rgba(20,20,20,0.06);padding:8px 0;z-index:60}
+.nav-mobile-menu a{padding:11px 18px;text-decoration:none;color:var(--color-text)}
+.nav-mobile-menu a:hover{background:var(--color-accent-100)}
+.nav-mobile-menu .mm-sec{font-size:11px;letter-spacing:0.08em;text-transform:uppercase;font-weight: 600;color:color-mix(in srgb,var(--color-text) 50%,transparent);padding:12px 18px 4px}
+.nav-mobile-menu .mm-cta{margin:10px 18px 8px;background-image:var(--grad-a);color:#fff;border-radius:10px;text-align:center;font-weight: 600}
+.nav-mobile-menu .mm-cta:hover{background-image:var(--grad-a-h)}
+@media (max-width: 760px){
+.nav > a:not([aria-label="CFOLogic"]){display:none}
+.nav .nav-dd{display:none}
+.nav-mobile{display:block}
+}
+@media (hover: none){
+.fit-body{grid-template-rows:1fr}
+.fit-body>p{padding-top:10px}
+.nav-dd:focus-within .nav-dd-menu{display:flex}
+}
+
+.nav-dd{position:relative;padding:26px 0;margin:-26px 0}
+.nav-dd-btn{display:flex;align-items:center;gap:6px;background:none;border:0;font-family:inherit;font-size:inherit;color:var(--color-text);cursor:pointer;padding:0;white-space:nowrap}
+.nav-dd-btn:hover{color:var(--color-accent-700)}
+.nav-dd-menu{position:absolute;top:100%;left:-18px;min-width:270px;padding:10px 0;display:none;flex-direction:column;background:rgba(253,253,253,0.92);backdrop-filter: blur(12px) saturate(1.15);-webkit-backdrop-filter: blur(12px) saturate(1.15);border:1px solid var(--color-neutral-200);border-radius:12px;box-shadow: 0 1px 2px rgba(20,20,20,0.04), 0 6px 22px rgba(20,20,20,0.06)}
+.nav-dd:hover .nav-dd-menu,.nav-dd:focus-within .nav-dd-menu{display:flex}
+.nav-dd-menu a{padding:9px 18px;white-space:nowrap;text-decoration:none}
+.nav-dd-menu a:hover{background:var(--color-accent-100)}
+
+input, button { font-family: inherit; }
+@media (max-width: 960px){
+.post-grid{grid-template-columns:1fr !important}
+.post-side{position:static !important}
+}
+@media (max-width: 760px){
+.nav{flex-wrap:wrap;row-gap:10px}
+}
+
+/* Post body tables. The wrapper scrolls on its own so a wide table never
+   widens the page; min-width keeps the columns readable instead of squashing
+   them to nothing on a phone. */
+.post-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:26px 0 0;border:1px solid var(--color-neutral-200);border-radius:12px;background:#fff}
+.post-table-wrap:focus-visible{outline:2px solid var(--color-accent);outline-offset:2px}
+.post-table{border-collapse:collapse;width:100%;min-width:620px;font-size:15px;line-height:23px}
+.post-table th,.post-table td{text-align:left;vertical-align:top;padding:11px 16px;border-bottom:1px solid var(--color-neutral-200)}
+.post-table thead th{font-size:12px;letter-spacing:0.06em;text-transform:uppercase;color:var(--color-accent-800);background:var(--color-accent-100);white-space:nowrap}
+.post-table tbody tr:last-child td{border-bottom:0}
+.post-table td:first-child{font-weight:600}
+@media (max-width: 760px){
+.m-stack{grid-template-columns:1fr !important}
+}
+</style>
+
+<script type="application/ld+json" id="post-ld">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Vendor Master Data Controls: The Weak Point Behind Payment Fraud", "description": "Vendor master data is where payment fraud starts. Controls for bank-detail changes, call-backs, segregation of duties, change logs and dormant vendors.", "keywords": "AIForCFOs, FinanceAI, FinOps, FinancialOperations, ProcessImprovement, FinancialLeadership", "datePublished": "2026-06-17", "dateModified": "2026-06-17", "articleSection": "AI for CFOs", "wordCount": 1340, "timeRequired": "PT6M", "author": {"@type": "Organization", "name": "CFOLogic", "url": "https://cfologic.com/"}, "publisher": {"@type": "Organization", "name": "CFOLogic"}, "mainEntityOfPage": "https://cfologic.com/insights/ai-for-cfos/vendor-master-data-controls/"}</script>
+<script type="application/ld+json" id="post-faq-ld">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is vendor master data?", "acceptedAnswer": {"@type": "Answer", "text": "Vendor master data is the record the ERP holds for each supplier: name, address, tax ID, payment terms, payment method and bank details. The payment run uses it to decide where money goes."}}, {"@type": "Question", "name": "How should a company verify a vendor bank detail change?", "acceptedAnswer": {"@type": "Answer", "text": "Call the supplier on a phone number already on file, not one supplied in the request, confirm the new details with a known contact, and record the call before the change takes effect."}}, {"@type": "Question", "name": "What segregation of duties is needed for vendor master data?", "acceptedAnswer": {"@type": "Answer", "text": "The person who creates or changes vendor records should not also post invoices or release payments. Where a small team cannot separate those roles, an independent review of every change compensates."}}, {"@type": "Question", "name": "Why block dormant vendors?", "acceptedAnswer": {"@type": "Answer", "text": "Dormant vendor records can be reactivated and paid with little scrutiny. Blocking them, and treating reactivation like a new vendor set-up, closes that route."}}, {"@type": "Question", "name": "Can AI detect vendor bank detail fraud?", "acceptedAnswer": {"@type": "Answer", "text": "AI can flag patterns that often accompany it, such as a bank change followed quickly by a payment or one account shared by two vendors. It cannot verify the account; a person still makes the call-back."}}]}</script>
+<link rel="stylesheet" href="/assets/theme.css?v=bb6f8922">
+<meta property="og:image" content="https://cfologic.com/assets/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://cfologic.com/assets/og-card.png">
+<link rel="icon" href="/favicon.ico?v=d6fea06e" sizes="32x32">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png?v=d6fea06e">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png?v=d6fea06e">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=d6fea06e">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#0064F1">
+<script type="text/plain" data-consent="analytics">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "ycvshql7yt");
+</script>
+<script type="text/plain" data-consent="marketing">function initApollo(){var n=Math.random().toString(36).substring(7),o=document.createElement("script");
+o.src="https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache="+n,o.async=!0,o.defer=!0,
+o.onload=function(){window.trackingFunctions.onLoad({appId:"6863df76aca6990019bee689"})},
+document.head.appendChild(o)}initApollo();</script>
+<script src="/assets/consent.js?v=a1a36eec"></script>
+</head>
+<body>
+<cfo-lead-capture></cfo-lead-capture>
+<div id="page-wrap" style="min-height: 100vh">
+<nav class="nav" style="position: sticky; top: 0; z-index: 50; background: rgba(253,253,253,0.65); backdrop-filter: blur(12px) saturate(1.15); -webkit-backdrop-filter: blur(12px) saturate(1.15); border-bottom: 1px solid var(--color-neutral-200); padding-inline: max(clamp(20px,5vw,72px), calc((100% - 1200px) / 2 + clamp(20px,5vw,72px)))">
+  <a href="/" aria-label="CFOLogic" style="text-decoration: none; flex: none"><img src="/assets/cfologic-logo.png" alt="CFOLogic" style="display: block; height: 40px; width: auto"></a>
+  
+    <div class="nav-dd">
+      <button class="nav-dd-btn" type="button" aria-haspopup="true">Who we serve <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></button>
+      <div class="nav-dd-menu">
+        
+          <a href="/founders/" style="color: var(--color-text)">For Founders &amp; CEOs</a>
+        
+          <a href="/cfo-success-partners/" style="color: var(--color-text)">For CFOs</a>
+        
+          <a href="/accounting-firms/" style="color: var(--color-text)">For CFO/CAS Firms</a>
+        
+          <a href="/capital-providers/" style="color: var(--color-text)">For Capital Providers</a>
+        
+          <a href="/acquisition-entrepreneurs/" style="color: var(--color-text)">For Acquisition Entrepreneurs</a>
+        
+      </div>
+    </div>
+  
+  <a href="/insights/" style="white-space: nowrap; font-weight: 600; color: var(--color-accent-700); text-decoration: none">Insights</a>
+    <a href="/finance-team-as-a-service/" style="white-space: nowrap; color: var(--color-text); text-decoration: none">What we do</a>
+    
+    <a href="https://navigator.cfologic.com" target="_blank" rel="noopener" style="white-space: nowrap; color: var(--color-text); text-decoration: none">Navigator AI</a>
+  
+  
+  <div class="nav-dd">
+    <button class="nav-dd-btn" type="button" aria-haspopup="true">About <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></button>
+    <div class="nav-dd-menu">
+      <a href="/about/" style="color: var(--color-text)">About Us</a>
+      <a href="/trust-center/" style="color: var(--color-text)">Trust Center</a>
+      <a href="https://careers.cfologic.com/careers" target="_blank" rel="noopener" style="color: var(--color-text)">Careers</a>
+    </div>
+  </div>
+  
+  <span style="flex: 1"></span>
+  <a class="btn btn-primary" href="https://cal.com/GrowthCFO" target="_blank" rel="noopener" style="white-space: nowrap; text-decoration: none">Book a Discovery Call</a>
+<details class="nav-mobile">
+    <summary aria-label="Open menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"></path></svg></summary>
+    <div class="nav-mobile-menu">
+      <span class="mm-sec">Who we serve</span>
+      <a href="/founders/">For Founders &amp; CEOs</a>
+      <a href="/cfo-success-partners/">For CFOs</a>
+      <a href="/accounting-firms/">For CFO/CAS Firms</a>
+      <a href="/capital-providers/">For Capital Providers</a>
+      <a href="/acquisition-entrepreneurs/">For Acquisition Entrepreneurs</a>
+      <span class="mm-sec">Explore</span>
+      <a href="/finance-team-as-a-service/">What we do</a>
+      <a href="/insights/">Insights</a>
+      <a href="https://navigator.cfologic.com" target="_blank" rel="noopener">Navigator AI</a>
+      <span class="mm-sec">Company</span>
+      <a href="/about/">About Us</a>
+      <a href="/trust-center/">Trust Center</a>
+      <a href="https://careers.cfologic.com/careers" target="_blank" rel="noopener">Careers</a>
+      <a class="mm-cta" href="https://cal.com/GrowthCFO" target="_blank" rel="noopener">Book a Discovery Call</a>
+    </div>
+  </details>
+</nav>
+<main style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(20px,5vw,72px); display: block">
+
+  <section style="padding: 64px 0 0">
+    <a href="/insights/" style="font-size: 14px; text-decoration: none; font-weight: 600">← All insights</a>
+    <div style="display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600; margin-top: 28px">
+      <span style="color: #fff; background-image: var(--grad-a); padding: 4px 10px; border-radius: 999px">AI for CFOs</span>
+      <span style="color: var(--color-accent-700)">Article</span>
+      <span style="color: color-mix(in srgb, var(--color-text) 50%, transparent); white-space: nowrap">Jun 2026 · 6 min read</span>
+    </div>
+    <h1 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(28px,3.7vw,49px); line-height: 1.1; letter-spacing: -0.02em; margin: 21px 0 0 -0.058em; max-width: 26ch">Vendor Master Data Controls: The Weak Point Behind Payment Fraud</h1>
+    <p style="font-size: 14px; color: color-mix(in srgb, var(--color-text) 65%, transparent); margin: 18px 0 0">By the CFOLogic team</p>
+  </section>
+
+  <div class="post-grid" style="display: grid; grid-template-columns: minmax(0, 8fr) minmax(280px, 4fr); gap: 42px clamp(32px,4vw,72px); align-items: start; padding: 42px 0 84px">
+    <article style="min-width: 0">
+      <aside aria-label="Idea in brief" style="padding: clamp(24px,3vw,36px); margin: 0 0 42px; border-radius: 16px; border: 1px solid rgba(160,199,255,0.55); background: linear-gradient(135deg, rgba(0,100,241,0.08), rgba(125,179,255,0.14) 55%, rgba(214,230,255,0.30)); backdrop-filter: blur(12px) saturate(1.15); -webkit-backdrop-filter: blur(12px) saturate(1.15); box-shadow: 0 1px 2px rgba(20,20,20,0.04), 0 4px 17px rgba(20,20,20,0.06), inset 0 1px 0 rgba(255,255,255,0.65)">
+        <p style="font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600; margin: 0" class="grad-text">Idea in brief</p>
+        <p style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 17.5px; line-height: 28px; margin: 14px 0 0">Why vendor master data is the usual route for payment fraud, how bank-detail change fraud works, the controls that address it (verification call-backs, segregation of duties, dual control on sensitive fields, change log review, dormant vendor blocks, employee-vendor matching), and which signals AI can monitor continuously while people make the verification calls.</p>
+        <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 18px; border-top: 1px solid rgba(160,199,255,0.5); padding-top: 18px">
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 14.5px; line-height: 24px; color: color-mix(in srgb, var(--color-text) 82%, transparent)">
+              <span aria-hidden="true" style="width: 7px; height: 7px; border-radius: 999px; background-image: var(--grad-a); margin-top: 8px"></span>
+              <span><strong>Why vendor master data matters.</strong> The payment run pays whatever bank account the vendor record holds. Invoice approval and matching do not check the destination, so a changed account can receive a correctly approved payment.</span>
+            </div>
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 14.5px; line-height: 24px; color: color-mix(in srgb, var(--color-text) 82%, transparent)">
+              <span aria-hidden="true" style="width: 7px; height: 7px; border-radius: 999px; background-image: var(--grad-a); margin-top: 8px"></span>
+              <span><strong>How bank-detail fraud works.</strong> A convincing request, often from a compromised or lookalike supplier email, asks for new bank details before the next run. Internal variants use dormant vendors or fictitious ones.</span>
+            </div>
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 14.5px; line-height: 24px; color: color-mix(in srgb, var(--color-text) 82%, transparent)">
+              <span aria-hidden="true" style="width: 7px; height: 7px; border-radius: 999px; background-image: var(--grad-a); margin-top: 8px"></span>
+              <span><strong>The core controls.</strong> A call-back to a number already on file, a second person confirming every sensitive change, separation between whoever maintains vendors and whoever pays them, and an independent review of the change log.</span>
+            </div>
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 14.5px; line-height: 24px; color: color-mix(in srgb, var(--color-text) 82%, transparent)">
+              <span aria-hidden="true" style="width: 7px; height: 7px; border-radius: 999px; background-image: var(--grad-a); margin-top: 8px"></span>
+              <span><strong>What AI can monitor.</strong> Change logs and payment proposals, continuously, for patterns such as a bank change followed quickly by a payment or one account shared by two vendors. People make the verification call and release the payment.</span>
+            </div>
+          
+        </div>
+      </aside>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">An email arrives from a long-standing supplier's accounts team. They have moved banks, the letter on headed paper is attached, and could you update the details before Friday's run. The invoice reference in the email is real. Someone in AP updates the vendor master data, the run goes out, and two weeks later the supplier calls to ask why they have not been paid.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Nothing in the invoice process failed. The invoice was genuine, matched and approved. The control that failed was on the vendor record, and in many companies that record gets less attention than any invoice.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+            <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(19px,1.9vw,25px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Why vendor master data is the weak point</h2>
+          
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Three-way match, approval workflows and duplicate checks all look at the invoice. None of them asks whether the bank account on the vendor record is the right one. The payment run trusts the master.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The master is also maintained by many hands. New vendors come from procurement, address changes from AP, tax details from the tax team, and bank details from whoever opens the email. The work is high volume and treated as administration, which makes it a convenient place for both external fraud and internal misuse.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+            <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(19px,1.9vw,25px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">How bank-detail change fraud works</h2>
+          
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The external pattern is the one above. A supplier's mailbox is compromised, or a lookalike domain is registered, and a request to change bank details arrives in the middle of a real email thread. It often comes with urgency: a new account, an old one closing, a payment due.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Internal patterns are quieter. Someone with vendor maintenance access changes the bank account on a dormant vendor, pays it, and changes it back. Or creates a vendor that does not exist, with an address or account that matches their own. A change made and reversed around a single payment run is a classic signature.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+            <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(19px,1.9vw,25px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">The controls that close the gap</h2>
+          
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>Call back on a number you already hold.</strong> Never the number in the request. Speak to a known contact, confirm the new details, and record who called, who answered and what was confirmed. The change is not effective until the call-back record exists.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>Dual control on sensitive fields.</strong> Bank details, payment method, address and tax ID should need a second person to confirm any change. SAP, for example, offers dual control for sensitive vendor fields, blocking the vendor for payment until a second user confirms. Check that it is switched on and that bank details are on the sensitive list.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>Segregation of duties.</strong> The person who maintains vendors should not post invoices or release payments. In small teams where that is not possible, an independent review of every change is the compensating control.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>Change log review.</strong> A weekly report of every change to sensitive fields, reviewed by someone outside AP and matched to a call-back record.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>Dormant vendors.</strong> Block vendors with no activity over a period your policy sets. Reactivation goes through the same checks as a new vendor.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>Vendor creation checks.</strong> Validate the tax ID, check for an existing record with the same bank account or address, and compare vendor bank accounts and addresses with the employee master.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+          
+            <div class="post-table-wrap" role="region" aria-label="Table" tabindex="0"><table class="post-table"><thead><tr><th>Control</th><th>Risk addressed</th><th>Performed by</th><th>Frequency</th></tr></thead><tbody><tr><td>Call-back on bank-detail change</td><td>Impersonation of a supplier</td><td>AP or vendor team, not the requester</td><td>Every change</td></tr><tr><td>Dual control on sensitive fields</td><td>One person changing where money goes</td><td>A second authorised user</td><td>Every change</td></tr><tr><td>Separation of vendor maintenance, invoice posting and payment release</td><td>Internal fraud</td><td>Access design, reviewed by the controller</td><td>Quarterly access review</td></tr><tr><td>Change log review</td><td>Unverified or reversed changes</td><td>Controller or internal audit</td><td>Weekly, and before each run</td></tr><tr><td>Dormant vendor block</td><td>Reuse of an inactive record</td><td>Master data team</td><td>Quarterly</td></tr><tr><td>Employee to vendor match</td><td>Fictitious vendors</td><td>Internal audit</td><td>Quarterly</td></tr><tr><td>Extra approval on first payment after a change</td><td>Late detection</td><td>Payment approver</td><td>Each run</td></tr></tbody></table></div>
+          
+        </div>
+      
+        <div>
+          
+            <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(19px,1.9vw,25px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">What AI can monitor in vendor master data</h2>
+          
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Most of these controls are periodic. Fraud is not. The gap between a change and the next review is where the money goes, and continuous monitoring is a reasonable use of AI. Gartner asked 183 CFOs and senior finance leaders about their AI use in May and June 2025, and 34% named error and anomaly detection, one of the most cited uses.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">A read-only monitor over the change log and the payment proposal can flag:</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 16px; line-height: 28px; margin: 12px 0 0 4px">
+              <span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 999px; background: var(--color-accent); margin-top: 11px"></span>
+              <span>a bank-detail change followed by a payment within a few days;</span>
+            </div>
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 16px; line-height: 28px; margin: 12px 0 0 4px">
+              <span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 999px; background: var(--color-accent); margin-top: 11px"></span>
+              <span>a change request from an email domain that differs from the one on file;</span>
+            </div>
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 16px; line-height: 28px; margin: 12px 0 0 4px">
+              <span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 999px; background: var(--color-accent); margin-top: 11px"></span>
+              <span>one bank account shared by two vendors, or by a vendor and an employee;</span>
+            </div>
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 16px; line-height: 28px; margin: 12px 0 0 4px">
+              <span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 999px; background: var(--color-accent); margin-top: 11px"></span>
+              <span>a dormant vendor reactivated and paid in the same week;</span>
+            </div>
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 16px; line-height: 28px; margin: 12px 0 0 4px">
+              <span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 999px; background: var(--color-accent); margin-top: 11px"></span>
+              <span>a sensitive field changed and then changed back;</span>
+            </div>
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 16px; line-height: 28px; margin: 12px 0 0 4px">
+              <span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 999px; background: var(--color-accent); margin-top: 11px"></span>
+              <span>a bank account in a country that does not match the supplier's address.</span>
+            </div>
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">A model can also read the request email and compare it with past correspondence from that supplier, then explain in plain words why it raised the flag.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">AI cannot verify a bank account. Verification is a conversation with a known person on a known number, and it stays with people, as does releasing a held payment. Expect false alarms, and tune them, because a monitor that flags everything trains people to ignore it. Monitoring tools should never have write access to the vendor master. A tool that can change bank details is itself a risk.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+            <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(19px,1.9vw,25px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">What vendor master data controls will not do</h2>
+          
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">They will not stop collusion. If the person who changes the record and the person who confirms it act together, dual control fails. Access reviews and rotation reduce the risk; they do not remove it.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">They will not get money back. Once a payment reaches a fraudulent account, recovery depends on how quickly you tell your bank and theirs. Have that procedure written down before you need it.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+            <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(19px,1.9vw,25px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Frequently asked questions</h2>
+          
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>What is vendor master data?</strong></p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Vendor master data is the record the ERP holds for each supplier: name, address, tax ID, payment terms, payment method and bank details. The payment run uses it to decide where money goes.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>How should a company verify a vendor bank detail change?</strong></p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Call the supplier on a phone number already on file, not one supplied in the request, confirm the new details with a known contact, and record the call before the change takes effect.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>What segregation of duties is needed for vendor master data?</strong></p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The person who creates or changes vendor records should not also post invoices or release payments. Where a small team cannot separate those roles, an independent review of every change compensates.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>Why block dormant vendors?</strong></p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Dormant vendor records can be reactivated and paid with little scrutiny. Blocking them, and treating reactivation like a new vendor set-up, closes that route.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>Can AI detect vendor bank detail fraud?</strong></p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">AI can flag patterns that often accompany it, such as a bank change followed quickly by a payment or one account shared by two vendors. It cannot verify the account; a person still makes the call-back.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+            <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(19px,1.9vw,25px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Where CFOLogic fits</h2>
+          
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">We build monitoring and exception tools for finance teams over the systems they already run, reading data without changing it and leaving each release decision with a person. Work usually starts as a proof of concept on one control. A public <a href="https://commandcenter.cfologic.com/p2pdemo/" target="_blank" rel="noopener">demo with fictional data</a> shows payables exceptions grouped by owner and status in a purchase-to-pay setting.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong><a href="https://cal.com/GrowthCFO" target="_blank" rel="noopener">Book a Discovery Call →</a></strong></p>
+          
+          
+        </div>
+      
+        <div>
+          
+            <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(19px,1.9vw,25px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Related insights</h2>
+          
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 16px; line-height: 28px; margin: 12px 0 0 4px">
+              <span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 999px; background: var(--color-accent); margin-top: 11px"></span>
+              <span><a href="/insights/ai-for-cfos/duplicate-payments-controls/" target="_blank" rel="noopener">Duplicate Payments: How They Happen and the Controls That Catch Them</a></span>
+            </div>
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 16px; line-height: 28px; margin: 12px 0 0 4px">
+              <span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 999px; background: var(--color-accent); margin-top: 11px"></span>
+              <span><a href="/insights/ai-for-cfos/three-way-match-exceptions/" target="_blank" rel="noopener">Three-Way Match Exceptions: Why They Pile Up and What Clears Them</a></span>
+            </div>
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 16px; line-height: 28px; margin: 12px 0 0 4px">
+              <span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 999px; background: var(--color-accent); margin-top: 11px"></span>
+              <span><a href="/insights/ai-for-cfos/management-by-exception-finance/" target="_blank" rel="noopener">Management by Exception in Finance: Designing Work Around What Needs a Person</a></span>
+            </div>
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 16px; line-height: 28px; margin: 12px 0 0 4px">
+              <span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 999px; background: var(--color-accent); margin-top: 11px"></span>
+              <span><a href="/insights/accounts-payable-after-an-acquisition/" target="_blank" rel="noopener">Accounts Payable After an Acquisition: What to Fix First</a></span>
+            </div>
+          
+          
+          
+        </div>
+      
+        <div>
+          
+            <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(19px,1.9vw,25px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Sources</h2>
+          
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 16px; line-height: 28px; margin: 12px 0 0 4px">
+              <span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 999px; background: var(--color-accent); margin-top: 11px"></span>
+              <span>Gartner, press release, <em>Gartner Survey Shows Finance AI Adoption Remains Steady in 2025</em>, 18 November 2025. Survey of 183 CFOs and senior finance leaders, May to June 2025. Supports error and anomaly detection as a top AI use case at 34%.</span>
+            </div>
+          
+          
+          
+        </div>
+      
+      <div style="margin-top: 56px; border-top: 2px solid var(--color-divider); padding-top: 28px; display: flex; flex-wrap: wrap; gap: 12px; align-items: center">
+        <span style="font-size: 12.5px; color: var(--color-accent-800); background: var(--color-accent-100); border: 1px solid var(--color-accent-200); padding: 3px 10px; border-radius: 999px">AI for CFOs</span>
+        <span style="font-size: 14px; color: color-mix(in srgb, var(--color-text) 60%, transparent)">Published Jun 2026 · CFOLogic Insights</span>
+      </div>
+    </article>
+
+    <aside class="post-side" style="position: sticky; top: 96px; display: flex; flex-direction: column; gap: 20px; min-width: 0">
+      <div class="glass" style="padding: 0; overflow: hidden">
+        <div style="background-image: var(--grad-a); color: #fff; padding: 18px 24px">
+          <p style="font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600; margin: 0; color: rgba(255,255,255,0.8)">The newsletter</p>
+          <p style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 16.5px; line-height: 24px; margin: 6px 0 0">Actionable insights like this, once a month.</p>
+        </div>
+        <form action="https://formsubmit.co/prasad@cfologic.com" method="POST" style="display: flex; flex-direction: column; gap: 10px; padding: 20px 24px 24px">
+          <input type="hidden" name="_subject" value="Insights subscription - blog post sidebar">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="email" name="email" required placeholder="you@company.com" aria-label="Work email" style="font-size: 14px; padding: 10px 14px; border: 1px solid var(--color-neutral-300); border-radius: 8px; background: #fff; color: var(--color-text)">
+          <button class="btn btn-primary" type="submit" style="cursor: pointer; margin-top: 4px">Subscribe</button>
+          <p style="font-size: 12px; line-height: 18px; margin: 2px 0 0; color: color-mix(in srgb, var(--color-text) 60%, transparent)">No spam ever. Unsubscribe in one click.</p>
+        </form>
+      </div>
+      <div class="glass" style="padding: 24px">
+        <p style="font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600; margin: 0; color: var(--color-neutral-700)">Related insights</p>
+        <div style="display: flex; flex-direction: column; margin-top: 6px">
+          
+            <a href="/insights/ai-for-cfos/unapplied-cash-dso/" style="display: block; text-decoration: none; color: var(--color-text); padding: 14px 0; border-bottom: 1px solid var(--color-neutral-200)">
+              <span style="display: block; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600; color: color-mix(in srgb, var(--color-text) 50%, transparent)">AI for CFOs · 6 min</span>
+              <span style="display: block; font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 15.5px; line-height: 23px; margin-top: 5px">Unapplied Cash and Short Payments: The Quiet Drag on DSO</span>
+            </a>
+          
+            <a href="/insights/ai-for-cfos/duplicate-payments-controls/" style="display: block; text-decoration: none; color: var(--color-text); padding: 14px 0; border-bottom: 1px solid var(--color-neutral-200)">
+              <span style="display: block; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600; color: color-mix(in srgb, var(--color-text) 50%, transparent)">AI for CFOs · 6 min</span>
+              <span style="display: block; font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 15.5px; line-height: 23px; margin-top: 5px">Duplicate Payments: How They Happen and the Controls That Catch Them</span>
+            </a>
+          
+            <a href="/insights/ai-for-cfos/collections-prioritization/" style="display: block; text-decoration: none; color: var(--color-text); padding: 14px 0; border-bottom: 1px solid var(--color-neutral-200)">
+              <span style="display: block; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600; color: color-mix(in srgb, var(--color-text) 50%, transparent)">AI for CFOs · 6 min</span>
+              <span style="display: block; font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 15.5px; line-height: 23px; margin-top: 5px">Collections Prioritization: Who to Call First, and Why the Aging Report Gets It Wrong</span>
+            </a>
+          
+        </div>
+        <a href="/insights/" style="display: inline-block; font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 14px; text-decoration: none; margin-top: 14px">All insights →</a>
+      </div>
+      <div style="border: 1px solid var(--color-neutral-200); border-radius: 16px; padding: 24px">
+        <p style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 16.5px; line-height: 24px; margin: 0">Thirty minutes on the decision you're sitting on right now.</p>
+        <p style="font-size: 13.5px; line-height: 21px; color: color-mix(in srgb, var(--color-text) 70%, transparent); margin: 8px 0 0">No pitch, no pressure.</p>
+        <a class="btn btn-primary" href="https://cal.com/GrowthCFO" target="_blank" rel="noopener" style="text-decoration: none; display: inline-flex; margin-top: 14px">Book a Discovery Call</a>
+      </div>
+    </aside>
+  </div>
+
+</main>
+
+<section style="background-image: var(--grad-a); color: #fff">
+  <div style="max-width: 1200px; margin: 0 auto; padding: 56px clamp(20px,5vw,72px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 28px; align-items: center">
+    <div>
+      <span style="display: block; font-size: 13px; letter-spacing: 0; text-transform: none; color: rgba(255,255,255,0.75); margin: 0 0 14px">The newsletter</span>
+      <h3 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(21px,2.3vw,30px); line-height: 1.15; letter-spacing: -0.015em; margin: 0; max-width: 24ch">Actionable insights like this, once a month.</h3>
+    </div>
+    <form action="https://formsubmit.co/prasad@cfologic.com" method="POST" style="display: flex; gap: 8px; flex-wrap: wrap">
+      <input type="hidden" name="_subject" value="Insights subscription - blog post page">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="email" name="email" required placeholder="you@company.com" aria-label="Email address" style="flex: 1; min-width: 200px; font-size: 14px; padding: 12px 14px; border: 0; border-radius: 8px; background: #fff; color: var(--color-text)">
+      <button class="btn" type="submit" style="cursor: pointer; background: var(--color-accent-900); color: #fff; border: 0">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="sf-wrap">
+    <div class="sf-grid">
+      <div class="sf-brand">
+        <a href="/" aria-label="CFOLogic" style="display: inline-block"><img src="/assets/cfologic-logo.png" alt="CFOLogic" style="display: block; height: 40px; width: auto"></a>
+        <p class="sf-tagline">The finance team behind ambitious businesses. Strategy to execution, one partner across the whole life of the business.</p>
+        <address class="sf-addr"><strong>CFOLogic, Inc.</strong>1207 Delaware Ave #5151, Wilmington, DE 19806, USA</address>
+        <address class="sf-addr"><strong>CFOLogic Private Limited</strong>2, Revati Arcade II, Baner, Pune, MH 411045, India</address>
+        <div class="sf-social">
+          <a href="https://www.linkedin.com/company/cfologichq" target="_blank" rel="noopener" aria-label="CFOLogic on LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></a>
+          <a href="https://x.com/CFOLogicHQ" target="_blank" rel="noopener" aria-label="CFOLogic on X"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.66l-5.21-6.82-5.97 6.82H1.67l7.73-8.84L1.25 2.25h6.83l4.71 6.23 5.45-6.23zm-1.16 17.52h1.83L7.08 4.13H5.12l11.96 15.64z"/></svg></a>
+          <a href="https://www.instagram.com/cfologichq" target="_blank" rel="noopener" aria-label="CFOLogic on Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        </div>
+      </div>
+      <div class="sf-col">
+        <h4>Who we serve</h4>
+        <a href="/founders/">Founders &amp; CEOs</a>
+        <a href="/cfo-success-partners/">CFOs &amp; Finance Leaders</a>
+        <a href="/accounting-firms/">CFO/CAS Firms</a>
+        <a href="/capital-providers/">Capital Providers</a>
+        <a href="/acquisition-entrepreneurs/">Acquisition Entrepreneurs</a>
+      </div>
+      <div class="sf-col">
+        <h4>Company</h4>
+        <a href="/about/">About</a>
+        <a href="/insights/">Insights</a>
+        <a href="/trust-center/">Trust Center</a>
+        <a href="https://careers.cfologic.com/careers" target="_blank" rel="noopener">Careers</a>
+      </div>
+      <div class="sf-col">
+        <h4>Product</h4>
+        <a href="https://navigator.cfologic.com" target="_blank" rel="noopener">Navigator AI</a>
+        <a href="https://navigatordemo.cfologic.com" target="_blank" rel="noopener">Live demo</a>
+        <a href="https://cal.com/GrowthCFO" target="_blank" rel="noopener">Book a discovery call</a>
+      </div>
+      <div class="sf-col sf-subscribe">
+        <h4>Insights, by email</h4>
+        <form action="https://formsubmit.co/prasad@cfologic.com" method="POST">
+          <input type="hidden" name="_subject" value="Insights subscription - cfologic.com">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="email" name="email" required placeholder="you@company.com" aria-label="Email address">
+          <button class="btn btn-primary" type="submit">Subscribe</button>
+        </form>
+        <p class="sf-note">No spam ever. Unsubscribe in one click.</p>
+      </div>
+    </div>
+    <div class="sf-bottom">
+      <span>&copy; CFOLogic 2026. All rights reserved.</span>
+      <nav aria-label="Legal"><a href="/legal/">Privacy</a><a href="/legal/">Terms</a></nav>
+    </div>
+  </div>
+</footer>
+
+</div>
+<script>window.__DC={"initial":0};</script>
+<script src="/assets/site.js" defer></script>
+</body>
+</html>

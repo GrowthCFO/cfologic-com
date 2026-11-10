@@ -1,0 +1,1011 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>x-if[data-if="off"]{display:none!important}</style>
+<script type="text/plain" data-consent="analytics" data-src="https://www.googletagmanager.com/gtag/js?id=G-5HRTB39JZ6"></script>
+<script type="text/plain" data-consent="analytics">window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-5HRTB39JZ6');</script>
+<title>AI Internal Controls: When AI Touches Financial Reporting | CFOLogic</title>
+<link rel="canonical" href="https://cfologic.com/insights/ai-for-cfos/ai-internal-controls/">
+<meta name="description" content="AI internal controls for finance: control design for AI-assisted steps, evidence, change management of prompts and models, segregation of duties, audit.">
+<meta property="og:title" content="AI Internal Controls: When AI Touches Financial Reporting | CFOLogic">
+<meta property="og:description" content="AI internal controls for finance: control design for AI-assisted steps, evidence, change management of prompts and models, segregation of duties, audit.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="CFOLogic">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://cfologic.com/insights/ai-for-cfos/ai-internal-controls/">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@CFOLogicHQ">
+<link rel="stylesheet" href="/assets/ds/styles.css">
+<script src="/assets/cfo-lead-capture.js"></script>
+<style>
+:root{--color-accent:#0064F1;--color-accent-100:#EDF4FF;--color-accent-200:#D6E6FF;--color-accent-300:#A0C7FF;--color-accent-400:#7DB3FF;--color-accent-500:#5A9FFF;--color-accent-600:#0055CE;--color-accent-700:#0047AB;--color-accent-800:#00378A;--color-accent-900:#002B66;--color-accent-2:#0064F1;--color-accent-2-100:#EDF4FF;--color-accent-2-200:#D6E6FF;--color-accent-2-800:#00378A;
+--grad-a:linear-gradient(135deg,#0047AB,#0064F1 48%,#378AFF);--grad-a-h:linear-gradient(135deg,#00378A,#0055CE 48%,#1576FF);
+--color-bg:#FDFDFD}
+.btn-primary{background-image:var(--grad-a);color:#fff !important}
+.btn-primary:hover,.btn-primary:active{background-image:var(--grad-a-h);color:#fff !important}
+.glass{background:rgba(255,255,255,0.55);backdrop-filter: blur(12px) saturate(1.15);-webkit-backdrop-filter: blur(12px) saturate(1.15);border:1px solid var(--color-neutral-200);border-radius:16px;box-shadow: 0 1px 2px rgba(20,20,20,0.04), 0 4px 17px rgba(20,20,20,0.06)}
+.grad-text{background-image:var(--grad-a);-webkit-background-clip:text;background-clip:text;color:transparent}
+body { margin: 0; background: var(--color-bg); color: var(--color-text); font-family: var(--font-body); text-wrap: pretty; }
+a { color: var(--color-accent-700); }
+a:hover { color: var(--color-accent-600); }
+.nav-mobile{display:none;position:relative}
+.nav-mobile summary{list-style:none;cursor:pointer;display:flex;align-items:center;padding:6px;color:var(--color-text)}
+.nav-mobile summary::-webkit-details-marker{display:none}
+.nav-mobile-menu{position:absolute;right:-6px;top:calc(100% + 12px);width:min(320px,calc(100vw - 32px));display:flex;flex-direction:column;background:rgba(253,253,253,0.97);backdrop-filter: blur(12px) saturate(1.15);-webkit-backdrop-filter: blur(12px) saturate(1.15);border:1px solid var(--color-neutral-200);border-radius:12px;box-shadow: 0 1px 2px rgba(20,20,20,0.04), 0 6px 22px rgba(20,20,20,0.06);padding:8px 0;z-index:60}
+.nav-mobile-menu a{padding:11px 18px;text-decoration:none;color:var(--color-text)}
+.nav-mobile-menu a:hover{background:var(--color-accent-100)}
+.nav-mobile-menu .mm-sec{font-size:11px;letter-spacing:0.08em;text-transform:uppercase;font-weight: 600;color:color-mix(in srgb,var(--color-text) 50%,transparent);padding:12px 18px 4px}
+.nav-mobile-menu .mm-cta{margin:10px 18px 8px;background-image:var(--grad-a);color:#fff;border-radius:10px;text-align:center;font-weight: 600}
+.nav-mobile-menu .mm-cta:hover{background-image:var(--grad-a-h)}
+@media (max-width: 760px){
+.nav > a:not([aria-label="CFOLogic"]){display:none}
+.nav .nav-dd{display:none}
+.nav-mobile{display:block}
+}
+@media (hover: none){
+.fit-body{grid-template-rows:1fr}
+.fit-body>p{padding-top:10px}
+.nav-dd:focus-within .nav-dd-menu{display:flex}
+}
+
+.nav-dd{position:relative;padding:26px 0;margin:-26px 0}
+.nav-dd-btn{display:flex;align-items:center;gap:6px;background:none;border:0;font-family:inherit;font-size:inherit;color:var(--color-text);cursor:pointer;padding:0;white-space:nowrap}
+.nav-dd-btn:hover{color:var(--color-accent-700)}
+.nav-dd-menu{position:absolute;top:100%;left:-18px;min-width:270px;padding:10px 0;display:none;flex-direction:column;background:rgba(253,253,253,0.92);backdrop-filter: blur(12px) saturate(1.15);-webkit-backdrop-filter: blur(12px) saturate(1.15);border:1px solid var(--color-neutral-200);border-radius:12px;box-shadow: 0 1px 2px rgba(20,20,20,0.04), 0 6px 22px rgba(20,20,20,0.06)}
+.nav-dd:hover .nav-dd-menu,.nav-dd:focus-within .nav-dd-menu{display:flex}
+.nav-dd-menu a{padding:9px 18px;white-space:nowrap;text-decoration:none}
+.nav-dd-menu a:hover{background:var(--color-accent-100)}
+
+input, button { font-family: inherit; }
+@media (max-width: 960px){
+.post-grid{grid-template-columns:1fr !important}
+.post-side{position:static !important}
+}
+@media (max-width: 760px){
+.nav{flex-wrap:wrap;row-gap:10px}
+}
+
+/* Post body tables. The wrapper scrolls on its own so a wide table never
+   widens the page; min-width keeps the columns readable instead of squashing
+   them to nothing on a phone. */
+.post-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:26px 0 0;border:1px solid var(--color-neutral-200);border-radius:12px;background:#fff}
+.post-table-wrap:focus-visible{outline:2px solid var(--color-accent);outline-offset:2px}
+.post-table{border-collapse:collapse;width:100%;min-width:620px;font-size:15px;line-height:23px}
+.post-table th,.post-table td{text-align:left;vertical-align:top;padding:11px 16px;border-bottom:1px solid var(--color-neutral-200)}
+.post-table thead th{font-size:12px;letter-spacing:0.06em;text-transform:uppercase;color:var(--color-accent-800);background:var(--color-accent-100);white-space:nowrap}
+.post-table tbody tr:last-child td{border-bottom:0}
+.post-table td:first-child{font-weight:600}
+@media (max-width: 760px){
+.m-stack{grid-template-columns:1fr !important}
+}
+</style>
+
+<script type="application/ld+json" id="post-ld">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "AI Internal Controls: What Changes When AI Touches Financial Reporting", "description": "AI internal controls for finance: control design for AI-assisted steps, evidence, change management of prompts and models, segregation of duties, audit.", "keywords": "AIForCFOs, FinanceAI, FinancialOperations, FinanceExcellence, FinancialLeadership, DigitalFinance", "datePublished": "2026-09-02", "dateModified": "2026-09-02", "articleSection": "AI for CFOs", "wordCount": 2216, "timeRequired": "PT10M", "author": {"@type": "Organization", "name": "CFOLogic", "url": "https://cfologic.com/"}, "publisher": {"@type": "Organization", "name": "CFOLogic"}, "mainEntityOfPage": "https://cfologic.com/insights/ai-for-cfos/ai-internal-controls/"}</script>
+<script type="application/ld+json" id="post-faq-ld">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What changes in internal controls when AI is used in financial reporting?", "acceptedAnswer": {"@type": "Answer", "text": "The control around an AI-assisted step has to cover the AI's output: what the reviewer checks and against what source, whether AI-produced information is complete and accurate, how changes to prompts and models are controlled, and what evidence is kept. The basic principles of control design stay the same."}}, {"@type": "Question", "name": "Is the AI or the reviewer the control?", "acceptedAnswer": {"@type": "Answer", "text": "In most AI-assisted steps the human review is the control, and the AI output is an input to it. Write the control description so the reviewer is clearly accountable and the review is specific about what is checked."}}, {"@type": "Question", "name": "How should prompts and AI models be handled under change management?", "acceptedAnswer": {"@type": "Answer", "text": "Treat prompts, instructions, source libraries and access settings as configuration: changes are requested, tested against a fixed set of cases, approved by someone other than the person who made them, and recorded. Ask vendors how model updates are announced and whether a version can be pinned."}}, {"@type": "Question", "name": "Can an AI agent create a segregation of duties conflict?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, an AI agent with rights to both create and approve a transaction, or to change vendor bank details and propose payments, is a conflict just as it would be for a person. Give each agent its own account and include it in the SoD matrix and access reviews."}}, {"@type": "Question", "name": "What will auditors ask about AI in financial reporting?", "acceptedAnswer": {"@type": "Answer", "text": "Expect questions about where AI is used and in what role, the related controls, the completeness and accuracy of AI-produced information, change management for prompts and models, system access, and retained evidence. Discuss these with your auditors before year-end."}}, {"@type": "Question", "name": "Are most finance teams ready for audit of AI-enabled processes?", "acceptedAnswer": {"@type": "Answer", "text": "Fewer than half say they are: in KPMG's May 2026 survey, 42% of organizations were fully assurance-ready for AI-enabled finance processes. The rest have work to do on controls, evidence or both before relying on AI in reporting."}}]}</script>
+<link rel="stylesheet" href="/assets/theme.css?v=bb6f8922">
+<meta property="og:image" content="https://cfologic.com/assets/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://cfologic.com/assets/og-card.png">
+<link rel="icon" href="/favicon.ico?v=d6fea06e" sizes="32x32">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png?v=d6fea06e">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png?v=d6fea06e">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=d6fea06e">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#0064F1">
+<script type="text/plain" data-consent="analytics">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "ycvshql7yt");
+</script>
+<script type="text/plain" data-consent="marketing">function initApollo(){var n=Math.random().toString(36).substring(7),o=document.createElement("script");
+o.src="https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache="+n,o.async=!0,o.defer=!0,
+o.onload=function(){window.trackingFunctions.onLoad({appId:"6863df76aca6990019bee689"})},
+document.head.appendChild(o)}initApollo();</script>
+<script src="/assets/consent.js?v=a1a36eec"></script>
+</head>
+<body>
+<cfo-lead-capture></cfo-lead-capture>
+<div id="page-wrap" style="min-height: 100vh">
+<nav class="nav" style="position: sticky; top: 0; z-index: 50; background: rgba(253,253,253,0.65); backdrop-filter: blur(12px) saturate(1.15); -webkit-backdrop-filter: blur(12px) saturate(1.15); border-bottom: 1px solid var(--color-neutral-200); padding-inline: max(clamp(20px,5vw,72px), calc((100% - 1200px) / 2 + clamp(20px,5vw,72px)))">
+  <a href="/" aria-label="CFOLogic" style="text-decoration: none; flex: none"><img src="/assets/cfologic-logo.png" alt="CFOLogic" style="display: block; height: 40px; width: auto"></a>
+  
+    <div class="nav-dd">
+      <button class="nav-dd-btn" type="button" aria-haspopup="true">Who we serve <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></button>
+      <div class="nav-dd-menu">
+        
+          <a href="/founders/" style="color: var(--color-text)">For Founders &amp; CEOs</a>
+        
+          <a href="/cfo-success-partners/" style="color: var(--color-text)">For CFOs</a>
+        
+          <a href="/accounting-firms/" style="color: var(--color-text)">For CFO/CAS Firms</a>
+        
+          <a href="/capital-providers/" style="color: var(--color-text)">For Capital Providers</a>
+        
+          <a href="/acquisition-entrepreneurs/" style="color: var(--color-text)">For Acquisition Entrepreneurs</a>
+        
+      </div>
+    </div>
+  
+  <a href="/insights/" style="white-space: nowrap; font-weight: 600; color: var(--color-accent-700); text-decoration: none">Insights</a>
+    <a href="/finance-team-as-a-service/" style="white-space: nowrap; color: var(--color-text); text-decoration: none">What we do</a>
+    
+    <a href="https://navigator.cfologic.com" target="_blank" rel="noopener" style="white-space: nowrap; color: var(--color-text); text-decoration: none">Navigator AI</a>
+  
+  
+  <div class="nav-dd">
+    <button class="nav-dd-btn" type="button" aria-haspopup="true">About <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></button>
+    <div class="nav-dd-menu">
+      <a href="/about/" style="color: var(--color-text)">About Us</a>
+      <a href="/trust-center/" style="color: var(--color-text)">Trust Center</a>
+      <a href="https://careers.cfologic.com/careers" target="_blank" rel="noopener" style="color: var(--color-text)">Careers</a>
+    </div>
+  </div>
+  
+  <span style="flex: 1"></span>
+  <a class="btn btn-primary" href="https://cal.com/GrowthCFO" target="_blank" rel="noopener" style="white-space: nowrap; text-decoration: none">Book a Discovery Call</a>
+<details class="nav-mobile">
+    <summary aria-label="Open menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"></path></svg></summary>
+    <div class="nav-mobile-menu">
+      <span class="mm-sec">Who we serve</span>
+      <a href="/founders/">For Founders &amp; CEOs</a>
+      <a href="/cfo-success-partners/">For CFOs</a>
+      <a href="/accounting-firms/">For CFO/CAS Firms</a>
+      <a href="/capital-providers/">For Capital Providers</a>
+      <a href="/acquisition-entrepreneurs/">For Acquisition Entrepreneurs</a>
+      <span class="mm-sec">Explore</span>
+      <a href="/finance-team-as-a-service/">What we do</a>
+      <a href="/insights/">Insights</a>
+      <a href="https://navigator.cfologic.com" target="_blank" rel="noopener">Navigator AI</a>
+      <span class="mm-sec">Company</span>
+      <a href="/about/">About Us</a>
+      <a href="/trust-center/">Trust Center</a>
+      <a href="https://careers.cfologic.com/careers" target="_blank" rel="noopener">Careers</a>
+      <a class="mm-cta" href="https://cal.com/GrowthCFO" target="_blank" rel="noopener">Book a Discovery Call</a>
+    </div>
+  </details>
+</nav>
+<main style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(20px,5vw,72px); display: block">
+
+  <section style="padding: 64px 0 0">
+    <a href="/insights/" style="font-size: 14px; text-decoration: none; font-weight: 600">← All insights</a>
+    <div style="display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600; margin-top: 28px">
+      <span style="color: #fff; background-image: var(--grad-a); padding: 4px 10px; border-radius: 999px">AI for CFOs</span>
+      <span style="color: var(--color-accent-700)">Guide</span>
+      <span style="color: color-mix(in srgb, var(--color-text) 50%, transparent); white-space: nowrap">Sep 2026 · 10 min read</span>
+    </div>
+    <h1 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(28px,3.7vw,49px); line-height: 1.1; letter-spacing: -0.02em; margin: 21px 0 0 -0.058em; max-width: 26ch">AI Internal Controls: What Changes When AI Touches Financial Reporting</h1>
+    <p style="font-size: 14px; color: color-mix(in srgb, var(--color-text) 65%, transparent); margin: 18px 0 0">By the CFOLogic team</p>
+  </section>
+
+  <div class="post-grid" style="display: grid; grid-template-columns: minmax(0, 8fr) minmax(280px, 4fr); gap: 42px clamp(32px,4vw,72px); align-items: start; padding: 42px 0 84px">
+    <article style="min-width: 0">
+      <aside aria-label="Idea in brief" style="padding: clamp(24px,3vw,36px); margin: 0 0 42px; border-radius: 16px; border: 1px solid rgba(160,199,255,0.55); background: linear-gradient(135deg, rgba(0,100,241,0.08), rgba(125,179,255,0.14) 55%, rgba(214,230,255,0.30)); backdrop-filter: blur(12px) saturate(1.15); -webkit-backdrop-filter: blur(12px) saturate(1.15); box-shadow: 0 1px 2px rgba(20,20,20,0.04), 0 4px 17px rgba(20,20,20,0.06), inset 0 1px 0 rgba(255,255,255,0.65)">
+        <p style="font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600; margin: 0" class="grad-text">Idea in brief</p>
+        <p style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 17.5px; line-height: 28px; margin: 14px 0 0">A practical guide to AI internal controls for finance leaders: the three roles AI can play in a financial reporting step, how to design the review control around an AI-assisted step, the evidence to keep, change management for prompts and models, segregation of duties when software does part of the work, and what auditors are likely to ask, with reference to the PCAOB staff spotlight of July 2024 and KPMG's 2026 survey on assurance readiness.</p>
+        <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 18px; border-top: 1px solid rgba(160,199,255,0.5); padding-top: 18px">
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 14.5px; line-height: 24px; color: color-mix(in srgb, var(--color-text) 82%, transparent)">
+              <span aria-hidden="true" style="width: 7px; height: 7px; border-radius: 999px; background-image: var(--grad-a); margin-top: 8px"></span>
+              <span><strong>What changes.</strong> When AI performs, assists or feeds a step in financial reporting, the control around that step must cover the AI's output: what the reviewer checks, against what source, and what evidence is kept.</span>
+            </div>
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 14.5px; line-height: 24px; color: color-mix(in srgb, var(--color-text) 82%, transparent)">
+              <span aria-hidden="true" style="width: 7px; height: 7px; border-radius: 999px; background-image: var(--grad-a); margin-top: 8px"></span>
+              <span><strong>What evidence to keep.</strong> The input or a reference to it, the tool and version, the output, the reviewer, what they changed and the approval, retained with the financial records it supports.</span>
+            </div>
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 14.5px; line-height: 24px; color: color-mix(in srgb, var(--color-text) 82%, transparent)">
+              <span aria-hidden="true" style="width: 7px; height: 7px; border-radius: 999px; background-image: var(--grad-a); margin-top: 8px"></span>
+              <span><strong>Why prompts and models need change control.</strong> A changed prompt, source library or model version can change the output without anyone touching the ERP, so treat them as configuration with testing and approval.</span>
+            </div>
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 14.5px; line-height: 24px; color: color-mix(in srgb, var(--color-text) 82%, transparent)">
+              <span aria-hidden="true" style="width: 7px; height: 7px; border-radius: 999px; background-image: var(--grad-a); margin-top: 8px"></span>
+              <span><strong>What to do now.</strong> Map where AI touches financial reporting, document the related controls, and discuss them with your auditors well before year-end. KPMG's 2026 survey found 42% of organizations fully assurance-ready for AI-enabled finance processes.</span>
+            </div>
+          
+        </div>
+      </aside>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Take an interim audit request list that arrives in early September with one new line. Please identify any processes relevant to financial reporting in which AI tools are used, and describe the related controls. The controller can name the bank reconciliation tool that suggests matches. She is less sure whether the FP&amp;A team's commentary drafts count, or what changed when the AP coding assistant went live in May.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">That line is where AI internal controls start for most finance teams. The underlying principles have not changed: a control has to be designed to catch a material error, operate consistently, and leave evidence. What changes is that part of the work inside the control is now done by software whose behavior can shift without anyone touching the ERP.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">This guide is practical rather than legal. Requirements differ by jurisdiction, by listing status and by audit firm, so treat it as a list of topics to discuss with your auditors, not as a statement of what they will require.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+            <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(19px,1.9vw,25px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Where AI touches financial reporting</h2>
+          
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Start by sorting each AI use into one of three roles. The control implications differ.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+          
+            <div class="post-table-wrap" role="region" aria-label="Table" tabindex="0"><table class="post-table"><thead><tr><th>AI's role</th><th>Example</th><th>What the control must cover</th></tr></thead><tbody><tr><td>Performs a step</td><td>Auto-matching bank lines to ledger entries above a confidence threshold</td><td>The rules and thresholds, testing of the matches, and review of what was matched automatically</td></tr><tr><td>Assists a person who performs the control</td><td>Suggesting invoice coding or drafting flux commentary for a reviewer to accept or change</td><td>What the reviewer checks and against what source, so the review is real and not a click-through</td></tr><tr><td>Produces information a control relies on</td><td>An AI-generated exceptions list that a reviewer works through</td><td>Completeness and accuracy of the list, because items it misses are never reviewed</td></tr></tbody></table></div>
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The third role is the one most often missed. Auditors already test whether the reports used in a control are complete and accurate, and an AI-produced list is a report like any other. If the tool quietly drops a category of exception, the review that follows will look clean and miss it.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Build a simple register: process, step, tool, role, control owner, related control. For most mid-sized companies it fits on one page, and it answers the auditor's request directly.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+            <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(19px,1.9vw,25px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Designing AI internal controls for assisted steps</h2>
+          
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>Decide what the control actually is.</strong> In most AI-assisted steps the control is still the human review. The AI output is an input to that review. Write the control description that way, so it is clear that the reviewer is accountable and the tool is not.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>Make the review precise.</strong> "Review AI-suggested journal entries" will not satisfy anyone. Say what the reviewer checks: supporting documents, account, amount, period, and whether the entry is unusual for that account. Set thresholds, such as every entry above a set amount checked to source, with a sample below it.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>Test what the tool leaves out.</strong> For any AI-produced list or match, check periodically for completeness. Take a sample of items the tool did not flag and confirm it was right not to. This is the step reviewers skip most often, because nothing on the screen prompts it.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>Keep the reviewer able to disagree.</strong> If the AI suggestion is pre-filled and accepting it takes one click, acceptance rates will drift towards 100%. Track how often reviewers change or reject suggestions. A rate near zero may mean the tool is excellent, or that nobody is looking. Find out which.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>Do not stack AI on AI without a person.</strong> One tool checking another's output can catch some consistency errors. It does not replace a reviewer with the domain knowledge to see what both tools missed, such as a contract term that never reached the ledger.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+            <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(19px,1.9vw,25px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Evidence an auditor can re-perform</h2>
+          
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Evidence for an AI-assisted step has to let someone else see what the tool was given, what it produced and what the person did with it.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+          
+            <div class="post-table-wrap" role="region" aria-label="Table" tabindex="0"><table class="post-table"><thead><tr><th>Evidence item</th><th>Why it is needed</th></tr></thead><tbody><tr><td>Input, or a reference to the data used</td><td>Shows what the tool was working from, and allows the output to be re-created or checked</td></tr><tr><td>Tool, prompt or configuration version, and model version where known</td><td>Shows which version of the logic produced the output</td></tr><tr><td>Output as produced</td><td>Separates what the tool suggested from what the reviewer changed</td></tr><tr><td>Reviewer, changes made and decision</td><td>Shows the review happened and what judgment was applied</td></tr><tr><td>Approval timestamp and approver</td><td>Ties the step to the control and the period</td></tr><tr><td>Exceptions and overrides</td><td>Shows how cases outside the rules were handled</td></tr></tbody></table></div>
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Keep it for as long as the financial records it supports are kept. Where a vendor runs the tool, confirm that you can get this evidence out of it, and in what form, before you rely on it at year-end.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+            <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(19px,1.9vw,25px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Change management for prompts and models</h2>
+          
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">A traditional system changes when someone changes it. An AI-assisted step can change in four ways, only one of which touches your own configuration.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>The prompt or instructions change.</strong> Someone improves the wording to fix a problem. The output shifts for every case, not only the one that prompted the change.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>The source library changes.</strong> A new policy is added or an old one removed. Answers that relied on it change.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>The model changes.</strong> The vendor updates the underlying model. Your configuration is untouched and the behavior still moves.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>Access or data changes.</strong> The tool gains or loses access to a data source, and its outputs change accordingly.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Treat prompts, instructions, source libraries and access settings as configuration under change control: requested, tested, approved by someone other than the person who made the change, and recorded. For the model itself, ask the vendor how updates are announced, whether you can pin a version, and whether their SOC 1 report, if they provide one, covers the AI service.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The practical tool is a regression test set: a fixed set of cases with known correct outcomes, run after any change of any kind. Keep the results with the change record. If the outputs move, someone decides whether that is acceptable before the tool is used in the next close.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+            <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(19px,1.9vw,25px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Segregation of duties when software does the work</h2>
+          
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>Give each AI agent its own identity.</strong> Automated tools that act on financial data should run under their own accounts, not a shared one and not a person's. That way their rights can be reviewed and their actions traced.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>Put agents in the SoD matrix.</strong> An agent that can both create and approve a transaction is a segregation of duties conflict, exactly as it would be for a person. So is an agent that can change vendor bank details and propose payments to that vendor.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>Separate the builder from the reviewer.</strong> The person who maintains a tool's prompts and configuration should not be the only person reviewing its output in the same process. Otherwise one person can change the logic and approve its results.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>Include AI access in periodic reviews.</strong> Access reviews should list every AI tool and agent account with access to financial systems, what each can read, and what each can write. Read-only by default makes this review short.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+            <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(19px,1.9vw,25px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">What auditors are likely to ask</h2>
+          
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">There is no single rulebook yet. The PCAOB's staff spotlight of 22 July 2024, based on outreach to audit firms and preparers, observed that GenAI use in audits "appears to be focused primarily on administrative and research activities". Among preparers, GenAI in accounting and financial reporting "appears to be secondary to integrating GenAI in operational and customer-facing areas". That was a snapshot from two years ago, and use inside finance has grown since.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">KPMG's Global AI in Finance 2026 report, based on responses from 1,013 senior finance leaders across 20 countries and published on 11 May 2026, found that "Active use of AI in finance has more than doubled since 2024, rising from 30 percent to 75 percent". It put the share of organizations "fully assurance-ready for AI-enabled finance processes" at 42 percent, fewer than half. Use has moved faster than the controls around it.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Expect questions along these lines:</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 16px; line-height: 28px; margin: 12px 0 0 4px">
+              <span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 999px; background: var(--color-accent); margin-top: 11px"></span>
+              <span>Where in financial reporting is AI used, and in which role?</span>
+            </div>
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 16px; line-height: 28px; margin: 12px 0 0 4px">
+              <span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 999px; background: var(--color-accent); margin-top: 11px"></span>
+              <span>What are the related controls, and who performs them?</span>
+            </div>
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 16px; line-height: 28px; margin: 12px 0 0 4px">
+              <span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 999px; background: var(--color-accent); margin-top: 11px"></span>
+              <span>How do you know AI-produced information used in a control is complete and accurate?</span>
+            </div>
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 16px; line-height: 28px; margin: 12px 0 0 4px">
+              <span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 999px; background: var(--color-accent); margin-top: 11px"></span>
+              <span>How are changes to prompts, configuration and models controlled and tested?</span>
+            </div>
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 16px; line-height: 28px; margin: 12px 0 0 4px">
+              <span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 999px; background: var(--color-accent); margin-top: 11px"></span>
+              <span>Which AI tools and agents have access to financial systems, and with what rights?</span>
+            </div>
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 16px; line-height: 28px; margin: 12px 0 0 4px">
+              <span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 999px; background: var(--color-accent); margin-top: 11px"></span>
+              <span>What evidence is retained, and can it be produced for a sample of items?</span>
+            </div>
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">For US-listed companies these questions sit inside management's assessment of internal control over financial reporting. For private companies with an external audit, the same topics come up in the auditor's understanding of controls. Either way, discuss them with your auditors before year-end, while there is still time to agree the approach and the testing without the closing timetable pressing on both sides.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+            <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(19px,1.9vw,25px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">What AI internal controls will not do</h2>
+          
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Controls do not make an AI tool more accurate. They detect and correct errors and leave evidence that someone looked. The quality of the output still depends on the source data, the design of the step and the experience of the reviewer.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">They will not settle questions of interpretation for you. Whether a particular AI-assisted step is a key control, how much testing it needs and how a deficiency would be classified are matters for management and the auditors to work through together, with the facts of your company in front of them.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+            <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(19px,1.9vw,25px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Frequently asked questions</h2>
+          
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>What changes in internal controls when AI is used in financial reporting?</strong></p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The control around an AI-assisted step has to cover the AI's output: what the reviewer checks and against what source, whether AI-produced information is complete and accurate, how changes to prompts and models are controlled, and what evidence is kept. The basic principles of control design stay the same.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>Is the AI or the reviewer the control?</strong></p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">In most AI-assisted steps the human review is the control, and the AI output is an input to it. Write the control description so the reviewer is clearly accountable and the review is specific about what is checked.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>How should prompts and AI models be handled under change management?</strong></p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Treat prompts, instructions, source libraries and access settings as configuration: changes are requested, tested against a fixed set of cases, approved by someone other than the person who made them, and recorded. Ask vendors how model updates are announced and whether a version can be pinned.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>Can an AI agent create a segregation of duties conflict?</strong></p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Yes, an AI agent with rights to both create and approve a transaction, or to change vendor bank details and propose payments, is a conflict just as it would be for a person. Give each agent its own account and include it in the SoD matrix and access reviews.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>What will auditors ask about AI in financial reporting?</strong></p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Expect questions about where AI is used and in what role, the related controls, the completeness and accuracy of AI-produced information, change management for prompts and models, system access, and retained evidence. Discuss these with your auditors before year-end.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>Are most finance teams ready for audit of AI-enabled processes?</strong></p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Fewer than half say they are: in KPMG's May 2026 survey, 42% of organizations were fully assurance-ready for AI-enabled finance processes. The rest have work to do on controls, evidence or both before relying on AI in reporting.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+            <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(19px,1.9vw,25px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Where CFOLogic fits</h2>
+          
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">CFOLogic is not a CPA firm, and our work is not assurance. We design and build AI-assisted tools for finance teams with the review step and the record built in: read-only on the systems already in place, with a person approving what leaves the team. Command Center is what we call a management layer that sits over one finance process. It surfaces the items that need a person, with the owner and the waiting time, and records what was done. The <a href="https://commandcenter.cfologic.com/p2pdemo/" target="_blank" rel="noopener">P2P Command Center demo</a> shows it on a fictional company's purchase-to-pay process.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong><a href="https://cal.com/GrowthCFO" target="_blank" rel="noopener">Book a Discovery Call →</a></strong></p>
+          
+          
+        </div>
+      
+        <div>
+          
+            <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(19px,1.9vw,25px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Related insights</h2>
+          
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 16px; line-height: 28px; margin: 12px 0 0 4px">
+              <span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 999px; background: var(--color-accent); margin-top: 11px"></span>
+              <span><a href="/insights/ai-for-cfos/ai-use-policy-finance/" target="_blank" rel="noopener">An AI Use Policy for the Finance Function: What to Put in It</a></span>
+            </div>
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 16px; line-height: 28px; margin: 12px 0 0 4px">
+              <span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 999px; background: var(--color-accent); margin-top: 11px"></span>
+              <span><a href="/insights/ai-for-cfos/ai-guardrails-finance-data/" target="_blank" rel="noopener">AI Guardrails for Finance Data: Access, Logging and Human Sign-Off</a></span>
+            </div>
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 16px; line-height: 28px; margin: 12px 0 0 4px">
+              <span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 999px; background: var(--color-accent); margin-top: 11px"></span>
+              <span><a href="/insights/ai-for-cfos/duplicate-payments-controls/" target="_blank" rel="noopener">Duplicate Payments: How They Happen and the Controls That Catch Them</a></span>
+            </div>
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 16px; line-height: 28px; margin: 12px 0 0 4px">
+              <span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 999px; background: var(--color-accent); margin-top: 11px"></span>
+              <span><a href="/insights/ai-for-cfos/management-by-exception-finance/" target="_blank" rel="noopener">Management by Exception in Finance: Designing Work Around What Needs a Person</a></span>
+            </div>
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 16px; line-height: 28px; margin: 12px 0 0 4px">
+              <span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 999px; background: var(--color-accent); margin-top: 11px"></span>
+              <span><a href="/insights/ai-in-finance-confidence-problem/" target="_blank" rel="noopener">AI in Finance Has a Confidence Problem, Not a Speed Problem</a></span>
+            </div>
+          
+          
+          
+        </div>
+      
+        <div>
+          
+            <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(19px,1.9vw,25px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Sources</h2>
+          
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 16px; line-height: 28px; margin: 12px 0 0 4px">
+              <span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 999px; background: var(--color-accent); margin-top: 11px"></span>
+              <span>PCAOB, <em>PCAOB Staff Shares Observations From Outreach on Use of Generative Artificial Intelligence in Audits and Financial Reporting</em>, staff spotlight and news release, 22 July 2024. Based on staff outreach to audit firms and preparers. Supports: GenAI use in audits focused primarily on administrative and research activities; among preparers, GenAI in accounting and financial reporting secondary to operational and customer-facing uses.</span>
+            </div>
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 16px; line-height: 28px; margin: 12px 0 0 4px">
+              <span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 999px; background: var(--color-accent); margin-top: 11px"></span>
+              <span>KPMG, <em>Global AI in Finance 2026</em>, press release, 11 May 2026. 1,013 senior finance leaders in 20 countries and 13 sectors at companies with revenue of at least US$250 million (at least US$500 million in the US), surveyed online in March 2026. Supports: active use of AI in finance rose from 30% in 2024 to 75%; 42% of organizations fully assurance-ready for AI-enabled finance processes.</span>
+            </div>
+          
+          
+          
+        </div>
+      
+      <div style="margin-top: 56px; border-top: 2px solid var(--color-divider); padding-top: 28px; display: flex; flex-wrap: wrap; gap: 12px; align-items: center">
+        <span style="font-size: 12.5px; color: var(--color-accent-800); background: var(--color-accent-100); border: 1px solid var(--color-accent-200); padding: 3px 10px; border-radius: 999px">AI for CFOs</span>
+        <span style="font-size: 14px; color: color-mix(in srgb, var(--color-text) 60%, transparent)">Published Sep 2026 · CFOLogic Insights</span>
+      </div>
+    </article>
+
+    <aside class="post-side" style="position: sticky; top: 96px; display: flex; flex-direction: column; gap: 20px; min-width: 0">
+      <div class="glass" style="padding: 0; overflow: hidden">
+        <div style="background-image: var(--grad-a); color: #fff; padding: 18px 24px">
+          <p style="font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600; margin: 0; color: rgba(255,255,255,0.8)">The newsletter</p>
+          <p style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 16.5px; line-height: 24px; margin: 6px 0 0">Actionable insights like this, once a month.</p>
+        </div>
+        <form action="https://formsubmit.co/prasad@cfologic.com" method="POST" style="display: flex; flex-direction: column; gap: 10px; padding: 20px 24px 24px">
+          <input type="hidden" name="_subject" value="Insights subscription - blog post sidebar">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="email" name="email" required placeholder="you@company.com" aria-label="Work email" style="font-size: 14px; padding: 10px 14px; border: 1px solid var(--color-neutral-300); border-radius: 8px; background: #fff; color: var(--color-text)">
+          <button class="btn btn-primary" type="submit" style="cursor: pointer; margin-top: 4px">Subscribe</button>
+          <p style="font-size: 12px; line-height: 18px; margin: 2px 0 0; color: color-mix(in srgb, var(--color-text) 60%, transparent)">No spam ever. Unsubscribe in one click.</p>
+        </form>
+      </div>
+      <div class="glass" style="padding: 24px">
+        <p style="font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600; margin: 0; color: var(--color-neutral-700)">Related insights</p>
+        <div style="display: flex; flex-direction: column; margin-top: 6px">
+          
+            <a href="/insights/ai-for-cfos/ai-in-accounts-payable-sap/" style="display: block; text-decoration: none; color: var(--color-text); padding: 14px 0; border-bottom: 1px solid var(--color-neutral-200)">
+              <span style="display: block; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600; color: color-mix(in srgb, var(--color-text) 50%, transparent)">AI for CFOs · 6 min</span>
+              <span style="display: block; font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 15.5px; line-height: 23px; margin-top: 5px">AI in Accounts Payable on SAP: What Works and What Still Needs People</span>
+            </a>
+          
+            <a href="/insights/ai-for-cfos/ai-use-policy-finance/" style="display: block; text-decoration: none; color: var(--color-text); padding: 14px 0; border-bottom: 1px solid var(--color-neutral-200)">
+              <span style="display: block; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600; color: color-mix(in srgb, var(--color-text) 50%, transparent)">AI for CFOs · 10 min</span>
+              <span style="display: block; font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 15.5px; line-height: 23px; margin-top: 5px">An AI Use Policy for the Finance Function: What to Put in It</span>
+            </a>
+          
+            <a href="/insights/ai-for-cfos/ai-in-order-to-cash-dynamics-365/" style="display: block; text-decoration: none; color: var(--color-text); padding: 14px 0; border-bottom: 1px solid var(--color-neutral-200)">
+              <span style="display: block; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600; color: color-mix(in srgb, var(--color-text) 50%, transparent)">AI for CFOs · 6 min</span>
+              <span style="display: block; font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 15.5px; line-height: 23px; margin-top: 5px">AI in Order-to-Cash on Microsoft Dynamics 365: Where to Start</span>
+            </a>
+          
+        </div>
+        <a href="/insights/" style="display: inline-block; font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 14px; text-decoration: none; margin-top: 14px">All insights →</a>
+      </div>
+      <div style="border: 1px solid var(--color-neutral-200); border-radius: 16px; padding: 24px">
+        <p style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 16.5px; line-height: 24px; margin: 0">Thirty minutes on the decision you're sitting on right now.</p>
+        <p style="font-size: 13.5px; line-height: 21px; color: color-mix(in srgb, var(--color-text) 70%, transparent); margin: 8px 0 0">No pitch, no pressure.</p>
+        <a class="btn btn-primary" href="https://cal.com/GrowthCFO" target="_blank" rel="noopener" style="text-decoration: none; display: inline-flex; margin-top: 14px">Book a Discovery Call</a>
+      </div>
+    </aside>
+  </div>
+
+</main>
+
+<section style="background-image: var(--grad-a); color: #fff">
+  <div style="max-width: 1200px; margin: 0 auto; padding: 56px clamp(20px,5vw,72px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 28px; align-items: center">
+    <div>
+      <span style="display: block; font-size: 13px; letter-spacing: 0; text-transform: none; color: rgba(255,255,255,0.75); margin: 0 0 14px">The newsletter</span>
+      <h3 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(21px,2.3vw,30px); line-height: 1.15; letter-spacing: -0.015em; margin: 0; max-width: 24ch">Actionable insights like this, once a month.</h3>
+    </div>
+    <form action="https://formsubmit.co/prasad@cfologic.com" method="POST" style="display: flex; gap: 8px; flex-wrap: wrap">
+      <input type="hidden" name="_subject" value="Insights subscription - blog post page">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="email" name="email" required placeholder="you@company.com" aria-label="Email address" style="flex: 1; min-width: 200px; font-size: 14px; padding: 12px 14px; border: 0; border-radius: 8px; background: #fff; color: var(--color-text)">
+      <button class="btn" type="submit" style="cursor: pointer; background: var(--color-accent-900); color: #fff; border: 0">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="sf-wrap">
+    <div class="sf-grid">
+      <div class="sf-brand">
+        <a href="/" aria-label="CFOLogic" style="display: inline-block"><img src="/assets/cfologic-logo.png" alt="CFOLogic" style="display: block; height: 40px; width: auto"></a>
+        <p class="sf-tagline">The finance team behind ambitious businesses. Strategy to execution, one partner across the whole life of the business.</p>
+        <address class="sf-addr"><strong>CFOLogic, Inc.</strong>1207 Delaware Ave #5151, Wilmington, DE 19806, USA</address>
+        <address class="sf-addr"><strong>CFOLogic Private Limited</strong>2, Revati Arcade II, Baner, Pune, MH 411045, India</address>
+        <div class="sf-social">
+          <a href="https://www.linkedin.com/company/cfologichq" target="_blank" rel="noopener" aria-label="CFOLogic on LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></a>
+          <a href="https://x.com/CFOLogicHQ" target="_blank" rel="noopener" aria-label="CFOLogic on X"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.66l-5.21-6.82-5.97 6.82H1.67l7.73-8.84L1.25 2.25h6.83l4.71 6.23 5.45-6.23zm-1.16 17.52h1.83L7.08 4.13H5.12l11.96 15.64z"/></svg></a>
+          <a href="https://www.instagram.com/cfologichq" target="_blank" rel="noopener" aria-label="CFOLogic on Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        </div>
+      </div>
+      <div class="sf-col">
+        <h4>Who we serve</h4>
+        <a href="/founders/">Founders &amp; CEOs</a>
+        <a href="/cfo-success-partners/">CFOs &amp; Finance Leaders</a>
+        <a href="/accounting-firms/">CFO/CAS Firms</a>
+        <a href="/capital-providers/">Capital Providers</a>
+        <a href="/acquisition-entrepreneurs/">Acquisition Entrepreneurs</a>
+      </div>
+      <div class="sf-col">
+        <h4>Company</h4>
+        <a href="/about/">About</a>
+        <a href="/insights/">Insights</a>
+        <a href="/trust-center/">Trust Center</a>
+        <a href="https://careers.cfologic.com/careers" target="_blank" rel="noopener">Careers</a>
+      </div>
+      <div class="sf-col">
+        <h4>Product</h4>
+        <a href="https://navigator.cfologic.com" target="_blank" rel="noopener">Navigator AI</a>
+        <a href="https://navigatordemo.cfologic.com" target="_blank" rel="noopener">Live demo</a>
+        <a href="https://cal.com/GrowthCFO" target="_blank" rel="noopener">Book a discovery call</a>
+      </div>
+      <div class="sf-col sf-subscribe">
+        <h4>Insights, by email</h4>
+        <form action="https://formsubmit.co/prasad@cfologic.com" method="POST">
+          <input type="hidden" name="_subject" value="Insights subscription - cfologic.com">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="email" name="email" required placeholder="you@company.com" aria-label="Email address">
+          <button class="btn btn-primary" type="submit">Subscribe</button>
+        </form>
+        <p class="sf-note">No spam ever. Unsubscribe in one click.</p>
+      </div>
+    </div>
+    <div class="sf-bottom">
+      <span>&copy; CFOLogic 2026. All rights reserved.</span>
+      <nav aria-label="Legal"><a href="/legal/">Privacy</a><a href="/legal/">Terms</a></nav>
+    </div>
+  </div>
+</footer>
+
+</div>
+<script>window.__DC={"initial":0};</script>
+<script src="/assets/site.js" defer></script>
+</body>
+</html>

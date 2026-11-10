@@ -1,0 +1,1035 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>x-if[data-if="off"]{display:none!important}</style>
+<script type="text/plain" data-consent="analytics" data-src="https://www.googletagmanager.com/gtag/js?id=G-5HRTB39JZ6"></script>
+<script type="text/plain" data-consent="analytics">window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-5HRTB39JZ6');</script>
+<title>AI Use Policy for Finance: What to Put in It | CFOLogic</title>
+<link rel="canonical" href="https://cfologic.com/insights/ai-for-cfos/ai-use-policy-finance/">
+<meta name="description" content="What to put in an AI use policy for finance: approved tools, data classes, prohibited uses, review, records, incidents, training and a template.">
+<meta property="og:title" content="AI Use Policy for Finance: What to Put in It | CFOLogic">
+<meta property="og:description" content="What to put in an AI use policy for finance: approved tools, data classes, prohibited uses, review, records, incidents, training and a template.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="CFOLogic">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://cfologic.com/insights/ai-for-cfos/ai-use-policy-finance/">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@CFOLogicHQ">
+<link rel="stylesheet" href="/assets/ds/styles.css">
+<script src="/assets/cfo-lead-capture.js"></script>
+<style>
+:root{--color-accent:#0064F1;--color-accent-100:#EDF4FF;--color-accent-200:#D6E6FF;--color-accent-300:#A0C7FF;--color-accent-400:#7DB3FF;--color-accent-500:#5A9FFF;--color-accent-600:#0055CE;--color-accent-700:#0047AB;--color-accent-800:#00378A;--color-accent-900:#002B66;--color-accent-2:#0064F1;--color-accent-2-100:#EDF4FF;--color-accent-2-200:#D6E6FF;--color-accent-2-800:#00378A;
+--grad-a:linear-gradient(135deg,#0047AB,#0064F1 48%,#378AFF);--grad-a-h:linear-gradient(135deg,#00378A,#0055CE 48%,#1576FF);
+--color-bg:#FDFDFD}
+.btn-primary{background-image:var(--grad-a);color:#fff !important}
+.btn-primary:hover,.btn-primary:active{background-image:var(--grad-a-h);color:#fff !important}
+.glass{background:rgba(255,255,255,0.55);backdrop-filter: blur(12px) saturate(1.15);-webkit-backdrop-filter: blur(12px) saturate(1.15);border:1px solid var(--color-neutral-200);border-radius:16px;box-shadow: 0 1px 2px rgba(20,20,20,0.04), 0 4px 17px rgba(20,20,20,0.06)}
+.grad-text{background-image:var(--grad-a);-webkit-background-clip:text;background-clip:text;color:transparent}
+body { margin: 0; background: var(--color-bg); color: var(--color-text); font-family: var(--font-body); text-wrap: pretty; }
+a { color: var(--color-accent-700); }
+a:hover { color: var(--color-accent-600); }
+.nav-mobile{display:none;position:relative}
+.nav-mobile summary{list-style:none;cursor:pointer;display:flex;align-items:center;padding:6px;color:var(--color-text)}
+.nav-mobile summary::-webkit-details-marker{display:none}
+.nav-mobile-menu{position:absolute;right:-6px;top:calc(100% + 12px);width:min(320px,calc(100vw - 32px));display:flex;flex-direction:column;background:rgba(253,253,253,0.97);backdrop-filter: blur(12px) saturate(1.15);-webkit-backdrop-filter: blur(12px) saturate(1.15);border:1px solid var(--color-neutral-200);border-radius:12px;box-shadow: 0 1px 2px rgba(20,20,20,0.04), 0 6px 22px rgba(20,20,20,0.06);padding:8px 0;z-index:60}
+.nav-mobile-menu a{padding:11px 18px;text-decoration:none;color:var(--color-text)}
+.nav-mobile-menu a:hover{background:var(--color-accent-100)}
+.nav-mobile-menu .mm-sec{font-size:11px;letter-spacing:0.08em;text-transform:uppercase;font-weight: 600;color:color-mix(in srgb,var(--color-text) 50%,transparent);padding:12px 18px 4px}
+.nav-mobile-menu .mm-cta{margin:10px 18px 8px;background-image:var(--grad-a);color:#fff;border-radius:10px;text-align:center;font-weight: 600}
+.nav-mobile-menu .mm-cta:hover{background-image:var(--grad-a-h)}
+@media (max-width: 760px){
+.nav > a:not([aria-label="CFOLogic"]){display:none}
+.nav .nav-dd{display:none}
+.nav-mobile{display:block}
+}
+@media (hover: none){
+.fit-body{grid-template-rows:1fr}
+.fit-body>p{padding-top:10px}
+.nav-dd:focus-within .nav-dd-menu{display:flex}
+}
+
+.nav-dd{position:relative;padding:26px 0;margin:-26px 0}
+.nav-dd-btn{display:flex;align-items:center;gap:6px;background:none;border:0;font-family:inherit;font-size:inherit;color:var(--color-text);cursor:pointer;padding:0;white-space:nowrap}
+.nav-dd-btn:hover{color:var(--color-accent-700)}
+.nav-dd-menu{position:absolute;top:100%;left:-18px;min-width:270px;padding:10px 0;display:none;flex-direction:column;background:rgba(253,253,253,0.92);backdrop-filter: blur(12px) saturate(1.15);-webkit-backdrop-filter: blur(12px) saturate(1.15);border:1px solid var(--color-neutral-200);border-radius:12px;box-shadow: 0 1px 2px rgba(20,20,20,0.04), 0 6px 22px rgba(20,20,20,0.06)}
+.nav-dd:hover .nav-dd-menu,.nav-dd:focus-within .nav-dd-menu{display:flex}
+.nav-dd-menu a{padding:9px 18px;white-space:nowrap;text-decoration:none}
+.nav-dd-menu a:hover{background:var(--color-accent-100)}
+
+input, button { font-family: inherit; }
+@media (max-width: 960px){
+.post-grid{grid-template-columns:1fr !important}
+.post-side{position:static !important}
+}
+@media (max-width: 760px){
+.nav{flex-wrap:wrap;row-gap:10px}
+}
+
+/* Post body tables. The wrapper scrolls on its own so a wide table never
+   widens the page; min-width keeps the columns readable instead of squashing
+   them to nothing on a phone. */
+.post-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:26px 0 0;border:1px solid var(--color-neutral-200);border-radius:12px;background:#fff}
+.post-table-wrap:focus-visible{outline:2px solid var(--color-accent);outline-offset:2px}
+.post-table{border-collapse:collapse;width:100%;min-width:620px;font-size:15px;line-height:23px}
+.post-table th,.post-table td{text-align:left;vertical-align:top;padding:11px 16px;border-bottom:1px solid var(--color-neutral-200)}
+.post-table thead th{font-size:12px;letter-spacing:0.06em;text-transform:uppercase;color:var(--color-accent-800);background:var(--color-accent-100);white-space:nowrap}
+.post-table tbody tr:last-child td{border-bottom:0}
+.post-table td:first-child{font-weight:600}
+@media (max-width: 760px){
+.m-stack{grid-template-columns:1fr !important}
+}
+</style>
+
+<script type="application/ld+json" id="post-ld">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "An AI Use Policy for the Finance Function: What to Put in It", "description": "What to put in an AI use policy for finance: approved tools, data classes, prohibited uses, review, records, incidents, training and a template.", "keywords": "AIForCFOs, FinanceAI, FinancialLeadership, FinancialOperations, DigitalFinance, FinanceExcellence", "datePublished": "2026-08-26", "dateModified": "2026-08-26", "articleSection": "AI for CFOs", "wordCount": 2419, "timeRequired": "PT10M", "author": {"@type": "Organization", "name": "CFOLogic", "url": "https://cfologic.com/"}, "publisher": {"@type": "Organization", "name": "CFOLogic"}, "mainEntityOfPage": "https://cfologic.com/insights/ai-for-cfos/ai-use-policy-finance/"}</script>
+<script type="application/ld+json" id="post-faq-ld">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is an AI use policy for finance?", "acceptedAnswer": {"@type": "Answer", "text": "An AI use policy for finance is a short written set of rules covering which AI tools the finance team may use, with which data, for which tasks, what review is required, and what records are kept. It usually sits as an annex to, or alongside, the company's general AI policy."}}, {"@type": "Question", "name": "What should an AI use policy include?", "acceptedAnswer": {"@type": "Answer", "text": "It should include scope, roles, approved tools, data classes, permitted and prohibited uses, review requirements, record keeping, incident handling, training and a process for exceptions and updates. The tool list and data class table work best as appendices that change more often than the policy."}}, {"@type": "Question", "name": "Does the EU AI Act apply to finance teams using AI?", "acceptedAnswer": {"@type": "Answer", "text": "It can, depending on where the company operates and how AI is used, so check scope with counsel. The AI literacy obligation has applied since 2 February 2025. After the Digital Omnibus, high-risk obligations apply from 2 December 2027 for Annex III systems and from 2 August 2028 for Annex I systems."}}, {"@type": "Question", "name": "Do we need ISO/IEC 42001 certification?", "acceptedAnswer": {"@type": "Answer", "text": "Most finance functions do not need certification, though the standard is a useful reference for how to structure AI policy, roles, risk assessment and review. Certification is a company-level decision, usually driven by customers or regulators."}}, {"@type": "Question", "name": "Who should own the AI use policy in finance?", "acceptedAnswer": {"@type": "Answer", "text": "The CFO should own the finance AI use policy, with IT security, legal and the controller contributing to the sections they know best. The tool list and data class table each need a named owner who keeps them current."}}, {"@type": "Question", "name": "How often should an AI use policy be reviewed?", "acceptedAnswer": {"@type": "Answer", "text": "Review it twice a year while tools are changing quickly, and sooner when a new tool is approved, an incident occurs, the law changes or the auditors raise a point."}}]}</script>
+<link rel="stylesheet" href="/assets/theme.css?v=bb6f8922">
+<meta property="og:image" content="https://cfologic.com/assets/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://cfologic.com/assets/og-card.png">
+<link rel="icon" href="/favicon.ico?v=d6fea06e" sizes="32x32">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png?v=d6fea06e">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png?v=d6fea06e">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=d6fea06e">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#0064F1">
+<script type="text/plain" data-consent="analytics">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "ycvshql7yt");
+</script>
+<script type="text/plain" data-consent="marketing">function initApollo(){var n=Math.random().toString(36).substring(7),o=document.createElement("script");
+o.src="https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache="+n,o.async=!0,o.defer=!0,
+o.onload=function(){window.trackingFunctions.onLoad({appId:"6863df76aca6990019bee689"})},
+document.head.appendChild(o)}initApollo();</script>
+<script src="/assets/consent.js?v=a1a36eec"></script>
+</head>
+<body>
+<cfo-lead-capture></cfo-lead-capture>
+<div id="page-wrap" style="min-height: 100vh">
+<nav class="nav" style="position: sticky; top: 0; z-index: 50; background: rgba(253,253,253,0.65); backdrop-filter: blur(12px) saturate(1.15); -webkit-backdrop-filter: blur(12px) saturate(1.15); border-bottom: 1px solid var(--color-neutral-200); padding-inline: max(clamp(20px,5vw,72px), calc((100% - 1200px) / 2 + clamp(20px,5vw,72px)))">
+  <a href="/" aria-label="CFOLogic" style="text-decoration: none; flex: none"><img src="/assets/cfologic-logo.png" alt="CFOLogic" style="display: block; height: 40px; width: auto"></a>
+  
+    <div class="nav-dd">
+      <button class="nav-dd-btn" type="button" aria-haspopup="true">Who we serve <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></button>
+      <div class="nav-dd-menu">
+        
+          <a href="/founders/" style="color: var(--color-text)">For Founders &amp; CEOs</a>
+        
+          <a href="/cfo-success-partners/" style="color: var(--color-text)">For CFOs</a>
+        
+          <a href="/accounting-firms/" style="color: var(--color-text)">For CFO/CAS Firms</a>
+        
+          <a href="/capital-providers/" style="color: var(--color-text)">For Capital Providers</a>
+        
+          <a href="/acquisition-entrepreneurs/" style="color: var(--color-text)">For Acquisition Entrepreneurs</a>
+        
+      </div>
+    </div>
+  
+  <a href="/insights/" style="white-space: nowrap; font-weight: 600; color: var(--color-accent-700); text-decoration: none">Insights</a>
+    <a href="/finance-team-as-a-service/" style="white-space: nowrap; color: var(--color-text); text-decoration: none">What we do</a>
+    
+    <a href="https://navigator.cfologic.com" target="_blank" rel="noopener" style="white-space: nowrap; color: var(--color-text); text-decoration: none">Navigator AI</a>
+  
+  
+  <div class="nav-dd">
+    <button class="nav-dd-btn" type="button" aria-haspopup="true">About <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></button>
+    <div class="nav-dd-menu">
+      <a href="/about/" style="color: var(--color-text)">About Us</a>
+      <a href="/trust-center/" style="color: var(--color-text)">Trust Center</a>
+      <a href="https://careers.cfologic.com/careers" target="_blank" rel="noopener" style="color: var(--color-text)">Careers</a>
+    </div>
+  </div>
+  
+  <span style="flex: 1"></span>
+  <a class="btn btn-primary" href="https://cal.com/GrowthCFO" target="_blank" rel="noopener" style="white-space: nowrap; text-decoration: none">Book a Discovery Call</a>
+<details class="nav-mobile">
+    <summary aria-label="Open menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"></path></svg></summary>
+    <div class="nav-mobile-menu">
+      <span class="mm-sec">Who we serve</span>
+      <a href="/founders/">For Founders &amp; CEOs</a>
+      <a href="/cfo-success-partners/">For CFOs</a>
+      <a href="/accounting-firms/">For CFO/CAS Firms</a>
+      <a href="/capital-providers/">For Capital Providers</a>
+      <a href="/acquisition-entrepreneurs/">For Acquisition Entrepreneurs</a>
+      <span class="mm-sec">Explore</span>
+      <a href="/finance-team-as-a-service/">What we do</a>
+      <a href="/insights/">Insights</a>
+      <a href="https://navigator.cfologic.com" target="_blank" rel="noopener">Navigator AI</a>
+      <span class="mm-sec">Company</span>
+      <a href="/about/">About Us</a>
+      <a href="/trust-center/">Trust Center</a>
+      <a href="https://careers.cfologic.com/careers" target="_blank" rel="noopener">Careers</a>
+      <a class="mm-cta" href="https://cal.com/GrowthCFO" target="_blank" rel="noopener">Book a Discovery Call</a>
+    </div>
+  </details>
+</nav>
+<main style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(20px,5vw,72px); display: block">
+
+  <section style="padding: 64px 0 0">
+    <a href="/insights/" style="font-size: 14px; text-decoration: none; font-weight: 600">← All insights</a>
+    <div style="display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600; margin-top: 28px">
+      <span style="color: #fff; background-image: var(--grad-a); padding: 4px 10px; border-radius: 999px">AI for CFOs</span>
+      <span style="color: var(--color-accent-700)">Guide</span>
+      <span style="color: color-mix(in srgb, var(--color-text) 50%, transparent); white-space: nowrap">Aug 2026 · 10 min read</span>
+    </div>
+    <h1 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(28px,3.7vw,49px); line-height: 1.1; letter-spacing: -0.02em; margin: 21px 0 0 -0.058em; max-width: 26ch">An AI Use Policy for the Finance Function: What to Put in It</h1>
+    <p style="font-size: 14px; color: color-mix(in srgb, var(--color-text) 65%, transparent); margin: 18px 0 0">By the CFOLogic team</p>
+  </section>
+
+  <div class="post-grid" style="display: grid; grid-template-columns: minmax(0, 8fr) minmax(280px, 4fr); gap: 42px clamp(32px,4vw,72px); align-items: start; padding: 42px 0 84px">
+    <article style="min-width: 0">
+      <aside aria-label="Idea in brief" style="padding: clamp(24px,3vw,36px); margin: 0 0 42px; border-radius: 16px; border: 1px solid rgba(160,199,255,0.55); background: linear-gradient(135deg, rgba(0,100,241,0.08), rgba(125,179,255,0.14) 55%, rgba(214,230,255,0.30)); backdrop-filter: blur(12px) saturate(1.15); -webkit-backdrop-filter: blur(12px) saturate(1.15); box-shadow: 0 1px 2px rgba(20,20,20,0.04), 0 4px 17px rgba(20,20,20,0.06), inset 0 1px 0 rgba(255,255,255,0.65)">
+        <p style="font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600; margin: 0" class="grad-text">Idea in brief</p>
+        <p style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 17.5px; line-height: 28px; margin: 14px 0 0">A practical guide to writing an AI use policy for the finance function: why finance needs its own, an eleven-section template outline, how to classify finance data by tool, prohibited uses and review requirements, record keeping, incidents and training, and how the policy relates to ISO/IEC 42001:2023 and the EU AI Act timetable after the Digital Omnibus moved the high-risk dates.</p>
+        <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 18px; border-top: 1px solid rgba(160,199,255,0.5); padding-top: 18px">
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 14.5px; line-height: 24px; color: color-mix(in srgb, var(--color-text) 82%, transparent)">
+              <span aria-hidden="true" style="width: 7px; height: 7px; border-radius: 999px; background-image: var(--grad-a); margin-top: 8px"></span>
+              <span><strong>What an AI use policy is.</strong> A short written set of rules for which AI tools finance may use, with which data, for which tasks, under what review, and with what record kept.</span>
+            </div>
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 14.5px; line-height: 24px; color: color-mix(in srgb, var(--color-text) 82%, transparent)">
+              <span aria-hidden="true" style="width: 7px; height: 7px; border-radius: 999px; background-image: var(--grad-a); margin-top: 8px"></span>
+              <span><strong>What to put in it.</strong> Scope and owners, approved tools, data classes, permitted and prohibited uses, review requirements, record keeping, incident handling, training, and how exceptions and updates are handled.</span>
+            </div>
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 14.5px; line-height: 24px; color: color-mix(in srgb, var(--color-text) 82%, transparent)">
+              <span aria-hidden="true" style="width: 7px; height: 7px; border-radius: 999px; background-image: var(--grad-a); margin-top: 8px"></span>
+              <span><strong>How long it should be.</strong> Short enough that people read it. Most of the detail belongs in two appendices: the approved tool list and the data class table.</span>
+            </div>
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 14.5px; line-height: 24px; color: color-mix(in srgb, var(--color-text) 82%, transparent)">
+              <span aria-hidden="true" style="width: 7px; height: 7px; border-radius: 999px; background-image: var(--grad-a); margin-top: 8px"></span>
+              <span><strong>How it relates to regulation.</strong> ISO/IEC 42001:2023 gives a management system structure, and the EU AI Act's AI literacy duty has applied since 2 February 2025. After the Digital Omnibus, high-risk obligations apply from 2 December 2027 or 2 August 2028.</span>
+            </div>
+          
+        </div>
+      </aside>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The audit committee pack for September has a new item. The chair has asked what AI tools the finance team uses, what data goes into them, and who checks what comes out. The controller knows the answers for her own team. She is less sure about FP&amp;A, and has no idea what the shared service centre started using in the spring.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">A finance AI use policy is how those questions get one answer instead of several. It does not need to be long. It does need to exist, be specific to finance, and be kept current. This guide covers what to put in it, section by section.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+            <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(19px,1.9vw,25px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Why finance needs its own AI use policy</h2>
+          
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Many companies already have a general acceptable use policy for AI, usually written by IT or legal. It is a good start, and it rarely goes far enough for finance, for three reasons.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>Finance data is different.</strong> Bank details, payroll, tax identifiers, unreleased results and, for listed companies, inside information. A general policy tends to treat all confidential data alike. Finance needs finer distinctions.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>Finance outputs are different.</strong> A journal, a payment, a disclosure, a reconciliation sign-off. These change records or leave the company, and they sit inside controls that auditors test.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>Finance runs the controls.</strong> Segregation of duties, approval limits and review evidence already exist in finance. An AI policy for finance should plug into them rather than sit beside them.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The practical answer is a finance annex to the company policy, or a standalone finance policy that references it. Either works. What matters is that the rules for finance data and finance outputs are written down and owned.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+            <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(19px,1.9vw,25px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">What to put in an AI use policy: a template outline</h2>
+          
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The outline below covers what most finance functions need. Adjust the depth to the size of the team and the reach of the tools.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+          
+            <div class="post-table-wrap" role="region" aria-label="Table" tabindex="0"><table class="post-table"><thead><tr><th>Section</th><th>What it should say</th><th>Owner</th></tr></thead><tbody><tr><td>1. Purpose and scope</td><td>Which teams, entities and contractors are covered, and that it applies to any AI tool used for finance work, approved or not</td><td>CFO</td></tr><tr><td>2. Roles</td><td>Who owns the policy, who approves new tools, who maintains the tool list, who handles incidents</td><td>CFO, with IT security</td></tr><tr><td>3. Approved tools</td><td>Reference to a maintained list of tools, versions and the data classes each is approved for</td><td>Finance systems lead</td></tr><tr><td>4. Data classes</td><td>How finance data is classified and which class may go into which tool</td><td>Controller, with IT security</td></tr><tr><td>5. Permitted uses</td><td>The tasks AI may help with, by role, with examples</td><td>Function heads</td></tr><tr><td>6. Prohibited uses</td><td>What AI may not do or be used for in finance</td><td>CFO</td></tr><tr><td>7. Review requirements</td><td>Which outputs need human review, by whom, against what, before use</td><td>Controller</td></tr><tr><td>8. Record keeping</td><td>What is logged and retained, where, and for how long</td><td>Controller</td></tr><tr><td>9. Incidents</td><td>What counts as an incident, who to tell, how fast, and what happens next</td><td>CFO, with IT security</td></tr><tr><td>10. Training</td><td>What people must complete before using approved tools, and refreshers</td><td>Finance operations lead</td></tr><tr><td>11. Exceptions and review</td><td>How to request an exception, and when the policy itself is reviewed</td><td>CFO</td></tr></tbody></table></div>
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Sections 3 and 4 do most of the work, and both change often. Keep the tool list and the data class table as appendices, maintained by their owners, so the body of the policy can stay stable for a year.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+            <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(19px,1.9vw,25px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Data classes: the section that does most of the work</h2>
+          
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">People rarely misuse AI on purpose. They put the wrong data into the wrong tool because nobody told them where the line was. A simple table answers that question in advance.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+          
+            <div class="post-table-wrap" role="region" aria-label="Table" tabindex="0"><table class="post-table"><thead><tr><th>Data class</th><th>Finance examples</th><th>Public or consumer AI tools</th><th>Company-approved general assistant</th><th>Approved finance tool with system controls</th></tr></thead><tbody><tr><td>Public</td><td>Published accounts, press releases, public regulations</td><td>Allowed</td><td>Allowed</td><td>Allowed</td></tr><tr><td>Internal</td><td>Process notes, policy manuals, chart of accounts, templates</td><td>Not allowed</td><td>Allowed</td><td>Allowed</td></tr><tr><td>Confidential</td><td>Management accounts, forecasts, customer and vendor lists, contracts</td><td>Not allowed</td><td>Allowed if the tool is approved for confidential data</td><td>Allowed</td></tr><tr><td>Restricted</td><td>Bank details, payroll, tax identifiers, unreleased results, inside information</td><td>Not allowed</td><td>Not allowed unless specifically approved</td><td>Allowed only where approved, with logging</td></tr></tbody></table></div>
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The labels will differ from company to company, and should match whatever classification IT already uses. The finance-specific part is the examples column. Writing "payroll" and "unreleased results" into the table removes most of the guesswork.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+            <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(19px,1.9vw,25px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Permitted and prohibited uses</h2>
+          
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>Permitted uses</strong> are best written by role, with examples. For accounts payable: suggesting invoice coding for review, drafting replies to vendor queries, summarising exception queues. For FP&amp;A: drafting first-pass variance commentary from the ledger, summarising board pack changes. Examples teach people more than principles do. An earlier issue covers <a href="/insights/ai-for-cfos/ai-use-cases-in-finance/" target="_blank" rel="noopener">ranking AI use cases by volume, rules and risk</a>.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>Prohibited uses</strong> should be few and clear. A typical finance list:</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 16px; line-height: 28px; margin: 12px 0 0 4px">
+              <span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 999px; background: var(--color-accent); margin-top: 11px"></span>
+              <span>Putting restricted data into any tool not approved for it.</span>
+            </div>
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 16px; line-height: 28px; margin: 12px 0 0 4px">
+              <span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 999px; background: var(--color-accent); margin-top: 11px"></span>
+              <span>Letting an AI tool approve a payment, a journal or a vendor master change.</span>
+            </div>
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 16px; line-height: 28px; margin: 12px 0 0 4px">
+              <span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 999px; background: var(--color-accent); margin-top: 11px"></span>
+              <span>Changing bank details, payment terms or approval routes on the strength of a document or message read by an AI tool, without the independent confirmation your vendor master process already requires.</span>
+            </div>
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 16px; line-height: 28px; margin: 12px 0 0 4px">
+              <span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 999px; background: var(--color-accent); margin-top: 11px"></span>
+              <span>Using AI-produced figures in external reporting, lender packs or board materials unless they are traced back to the ledger.</span>
+            </div>
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 16px; line-height: 28px; margin: 12px 0 0 4px">
+              <span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 999px; background: var(--color-accent); margin-top: 11px"></span>
+              <span>Using AI to make or materially support decisions about individuals, such as credit decisions on individual customers or employment decisions, without the legal review route described in the policy.</span>
+            </div>
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 16px; line-height: 28px; margin: 12px 0 0 4px">
+              <span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 999px; background: var(--color-accent); margin-top: 11px"></span>
+              <span>Presenting AI-drafted content to auditors, regulators or tax authorities as reviewed when it has not been.</span>
+            </div>
+          
+          
+          
+        </div>
+      
+        <div>
+          
+            <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(19px,1.9vw,25px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Review requirements and record keeping</h2>
+          
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>Review by output type.</strong> Not every AI output needs the same scrutiny. A draft internal email needs the sender to read it. A reconciliation conclusion needs the usual reviewer, who knows it was AI-assisted. Anything that changes a record, leaves finance or feeds external reporting needs a named reviewer, a check against source and a recorded approval. Write those three tiers into the policy so people do not have to judge each case.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>Record what an auditor would ask for.</strong> For AI-assisted steps inside a financial process, keep the input or a reference to it, the output, the tool and version used, the reviewer and the decision. Retain these on the same schedule as the financial records they support. <a href="/insights/ai-for-cfos/ai-guardrails-finance-data/" target="_blank" rel="noopener">AI Guardrails for Finance Data: Access, Logging and Human Sign-Off</a> covers logging in more detail.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>Keep a register.</strong> A simple list of every finance process step where AI is used, the tool, the owner and the related control. It takes an afternoon to start, and it answers the audit committee's question directly.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+            <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(19px,1.9vw,25px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Incidents and training</h2>
+          
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>Define an incident broadly.</strong> Restricted data put into the wrong tool. An AI-assisted output with an error that reached someone outside finance. A tool behaving unexpectedly after an update. A suspected attempt to manipulate a tool through a document. People should report all of these, without blame for honest mistakes, to a named contact within a set time, such as one business day.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>Say what happens next.</strong> Contain it, assess whether data protection, contractual or disclosure obligations are triggered, fix the cause and record the outcome. Data protection notification deadlines can be short, so the policy should route incidents involving personal data to whoever handles privacy, straight away.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>Training before access.</strong> Anyone using an approved tool for finance work should first complete short training on the policy, the data classes and how to review output. This is good practice anywhere. For organizations within the EU AI Act's scope, an AI literacy obligation has applied since 2 February 2025.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+            <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(19px,1.9vw,25px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">The standards and rules to align with</h2>
+          
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>ISO/IEC 42001:2023.</strong> Published in December 2023, it sets requirements for an artificial intelligence management system: policy, roles, risk assessment, controls and continual improvement, in the familiar structure of other ISO management system standards. Most finance functions will not seek certification. The standard is still a useful reference for structure, and an AI use policy is one of the elements it expects. If your company is pursuing certification, align the finance policy with the company AI policy from the start.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>The EU AI Act.</strong> Regulation (EU) 2024/1689 entered into force on 1 August 2024. The prohibitions and the AI literacy obligation have applied since 2 February 2025, and the governance rules and obligations for general-purpose AI models since 2 August 2025. The Digital Omnibus on AI, Regulation (EU) 2026/1744, in force since 27 July 2026, moved the dates for high-risk systems. Obligations now apply from 2 December 2027 for high-risk systems under Article 6(2) and Annex III, and from 2 August 2028 for those under Article 6(1) and Annex I.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Most finance uses of AI, such as coding suggestions, reconciliation matching and commentary drafts, are unlikely to fall in the high-risk categories. Some uses close to finance can, including assessing the creditworthiness of individuals and certain employment decisions. Whether any of your uses are in scope is a question for counsel, and the policy should route it there rather than answer it.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>The NIST AI Risk Management Framework.</strong> For US companies in particular, NIST's voluntary framework of January 2023 and its Generative AI Profile of July 2024 offer a structure many risk teams already know. The guardrails piece in this series maps finance controls to it.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+            <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(19px,1.9vw,25px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Keeping the policy current</h2>
+          
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>Review on a schedule and on events.</strong> Twice a year is reasonable while tools are changing quickly. Review sooner when a new tool is approved, a significant incident occurs, the law changes or the auditors raise a point.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>Keep the appendices live.</strong> The tool list and the data class table should change whenever reality does. A policy whose tool list is six months out of date tells people the rules are optional.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>Check use against the policy.</strong> Once a quarter, compare the register, the approved tools and what people actually use. Gaps usually point to a missing approved tool rather than bad behavior.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+            <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(19px,1.9vw,25px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">What an AI use policy will not do</h2>
+          
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">It will not make anyone follow it. A policy works when the approved route is the easiest one: an approved tool that does the job, clear examples and a quick answer when someone asks whether something is allowed. If the approved tools are poor, people will use others and stop mentioning it.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">It will not substitute for controls in the systems. A rule saying restricted data must not go into an unapproved tool helps, and a technical block helps more. Where the systems can enforce a rule, let them, and use the policy for the judgments they cannot make.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+            <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(19px,1.9vw,25px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Frequently asked questions</h2>
+          
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>What is an AI use policy for finance?</strong></p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">An AI use policy for finance is a short written set of rules covering which AI tools the finance team may use, with which data, for which tasks, what review is required, and what records are kept. It usually sits as an annex to, or alongside, the company's general AI policy.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>What should an AI use policy include?</strong></p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">It should include scope, roles, approved tools, data classes, permitted and prohibited uses, review requirements, record keeping, incident handling, training and a process for exceptions and updates. The tool list and data class table work best as appendices that change more often than the policy.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>Does the EU AI Act apply to finance teams using AI?</strong></p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">It can, depending on where the company operates and how AI is used, so check scope with counsel. The AI literacy obligation has applied since 2 February 2025. After the Digital Omnibus, high-risk obligations apply from 2 December 2027 for Annex III systems and from 2 August 2028 for Annex I systems.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>Do we need ISO/IEC 42001 certification?</strong></p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Most finance functions do not need certification, though the standard is a useful reference for how to structure AI policy, roles, risk assessment and review. Certification is a company-level decision, usually driven by customers or regulators.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>Who should own the AI use policy in finance?</strong></p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The CFO should own the finance AI use policy, with IT security, legal and the controller contributing to the sections they know best. The tool list and data class table each need a named owner who keeps them current.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>How often should an AI use policy be reviewed?</strong></p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Review it twice a year while tools are changing quickly, and sooner when a new tool is approved, an incident occurs, the law changes or the auditors raise a point.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+            <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(19px,1.9vw,25px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Where CFOLogic fits</h2>
+          
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">We help CFOs set the guardrails around AI adoption in finance, including the finance AI use policy, the data classes and the review steps, as part of a wider adoption approach. The tools we design run read-only on top of existing systems, and anything that leaves the team is approved by a person. We do not give legal advice, and questions of legal scope go to your counsel. Our <a href="/cfo-success-partners/" target="_blank" rel="noopener">CFO Success Partners</a> page covers the engagement model.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong><a href="https://cal.com/GrowthCFO" target="_blank" rel="noopener">Book a Discovery Call →</a></strong></p>
+          
+          
+        </div>
+      
+        <div>
+          
+            <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(19px,1.9vw,25px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Related insights</h2>
+          
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 16px; line-height: 28px; margin: 12px 0 0 4px">
+              <span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 999px; background: var(--color-accent); margin-top: 11px"></span>
+              <span><a href="/insights/ai-for-cfos/ai-guardrails-finance-data/" target="_blank" rel="noopener">AI Guardrails for Finance Data: Access, Logging and Human Sign-Off</a></span>
+            </div>
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 16px; line-height: 28px; margin: 12px 0 0 4px">
+              <span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 999px; background: var(--color-accent); margin-top: 11px"></span>
+              <span><a href="/insights/ai-for-cfos/ai-with-company-context/" target="_blank" rel="noopener">AI With Company Context: The Layer Most Rollouts Skip</a></span>
+            </div>
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 16px; line-height: 28px; margin: 12px 0 0 4px">
+              <span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 999px; background: var(--color-accent); margin-top: 11px"></span>
+              <span><a href="/insights/ai-for-cfos/enterprise-ai-adoption/" target="_blank" rel="noopener">Enterprise AI Adoption: Why Giving Everyone a Chatbot Is Not a Strategy</a></span>
+            </div>
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 16px; line-height: 28px; margin: 12px 0 0 4px">
+              <span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 999px; background: var(--color-accent); margin-top: 11px"></span>
+              <span><a href="/insights/ai-for-cfos/ai-use-cases-in-finance/" target="_blank" rel="noopener">AI Use Cases in Finance: How to Rank Them by Volume, Rules and Risk</a></span>
+            </div>
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 16px; line-height: 28px; margin: 12px 0 0 4px">
+              <span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 999px; background: var(--color-accent); margin-top: 11px"></span>
+              <span><a href="/insights/ai-adoption-in-finance-teams/" target="_blank" rel="noopener">Curious, Connected, Compounding: AI Adoption in Finance Teams</a></span>
+            </div>
+          
+          
+          
+        </div>
+      
+        <div>
+          
+            <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(19px,1.9vw,25px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Sources</h2>
+          
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 16px; line-height: 28px; margin: 12px 0 0 4px">
+              <span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 999px; background: var(--color-accent); margin-top: 11px"></span>
+              <span>International Organization for Standardization, <em>ISO/IEC 42001:2023, Information technology: Artificial intelligence: Management system</em>, published December 2023. Supports: requirements for an artificial intelligence management system.</span>
+            </div>
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 16px; line-height: 28px; margin: 12px 0 0 4px">
+              <span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 999px; background: var(--color-accent); margin-top: 11px"></span>
+              <span>European Union, <em>Regulation (EU) 2024/1689 (Artificial Intelligence Act)</em>. Supports: entry into force 1 August 2024; prohibitions and AI literacy from 2 February 2025; governance rules and obligations for general-purpose AI models from 2 August 2025.</span>
+            </div>
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 16px; line-height: 28px; margin: 12px 0 0 4px">
+              <span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 999px; background: var(--color-accent); margin-top: 11px"></span>
+              <span>European Union, <em>Regulation (EU) 2026/1744 (Digital Omnibus on AI)</em>, 8 July 2026, published in the Official Journal 24 July 2026, in force 27 July 2026. Supports: high-risk obligations from 2 December 2027 for systems under Article 6(2) and Annex III, and from 2 August 2028 for systems under Article 6(1) and Annex I.</span>
+            </div>
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 16px; line-height: 28px; margin: 12px 0 0 4px">
+              <span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 999px; background: var(--color-accent); margin-top: 11px"></span>
+              <span>National Institute of Standards and Technology, <em>AI Risk Management Framework (AI RMF 1.0)</em>, 26 January 2023, and <em>NIST AI 600-1, Generative Artificial Intelligence Profile</em>, 26 July 2024. Supports: reference to the voluntary NIST framework and profile.</span>
+            </div>
+          
+          
+          
+        </div>
+      
+      <div style="margin-top: 56px; border-top: 2px solid var(--color-divider); padding-top: 28px; display: flex; flex-wrap: wrap; gap: 12px; align-items: center">
+        <span style="font-size: 12.5px; color: var(--color-accent-800); background: var(--color-accent-100); border: 1px solid var(--color-accent-200); padding: 3px 10px; border-radius: 999px">AI for CFOs</span>
+        <span style="font-size: 14px; color: color-mix(in srgb, var(--color-text) 60%, transparent)">Published Aug 2026 · CFOLogic Insights</span>
+      </div>
+    </article>
+
+    <aside class="post-side" style="position: sticky; top: 96px; display: flex; flex-direction: column; gap: 20px; min-width: 0">
+      <div class="glass" style="padding: 0; overflow: hidden">
+        <div style="background-image: var(--grad-a); color: #fff; padding: 18px 24px">
+          <p style="font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600; margin: 0; color: rgba(255,255,255,0.8)">The newsletter</p>
+          <p style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 16.5px; line-height: 24px; margin: 6px 0 0">Actionable insights like this, once a month.</p>
+        </div>
+        <form action="https://formsubmit.co/prasad@cfologic.com" method="POST" style="display: flex; flex-direction: column; gap: 10px; padding: 20px 24px 24px">
+          <input type="hidden" name="_subject" value="Insights subscription - blog post sidebar">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="email" name="email" required placeholder="you@company.com" aria-label="Work email" style="font-size: 14px; padding: 10px 14px; border: 1px solid var(--color-neutral-300); border-radius: 8px; background: #fff; color: var(--color-text)">
+          <button class="btn btn-primary" type="submit" style="cursor: pointer; margin-top: 4px">Subscribe</button>
+          <p style="font-size: 12px; line-height: 18px; margin: 2px 0 0; color: color-mix(in srgb, var(--color-text) 60%, transparent)">No spam ever. Unsubscribe in one click.</p>
+        </form>
+      </div>
+      <div class="glass" style="padding: 24px">
+        <p style="font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600; margin: 0; color: var(--color-neutral-700)">Related insights</p>
+        <div style="display: flex; flex-direction: column; margin-top: 6px">
+          
+            <a href="/insights/ai-for-cfos/ai-internal-controls/" style="display: block; text-decoration: none; color: var(--color-text); padding: 14px 0; border-bottom: 1px solid var(--color-neutral-200)">
+              <span style="display: block; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600; color: color-mix(in srgb, var(--color-text) 50%, transparent)">AI for CFOs · 10 min</span>
+              <span style="display: block; font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 15.5px; line-height: 23px; margin-top: 5px">AI Internal Controls: What Changes When AI Touches Financial Reporting</span>
+            </a>
+          
+            <a href="/insights/ai-for-cfos/ai-guardrails-finance-data/" style="display: block; text-decoration: none; color: var(--color-text); padding: 14px 0; border-bottom: 1px solid var(--color-neutral-200)">
+              <span style="display: block; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600; color: color-mix(in srgb, var(--color-text) 50%, transparent)">AI for CFOs · 7 min</span>
+              <span style="display: block; font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 15.5px; line-height: 23px; margin-top: 5px">AI Guardrails for Finance Data: Access, Logging and Human Sign-Off</span>
+            </a>
+          
+            <a href="/insights/ai-for-cfos/ai-in-accounts-payable-sap/" style="display: block; text-decoration: none; color: var(--color-text); padding: 14px 0; border-bottom: 1px solid var(--color-neutral-200)">
+              <span style="display: block; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600; color: color-mix(in srgb, var(--color-text) 50%, transparent)">AI for CFOs · 6 min</span>
+              <span style="display: block; font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 15.5px; line-height: 23px; margin-top: 5px">AI in Accounts Payable on SAP: What Works and What Still Needs People</span>
+            </a>
+          
+        </div>
+        <a href="/insights/" style="display: inline-block; font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 14px; text-decoration: none; margin-top: 14px">All insights →</a>
+      </div>
+      <div style="border: 1px solid var(--color-neutral-200); border-radius: 16px; padding: 24px">
+        <p style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 16.5px; line-height: 24px; margin: 0">Thirty minutes on the decision you're sitting on right now.</p>
+        <p style="font-size: 13.5px; line-height: 21px; color: color-mix(in srgb, var(--color-text) 70%, transparent); margin: 8px 0 0">No pitch, no pressure.</p>
+        <a class="btn btn-primary" href="https://cal.com/GrowthCFO" target="_blank" rel="noopener" style="text-decoration: none; display: inline-flex; margin-top: 14px">Book a Discovery Call</a>
+      </div>
+    </aside>
+  </div>
+
+</main>
+
+<section style="background-image: var(--grad-a); color: #fff">
+  <div style="max-width: 1200px; margin: 0 auto; padding: 56px clamp(20px,5vw,72px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 28px; align-items: center">
+    <div>
+      <span style="display: block; font-size: 13px; letter-spacing: 0; text-transform: none; color: rgba(255,255,255,0.75); margin: 0 0 14px">The newsletter</span>
+      <h3 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(21px,2.3vw,30px); line-height: 1.15; letter-spacing: -0.015em; margin: 0; max-width: 24ch">Actionable insights like this, once a month.</h3>
+    </div>
+    <form action="https://formsubmit.co/prasad@cfologic.com" method="POST" style="display: flex; gap: 8px; flex-wrap: wrap">
+      <input type="hidden" name="_subject" value="Insights subscription - blog post page">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="email" name="email" required placeholder="you@company.com" aria-label="Email address" style="flex: 1; min-width: 200px; font-size: 14px; padding: 12px 14px; border: 0; border-radius: 8px; background: #fff; color: var(--color-text)">
+      <button class="btn" type="submit" style="cursor: pointer; background: var(--color-accent-900); color: #fff; border: 0">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="sf-wrap">
+    <div class="sf-grid">
+      <div class="sf-brand">
+        <a href="/" aria-label="CFOLogic" style="display: inline-block"><img src="/assets/cfologic-logo.png" alt="CFOLogic" style="display: block; height: 40px; width: auto"></a>
+        <p class="sf-tagline">The finance team behind ambitious businesses. Strategy to execution, one partner across the whole life of the business.</p>
+        <address class="sf-addr"><strong>CFOLogic, Inc.</strong>1207 Delaware Ave #5151, Wilmington, DE 19806, USA</address>
+        <address class="sf-addr"><strong>CFOLogic Private Limited</strong>2, Revati Arcade II, Baner, Pune, MH 411045, India</address>
+        <div class="sf-social">
+          <a href="https://www.linkedin.com/company/cfologichq" target="_blank" rel="noopener" aria-label="CFOLogic on LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></a>
+          <a href="https://x.com/CFOLogicHQ" target="_blank" rel="noopener" aria-label="CFOLogic on X"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.66l-5.21-6.82-5.97 6.82H1.67l7.73-8.84L1.25 2.25h6.83l4.71 6.23 5.45-6.23zm-1.16 17.52h1.83L7.08 4.13H5.12l11.96 15.64z"/></svg></a>
+          <a href="https://www.instagram.com/cfologichq" target="_blank" rel="noopener" aria-label="CFOLogic on Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        </div>
+      </div>
+      <div class="sf-col">
+        <h4>Who we serve</h4>
+        <a href="/founders/">Founders &amp; CEOs</a>
+        <a href="/cfo-success-partners/">CFOs &amp; Finance Leaders</a>
+        <a href="/accounting-firms/">CFO/CAS Firms</a>
+        <a href="/capital-providers/">Capital Providers</a>
+        <a href="/acquisition-entrepreneurs/">Acquisition Entrepreneurs</a>
+      </div>
+      <div class="sf-col">
+        <h4>Company</h4>
+        <a href="/about/">About</a>
+        <a href="/insights/">Insights</a>
+        <a href="/trust-center/">Trust Center</a>
+        <a href="https://careers.cfologic.com/careers" target="_blank" rel="noopener">Careers</a>
+      </div>
+      <div class="sf-col">
+        <h4>Product</h4>
+        <a href="https://navigator.cfologic.com" target="_blank" rel="noopener">Navigator AI</a>
+        <a href="https://navigatordemo.cfologic.com" target="_blank" rel="noopener">Live demo</a>
+        <a href="https://cal.com/GrowthCFO" target="_blank" rel="noopener">Book a discovery call</a>
+      </div>
+      <div class="sf-col sf-subscribe">
+        <h4>Insights, by email</h4>
+        <form action="https://formsubmit.co/prasad@cfologic.com" method="POST">
+          <input type="hidden" name="_subject" value="Insights subscription - cfologic.com">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="email" name="email" required placeholder="you@company.com" aria-label="Email address">
+          <button class="btn btn-primary" type="submit">Subscribe</button>
+        </form>
+        <p class="sf-note">No spam ever. Unsubscribe in one click.</p>
+      </div>
+    </div>
+    <div class="sf-bottom">
+      <span>&copy; CFOLogic 2026. All rights reserved.</span>
+      <nav aria-label="Legal"><a href="/legal/">Privacy</a><a href="/legal/">Terms</a></nav>
+    </div>
+  </div>
+</footer>
+
+</div>
+<script>window.__DC={"initial":0};</script>
+<script src="/assets/site.js" defer></script>
+</body>
+</html>

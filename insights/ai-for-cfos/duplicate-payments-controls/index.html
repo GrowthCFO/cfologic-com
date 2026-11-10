@@ -1,0 +1,774 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>x-if[data-if="off"]{display:none!important}</style>
+<script type="text/plain" data-consent="analytics" data-src="https://www.googletagmanager.com/gtag/js?id=G-5HRTB39JZ6"></script>
+<script type="text/plain" data-consent="analytics">window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-5HRTB39JZ6');</script>
+<title>Duplicate Payments: Causes and the Controls That Catch Them | CFOLogic</title>
+<link rel="canonical" href="https://cfologic.com/insights/ai-for-cfos/duplicate-payments-controls/">
+<meta name="description" content="How duplicate payments happen in AP, why exact-match checks miss them, and the preventive, detective and fuzzy-matching controls that catch them.">
+<meta property="og:title" content="Duplicate Payments: Causes and the Controls That Catch Them | CFOLogic">
+<meta property="og:description" content="How duplicate payments happen in AP, why exact-match checks miss them, and the preventive, detective and fuzzy-matching controls that catch them.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="CFOLogic">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://cfologic.com/insights/ai-for-cfos/duplicate-payments-controls/">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@CFOLogicHQ">
+<link rel="stylesheet" href="/assets/ds/styles.css">
+<script src="/assets/cfo-lead-capture.js"></script>
+<style>
+:root{--color-accent:#0064F1;--color-accent-100:#EDF4FF;--color-accent-200:#D6E6FF;--color-accent-300:#A0C7FF;--color-accent-400:#7DB3FF;--color-accent-500:#5A9FFF;--color-accent-600:#0055CE;--color-accent-700:#0047AB;--color-accent-800:#00378A;--color-accent-900:#002B66;--color-accent-2:#0064F1;--color-accent-2-100:#EDF4FF;--color-accent-2-200:#D6E6FF;--color-accent-2-800:#00378A;
+--grad-a:linear-gradient(135deg,#0047AB,#0064F1 48%,#378AFF);--grad-a-h:linear-gradient(135deg,#00378A,#0055CE 48%,#1576FF);
+--color-bg:#FDFDFD}
+.btn-primary{background-image:var(--grad-a);color:#fff !important}
+.btn-primary:hover,.btn-primary:active{background-image:var(--grad-a-h);color:#fff !important}
+.glass{background:rgba(255,255,255,0.55);backdrop-filter: blur(12px) saturate(1.15);-webkit-backdrop-filter: blur(12px) saturate(1.15);border:1px solid var(--color-neutral-200);border-radius:16px;box-shadow: 0 1px 2px rgba(20,20,20,0.04), 0 4px 17px rgba(20,20,20,0.06)}
+.grad-text{background-image:var(--grad-a);-webkit-background-clip:text;background-clip:text;color:transparent}
+body { margin: 0; background: var(--color-bg); color: var(--color-text); font-family: var(--font-body); text-wrap: pretty; }
+a { color: var(--color-accent-700); }
+a:hover { color: var(--color-accent-600); }
+.nav-mobile{display:none;position:relative}
+.nav-mobile summary{list-style:none;cursor:pointer;display:flex;align-items:center;padding:6px;color:var(--color-text)}
+.nav-mobile summary::-webkit-details-marker{display:none}
+.nav-mobile-menu{position:absolute;right:-6px;top:calc(100% + 12px);width:min(320px,calc(100vw - 32px));display:flex;flex-direction:column;background:rgba(253,253,253,0.97);backdrop-filter: blur(12px) saturate(1.15);-webkit-backdrop-filter: blur(12px) saturate(1.15);border:1px solid var(--color-neutral-200);border-radius:12px;box-shadow: 0 1px 2px rgba(20,20,20,0.04), 0 6px 22px rgba(20,20,20,0.06);padding:8px 0;z-index:60}
+.nav-mobile-menu a{padding:11px 18px;text-decoration:none;color:var(--color-text)}
+.nav-mobile-menu a:hover{background:var(--color-accent-100)}
+.nav-mobile-menu .mm-sec{font-size:11px;letter-spacing:0.08em;text-transform:uppercase;font-weight: 600;color:color-mix(in srgb,var(--color-text) 50%,transparent);padding:12px 18px 4px}
+.nav-mobile-menu .mm-cta{margin:10px 18px 8px;background-image:var(--grad-a);color:#fff;border-radius:10px;text-align:center;font-weight: 600}
+.nav-mobile-menu .mm-cta:hover{background-image:var(--grad-a-h)}
+@media (max-width: 760px){
+.nav > a:not([aria-label="CFOLogic"]){display:none}
+.nav .nav-dd{display:none}
+.nav-mobile{display:block}
+}
+@media (hover: none){
+.fit-body{grid-template-rows:1fr}
+.fit-body>p{padding-top:10px}
+.nav-dd:focus-within .nav-dd-menu{display:flex}
+}
+
+.nav-dd{position:relative;padding:26px 0;margin:-26px 0}
+.nav-dd-btn{display:flex;align-items:center;gap:6px;background:none;border:0;font-family:inherit;font-size:inherit;color:var(--color-text);cursor:pointer;padding:0;white-space:nowrap}
+.nav-dd-btn:hover{color:var(--color-accent-700)}
+.nav-dd-menu{position:absolute;top:100%;left:-18px;min-width:270px;padding:10px 0;display:none;flex-direction:column;background:rgba(253,253,253,0.92);backdrop-filter: blur(12px) saturate(1.15);-webkit-backdrop-filter: blur(12px) saturate(1.15);border:1px solid var(--color-neutral-200);border-radius:12px;box-shadow: 0 1px 2px rgba(20,20,20,0.04), 0 6px 22px rgba(20,20,20,0.06)}
+.nav-dd:hover .nav-dd-menu,.nav-dd:focus-within .nav-dd-menu{display:flex}
+.nav-dd-menu a{padding:9px 18px;white-space:nowrap;text-decoration:none}
+.nav-dd-menu a:hover{background:var(--color-accent-100)}
+
+input, button { font-family: inherit; }
+@media (max-width: 960px){
+.post-grid{grid-template-columns:1fr !important}
+.post-side{position:static !important}
+}
+@media (max-width: 760px){
+.nav{flex-wrap:wrap;row-gap:10px}
+}
+
+/* Post body tables. The wrapper scrolls on its own so a wide table never
+   widens the page; min-width keeps the columns readable instead of squashing
+   them to nothing on a phone. */
+.post-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:26px 0 0;border:1px solid var(--color-neutral-200);border-radius:12px;background:#fff}
+.post-table-wrap:focus-visible{outline:2px solid var(--color-accent);outline-offset:2px}
+.post-table{border-collapse:collapse;width:100%;min-width:620px;font-size:15px;line-height:23px}
+.post-table th,.post-table td{text-align:left;vertical-align:top;padding:11px 16px;border-bottom:1px solid var(--color-neutral-200)}
+.post-table thead th{font-size:12px;letter-spacing:0.06em;text-transform:uppercase;color:var(--color-accent-800);background:var(--color-accent-100);white-space:nowrap}
+.post-table tbody tr:last-child td{border-bottom:0}
+.post-table td:first-child{font-weight:600}
+@media (max-width: 760px){
+.m-stack{grid-template-columns:1fr !important}
+}
+</style>
+
+<script type="application/ld+json" id="post-ld">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Duplicate Payments: How They Happen and the Controls That Catch Them", "description": "How duplicate payments happen in AP, why exact-match checks miss them, and the preventive, detective and fuzzy-matching controls that catch them.", "keywords": "AIForCFOs, FinanceAI, FinOps, FinancialOperations, ProcessImprovement, FinanceExcellence", "datePublished": "2026-06-10", "dateModified": "2026-06-10", "articleSection": "AI for CFOs", "wordCount": 1363, "timeRequired": "PT6M", "author": {"@type": "Organization", "name": "CFOLogic", "url": "https://cfologic.com/"}, "publisher": {"@type": "Organization", "name": "CFOLogic"}, "mainEntityOfPage": "https://cfologic.com/insights/ai-for-cfos/duplicate-payments-controls/"}</script>
+<script type="application/ld+json" id="post-faq-ld">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What causes duplicate payments in accounts payable?", "acceptedAnswer": {"@type": "Answer", "text": "Duplicate payments are usually caused by the same invoice being keyed twice with small differences, by duplicate vendor records, by manual payments that are not linked to the invoice, or by mishandled credit memos and reversals."}}, {"@type": "Question", "name": "Why does the ERP's duplicate invoice check not stop every duplicate?", "acceptedAnswer": {"@type": "Answer", "text": "It does not, because it looks for an exact match on a fixed set of fields. A reference keyed differently or a second vendor record is enough to pass it."}}, {"@type": "Question", "name": "What is the difference between preventive and detective controls for duplicate payments?", "acceptedAnswer": {"@type": "Answer", "text": "A preventive control stops a duplicate invoice from being posted or paid, while a detective control finds it afterwards. The most useful detective control reviews the payment proposal for near-matches before the money leaves."}}, {"@type": "Question", "name": "What is fuzzy matching for duplicate invoices?", "acceptedAnswer": {"@type": "Answer", "text": "Fuzzy matching scores pairs of invoices on how similar they are across reference, amount, date, vendor and bank account, rather than requiring an exact match. Recurring payments need separate treatment or they produce false alarms."}}, {"@type": "Question", "name": "How do you recover a duplicate payment?", "acceptedAnswer": {"@type": "Answer", "text": "Ask the vendor for a refund or agree an offset against the next invoice, and confirm it in writing. Then trace which control failed and fix it."}}]}</script>
+<link rel="stylesheet" href="/assets/theme.css?v=bb6f8922">
+<meta property="og:image" content="https://cfologic.com/assets/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://cfologic.com/assets/og-card.png">
+<link rel="icon" href="/favicon.ico?v=d6fea06e" sizes="32x32">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png?v=d6fea06e">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png?v=d6fea06e">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=d6fea06e">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#0064F1">
+<script type="text/plain" data-consent="analytics">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "ycvshql7yt");
+</script>
+<script type="text/plain" data-consent="marketing">function initApollo(){var n=Math.random().toString(36).substring(7),o=document.createElement("script");
+o.src="https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache="+n,o.async=!0,o.defer=!0,
+o.onload=function(){window.trackingFunctions.onLoad({appId:"6863df76aca6990019bee689"})},
+document.head.appendChild(o)}initApollo();</script>
+<script src="/assets/consent.js?v=a1a36eec"></script>
+</head>
+<body>
+<cfo-lead-capture></cfo-lead-capture>
+<div id="page-wrap" style="min-height: 100vh">
+<nav class="nav" style="position: sticky; top: 0; z-index: 50; background: rgba(253,253,253,0.65); backdrop-filter: blur(12px) saturate(1.15); -webkit-backdrop-filter: blur(12px) saturate(1.15); border-bottom: 1px solid var(--color-neutral-200); padding-inline: max(clamp(20px,5vw,72px), calc((100% - 1200px) / 2 + clamp(20px,5vw,72px)))">
+  <a href="/" aria-label="CFOLogic" style="text-decoration: none; flex: none"><img src="/assets/cfologic-logo.png" alt="CFOLogic" style="display: block; height: 40px; width: auto"></a>
+  
+    <div class="nav-dd">
+      <button class="nav-dd-btn" type="button" aria-haspopup="true">Who we serve <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></button>
+      <div class="nav-dd-menu">
+        
+          <a href="/founders/" style="color: var(--color-text)">For Founders &amp; CEOs</a>
+        
+          <a href="/cfo-success-partners/" style="color: var(--color-text)">For CFOs</a>
+        
+          <a href="/accounting-firms/" style="color: var(--color-text)">For CFO/CAS Firms</a>
+        
+          <a href="/capital-providers/" style="color: var(--color-text)">For Capital Providers</a>
+        
+          <a href="/acquisition-entrepreneurs/" style="color: var(--color-text)">For Acquisition Entrepreneurs</a>
+        
+      </div>
+    </div>
+  
+  <a href="/insights/" style="white-space: nowrap; font-weight: 600; color: var(--color-accent-700); text-decoration: none">Insights</a>
+    <a href="/finance-team-as-a-service/" style="white-space: nowrap; color: var(--color-text); text-decoration: none">What we do</a>
+    
+    <a href="https://navigator.cfologic.com" target="_blank" rel="noopener" style="white-space: nowrap; color: var(--color-text); text-decoration: none">Navigator AI</a>
+  
+  
+  <div class="nav-dd">
+    <button class="nav-dd-btn" type="button" aria-haspopup="true">About <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></button>
+    <div class="nav-dd-menu">
+      <a href="/about/" style="color: var(--color-text)">About Us</a>
+      <a href="/trust-center/" style="color: var(--color-text)">Trust Center</a>
+      <a href="https://careers.cfologic.com/careers" target="_blank" rel="noopener" style="color: var(--color-text)">Careers</a>
+    </div>
+  </div>
+  
+  <span style="flex: 1"></span>
+  <a class="btn btn-primary" href="https://cal.com/GrowthCFO" target="_blank" rel="noopener" style="white-space: nowrap; text-decoration: none">Book a Discovery Call</a>
+<details class="nav-mobile">
+    <summary aria-label="Open menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"></path></svg></summary>
+    <div class="nav-mobile-menu">
+      <span class="mm-sec">Who we serve</span>
+      <a href="/founders/">For Founders &amp; CEOs</a>
+      <a href="/cfo-success-partners/">For CFOs</a>
+      <a href="/accounting-firms/">For CFO/CAS Firms</a>
+      <a href="/capital-providers/">For Capital Providers</a>
+      <a href="/acquisition-entrepreneurs/">For Acquisition Entrepreneurs</a>
+      <span class="mm-sec">Explore</span>
+      <a href="/finance-team-as-a-service/">What we do</a>
+      <a href="/insights/">Insights</a>
+      <a href="https://navigator.cfologic.com" target="_blank" rel="noopener">Navigator AI</a>
+      <span class="mm-sec">Company</span>
+      <a href="/about/">About Us</a>
+      <a href="/trust-center/">Trust Center</a>
+      <a href="https://careers.cfologic.com/careers" target="_blank" rel="noopener">Careers</a>
+      <a class="mm-cta" href="https://cal.com/GrowthCFO" target="_blank" rel="noopener">Book a Discovery Call</a>
+    </div>
+  </details>
+</nav>
+<main style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(20px,5vw,72px); display: block">
+
+  <section style="padding: 64px 0 0">
+    <a href="/insights/" style="font-size: 14px; text-decoration: none; font-weight: 600">← All insights</a>
+    <div style="display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600; margin-top: 28px">
+      <span style="color: #fff; background-image: var(--grad-a); padding: 4px 10px; border-radius: 999px">AI for CFOs</span>
+      <span style="color: var(--color-accent-700)">Article</span>
+      <span style="color: color-mix(in srgb, var(--color-text) 50%, transparent); white-space: nowrap">Jun 2026 · 6 min read</span>
+    </div>
+    <h1 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(28px,3.7vw,49px); line-height: 1.1; letter-spacing: -0.02em; margin: 21px 0 0 -0.058em; max-width: 26ch">Duplicate Payments: How They Happen and the Controls That Catch Them</h1>
+    <p style="font-size: 14px; color: color-mix(in srgb, var(--color-text) 65%, transparent); margin: 18px 0 0">By the CFOLogic team</p>
+  </section>
+
+  <div class="post-grid" style="display: grid; grid-template-columns: minmax(0, 8fr) minmax(280px, 4fr); gap: 42px clamp(32px,4vw,72px); align-items: start; padding: 42px 0 84px">
+    <article style="min-width: 0">
+      <aside aria-label="Idea in brief" style="padding: clamp(24px,3vw,36px); margin: 0 0 42px; border-radius: 16px; border: 1px solid rgba(160,199,255,0.55); background: linear-gradient(135deg, rgba(0,100,241,0.08), rgba(125,179,255,0.14) 55%, rgba(214,230,255,0.30)); backdrop-filter: blur(12px) saturate(1.15); -webkit-backdrop-filter: blur(12px) saturate(1.15); box-shadow: 0 1px 2px rgba(20,20,20,0.04), 0 4px 17px rgba(20,20,20,0.06), inset 0 1px 0 rgba(255,255,255,0.65)">
+        <p style="font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600; margin: 0" class="grad-text">Idea in brief</p>
+        <p style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 17.5px; line-height: 28px; margin: 14px 0 0">How duplicate payments happen in accounts payable (re-keyed invoices, duplicate vendor records, reference format variations, credit memo errors and manual payments outside the run), the difference between preventive and detective controls, how fuzzy matching works and where it produces false alarms, and how to recover and root-cause a duplicate once found.</p>
+        <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 18px; border-top: 1px solid rgba(160,199,255,0.5); padding-top: 18px">
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 14.5px; line-height: 24px; color: color-mix(in srgb, var(--color-text) 82%, transparent)">
+              <span aria-hidden="true" style="width: 7px; height: 7px; border-radius: 999px; background-image: var(--grad-a); margin-top: 8px"></span>
+              <span><strong>How duplicate payments happen.</strong> The same invoice is keyed twice with small differences, posted to two records for one vendor, paid manually and then again in the run, or a credit memo is mishandled.</span>
+            </div>
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 14.5px; line-height: 24px; color: color-mix(in srgb, var(--color-text) 82%, transparent)">
+              <span aria-hidden="true" style="width: 7px; height: 7px; border-radius: 999px; background-image: var(--grad-a); margin-top: 8px"></span>
+              <span><strong>Why the ERP check misses them.</strong> Standard duplicate checks compare a fixed set of fields for an exact match, so a reference keyed as INV-0042 one day and 42 the next passes.</span>
+            </div>
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 14.5px; line-height: 24px; color: color-mix(in srgb, var(--color-text) 82%, transparent)">
+              <span aria-hidden="true" style="width: 7px; height: 7px; border-radius: 999px; background-image: var(--grad-a); margin-top: 8px"></span>
+              <span><strong>Preventive versus detective.</strong> Preventive controls stop the second posting; detective controls find it before or after the money leaves. A sound AP function needs both, and the most valuable window is the review of the payment proposal.</span>
+            </div>
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 14.5px; line-height: 24px; color: color-mix(in srgb, var(--color-text) 82%, transparent)">
+              <span aria-hidden="true" style="width: 7px; height: 7px; border-radius: 999px; background-image: var(--grad-a); margin-top: 8px"></span>
+              <span><strong>What fuzzy matching and AI add.</strong> They score near-matches across reference, amount, date, vendor and bank account, and explain why two invoices look alike. A person decides whether to hold the payment.</span>
+            </div>
+          
+        </div>
+      </aside>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">A supplier sends a statement showing a credit balance on your account, and nobody in AP can say where it came from. Tracing it takes an afternoon: the same invoice arrived by email and by post, was keyed twice a week apart, and was paid in two runs. This vendor flagged it. Many duplicate payments are never flagged and sit as credits in a supplier's ledger until someone asks.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Most ERPs check for duplicate invoices. Duplicates still get through, because the second copy rarely looks exactly like the first.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+            <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(19px,1.9vw,25px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">How duplicate payments happen</h2>
+          
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>Re-keyed invoices.</strong> The same invoice arrives through two channels, or a reminder copy arrives after the original. It is keyed again with a slightly different reference, a different invoice date or a rounded amount.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>Duplicate vendor records.</strong> One supplier exists twice in the vendor master, perhaps after an acquisition, a change of name or a new remit-to address. The duplicate check runs within a vendor, so an invoice posted to each record passes.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>Reference format variations.</strong> INV-0042, INV0042, 0042 and 42 are the same invoice to a person and four different invoices to an exact-match check. Dates keyed in day-month and month-day order cause the same problem.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>Credit memos and reversals.</strong> An invoice is reversed and re-posted, and the original payment is not matched to the new document. Or a credit memo is entered as an invoice and paid.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>Manual payments outside the run.</strong> An urgent wire goes out for a supplier who is threatening to stop deliveries. The invoice is later posted in the normal way, nothing links it to the manual payment, and the run pays it again.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">We have not found a published duplicate-payment rate we would cite with confidence. The closest broad measure is APQC Open Standards Benchmarking (cross-industry median, all companies): 95.0% of disbursements are first time error free, across 2,479 companies. That covers every kind of disbursement error, not duplicates alone.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+            <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(19px,1.9vw,25px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Preventive and detective controls for duplicate payments</h2>
+          
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">A preventive control stops the second invoice from being posted or paid. A detective control finds it afterwards. Both matter, and the most useful detective control runs before the money leaves.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+          
+            <div class="post-table-wrap" role="region" aria-label="Table" tabindex="0"><table class="post-table"><thead><tr><th>Control</th><th>Type</th><th>What it catches</th><th>Where it falls short</th></tr></thead><tbody><tr><td>ERP duplicate invoice check set to block, not warn</td><td>Preventive</td><td>Exact repeats of vendor, reference, date and amount</td><td>Format variations; duplicate vendor records</td></tr><tr><td>Reference entry standard (no prefixes, no leading zeros)</td><td>Preventive</td><td>Keying variations</td><td>Depends on discipline and on OCR settings</td></tr><tr><td>Duplicate check at vendor creation (tax ID, bank account, address)</td><td>Preventive</td><td>A second record for an existing supplier</td><td>Weak if the master is already untidy</td></tr><tr><td>Manual payments posted against the invoice before release</td><td>Preventive</td><td>Payment outside the run followed by payment in it</td><td>Urgent requests that skip the rule</td></tr><tr><td>Near-match review of the payment proposal</td><td>Detective, before payment</td><td>Fuzzy duplicates in this run against recent history</td><td>Needs time in the run calendar</td></tr><tr><td>Vendor statement reconciliation and periodic recovery review</td><td>Detective, after payment</td><td>Anything the earlier controls missed</td><td>Money has left; recovery depends on the vendor</td></tr></tbody></table></div>
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Two settings are worth checking this week. One is whether the ERP's duplicate check stops the posting or only warns; a warning AP clicks through daily is a weak control. The other is which fields it compares, a choice the controller should document.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+            <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(19px,1.9vw,25px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Fuzzy matching: what it adds and where it misfires</h2>
+          
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Fuzzy matching compares invoices on how alike they are, not whether they are identical. A typical approach normalises the reference (stripping prefixes, spaces and leading zeros), then scores pairs on reference similarity, amount, invoice date, vendor name and bank account. Pairs above a threshold go to a reviewer.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">It produces false alarms. Monthly rent, retainers and instalments repeat the same amount by design. Treat recurring payments as a separate class with their own expected schedule, or the review list fills with noise and people stop reading it.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">AI has a place here. Error and anomaly detection was among the top AI use cases, at 34%, in Gartner's May and June 2025 survey (183 CFOs and senior finance leaders). In payables, a model can compare the invoice documents, line items included, and say plainly why two look like one: same PO, same delivery note, references differing only by a prefix. It can also link a manual payment to the invoice it settled.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">It should not stop a payment on its own. A flagged pair goes to a person who checks the documents and decides whether to hold. Log every flag and every decision, so the controller can see how often the flags are right.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+            <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(19px,1.9vw,25px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Recovering a duplicate and fixing the cause</h2>
+          
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">When a duplicate is found after payment, ask the vendor for a refund or agree an offset against the next invoice, in writing. Then trace which control failed: a vendor record that should have been merged, a manual payment never linked, a check set to warn. Fix the control as well as the transaction.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Reconciling statements from larger suppliers finds credits they have not mentioned. It is dull work and the last line of defence.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+            <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(19px,1.9vw,25px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">What duplicate payment controls will not fix</h2>
+          
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">They will not catch a payment that is designed to look different. An invoice from a fictitious vendor, or a genuine invoice paid to a changed bank account, is not a duplicate. That is a vendor master problem and needs its own controls.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">They will not make up for a vendor master that is already full of duplicate records. Matching on tax ID and bank account helps, but cleaning the master is a separate piece of work that someone has to own.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+            <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(19px,1.9vw,25px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Frequently asked questions</h2>
+          
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>What causes duplicate payments in accounts payable?</strong></p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Duplicate payments are usually caused by the same invoice being keyed twice with small differences, by duplicate vendor records, by manual payments that are not linked to the invoice, or by mishandled credit memos and reversals.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>Why does the ERP's duplicate invoice check not stop every duplicate?</strong></p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">It does not, because it looks for an exact match on a fixed set of fields. A reference keyed differently or a second vendor record is enough to pass it.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>What is the difference between preventive and detective controls for duplicate payments?</strong></p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">A preventive control stops a duplicate invoice from being posted or paid, while a detective control finds it afterwards. The most useful detective control reviews the payment proposal for near-matches before the money leaves.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>What is fuzzy matching for duplicate invoices?</strong></p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Fuzzy matching scores pairs of invoices on how similar they are across reference, amount, date, vendor and bank account, rather than requiring an exact match. Recurring payments need separate treatment or they produce false alarms.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>How do you recover a duplicate payment?</strong></p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Ask the vendor for a refund or agree an offset against the next invoice, and confirm it in writing. Then trace which control failed and fix it.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+            <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(19px,1.9vw,25px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Where CFOLogic fits</h2>
+          
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Our AI work on payables starts as a proof of concept on one process, built over the ERP the team already runs. It is read-only by design, and holding a flagged invoice stays a human decision. For the exception-queue approach in practice, see the <a href="https://commandcenter.cfologic.com/p2pdemo/" target="_blank" rel="noopener">Command Center demo for purchase-to-pay</a>, which uses a fictional company.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong><a href="https://cal.com/GrowthCFO" target="_blank" rel="noopener">Book a Discovery Call →</a></strong></p>
+          
+          
+        </div>
+      
+        <div>
+          
+            <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(19px,1.9vw,25px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Related insights</h2>
+          
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 16px; line-height: 28px; margin: 12px 0 0 4px">
+              <span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 999px; background: var(--color-accent); margin-top: 11px"></span>
+              <span><a href="/insights/ai-for-cfos/three-way-match-exceptions/" target="_blank" rel="noopener">Three-Way Match Exceptions: Why They Pile Up and What Clears Them</a></span>
+            </div>
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 16px; line-height: 28px; margin: 12px 0 0 4px">
+              <span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 999px; background: var(--color-accent); margin-top: 11px"></span>
+              <span><a href="/insights/ai-for-cfos/management-by-exception-finance/" target="_blank" rel="noopener">Management by Exception in Finance: Designing Work Around What Needs a Person</a></span>
+            </div>
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 16px; line-height: 28px; margin: 12px 0 0 4px">
+              <span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 999px; background: var(--color-accent); margin-top: 11px"></span>
+              <span><a href="/insights/ai-for-cfos/ai-use-cases-in-finance/" target="_blank" rel="noopener">AI Use Cases in Finance: How to Rank Them by Volume, Rules and Risk</a></span>
+            </div>
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 16px; line-height: 28px; margin: 12px 0 0 4px">
+              <span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 999px; background: var(--color-accent); margin-top: 11px"></span>
+              <span><a href="/insights/accounts-payable-after-an-acquisition/" target="_blank" rel="noopener">Accounts Payable After an Acquisition: What to Fix First</a></span>
+            </div>
+          
+          
+          
+        </div>
+      
+        <div>
+          
+            <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(19px,1.9vw,25px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Sources</h2>
+          
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 16px; line-height: 28px; margin: 12px 0 0 4px">
+              <span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 999px; background: var(--color-accent); margin-top: 11px"></span>
+              <span>APQC Open Standards Benchmarking (cross-industry median, all companies), measure 101944, <em>Percentage of disbursements that are first time error free</em>. Continuously updated database; 2,479 companies. Supports the median of 95.0%, which covers all disbursement errors, not duplicates alone.</span>
+            </div>
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 16px; line-height: 28px; margin: 12px 0 0 4px">
+              <span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 999px; background: var(--color-accent); margin-top: 11px"></span>
+              <span>Gartner, press release, <em>Gartner Survey Shows Finance AI Adoption Remains Steady in 2025</em>, 18 November 2025. Survey of 183 CFOs and senior finance leaders, May to June 2025. Supports error and anomaly detection as a top AI use case at 34%.</span>
+            </div>
+          
+          
+          
+        </div>
+      
+      <div style="margin-top: 56px; border-top: 2px solid var(--color-divider); padding-top: 28px; display: flex; flex-wrap: wrap; gap: 12px; align-items: center">
+        <span style="font-size: 12.5px; color: var(--color-accent-800); background: var(--color-accent-100); border: 1px solid var(--color-accent-200); padding: 3px 10px; border-radius: 999px">AI for CFOs</span>
+        <span style="font-size: 14px; color: color-mix(in srgb, var(--color-text) 60%, transparent)">Published Jun 2026 · CFOLogic Insights</span>
+      </div>
+    </article>
+
+    <aside class="post-side" style="position: sticky; top: 96px; display: flex; flex-direction: column; gap: 20px; min-width: 0">
+      <div class="glass" style="padding: 0; overflow: hidden">
+        <div style="background-image: var(--grad-a); color: #fff; padding: 18px 24px">
+          <p style="font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600; margin: 0; color: rgba(255,255,255,0.8)">The newsletter</p>
+          <p style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 16.5px; line-height: 24px; margin: 6px 0 0">Actionable insights like this, once a month.</p>
+        </div>
+        <form action="https://formsubmit.co/prasad@cfologic.com" method="POST" style="display: flex; flex-direction: column; gap: 10px; padding: 20px 24px 24px">
+          <input type="hidden" name="_subject" value="Insights subscription - blog post sidebar">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="email" name="email" required placeholder="you@company.com" aria-label="Work email" style="font-size: 14px; padding: 10px 14px; border: 1px solid var(--color-neutral-300); border-radius: 8px; background: #fff; color: var(--color-text)">
+          <button class="btn btn-primary" type="submit" style="cursor: pointer; margin-top: 4px">Subscribe</button>
+          <p style="font-size: 12px; line-height: 18px; margin: 2px 0 0; color: color-mix(in srgb, var(--color-text) 60%, transparent)">No spam ever. Unsubscribe in one click.</p>
+        </form>
+      </div>
+      <div class="glass" style="padding: 24px">
+        <p style="font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600; margin: 0; color: var(--color-neutral-700)">Related insights</p>
+        <div style="display: flex; flex-direction: column; margin-top: 6px">
+          
+            <a href="/insights/ai-for-cfos/vendor-master-data-controls/" style="display: block; text-decoration: none; color: var(--color-text); padding: 14px 0; border-bottom: 1px solid var(--color-neutral-200)">
+              <span style="display: block; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600; color: color-mix(in srgb, var(--color-text) 50%, transparent)">AI for CFOs · 6 min</span>
+              <span style="display: block; font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 15.5px; line-height: 23px; margin-top: 5px">Vendor Master Data Controls: The Weak Point Behind Payment Fraud</span>
+            </a>
+          
+            <a href="/insights/ai-for-cfos/three-way-match-exceptions/" style="display: block; text-decoration: none; color: var(--color-text); padding: 14px 0; border-bottom: 1px solid var(--color-neutral-200)">
+              <span style="display: block; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600; color: color-mix(in srgb, var(--color-text) 50%, transparent)">AI for CFOs · 6 min</span>
+              <span style="display: block; font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 15.5px; line-height: 23px; margin-top: 5px">Three-Way Match Exceptions: Why They Pile Up and What Clears Them</span>
+            </a>
+          
+            <a href="/insights/ai-for-cfos/unapplied-cash-dso/" style="display: block; text-decoration: none; color: var(--color-text); padding: 14px 0; border-bottom: 1px solid var(--color-neutral-200)">
+              <span style="display: block; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600; color: color-mix(in srgb, var(--color-text) 50%, transparent)">AI for CFOs · 6 min</span>
+              <span style="display: block; font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 15.5px; line-height: 23px; margin-top: 5px">Unapplied Cash and Short Payments: The Quiet Drag on DSO</span>
+            </a>
+          
+        </div>
+        <a href="/insights/" style="display: inline-block; font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 14px; text-decoration: none; margin-top: 14px">All insights →</a>
+      </div>
+      <div style="border: 1px solid var(--color-neutral-200); border-radius: 16px; padding: 24px">
+        <p style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 16.5px; line-height: 24px; margin: 0">Thirty minutes on the decision you're sitting on right now.</p>
+        <p style="font-size: 13.5px; line-height: 21px; color: color-mix(in srgb, var(--color-text) 70%, transparent); margin: 8px 0 0">No pitch, no pressure.</p>
+        <a class="btn btn-primary" href="https://cal.com/GrowthCFO" target="_blank" rel="noopener" style="text-decoration: none; display: inline-flex; margin-top: 14px">Book a Discovery Call</a>
+      </div>
+    </aside>
+  </div>
+
+</main>
+
+<section style="background-image: var(--grad-a); color: #fff">
+  <div style="max-width: 1200px; margin: 0 auto; padding: 56px clamp(20px,5vw,72px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 28px; align-items: center">
+    <div>
+      <span style="display: block; font-size: 13px; letter-spacing: 0; text-transform: none; color: rgba(255,255,255,0.75); margin: 0 0 14px">The newsletter</span>
+      <h3 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(21px,2.3vw,30px); line-height: 1.15; letter-spacing: -0.015em; margin: 0; max-width: 24ch">Actionable insights like this, once a month.</h3>
+    </div>
+    <form action="https://formsubmit.co/prasad@cfologic.com" method="POST" style="display: flex; gap: 8px; flex-wrap: wrap">
+      <input type="hidden" name="_subject" value="Insights subscription - blog post page">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="email" name="email" required placeholder="you@company.com" aria-label="Email address" style="flex: 1; min-width: 200px; font-size: 14px; padding: 12px 14px; border: 0; border-radius: 8px; background: #fff; color: var(--color-text)">
+      <button class="btn" type="submit" style="cursor: pointer; background: var(--color-accent-900); color: #fff; border: 0">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="sf-wrap">
+    <div class="sf-grid">
+      <div class="sf-brand">
+        <a href="/" aria-label="CFOLogic" style="display: inline-block"><img src="/assets/cfologic-logo.png" alt="CFOLogic" style="display: block; height: 40px; width: auto"></a>
+        <p class="sf-tagline">The finance team behind ambitious businesses. Strategy to execution, one partner across the whole life of the business.</p>
+        <address class="sf-addr"><strong>CFOLogic, Inc.</strong>1207 Delaware Ave #5151, Wilmington, DE 19806, USA</address>
+        <address class="sf-addr"><strong>CFOLogic Private Limited</strong>2, Revati Arcade II, Baner, Pune, MH 411045, India</address>
+        <div class="sf-social">
+          <a href="https://www.linkedin.com/company/cfologichq" target="_blank" rel="noopener" aria-label="CFOLogic on LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></a>
+          <a href="https://x.com/CFOLogicHQ" target="_blank" rel="noopener" aria-label="CFOLogic on X"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.66l-5.21-6.82-5.97 6.82H1.67l7.73-8.84L1.25 2.25h6.83l4.71 6.23 5.45-6.23zm-1.16 17.52h1.83L7.08 4.13H5.12l11.96 15.64z"/></svg></a>
+          <a href="https://www.instagram.com/cfologichq" target="_blank" rel="noopener" aria-label="CFOLogic on Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        </div>
+      </div>
+      <div class="sf-col">
+        <h4>Who we serve</h4>
+        <a href="/founders/">Founders &amp; CEOs</a>
+        <a href="/cfo-success-partners/">CFOs &amp; Finance Leaders</a>
+        <a href="/accounting-firms/">CFO/CAS Firms</a>
+        <a href="/capital-providers/">Capital Providers</a>
+        <a href="/acquisition-entrepreneurs/">Acquisition Entrepreneurs</a>
+      </div>
+      <div class="sf-col">
+        <h4>Company</h4>
+        <a href="/about/">About</a>
+        <a href="/insights/">Insights</a>
+        <a href="/trust-center/">Trust Center</a>
+        <a href="https://careers.cfologic.com/careers" target="_blank" rel="noopener">Careers</a>
+      </div>
+      <div class="sf-col">
+        <h4>Product</h4>
+        <a href="https://navigator.cfologic.com" target="_blank" rel="noopener">Navigator AI</a>
+        <a href="https://navigatordemo.cfologic.com" target="_blank" rel="noopener">Live demo</a>
+        <a href="https://cal.com/GrowthCFO" target="_blank" rel="noopener">Book a discovery call</a>
+      </div>
+      <div class="sf-col sf-subscribe">
+        <h4>Insights, by email</h4>
+        <form action="https://formsubmit.co/prasad@cfologic.com" method="POST">
+          <input type="hidden" name="_subject" value="Insights subscription - cfologic.com">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="email" name="email" required placeholder="you@company.com" aria-label="Email address">
+          <button class="btn btn-primary" type="submit">Subscribe</button>
+        </form>
+        <p class="sf-note">No spam ever. Unsubscribe in one click.</p>
+      </div>
+    </div>
+    <div class="sf-bottom">
+      <span>&copy; CFOLogic 2026. All rights reserved.</span>
+      <nav aria-label="Legal"><a href="/legal/">Privacy</a><a href="/legal/">Terms</a></nav>
+    </div>
+  </div>
+</footer>
+
+</div>
+<script>window.__DC={"initial":0};</script>
+<script src="/assets/site.js" defer></script>
+</body>
+</html>

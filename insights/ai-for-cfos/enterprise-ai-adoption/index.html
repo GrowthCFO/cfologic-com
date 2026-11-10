@@ -1,0 +1,825 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>x-if[data-if="off"]{display:none!important}</style>
+<script type="text/plain" data-consent="analytics" data-src="https://www.googletagmanager.com/gtag/js?id=G-5HRTB39JZ6"></script>
+<script type="text/plain" data-consent="analytics">window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-5HRTB39JZ6');</script>
+<title>Enterprise AI Adoption: Why a Chatbot Is Not a Strategy | CFOLogic</title>
+<link rel="canonical" href="https://cfologic.com/insights/ai-for-cfos/enterprise-ai-adoption/">
+<meta name="description" content="Enterprise AI adoption needs more than chatbot licences: company context, use cases by role, guardrails and measurement, with finance owning the controls.">
+<meta property="og:title" content="Enterprise AI Adoption: Why a Chatbot Is Not a Strategy | CFOLogic">
+<meta property="og:description" content="Enterprise AI adoption needs more than chatbot licences: company context, use cases by role, guardrails and measurement, with finance owning the controls.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="CFOLogic">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://cfologic.com/insights/ai-for-cfos/enterprise-ai-adoption/">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@CFOLogicHQ">
+<link rel="stylesheet" href="/assets/ds/styles.css">
+<script src="/assets/cfo-lead-capture.js"></script>
+<style>
+:root{--color-accent:#0064F1;--color-accent-100:#EDF4FF;--color-accent-200:#D6E6FF;--color-accent-300:#A0C7FF;--color-accent-400:#7DB3FF;--color-accent-500:#5A9FFF;--color-accent-600:#0055CE;--color-accent-700:#0047AB;--color-accent-800:#00378A;--color-accent-900:#002B66;--color-accent-2:#0064F1;--color-accent-2-100:#EDF4FF;--color-accent-2-200:#D6E6FF;--color-accent-2-800:#00378A;
+--grad-a:linear-gradient(135deg,#0047AB,#0064F1 48%,#378AFF);--grad-a-h:linear-gradient(135deg,#00378A,#0055CE 48%,#1576FF);
+--color-bg:#FDFDFD}
+.btn-primary{background-image:var(--grad-a);color:#fff !important}
+.btn-primary:hover,.btn-primary:active{background-image:var(--grad-a-h);color:#fff !important}
+.glass{background:rgba(255,255,255,0.55);backdrop-filter: blur(12px) saturate(1.15);-webkit-backdrop-filter: blur(12px) saturate(1.15);border:1px solid var(--color-neutral-200);border-radius:16px;box-shadow: 0 1px 2px rgba(20,20,20,0.04), 0 4px 17px rgba(20,20,20,0.06)}
+.grad-text{background-image:var(--grad-a);-webkit-background-clip:text;background-clip:text;color:transparent}
+body { margin: 0; background: var(--color-bg); color: var(--color-text); font-family: var(--font-body); text-wrap: pretty; }
+a { color: var(--color-accent-700); }
+a:hover { color: var(--color-accent-600); }
+.nav-mobile{display:none;position:relative}
+.nav-mobile summary{list-style:none;cursor:pointer;display:flex;align-items:center;padding:6px;color:var(--color-text)}
+.nav-mobile summary::-webkit-details-marker{display:none}
+.nav-mobile-menu{position:absolute;right:-6px;top:calc(100% + 12px);width:min(320px,calc(100vw - 32px));display:flex;flex-direction:column;background:rgba(253,253,253,0.97);backdrop-filter: blur(12px) saturate(1.15);-webkit-backdrop-filter: blur(12px) saturate(1.15);border:1px solid var(--color-neutral-200);border-radius:12px;box-shadow: 0 1px 2px rgba(20,20,20,0.04), 0 6px 22px rgba(20,20,20,0.06);padding:8px 0;z-index:60}
+.nav-mobile-menu a{padding:11px 18px;text-decoration:none;color:var(--color-text)}
+.nav-mobile-menu a:hover{background:var(--color-accent-100)}
+.nav-mobile-menu .mm-sec{font-size:11px;letter-spacing:0.08em;text-transform:uppercase;font-weight: 600;color:color-mix(in srgb,var(--color-text) 50%,transparent);padding:12px 18px 4px}
+.nav-mobile-menu .mm-cta{margin:10px 18px 8px;background-image:var(--grad-a);color:#fff;border-radius:10px;text-align:center;font-weight: 600}
+.nav-mobile-menu .mm-cta:hover{background-image:var(--grad-a-h)}
+@media (max-width: 760px){
+.nav > a:not([aria-label="CFOLogic"]){display:none}
+.nav .nav-dd{display:none}
+.nav-mobile{display:block}
+}
+@media (hover: none){
+.fit-body{grid-template-rows:1fr}
+.fit-body>p{padding-top:10px}
+.nav-dd:focus-within .nav-dd-menu{display:flex}
+}
+
+.nav-dd{position:relative;padding:26px 0;margin:-26px 0}
+.nav-dd-btn{display:flex;align-items:center;gap:6px;background:none;border:0;font-family:inherit;font-size:inherit;color:var(--color-text);cursor:pointer;padding:0;white-space:nowrap}
+.nav-dd-btn:hover{color:var(--color-accent-700)}
+.nav-dd-menu{position:absolute;top:100%;left:-18px;min-width:270px;padding:10px 0;display:none;flex-direction:column;background:rgba(253,253,253,0.92);backdrop-filter: blur(12px) saturate(1.15);-webkit-backdrop-filter: blur(12px) saturate(1.15);border:1px solid var(--color-neutral-200);border-radius:12px;box-shadow: 0 1px 2px rgba(20,20,20,0.04), 0 6px 22px rgba(20,20,20,0.06)}
+.nav-dd:hover .nav-dd-menu,.nav-dd:focus-within .nav-dd-menu{display:flex}
+.nav-dd-menu a{padding:9px 18px;white-space:nowrap;text-decoration:none}
+.nav-dd-menu a:hover{background:var(--color-accent-100)}
+
+input, button { font-family: inherit; }
+@media (max-width: 960px){
+.post-grid{grid-template-columns:1fr !important}
+.post-side{position:static !important}
+}
+@media (max-width: 760px){
+.nav{flex-wrap:wrap;row-gap:10px}
+}
+
+/* Post body tables. The wrapper scrolls on its own so a wide table never
+   widens the page; min-width keeps the columns readable instead of squashing
+   them to nothing on a phone. */
+.post-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:26px 0 0;border:1px solid var(--color-neutral-200);border-radius:12px;background:#fff}
+.post-table-wrap:focus-visible{outline:2px solid var(--color-accent);outline-offset:2px}
+.post-table{border-collapse:collapse;width:100%;min-width:620px;font-size:15px;line-height:23px}
+.post-table th,.post-table td{text-align:left;vertical-align:top;padding:11px 16px;border-bottom:1px solid var(--color-neutral-200)}
+.post-table thead th{font-size:12px;letter-spacing:0.06em;text-transform:uppercase;color:var(--color-accent-800);background:var(--color-accent-100);white-space:nowrap}
+.post-table tbody tr:last-child td{border-bottom:0}
+.post-table td:first-child{font-weight:600}
+@media (max-width: 760px){
+.m-stack{grid-template-columns:1fr !important}
+}
+</style>
+
+<script type="application/ld+json" id="post-ld">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Enterprise AI Adoption: Why Giving Everyone a Chatbot Is Not a Strategy", "description": "Enterprise AI adoption needs more than chatbot licences: company context, use cases by role, guardrails and measurement, with finance owning the controls.", "keywords": "AIForCFOs, FinanceAI, DigitalFinance, FinancialLeadership, FinanceStrategy, ProcessImprovement", "datePublished": "2026-08-05", "dateModified": "2026-08-05", "articleSection": "AI for CFOs", "wordCount": 1623, "timeRequired": "PT7M", "author": {"@type": "Organization", "name": "CFOLogic", "url": "https://cfologic.com/"}, "publisher": {"@type": "Organization", "name": "CFOLogic"}, "mainEntityOfPage": "https://cfologic.com/insights/ai-for-cfos/enterprise-ai-adoption/"}</script>
+<script type="application/ld+json" id="post-faq-ld">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Why does giving employees a general AI chatbot not change much?", "acceptedAnswer": {"@type": "Answer", "text": "A general chatbot does not know the company's definitions, policies or data, so people use it for drafting and summarising rather than for the processes that drive cost and risk. The time savings stay with individuals and the way work gets done stays the same."}}, {"@type": "Question", "name": "What does enterprise AI adoption require?", "acceptedAnswer": {"@type": "Answer", "text": "Enterprise AI adoption requires company context, use cases defined for each role, guardrails on data and review, and measurement of the process before and after. Licences and general training on their own do not change how work is done."}}, {"@type": "Question", "name": "Should the CFO own AI governance?", "acceptedAnswer": {"@type": "Answer", "text": "Not always, but the CFO should have a formal say, because AI touches the data, approvals and controls finance runs. In Deloitte's Q2 2026 CFO Signals survey, 19% of CFOs said they have greatest responsibility for AI governance."}}, {"@type": "Question", "name": "How do you measure whether AI adoption is working?", "acceptedAnswer": {"@type": "Answer", "text": "Measure the process, not tool usage: cycle time, exception rates, rework and hours put to other use, against a baseline taken before the change. Usage figures show only that people opened the tool."}}, {"@type": "Question", "name": "Where should a company start with AI beyond a chatbot?", "acceptedAnswer": {"@type": "Answer", "text": "Start with one role and one high-volume, rules-heavy process, give the tool the company context it needs, set a named review step, and measure the result before extending to the next role."}}]}</script>
+<link rel="stylesheet" href="/assets/theme.css?v=bb6f8922">
+<meta property="og:image" content="https://cfologic.com/assets/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://cfologic.com/assets/og-card.png">
+<link rel="icon" href="/favicon.ico?v=d6fea06e" sizes="32x32">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png?v=d6fea06e">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png?v=d6fea06e">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=d6fea06e">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#0064F1">
+<script type="text/plain" data-consent="analytics">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "ycvshql7yt");
+</script>
+<script type="text/plain" data-consent="marketing">function initApollo(){var n=Math.random().toString(36).substring(7),o=document.createElement("script");
+o.src="https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache="+n,o.async=!0,o.defer=!0,
+o.onload=function(){window.trackingFunctions.onLoad({appId:"6863df76aca6990019bee689"})},
+document.head.appendChild(o)}initApollo();</script>
+<script src="/assets/consent.js?v=a1a36eec"></script>
+</head>
+<body>
+<cfo-lead-capture></cfo-lead-capture>
+<div id="page-wrap" style="min-height: 100vh">
+<nav class="nav" style="position: sticky; top: 0; z-index: 50; background: rgba(253,253,253,0.65); backdrop-filter: blur(12px) saturate(1.15); -webkit-backdrop-filter: blur(12px) saturate(1.15); border-bottom: 1px solid var(--color-neutral-200); padding-inline: max(clamp(20px,5vw,72px), calc((100% - 1200px) / 2 + clamp(20px,5vw,72px)))">
+  <a href="/" aria-label="CFOLogic" style="text-decoration: none; flex: none"><img src="/assets/cfologic-logo.png" alt="CFOLogic" style="display: block; height: 40px; width: auto"></a>
+  
+    <div class="nav-dd">
+      <button class="nav-dd-btn" type="button" aria-haspopup="true">Who we serve <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></button>
+      <div class="nav-dd-menu">
+        
+          <a href="/founders/" style="color: var(--color-text)">For Founders &amp; CEOs</a>
+        
+          <a href="/cfo-success-partners/" style="color: var(--color-text)">For CFOs</a>
+        
+          <a href="/accounting-firms/" style="color: var(--color-text)">For CFO/CAS Firms</a>
+        
+          <a href="/capital-providers/" style="color: var(--color-text)">For Capital Providers</a>
+        
+          <a href="/acquisition-entrepreneurs/" style="color: var(--color-text)">For Acquisition Entrepreneurs</a>
+        
+      </div>
+    </div>
+  
+  <a href="/insights/" style="white-space: nowrap; font-weight: 600; color: var(--color-accent-700); text-decoration: none">Insights</a>
+    <a href="/finance-team-as-a-service/" style="white-space: nowrap; color: var(--color-text); text-decoration: none">What we do</a>
+    
+    <a href="https://navigator.cfologic.com" target="_blank" rel="noopener" style="white-space: nowrap; color: var(--color-text); text-decoration: none">Navigator AI</a>
+  
+  
+  <div class="nav-dd">
+    <button class="nav-dd-btn" type="button" aria-haspopup="true">About <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></button>
+    <div class="nav-dd-menu">
+      <a href="/about/" style="color: var(--color-text)">About Us</a>
+      <a href="/trust-center/" style="color: var(--color-text)">Trust Center</a>
+      <a href="https://careers.cfologic.com/careers" target="_blank" rel="noopener" style="color: var(--color-text)">Careers</a>
+    </div>
+  </div>
+  
+  <span style="flex: 1"></span>
+  <a class="btn btn-primary" href="https://cal.com/GrowthCFO" target="_blank" rel="noopener" style="white-space: nowrap; text-decoration: none">Book a Discovery Call</a>
+<details class="nav-mobile">
+    <summary aria-label="Open menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"></path></svg></summary>
+    <div class="nav-mobile-menu">
+      <span class="mm-sec">Who we serve</span>
+      <a href="/founders/">For Founders &amp; CEOs</a>
+      <a href="/cfo-success-partners/">For CFOs</a>
+      <a href="/accounting-firms/">For CFO/CAS Firms</a>
+      <a href="/capital-providers/">For Capital Providers</a>
+      <a href="/acquisition-entrepreneurs/">For Acquisition Entrepreneurs</a>
+      <span class="mm-sec">Explore</span>
+      <a href="/finance-team-as-a-service/">What we do</a>
+      <a href="/insights/">Insights</a>
+      <a href="https://navigator.cfologic.com" target="_blank" rel="noopener">Navigator AI</a>
+      <span class="mm-sec">Company</span>
+      <a href="/about/">About Us</a>
+      <a href="/trust-center/">Trust Center</a>
+      <a href="https://careers.cfologic.com/careers" target="_blank" rel="noopener">Careers</a>
+      <a class="mm-cta" href="https://cal.com/GrowthCFO" target="_blank" rel="noopener">Book a Discovery Call</a>
+    </div>
+  </details>
+</nav>
+<main style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(20px,5vw,72px); display: block">
+
+  <section style="padding: 64px 0 0">
+    <a href="/insights/" style="font-size: 14px; text-decoration: none; font-weight: 600">← All insights</a>
+    <div style="display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600; margin-top: 28px">
+      <span style="color: #fff; background-image: var(--grad-a); padding: 4px 10px; border-radius: 999px">AI for CFOs</span>
+      <span style="color: var(--color-accent-700)">Article</span>
+      <span style="color: color-mix(in srgb, var(--color-text) 50%, transparent); white-space: nowrap">Aug 2026 · 7 min read</span>
+    </div>
+    <h1 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(28px,3.7vw,49px); line-height: 1.1; letter-spacing: -0.02em; margin: 21px 0 0 -0.058em; max-width: 26ch">Enterprise AI Adoption: Why Giving Everyone a Chatbot Is Not a Strategy</h1>
+    <p style="font-size: 14px; color: color-mix(in srgb, var(--color-text) 65%, transparent); margin: 18px 0 0">By the CFOLogic team</p>
+  </section>
+
+  <div class="post-grid" style="display: grid; grid-template-columns: minmax(0, 8fr) minmax(280px, 4fr); gap: 42px clamp(32px,4vw,72px); align-items: start; padding: 42px 0 84px">
+    <article style="min-width: 0">
+      <aside aria-label="Idea in brief" style="padding: clamp(24px,3vw,36px); margin: 0 0 42px; border-radius: 16px; border: 1px solid rgba(160,199,255,0.55); background: linear-gradient(135deg, rgba(0,100,241,0.08), rgba(125,179,255,0.14) 55%, rgba(214,230,255,0.30)); backdrop-filter: blur(12px) saturate(1.15); -webkit-backdrop-filter: blur(12px) saturate(1.15); box-shadow: 0 1px 2px rgba(20,20,20,0.04), 0 4px 17px rgba(20,20,20,0.06), inset 0 1px 0 rgba(255,255,255,0.65)">
+        <p style="font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600; margin: 0" class="grad-text">Idea in brief</p>
+        <p style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 17.5px; line-height: 28px; margin: 14px 0 0">Why a company-wide chatbot rollout rarely changes how work gets done, the four things enterprise AI adoption needs (company context, use cases defined by role, guardrails and measurement), what Gartner's and Deloitte's 2025 and 2026 surveys say about impact and governance, and why the CFO is often the natural owner of the data and controls involved.</p>
+        <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 18px; border-top: 1px solid rgba(160,199,255,0.5); padding-top: 18px">
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 14.5px; line-height: 24px; color: color-mix(in srgb, var(--color-text) 82%, transparent)">
+              <span aria-hidden="true" style="width: 7px; height: 7px; border-radius: 999px; background-image: var(--grad-a); margin-top: 8px"></span>
+              <span><strong>Why a chatbot rollout stalls.</strong> A general assistant does not know your company's definitions, policies or data, so people use it for drafting and summaries while the processes stay as they were.</span>
+            </div>
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 14.5px; line-height: 24px; color: color-mix(in srgb, var(--color-text) 82%, transparent)">
+              <span aria-hidden="true" style="width: 7px; height: 7px; border-radius: 999px; background-image: var(--grad-a); margin-top: 8px"></span>
+              <span><strong>What enterprise AI adoption needs.</strong> Four things: company context, use cases defined for each role, guardrails on data and review, and measurement of whether the work itself changed.</span>
+            </div>
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 14.5px; line-height: 24px; color: color-mix(in srgb, var(--color-text) 82%, transparent)">
+              <span aria-hidden="true" style="width: 7px; height: 7px; border-radius: 999px; background-image: var(--grad-a); margin-top: 8px"></span>
+              <span><strong>Why the CFO is involved.</strong> Finance usually owns the data, the approval matrix and the controls that AI touches. In Deloitte's Q2 2026 CFO Signals survey, 19% of CFOs said they have greatest responsibility for AI governance.</span>
+            </div>
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 14.5px; line-height: 24px; color: color-mix(in srgb, var(--color-text) 82%, transparent)">
+              <span aria-hidden="true" style="width: 7px; height: 7px; border-radius: 999px; background-image: var(--grad-a); margin-top: 8px"></span>
+              <span><strong>Where to start.</strong> Pick one role and one high-volume process, give the tool the context it needs, set the review step, and measure the process before and after.</span>
+            </div>
+          
+        </div>
+      </aside>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Take a company that bought a general AI assistant for every employee in the spring. By the July close the usage report looks healthy. Sales drafts emails with it. The FP&amp;A analyst tidies variance commentary. Accounts payable still codes invoices by hand, the controller still chases the same reconciliations on day three, and nobody in the leadership meeting can name a process that now runs differently.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">That is a common shape for enterprise AI adoption in 2026. The licences are real, and so are the individual time savings. What has not moved is the way the company works, because a tool that knows nothing about the company has no way to change how it operates.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+            <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(19px,1.9vw,25px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Why a chatbot for everyone changes so little</h2>
+          
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">A general assistant learns from public text. It does not know what your company means by an active customer, which cost centre owns a contract, or what the approval limit is for a capital purchase in Germany. Ask it something that depends on any of that and it will either decline or produce an answer that sounds right and is not.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">So people sensibly use it where company knowledge does not matter: rewording, summarising, first drafts. Useful, and invisible at the level of the process. The close calendar, the payment run and the forecast cycle look as they did before.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The surveys point the same way. Gartner's 2025 survey of 183 CFOs and other senior finance leaders found "59% of finance leaders reporting the use of AI in their finance function", with "91% of respondents reporting low or moderate impact initially". In June 2026 Gartner reported from the same survey that "84% of finance organizations have implemented or are planning to implement AI, yet only 7% report a high or very high impact". Use is wide. Impact, so far, is narrow.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+            <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(19px,1.9vw,25px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">What enterprise AI adoption needs</h2>
+          
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Four things separate a rollout that changes work from one that adds a browser tab.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+          
+            <div class="post-table-wrap" role="region" aria-label="Table" tabindex="0"><table class="post-table"><thead><tr><th>Element</th><th>What it means</th><th>What happens without it</th><th>Usual owner</th></tr></thead><tbody><tr><td>Company context</td><td>The tool draws on your own definitions, policies, chart of accounts and approved data, and sees only what the user may see</td><td>Answers are generic, or confidently wrong about your business</td><td>Finance and IT, with each policy owner</td></tr><tr><td>Use cases by role</td><td>For each role, a short list of tasks where AI helps, with inputs, expected output and reviewer written down</td><td>People experiment alone and the gains stay with individuals</td><td>Function heads</td></tr><tr><td>Guardrails</td><td>Rules on which data goes into which tool, what needs human review and what is logged</td><td>Either nothing is allowed and use stalls, or everything is and risk grows quietly</td><td>CFO, with IT security and legal</td></tr><tr><td>Measurement</td><td>A baseline for the process and a record of what changed after</td><td>Login counts stand in for results</td><td>Finance</td></tr></tbody></table></div>
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>Company context.</strong> This is the layer most rollouts skip, and the next issue in this series, <a href="/insights/ai-for-cfos/ai-with-company-context/" target="_blank" rel="noopener">AI With Company Context: The Layer Most Rollouts Skip</a>, covers it in full. In short, the tool needs to read the company's own approved material, show where each answer came from, and respect the permissions of the person asking.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>Use cases by role.</strong> "Use AI more" is not an instruction anyone can act on. "Draft the first pass of the monthly flux commentary from the trial balance and last month's commentary, for the FP&amp;A lead to edit" is. Write a handful of these for each role, starting with high-volume, rules-heavy work. An earlier issue on <a href="/insights/ai-for-cfos/ai-use-cases-in-finance/" target="_blank" rel="noopener">scoring candidate tasks</a> sets out one way to choose.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>Guardrails.</strong> Someone has to decide which classes of data can go into which tools, which outputs need a named reviewer, and what gets logged. Those decisions belong in a short written policy before use spreads past the first teams.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>Measurement.</strong> Measure the process rather than the tool. Cycle time, exception rates, rework and hours put to other use tell you whether work changed. Usage dashboards tell you only that people opened the application.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+            <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(19px,1.9vw,25px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Why finance usually ends up owning it</h2>
+          
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">AI runs on data, and in most companies finance owns the data people trust: the ledger, the customer and vendor masters, the cost centre structure, the delegation of authority. Finance also runs the controls that AI will sit beside, from segregation of duties to review sign-offs. When a tool drafts a customer credit note or proposes a journal, it is finance's controls that have to hold.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Deloitte's CFO Signals survey for the second quarter of 2026 asked 200 North American CFOs at companies with at least US$1 billion in revenue. It found that "93% say their organizations use AI across key operations" and that "One in five (19%) CFOs say they have greatest responsibility for AI governance". Balancing speed and risk was the top challenge, cited by 59%.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Not every CFO needs to chair AI governance. Every CFO does need a formal voice in it, because decisions about data access, review and evidence land on finance whoever runs the committee.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">The same survey found 96% of these CFOs somewhat or very confident in their company's AI governance framework. Confidence is a fair starting point. The practical test is narrower: for any AI-assisted step, can you show who could see what, who reviewed the output, and where the record sits?</p>
+          
+          
+        </div>
+      
+        <div>
+          
+            <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(19px,1.9vw,25px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">A rollout sequence by role</h2>
+          
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>Choose the role and the process.</strong> Pick one with a lot of repeat work and clear rules, such as invoice coding or bank matching.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>List the context that process needs.</strong> The coding guide, the approval limits, the vendor master, last quarter's exceptions. Note where each lives and who owns it.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>Decide the review and the record first.</strong> Name who checks the output, against what, and where the evidence is kept, before anyone uses the tool on live work.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>Take a baseline.</strong> A month of cycle time, exception rate and rework, measured the way you will measure it afterwards.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>Run, measure and fix.</strong> The first month will expose gaps in the context and the rules. Close them before moving to the next role.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+            <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(19px,1.9vw,25px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">What enterprise AI adoption will not fix</h2>
+          
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">It cannot repair a process nobody has designed. If the approval matrix lives in three people's heads, an AI tool cannot follow it, and neither can a new hire.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Nor will it settle accountability. A board, an auditor or a lender will still hold a named person responsible for the number, the payment or the disclosure. Decide who that person is for each AI-assisted step before the tool goes live on that step.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+            <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(19px,1.9vw,25px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Frequently asked questions</h2>
+          
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>Why does giving employees a general AI chatbot not change much?</strong></p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">A general chatbot does not know the company's definitions, policies or data, so people use it for drafting and summarising rather than for the processes that drive cost and risk. The time savings stay with individuals and the way work gets done stays the same.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>What does enterprise AI adoption require?</strong></p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Enterprise AI adoption requires company context, use cases defined for each role, guardrails on data and review, and measurement of the process before and after. Licences and general training on their own do not change how work is done.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>Should the CFO own AI governance?</strong></p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Not always, but the CFO should have a formal say, because AI touches the data, approvals and controls finance runs. In Deloitte's Q2 2026 CFO Signals survey, 19% of CFOs said they have greatest responsibility for AI governance.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>How do you measure whether AI adoption is working?</strong></p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Measure the process, not tool usage: cycle time, exception rates, rework and hours put to other use, against a baseline taken before the change. Usage figures show only that people opened the tool.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong>Where should a company start with AI beyond a chatbot?</strong></p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">Start with one role and one high-volume, rules-heavy process, give the tool the company context it needs, set a named review step, and measure the result before extending to the next role.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+            <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(19px,1.9vw,25px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Where CFOLogic fits</h2>
+          
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)">We work with CFOs on company-wide AI adoption as an approach: defining use cases by role, supplying company context and setting guardrails, on top of the systems the company already runs. The tools we design and build are read-only by default, and a person signs off anything that leaves the team. More on how we work is on the <a href="/cfo-success-partners/" target="_blank" rel="noopener">CFO Success Partners</a> page.</p>
+          
+          
+        </div>
+      
+        <div>
+          
+          
+          
+            <p style="font-size: 16px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 88%, transparent)"><strong><a href="https://cal.com/GrowthCFO" target="_blank" rel="noopener">Book a Discovery Call →</a></strong></p>
+          
+          
+        </div>
+      
+        <div>
+          
+            <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(19px,1.9vw,25px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Related insights</h2>
+          
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 16px; line-height: 28px; margin: 12px 0 0 4px">
+              <span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 999px; background: var(--color-accent); margin-top: 11px"></span>
+              <span><a href="/insights/ai-adoption-in-finance-teams/" target="_blank" rel="noopener">Curious, Connected, Compounding: AI Adoption in Finance Teams</a></span>
+            </div>
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 16px; line-height: 28px; margin: 12px 0 0 4px">
+              <span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 999px; background: var(--color-accent); margin-top: 11px"></span>
+              <span><a href="/insights/ai-for-cfos/ai-use-cases-in-finance/" target="_blank" rel="noopener">AI Use Cases in Finance: How to Rank Them by Volume, Rules and Risk</a></span>
+            </div>
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 16px; line-height: 28px; margin: 12px 0 0 4px">
+              <span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 999px; background: var(--color-accent); margin-top: 11px"></span>
+              <span><a href="/insights/ai-for-cfos/ai-with-company-context/" target="_blank" rel="noopener">AI With Company Context: The Layer Most Rollouts Skip</a></span>
+            </div>
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 16px; line-height: 28px; margin: 12px 0 0 4px">
+              <span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 999px; background: var(--color-accent); margin-top: 11px"></span>
+              <span><a href="/insights/ai-for-cfos/ai-guardrails-finance-data/" target="_blank" rel="noopener">AI Guardrails for Finance Data: Access, Logging and Human Sign-Off</a></span>
+            </div>
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 16px; line-height: 28px; margin: 12px 0 0 4px">
+              <span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 999px; background: var(--color-accent); margin-top: 11px"></span>
+              <span><a href="/insights/88-percent-of-accountants-use-ai-only-6-percent-want-it-autonomous/" target="_blank" rel="noopener">88% of Accountants Use AI. Only 6% Want It Autonomous.</a></span>
+            </div>
+          
+          
+          
+        </div>
+      
+        <div>
+          
+            <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(19px,1.9vw,25px); line-height: 1.25; letter-spacing: -0.01em; margin: 42px 0 0">Sources</h2>
+          
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 16px; line-height: 28px; margin: 12px 0 0 4px">
+              <span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 999px; background: var(--color-accent); margin-top: 11px"></span>
+              <span>Deloitte, <em>Q2 2026 CFO Signals Survey</em>, press release, 23 July 2026. 200 North American CFOs at companies with at least US$1 billion in revenue, fielded 22 May to 7 June 2026. Supports: 93% say their organizations use AI across key operations; 96% somewhat or very confident in their company's AI governance framework; 19% of CFOs say they have greatest responsibility for AI governance; balancing speed and risk the top challenge (59%).</span>
+            </div>
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 16px; line-height: 28px; margin: 12px 0 0 4px">
+              <span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 999px; background: var(--color-accent); margin-top: 11px"></span>
+              <span>Gartner, <em>Gartner Survey Shows Finance AI Adoption Remains Steady in 2025</em>, press release, 18 November 2025. 183 CFOs and senior finance leaders, May to June 2025. Supports: 59% of finance leaders report using AI in their finance function; 91% report low or moderate impact initially.</span>
+            </div>
+          
+          
+          
+        </div>
+      
+        <div>
+          
+          
+            <div style="display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 16px; line-height: 28px; margin: 12px 0 0 4px">
+              <span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 999px; background: var(--color-accent); margin-top: 11px"></span>
+              <span>Gartner, <em>Gartner Says CFOs Need Structured Finance AI Roadmaps</em>, press release, 8 June 2026. Same survey of 183 CFOs and senior finance leaders. Supports: 84% of finance organizations have implemented or plan to implement AI; 7% report a high or very high impact.</span>
+            </div>
+          
+          
+          
+        </div>
+      
+      <div style="margin-top: 56px; border-top: 2px solid var(--color-divider); padding-top: 28px; display: flex; flex-wrap: wrap; gap: 12px; align-items: center">
+        <span style="font-size: 12.5px; color: var(--color-accent-800); background: var(--color-accent-100); border: 1px solid var(--color-accent-200); padding: 3px 10px; border-radius: 999px">AI for CFOs</span>
+        <span style="font-size: 14px; color: color-mix(in srgb, var(--color-text) 60%, transparent)">Published Aug 2026 · CFOLogic Insights</span>
+      </div>
+    </article>
+
+    <aside class="post-side" style="position: sticky; top: 96px; display: flex; flex-direction: column; gap: 20px; min-width: 0">
+      <div class="glass" style="padding: 0; overflow: hidden">
+        <div style="background-image: var(--grad-a); color: #fff; padding: 18px 24px">
+          <p style="font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600; margin: 0; color: rgba(255,255,255,0.8)">The newsletter</p>
+          <p style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 16.5px; line-height: 24px; margin: 6px 0 0">Actionable insights like this, once a month.</p>
+        </div>
+        <form action="https://formsubmit.co/prasad@cfologic.com" method="POST" style="display: flex; flex-direction: column; gap: 10px; padding: 20px 24px 24px">
+          <input type="hidden" name="_subject" value="Insights subscription - blog post sidebar">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="email" name="email" required placeholder="you@company.com" aria-label="Work email" style="font-size: 14px; padding: 10px 14px; border: 1px solid var(--color-neutral-300); border-radius: 8px; background: #fff; color: var(--color-text)">
+          <button class="btn btn-primary" type="submit" style="cursor: pointer; margin-top: 4px">Subscribe</button>
+          <p style="font-size: 12px; line-height: 18px; margin: 2px 0 0; color: color-mix(in srgb, var(--color-text) 60%, transparent)">No spam ever. Unsubscribe in one click.</p>
+        </form>
+      </div>
+      <div class="glass" style="padding: 24px">
+        <p style="font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600; margin: 0; color: var(--color-neutral-700)">Related insights</p>
+        <div style="display: flex; flex-direction: column; margin-top: 6px">
+          
+            <a href="/insights/ai-for-cfos/ai-with-company-context/" style="display: block; text-decoration: none; color: var(--color-text); padding: 14px 0; border-bottom: 1px solid var(--color-neutral-200)">
+              <span style="display: block; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600; color: color-mix(in srgb, var(--color-text) 50%, transparent)">AI for CFOs · 6 min</span>
+              <span style="display: block; font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 15.5px; line-height: 23px; margin-top: 5px">AI With Company Context: The Layer Most Rollouts Skip</span>
+            </a>
+          
+            <a href="/insights/ai-for-cfos/multi-country-compliance-calendar/" style="display: block; text-decoration: none; color: var(--color-text); padding: 14px 0; border-bottom: 1px solid var(--color-neutral-200)">
+              <span style="display: block; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600; color: color-mix(in srgb, var(--color-text) 50%, transparent)">AI for CFOs · 8 min</span>
+              <span style="display: block; font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 15.5px; line-height: 23px; margin-top: 5px">A Compliance Calendar for Multi-Country Groups: Why Spreadsheets Fail at Ten Jurisdictions</span>
+            </a>
+          
+            <a href="/insights/ai-for-cfos/ai-guardrails-finance-data/" style="display: block; text-decoration: none; color: var(--color-text); padding: 14px 0; border-bottom: 1px solid var(--color-neutral-200)">
+              <span style="display: block; font-size: 13px; letter-spacing: 0; text-transform: none; font-weight: 600; color: color-mix(in srgb, var(--color-text) 50%, transparent)">AI for CFOs · 7 min</span>
+              <span style="display: block; font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 15.5px; line-height: 23px; margin-top: 5px">AI Guardrails for Finance Data: Access, Logging and Human Sign-Off</span>
+            </a>
+          
+        </div>
+        <a href="/insights/" style="display: inline-block; font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 14px; text-decoration: none; margin-top: 14px">All insights →</a>
+      </div>
+      <div style="border: 1px solid var(--color-neutral-200); border-radius: 16px; padding: 24px">
+        <p style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 16.5px; line-height: 24px; margin: 0">Thirty minutes on the decision you're sitting on right now.</p>
+        <p style="font-size: 13.5px; line-height: 21px; color: color-mix(in srgb, var(--color-text) 70%, transparent); margin: 8px 0 0">No pitch, no pressure.</p>
+        <a class="btn btn-primary" href="https://cal.com/GrowthCFO" target="_blank" rel="noopener" style="text-decoration: none; display: inline-flex; margin-top: 14px">Book a Discovery Call</a>
+      </div>
+    </aside>
+  </div>
+
+</main>
+
+<section style="background-image: var(--grad-a); color: #fff">
+  <div style="max-width: 1200px; margin: 0 auto; padding: 56px clamp(20px,5vw,72px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 28px; align-items: center">
+    <div>
+      <span style="display: block; font-size: 13px; letter-spacing: 0; text-transform: none; color: rgba(255,255,255,0.75); margin: 0 0 14px">The newsletter</span>
+      <h3 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(21px,2.3vw,30px); line-height: 1.15; letter-spacing: -0.015em; margin: 0; max-width: 24ch">Actionable insights like this, once a month.</h3>
+    </div>
+    <form action="https://formsubmit.co/prasad@cfologic.com" method="POST" style="display: flex; gap: 8px; flex-wrap: wrap">
+      <input type="hidden" name="_subject" value="Insights subscription - blog post page">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="email" name="email" required placeholder="you@company.com" aria-label="Email address" style="flex: 1; min-width: 200px; font-size: 14px; padding: 12px 14px; border: 0; border-radius: 8px; background: #fff; color: var(--color-text)">
+      <button class="btn" type="submit" style="cursor: pointer; background: var(--color-accent-900); color: #fff; border: 0">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="sf-wrap">
+    <div class="sf-grid">
+      <div class="sf-brand">
+        <a href="/" aria-label="CFOLogic" style="display: inline-block"><img src="/assets/cfologic-logo.png" alt="CFOLogic" style="display: block; height: 40px; width: auto"></a>
+        <p class="sf-tagline">The finance team behind ambitious businesses. Strategy to execution, one partner across the whole life of the business.</p>
+        <address class="sf-addr"><strong>CFOLogic, Inc.</strong>1207 Delaware Ave #5151, Wilmington, DE 19806, USA</address>
+        <address class="sf-addr"><strong>CFOLogic Private Limited</strong>2, Revati Arcade II, Baner, Pune, MH 411045, India</address>
+        <div class="sf-social">
+          <a href="https://www.linkedin.com/company/cfologichq" target="_blank" rel="noopener" aria-label="CFOLogic on LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></a>
+          <a href="https://x.com/CFOLogicHQ" target="_blank" rel="noopener" aria-label="CFOLogic on X"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.66l-5.21-6.82-5.97 6.82H1.67l7.73-8.84L1.25 2.25h6.83l4.71 6.23 5.45-6.23zm-1.16 17.52h1.83L7.08 4.13H5.12l11.96 15.64z"/></svg></a>
+          <a href="https://www.instagram.com/cfologichq" target="_blank" rel="noopener" aria-label="CFOLogic on Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        </div>
+      </div>
+      <div class="sf-col">
+        <h4>Who we serve</h4>
+        <a href="/founders/">Founders &amp; CEOs</a>
+        <a href="/cfo-success-partners/">CFOs &amp; Finance Leaders</a>
+        <a href="/accounting-firms/">CFO/CAS Firms</a>
+        <a href="/capital-providers/">Capital Providers</a>
+        <a href="/acquisition-entrepreneurs/">Acquisition Entrepreneurs</a>
+      </div>
+      <div class="sf-col">
+        <h4>Company</h4>
+        <a href="/about/">About</a>
+        <a href="/insights/">Insights</a>
+        <a href="/trust-center/">Trust Center</a>
+        <a href="https://careers.cfologic.com/careers" target="_blank" rel="noopener">Careers</a>
+      </div>
+      <div class="sf-col">
+        <h4>Product</h4>
+        <a href="https://navigator.cfologic.com" target="_blank" rel="noopener">Navigator AI</a>
+        <a href="https://navigatordemo.cfologic.com" target="_blank" rel="noopener">Live demo</a>
+        <a href="https://cal.com/GrowthCFO" target="_blank" rel="noopener">Book a discovery call</a>
+      </div>
+      <div class="sf-col sf-subscribe">
+        <h4>Insights, by email</h4>
+        <form action="https://formsubmit.co/prasad@cfologic.com" method="POST">
+          <input type="hidden" name="_subject" value="Insights subscription - cfologic.com">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="email" name="email" required placeholder="you@company.com" aria-label="Email address">
+          <button class="btn btn-primary" type="submit">Subscribe</button>
+        </form>
+        <p class="sf-note">No spam ever. Unsubscribe in one click.</p>
+      </div>
+    </div>
+    <div class="sf-bottom">
+      <span>&copy; CFOLogic 2026. All rights reserved.</span>
+      <nav aria-label="Legal"><a href="/legal/">Privacy</a><a href="/legal/">Terms</a></nav>
+    </div>
+  </div>
+</footer>
+
+</div>
+<script>window.__DC={"initial":0};</script>
+<script src="/assets/site.js" defer></script>
+</body>
+</html>
