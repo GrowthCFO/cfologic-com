@@ -104,7 +104,29 @@
       if (count && D.chip.countLabel) {
         count.textContent = shown + (shown === 1 ? D.chip.countLabel[0] : D.chip.countLabel[1]);
       }
+      };
+
+    // Keep the chosen filters in the address bar (?type=guide), so a filtered
+    // view can be shared and survives a reload.
+    var slug = function (v) { return String(v).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''); };
+    var syncUrl = function () {
+      if (!window.history || !history.replaceState) return;
+      var q = new URLSearchParams(location.search);
+      for (var group in picked) {
+        if (picked[group] === D.chip.all[group]) q.delete(group); else q.set(group, slug(picked[group]));
+      }
+      var s = q.toString();
+      history.replaceState(null, '', location.pathname + (s ? '?' + s : '') + location.hash);
     };
+    Array.prototype.forEach.call(chips, function (chip) {
+      chip.addEventListener('click', syncUrl);
+    });
+    var params = new URLSearchParams(location.search), fromUrl = false;
+    Array.prototype.forEach.call(chips, function (chip) {
+      var group = chip.getAttribute('data-dc-chip'), val = chip.getAttribute('data-dc-val');
+      if (params.has(group) && slug(val) === params.get(group)) { picked[group] = val; fromUrl = true; }
+    });
+    if (fromUrl) refilter();
   }
 
   // ---- sticky-card jump ----------------------------------------------------
